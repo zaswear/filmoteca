@@ -1,0 +1,202 @@
+// El esquema completo está en `prisma/migrations/0_init`. Para una base vacía:
+//
+//     npm run db:deploy      # prisma migrate deploy
+//
+// Evita `prisma db push` sobre una base con datos: sincroniza a la brava y
+// puede vaciar tablas enteras. Para cambios posteriores, `npm run db:migrate`
+// genera la migración y la aplica.
+generator client {
+  // Salida propia dentro del repo en vez de `node_modules/.prisma`: así el
+  // cliente generado no depende de dónde instale el gestor de paquetes.
+  provider = "prisma-client-js"
+  output   = "../lib/generated/prisma"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DATABASE_URL_UNPOOLED")
+}
+
+// ─── Movie ────────────────────────────────────────────────────────────────────
+// watch_format: "cine" | "streaming" | "bluray" | "dvd" | "digital" | "otro"
+// status:       "vista" | "pendiente" | "en_progreso" | "descartada"
+
+model Movie {
+  id        Int    @id @default(autoincrement())
+  imdbId    String @unique @map("imdb_id")
+
+  // Datos automáticos (OMDb)
+  title         String
+  originalTitle String?  @map("original_title")
+  year          Int?
+  releaseDate   DateTime? @map("release_date") // estreno exacto (TMDB), para watchlist "próximamente"
+  durationMin   Int?     @map("duration_min")
+  genres        String   @default("[]")
+  directors     String   @default("[]")
+  cast          String   @default("[]")
+  plot          String?
+  posterUrl     String?  @map("poster_url")
+  imdbRating    Float?   @map("imdb_rating")
+  imdbVotes     Int?     @map("imdb_votes")
+  country       String?
+  language      String?
+  rated         String?
+  trailerKey    String?  @map("trailer_key")
+
+  // Datos personales
+  myRating      Float?   @map("my_rating")
+  watchedAt     DateTime? @map("watched_at")
+  watchFormat   String?  @map("watch_format")
+  review        String?
+  hasImdbReview Boolean  @default(false) @map("has_imdb_review")
+  notes         String?
+  status        String   @default("pendiente")
+  visualTone    String?  @map("visual_tone")
+
+  // Importación
+  importedFromImdb Boolean @default(false) @map("imported_from_imdb")
+
+  // Timestamps
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  images      Image[]
+  viewings    Viewing[]
+  collections Collection[]
+
+  @@index([status])
+  @@index([watchedAt])
+  @@index([myRating])
+  @@index([year])
+  @@map("movies")
+}
+
+// ─── Image ────────────────────────────────────────────────────────────────────
+
+model Image {
+  id       Int    @id @default(autoincrement())
+  movieId  Int    @map("movie_id")
+  publicId String @map("public_id")
+  url      String
+  width    Int?
+  height   Int?
+  type     String @default("gallery")
+
+  createdAt DateTime @default(now()) @map("created_at")
+
+  movie Movie @relation(fields: [movieId], references: [id], onDelete: Cascade)
+
+  @@index([movieId])
+  @@map("images")
+}
+
+// ─── Viewing ─────────────────────────────────────────────────────────────────
+// Un revisionado: volver a ver algo que ya está en el diario.
+//
+// `Movie` guarda UNA fecha de visionado y UNA nota, así que volver a ver una
+// película no se podía apuntar en ningún sitio: o pisabas la fecha original o
+// no constaba. Para un diario de 240 películas a lo largo de años, eso es la
+// limitación más de fondo que tenía.
+//
+// Esta tabla guarda los visionados ADICIONALES, no el primero: el primero
+// sigue en `Movie.watchedAt` / `Movie.myRating`, que es lo que lee media
+// aplicación. Las veces que has visto algo son 1 + sus revisionados, y el
+// balance mensual suma las dos cosas.
+
+model Viewing {
+  id        Int      @id @default(autoincrement())
+  movieId   Int      @map("movie_id")
+  watchedAt DateTime @map("watched_at")
+  myRating  Float?   @map("my_rating")
+  notes     String?
+
+  createdAt DateTime @default(now()) @map("created_at")
+
+  movie Movie @relation(fields: [movieId], references: [id], onDelete: Cascade)
+
+  @@index([movieId])
+  @@index([watchedAt])
+  @@map("viewings")
+}
+
+// ─── Collection ──────────────────────────────────────────────────────────────
+
+model Collection {
+  id          Int      @id @default(autoincrement())
+  name        String   @unique
+  description String?
+
+  movies      Movie[]
+
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+
+  @@map("collections")
+}
+
+// ─── BlurayPurchase ──────────────────────────────────────────────────────────
+
+model BlurayPurchase {
+  id        Int      @id @default(autoincrement())
+  title     String
+  posterUrl String?  @map("poster_url")
+  link      String?
+  createdAt DateTime @default(now()) @map("created_at")
+
+  @@map("bluray_purchases")
+}
+
+// ─── CinemaMovie (Cartelera) ─────────────────────────────────────────────────
+
+model CinemaMovie {
+  id        Int      @id @default(autoincrement())
+  title     String   @unique
+  url       String
+  posterUrl String?  @map("poster_url")
+  createdAt DateTime @default(now()) @map("created_at")
+
+  showtimes CinemaShowtime[]
+
+  @@map("cinema_movies")
+}
+
+// ─── CinemaShowtime (Cartelera) ──────────────────────────────────────────────
+
+model CinemaShowtime {
+  id         Int      @id @default(autoincrement())
+  movieId    Int      @map("movie_id")
+  cinemaName String   @map("cinema_name")
+  city       String
+  startTime  String   @map("start_time")
+  date       DateTime @db.Date
+  ticketUrl  String?  @map("ticket_url")
+
+  movie     CinemaMovie @relation(fields: [movieId], references: [id], onDelete: Cascade)
+
+  @@index([movieId])
+  @@index([date])
+  @@index([city])
+  @@index([cinemaName])
+  @@map("cinema_showtimes")
+}
+
+// ─── AdminCredential ──────────────────────────────────────────────────────────
+// La credencial del único administrador, en una sola fila (id = 1). Antes vivía
+// en variables de entorno (ADMIN_USER + ADMIN_PASSWORD_HASH), duplicadas entre
+// el .env local y el panel de Vercel: en enelultimoepisodio se desincronizaron
+// y el login dejó de aceptar la contraseña de siempre sin que nadie la hubiera
+// cambiado. Aquí hay una sola fuente de verdad, se cambia sin redeploy y el
+// reset de emergencia (npm run admin:password) no necesita tocar Vercel.
+//
+// La tabla la crea ese mismo script con SQL aditivo (CREATE TABLE IF NOT
+// EXISTS), como manda el aviso de arriba. Nada de `prisma db push`.
+
+model AdminCredential {
+  id           Int      @id @default(1)
+  username     String
+  passwordHash String   @map("password_hash")
+  updatedAt    DateTime @updatedAt @map("updated_at")
+
+  @@map("admin_credential")
+}

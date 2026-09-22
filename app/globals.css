@@ -1,0 +1,600 @@
+@import 'tailwindcss';
+
+@theme {
+  --breakpoint-xs: 480px;
+
+  --color-bg: var(--bg);
+
+  --color-surface: var(--surface);
+  --color-surface-hi: var(--surface-hi);
+  --color-surface-overlay: var(--surface-overlay);
+
+  --color-border: var(--border);
+  --color-border-hi: var(--border-hi);
+  --color-border-focus: var(--border-focus);
+
+  --color-text: var(--text);
+  --color-text-mid: var(--text-mid);
+  --color-text-faint: var(--text-faint);
+
+  --color-accent: var(--accent);
+  --color-accent-dim: var(--accent-dim);
+  --color-accent-hover: var(--accent-hover);
+
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-error: var(--error);
+
+  /* Los tokens del tema NO pueden llamarse igual que las variables que
+     declara next/font, o la declaración se referencia a sí misma
+     (`--font-display: var(--font-display)`), el navegador la descarta por
+     ciclo y la familia que gana es la que quede después en la cascada. Pasaba
+     con --font-display: funcionaba de milagro y el fallback a Arial Black
+     declarado aquí no llegaba a existir. De ahí los nombres con la fuente. */
+  --font-display: var(--font-archivo-black), "Arial Black", sans-serif;
+  --font-sans: var(--font-archivo), system-ui, sans-serif;
+  /* `font-mono` ya no es monoespaciada: en el sistema «Filmoteca» el papel de
+     la letra pequeña de archivo lo hace Newsreader. Se conserva el nombre de
+     la utilidad porque la usan cuarenta sitios; lo que cambia es la familia. */
+  --font-mono: var(--font-newsreader), Georgia, serif;
+
+  --text-xs: 11px;
+  --text-xs--line-height: 1.45;
+  --text-sm: 13px;
+  --text-sm--line-height: 1.5;
+  --text-base: 15px;
+  --text-base--line-height: 1.6;
+  --text-lg: 18px;
+  --text-lg--line-height: 1.5;
+  --text-xl: 22px;
+  --text-xl--line-height: 1.35;
+  --text-2xl: 28px;
+  --text-2xl--line-height: 1.25;
+  --text-3xl: 38px;
+  --text-3xl--line-height: 1.15;
+  --text-4xl: 52px;
+  --text-4xl--line-height: 1.08;
+
+  --radius-sm: 4px;
+  --radius: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+
+  --shadow-card: 0 1px 2px oklch(20% 0.01 60 / 10%);
+  --shadow-raised: 0 4px 14px oklch(20% 0.01 60 / 14%);
+  --shadow-modal: 0 20px 52px oklch(20% 0.01 60 / 26%);
+  --shadow-poster: 0 10px 30px oklch(20% 0.01 60 / 20%);
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
+
+@utility font-display {
+  font-family: var(--font-archivo-black), "Arial Black", sans-serif;
+  letter-spacing: -0.025em;
+}
+
+@utility font-mono {
+  font-family: var(--font-newsreader), Georgia, serif;
+}
+
+@utility text-balance {
+  text-wrap: balance;
+}
+
+@utility truncate-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Superficie mínima de pulsación (WCAG 2.2 — 2.5.8, 44x44 CSS px).
+   Va como utilidad y no como valor suelto porque un token se aplica y un
+   número se olvida: el icono puede seguir siendo de 18 px, lo que crece es
+   el área que responde al dedo. Se combina con el padding existente, no lo
+   sustituye. */
+@utility tap-target {
+  min-width: var(--tap);
+  min-height: var(--tap);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@layer base {
+  :root {
+    /* «Filmoteca» (2026-09): el proyecto pasa de solo-oscuro a papel. El
+       acento ya no es la luz de una lámpara de lectura sino el bermellón de
+       una entrada de cine, que sí existe sobre fondo claro; el fondo es papel
+       hueso, no blanco, para que los carteles no floten sobre un folio.
+       color-scheme: light para que select, date picker y barras de scroll se
+       pinten claros: con `dark` salían negros sobre el papel. */
+    color-scheme: light;
+
+    /* Objetivos táctiles */
+    --tap: 44px;
+
+    /* Surfaces */
+    --bg:              oklch(92.5% 0.014  85);
+    --surface:         oklch(96%   0.010  85);
+    --surface-hi:      oklch(98.5% 0.006  85);
+    --surface-overlay: oklch(96%   0.010  85 / 96%);
+
+    /* Borders */
+    --border:          oklch(85%   0.020  80);
+    --border-hi:       oklch(72%   0.025  75);
+    --border-focus:    oklch(52%   0.190  32);
+
+    /* Text */
+    --text:            oklch(20%   0.012  60);
+    --text-mid:        oklch(42%   0.016  75);
+    --text-faint:      oklch(55%   0.015  75);
+
+    /* Accent — bermellón de entrada de cine */
+    --accent:          oklch(52%   0.190  32);
+    --accent-dim:      oklch(52%   0.190  32 / 12%);
+    --accent-hover:    oklch(45%   0.180  32);
+
+    /* Semantic */
+    --success:         oklch(42%   0.090 160);
+    --warning:         oklch(48%   0.110  75);
+    --error:           oklch(47%   0.180  28);
+    --info:            oklch(45%   0.120 250);
+
+    /* Tintas de los semánticos, para fondos de aviso (alertas, banners,
+       filas seleccionadas). Mismo criterio que --accent-dim. */
+    --error-dim:       oklch(62%   0.16   22 / 12%);
+    --green-dim:       oklch(70%   0.14  155 / 12%);
+
+    /* Overlay */
+    --backdrop:        oklch(18% 0.010 60 / 62%);
+
+    /* Shadows — sobre papel pesan mucho menos que sobre negro */
+    --shadow-card:     0 1px  2px oklch(20% 0.01 60 / 10%);
+    --shadow-raised:   0 4px 14px oklch(20% 0.01 60 / 14%);
+    --shadow-modal:    0 20px 52px oklch(20% 0.01 60 / 26%);
+    --shadow-poster:   0 10px 30px oklch(20% 0.01 60 / 20%);
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: var(--font-archivo), system-ui, sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    min-height: 100dvh;
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: var(--border-hi); border-radius: 3px; }
+  * { scrollbar-width: thin; scrollbar-color: var(--border-hi) transparent; }
+
+  /* Focus */
+  :focus-visible {
+    outline: 2px solid var(--border-focus);
+    outline-offset: 2px;
+  }
+
+  /* Links */
+  a { color: inherit; text-decoration: none; }
+
+  /* Archivo Black tiene un solo peso y no tiene cursiva. Los titulares
+     heredados llevan `font-display font-semibold italic` de cuando la display
+     era Cormorant; sin esto el navegador sintetiza una negrita y una oblicua
+     falsas y el titular sale sucio. Se neutraliza aquí en vez de tocar los
+     cuarenta sitios que lo escriben. */
+  .font-display {
+    font-weight: 400 !important;
+    font-style: normal !important;
+  }
+}
+
+/* ── Tiptap editor ───────────────────────────────────────────────────────── */
+.prose-editor h2 { font-family: var(--font-newsreader), Georgia, serif; font-size: 22px; font-weight: 600; margin: 1.2em 0 0.5em; color: var(--text); }
+.prose-editor h3 { font-family: var(--font-newsreader), Georgia, serif; font-size: 18px; font-weight: 600; margin: 1em 0 0.4em; color: var(--text); }
+.prose-editor p  { margin: 0 0 0.8em; color: var(--text); line-height: 1.7; }
+.prose-editor strong { color: var(--text); }
+.prose-editor em { color: var(--text-mid); }
+.prose-editor ul { padding-left: 1.4em; margin: 0.5em 0 0.8em; color: var(--text); }
+.prose-editor li { margin: 0.2em 0; }
+.prose-editor blockquote { border-left: 2px solid var(--accent); margin: 1em 0; padding: 0.5em 0 0.5em 1em; color: var(--text-mid); font-style: italic; }
+.prose-editor p.is-editor-empty:first-child::before { content: attr(data-placeholder); color: var(--text-faint); float: left; height: 0; pointer-events: none; }
+
+/* ── Movie detail ────────────────────────────────────────────────────────── */
+.section-heading {
+  font-family: var(--font-newsreader), Georgia, serif;
+  font-size: 22px;
+  font-weight: 600;
+  font-style: italic;
+  color: var(--text);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 8px;
+}
+.prose-review        { max-width: 68ch; }
+.prose-review p       { margin: 0 0 1em; color: var(--text-mid); line-height: 1.75; font-size: 16px; text-wrap: pretty; }
+.prose-review h2, .prose-review h3 { text-wrap: balance; }
+/* Capitular editorial en el primer párrafo de la crítica */
+.prose-review > p:first-of-type::first-letter {
+  font-family: var(--font-newsreader), Georgia, serif;
+  float: left; font-size: 3.1em; line-height: 0.82; font-weight: 700;
+  margin: 0.04em 0.1em 0 0; color: var(--accent);
+}
+.prose-review h2      { font-family: var(--font-newsreader), Georgia, serif; font-size: 22px; font-weight: 600; margin: 1.5em 0 0.6em; color: var(--text); }
+.prose-review h3      { font-family: var(--font-newsreader), Georgia, serif; font-size: 18px; font-weight: 600; margin: 1.2em 0 0.5em; color: var(--text); }
+.prose-review strong  { color: var(--text); font-weight: 600; }
+.prose-review em      { color: var(--text-mid); }
+.prose-review ul      { padding-left: 1.4em; margin: 0.5em 0 1em; }
+.prose-review li      { margin: 0.3em 0; color: var(--text-mid); }
+.prose-review blockquote { border-left: 2px solid var(--accent); padding: 0.5em 0 0.5em 1em; margin: 1em 0; color: var(--text-mid); font-style: italic; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ── Póster: elevación en hover ──────────────────────────────────────────────
+   El único gesto decorativo que el concepto autoriza: el póster es la entrada
+   a la película, así que responde al puntero. Sobre papel la sombra pesa mucho
+   menos que sobre negro, y el halo ámbar de la lámpara ya no existe.         */
+.poster-glow-hover {
+  transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.poster-glow-hover:hover {
+  transform: translateY(-4px) scale(1.015);
+  box-shadow: 0 12px 26px oklch(20% 0.01 60 / 22%);
+}
+
+/* ── Entrada de cine (cabecera de la ficha) ──────────────────────────────────
+   La ficha se presenta como la entrada del logo: papel crema, tinta en el
+   borde, una muesca de perforación a cada lado (el mismo motivo del path del
+   logo) y un talón separado por línea de corte discontinua. La muesca es un
+   mask con dos radial-gradient: el borde se «perfora» sin pseudo-elementos. */
+.ticket {
+  position: relative;
+  background-color: var(--surface);
+  border: 1.5px solid var(--text);
+  border-radius: 12px;
+  box-shadow: var(--shadow-card);
+  /* La muesca hereda el radio: queda centrada en el lateral, como en el logo. */
+  mask-image:
+    radial-gradient(circle 12px at 0 50%, transparent 97%, black),
+    radial-gradient(circle 12px at 100% 50%, transparent 97%, black);
+  mask-size: 50.5% 100%;
+  mask-position: 0 0, 100% 0;
+  mask-repeat: no-repeat, no-repeat;
+}
+/* Talón: línea de corte discontinua como la del logo «full»
+   (strokeDasharray 3.4 5 ~ border dashed con segmentos cortos). */
+.ticket-stub {
+  border-color: oklch(20% 0.012 60 / 35%);
+  border-style: dashed;
+}
+
+/* ── Formato de visionado ────────────────────────────────────────────────────
+   Dato, no categoría: el formato no compite con la película. Neutro en todos
+   los casos salvo Cine, el único que merece el ámbar.                        */
+.watch-badge {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-newsreader), Georgia, serif;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 2px 8px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  line-height: 1.2;
+}
+.watch-badge-cine {
+  background-color: oklch(74% 0.13 72 / 10%);
+  color: oklch(74% 0.13 72);
+  border-color: oklch(74% 0.13 72 / 25%);
+}
+.watch-badge-bluray,
+.watch-badge-streaming,
+.watch-badge-dvd,
+.watch-badge-digital,
+.watch-badge-otro {
+  background-color: oklch(100% 0 0 / 4%);
+  color: var(--text-mid);
+  border-color: var(--border);
+}
+
+/* ── Cabecera pegajosa de listados ───────────────────────────────────────── */
+.shrink-blur-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: var(--bg);
+}
+
+/* ── Acordeón de filtros, nativo CSS ─────────────────────────────────────── */
+.accordion-filters {
+  display: block;
+  width: 100%;
+}
+.accordion-filters > summary {
+  list-style: none;
+  display: none;
+}
+.accordion-content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+  overflow: hidden;
+}
+.accordion-filters[open] .accordion-content {
+  grid-template-rows: 1fr;
+}
+.accordion-inner {
+  min-height: 0;
+}
+
+/* ── Login: muro de pósters cinematográfico ──────────────────────────────────── */
+.login-wall {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  overflow: hidden;
+  /* scale tapa los bordes que deja el blur */
+  transform: scale(1.12);
+  filter: blur(3px) brightness(0.42) saturate(0.85);
+  pointer-events: none;
+}
+.login-wall-col {
+  flex: 0 0 auto;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  animation: wallDrift 56s linear infinite;
+  will-change: transform;
+}
+.login-wall-col--rev { animation-direction: reverse; }
+.login-wall-col img {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
+}
+@keyframes wallDrift {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-50%); }
+}
+
+/* Viñeta: enfoca el centro y funde los bordes al fondo */
+.login-vignette {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    radial-gradient(125% 85% at 50% 32%,
+      transparent 0%,
+      oklch(10% 0.010 52 / 58%) 52%,
+      oklch(8% 0.010 52 / 94%) 100%),
+    linear-gradient(to bottom,
+      oklch(10% 0.010 52 / 72%),
+      oklch(10% 0.010 52 / 38%) 42%,
+      oklch(8% 0.010 52 / 88%));
+}
+/* Glow ámbar tenue tipo proyector, detrás de la tarjeta */
+.login-spot {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: radial-gradient(40% 32% at 50% 38%,
+    oklch(74% 0.13 72 / 12%) 0%,
+    transparent 70%);
+}
+/* Grano de película */
+.login-grain {
+  position: fixed;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0.05;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Haz de proyector: cono de luz cálida que entra desde la esquina superior
+   derecha y se abre hacia el contenido. Va con z-index negativo dentro de un
+   contenedor relative: queda tras el contenido pero sobre el fondo. */
+.projector-beam {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(14% 10% at 97% 1%,
+      oklch(92% 0.07 82 / 22%) 0%,
+      transparent 70%),
+    linear-gradient(205deg,
+      oklch(90% 0.08 80 / 15%) 0%,
+      oklch(86% 0.09 76 / 6%) 48%,
+      transparent 76%);
+  clip-path: polygon(88% 0, 100% 0, 62% 100%, 14% 100%);
+  transform-origin: 98% 0;
+  animation: beam-sway 11s ease-in-out infinite alternate;
+}
+@keyframes beam-sway {
+  from { transform: rotate(-0.7deg); }
+  to   { transform: rotate(0.7deg); }
+}
+
+/* ── Póster: aparición al cargar ─────────────────────────────────────────────
+   Funcional, no teatral: comunica que la imagen terminó de cargar y evita el
+   pop-in. Solo opacidad.                                                      */
+.animate-poster-in {
+  animation: posterIn 0.4s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+@keyframes posterIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ── Fundido de entrada ──────────────────────────────────────────────────────
+   Aparición de bloques que montan sobre la página (cabeceras de sección,
+   fondos de modal): opacidad más un leve desplazamiento, nada de escala. */
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+  animation: fade-in 0.3s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+/* ── Entrada escalonada de rejillas ─────────────────────────────────────────
+   Las tarjetas del diario y de resultados montan una tras otra con un delay
+   por índice (inline, tope en las 12 primeras). Solo transform y opacidad. */
+@keyframes grid-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-grid-in {
+  animation: grid-in 0.35s cubic-bezier(0.25, 1, 0.5, 1) both;
+}
+
+/* ── Sello de confirmación («estampación») ───────────────────────────────────
+   Al marcar como vista o añadir a pendientes: el sello cae sobre la ficha
+   como un tampón, de grande y girado a su tamaño final. */
+@keyframes stamp {
+  from { opacity: 0; transform: scale(1.6) rotate(-8deg); }
+  to   { opacity: 1; transform: scale(1) rotate(0deg); }
+}
+.animate-stamp {
+  animation: stamp 0.35s cubic-bezier(0.25, 1, 0.5, 1) both;
+}
+
+/* ── Skeleton de póster ──────────────────────────────────────────────────────
+   Mismo ratio que el cartel (2/3) para que el montaje no salte cuando llega
+   la imagen. El brillo barre el hueco con translateX, que es transform. */
+.poster-skeleton {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--surface-hi);
+}
+.poster-skeleton::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(100deg,
+    transparent 30%,
+    oklch(100% 0 0 / 55%) 50%,
+    transparent 70%);
+  transform: translateX(-100%);
+  animation: poster-skeleton-shimmer 1.6s ease-in-out infinite;
+}
+@keyframes poster-skeleton-shimmer {
+  to { transform: translateX(100%); }
+}
+
+/* ── Tráiler expandible ──────────────────────────────────────────────────────
+   Mismo patrón que el acordeón de filtros: grid-template-rows 0fr→1fr.
+   El iframe se monta la primera vez que se abre y se queda en el DOM
+   (recogido a 0fr) para poder animar también el cierre. */
+.trailer-expand {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+}
+.trailer-expand[data-open="true"] {
+  grid-template-rows: 1fr;
+}
+.trailer-expand > .trailer-expand-inner {
+  min-height: 0;
+  overflow: hidden;
+}
+
+/* ── Transiciones de vista (View Transitions API) ────────────────────────────
+   Cross-fade sutil de todo el documento entre navegaciones. Los carteles con
+   su propio `view-transition-name` (dc-poster-*) quedan excluidos de la
+   captura del root: el navegador los anima como elemento compartido y este
+   fade no les aplica. Con reduced-motion el bloque global de más abajo
+   reduce la duración a casi cero. */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.2s;
+  animation-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* ── Estados semánticos ──────────────────────────────────────────────────────
+   El badge se apoya sobre dos fondos distintos: el póster (vista grid) y la
+   fila (vista lista). Por eso el fondo es opaco y no una tinta del propio
+   color: sobre un póster claro, una tinta al 10% deja el texto ilegible.
+   Mismo criterio que el chip de nota, que ya es ámbar sólido.               */
+.badge-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 2.5px 8px;
+  border-radius: 4px;
+  line-height: 1.25;
+  font-family: var(--font-archivo), sans-serif;
+  letter-spacing: 0.02em;
+  background-color: var(--surface-hi);
+  border: 1px solid var(--border-hi);
+}
+.badge-status--vista {
+  color: oklch(74% 0.14 155);
+  border-color: oklch(70% 0.14 155 / 35%);
+}
+.badge-status--pendiente {
+  color: oklch(72% 0.012 52);
+  border-color: oklch(72% 0.012 52 / 30%);
+}
+.badge-status--en_progreso {
+  color: oklch(74% 0.13 72);
+  border-color: oklch(74% 0.13 72 / 35%);
+}
+.badge-status--descartada {
+  color: oklch(70% 0.16 22);
+  border-color: oklch(62% 0.16 22 / 35%);
+}
+
+

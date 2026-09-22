@@ -1,0 +1,56 @@
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+.yarn/install-state.gz
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
+.env
+.env*.local
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# database
+*.db
+*.db-journal
+*.db-shm
+*.db-wal
+
+# windows zone identifiers
+*Zone.Identifier
+*Zone.Identifier*
+
+# Cliente Prisma propio de la app
+lib/generated/
+
+# Registro local del backfill de fechas de visionado
+scripts/.backfill-watched-dates.json
+
+# Historial personal de visionados: se importa, no se versiona.
+export_imdb/*.csv
+import_data/*.csv
+!import_data/ejemplo.csv
