@@ -2,8 +2,9 @@ import { ShoppingBag } from "lucide-react";
 import { db } from "@/lib/db";
 import { BlurayPurchaseList } from "@/components/movies/bluray-purchase-list";
 
+import { t } from "@/lib/i18n";
 export const dynamic = "force-dynamic";
-export const metadata = { title: "Lista de Compra Blu-ray" };
+export const metadata = { title: t("compras.titulo") };
 
 interface MubisItem {
   title: string;
@@ -83,13 +84,9 @@ export default async function ComprasBlurayPage() {
       {/* Cabecera */}
       <div className="border-b border-(--border) pb-6 flex items-center justify-between">
         <div>
-          <h1 className="font-display font-semibold text-[38px] italic leading-none text-text flex items-center gap-3">
-            Compra de Blu-rays
-            <ShoppingBag size={28} className="text-(--accent) animate-pulse" />
+          <h1 className="font-display font-semibold text-[38px] italic leading-none text-text flex items-center gap-3">{t("compras.encabezado")}<ShoppingBag size={28} className="text-(--accent) animate-pulse" />
           </h1>
-          <p className="text-xs text-text-faint font-mono mt-2 uppercase tracking-widest">
-            Novedades de Mubis y tu lista de la compra personalizada
-          </p>
+          <p className="text-xs text-text-faint font-mono mt-2 uppercase tracking-widest">{t("compras.subtitulo")}</p>
         </div>
       </div>
 

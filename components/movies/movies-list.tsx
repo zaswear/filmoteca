@@ -11,6 +11,7 @@ import { MOVIE_STATUS_LABELS, type MovieStatus } from "@/lib/types";
 import { SeatIcon } from "@/components/ui/seat-icon";
 
 
+import { t, DATE_LOCALE } from "@/lib/i18n";
 // El contrato de filtros, su ida y vuelta a la URL y la traducción a consulta
 // viven en lib/movie-query.ts: ahora los comparten este componente y la página
 // de servidor, que es quien filtra, ordena y pagina.
@@ -29,7 +30,7 @@ import {
 
 function fmtDate(iso: string | null): string {
   if (!iso) return "—";
-  return new Date(iso).toLocaleDateString("es-ES", { day: "numeric", month: "short", year: "numeric" });
+  return new Date(iso).toLocaleDateString(DATE_LOCALE, { day: "numeric", month: "short", year: "numeric" });
 }
 
 /** Clave de día local (YYYY-MM-DD) para agrupar visionados del mismo día. */
@@ -144,27 +145,25 @@ export function MoviesList({ movies, total, generos, anios }: Props) {
   return (
     <div className="flex flex-col flex-1 overflow-hidden">
 
-      <nav aria-label="Accesos al diario" className="flex flex-wrap gap-2 px-3 sm:px-6 py-3 text-sm">
-        <Link className="tap-target px-3 rounded border border-border" href="/peliculas?status=vista&sort=watchedAt">Últimas vistas</Link>
-        <Link className="tap-target px-3 rounded border border-border" href="/watchlist">Pendientes</Link>
-        <Link className="tap-target px-3 rounded border border-border" href="/balance">Balance</Link>
+      <nav aria-label={t("diario.accesos")} className="flex flex-wrap gap-2 px-3 sm:px-6 py-3 text-sm">
+        <Link className="tap-target px-3 rounded border border-border" href="/peliculas?status=vista&sort=watchedAt">{t("diario.ultimasVistas")}</Link>
+        <Link className="tap-target px-3 rounded border border-border" href="/watchlist">{t("diario.pendientes")}</Link>
+        <Link className="tap-target px-3 rounded border border-border" href="/balance">{t("nav.balance")}</Link>
       </nav>
       {/* ── Toolbar ── */}
       <div className="flex items-center justify-between gap-3 px-3 sm:px-6 py-3 border-b border-(--border) shrink-0 shrink-blur-header">
         <div className="flex items-center gap-3 flex-1 min-w-0">
-          <h1 className="font-display font-semibold italic text-[26px] leading-none text-text hidden sm:block">
-            Diario
-          </h1>
+          <h1 className="font-display font-semibold italic text-[26px] leading-none text-text hidden sm:block">{t("nav.diario")}</h1>
 
           {/* Search */}
           <div className="relative flex-1 min-w-0 max-w-xs">
             <Search size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-text-faint" />
             <input
-              aria-label="Buscar en mi diario"
+              aria-label={t("diario.buscarEtiqueta")}
               type="search"
               value={searchDraft}
               onChange={onSearch}
-              placeholder="Buscar título, director…"
+              placeholder={t("diario.buscarPlaceholder")}
               className={cn(inputCls, "pl-8 w-full")}
             />
           </div>
@@ -173,7 +172,7 @@ export function MoviesList({ movies, total, generos, anios }: Props) {
         <div className="flex items-center gap-2 shrink-0">
           {/* Filters toggle */}
           <button
-            aria-label="Filtros"
+            aria-label={t("diario.filtros")}
             onClick={() => setShowFilters((v) => !v)}
             className={cn(
               "flex items-center gap-1.5 px-3 py-1.5 text-sm rounded-[6px] border transition-colors",
@@ -183,7 +182,7 @@ export function MoviesList({ movies, total, generos, anios }: Props) {
             )}
           >
             <SlidersHorizontal size={13} />
-            <span className="hidden sm:inline">Filtros</span>
+            <span className="hidden sm:inline">{t("diario.filtros")}</span>
             {hasActiveFilters && (
               <span className="ml-0.5 w-1.5 h-1.5 rounded-full bg-(--accent)" />
             )}
@@ -194,8 +193,7 @@ export function MoviesList({ movies, total, generos, anios }: Props) {
               onClick={clearFilters}
               className="hidden sm:flex items-center gap-1 text-xs text-text-faint hover:text-(--error) transition-colors"
             >
-              <X size={11} /> Limpiar
-            </button>
+              <X size={11} />{t("diario.limpiar")}</button>
           )}
 
           <div className="flex items-center gap-1.5">
@@ -214,8 +212,8 @@ export function MoviesList({ movies, total, generos, anios }: Props) {
             <button
               onClick={() => set("sortOrder", filters.sortOrder === "asc" ? "desc" : "asc")}
               className="hidden sm:inline-flex tap-target rounded-[6px] border border-(--border) text-text-mid hover:text-text hover:border-(--border-hi) transition-colors"
-              title={filters.sortOrder === "asc" ? "Ascendente" : "Descendente"}
-              aria-label={filters.sortOrder === "asc" ? "Orden ascendente, cambiar a descendente" : "Orden descendente, cambiar a ascendente"}
+              title={filters.sortOrder === "asc" ? t("diario.ascendente") : t("diario.descendente")}
+              aria-label={filters.sortOrder === "asc" ? t("diario.ordenAsc") : t("diario.ordenDesc")}
             >
               <ArrowUpDown size={14} aria-hidden="true" className={filters.sortOrder === "asc" ? "" : "rotate-180"} />
             </button>
@@ -242,7 +240,7 @@ export function MoviesList({ movies, total, generos, anios }: Props) {
               href="/peliculas/nueva"
               className="flex items-center gap-1.5 px-3 py-1.5 bg-(--accent) hover:bg-(--accent-hover) text-bg text-sm font-medium rounded-[6px] transition-colors"
             >
-              <Plus size={14} /> <span className="hidden sm:inline">Nueva</span>
+              <Plus size={14} /> <span className="hidden sm:inline">{t("diario.nueva")}</span>
             </Link>
           </div>
         </div>
@@ -250,7 +248,7 @@ export function MoviesList({ movies, total, generos, anios }: Props) {
 
       {/* ── Advanced Filters ── */}
       <details className="accordion-filters" open={showFilters}>
-        <summary className="hidden">Filtros Avanzados</summary>
+        <summary className="hidden">{t("diario.filtrosAvanzados")}</summary>
         <div className="accordion-content">
           <div className="accordion-inner">
             <div className="flex flex-wrap gap-3 px-3 sm:px-6 py-3 border-b border-(--border) bg-(--surface) shrink-0">
@@ -259,12 +257,12 @@ export function MoviesList({ movies, total, generos, anios }: Props) {
               </select>
 
               <select value={filters.genre} onChange={(e) => set("genre", e.target.value)} className={selectCls}>
-                <option value="">Todos los géneros</option>
+                <option value="">{t("diario.todosGeneros")}</option>
                 {genres.map((g) => <option key={g} value={g}>{g}</option>)}
               </select>
 
               <select value={filters.year} onChange={(e) => set("year", e.target.value)} className={selectCls}>
-                <option value="">Todos los años</option>
+                <option value="">{t("diario.todosAnios")}</option>
                 {years.map((y) => <option key={y} value={y}>{y}</option>)}
               </select>
 
@@ -272,25 +270,25 @@ export function MoviesList({ movies, total, generos, anios }: Props) {
                 type="text"
                 value={filters.director}
                 onChange={(e) => set("director", e.target.value)}
-                placeholder="Director…"
+                placeholder={t("diario.directorPlaceholder")}
                 className={cn(inputCls, "w-40")}
               />
 
               <select value={filters.hasImdbReview} onChange={(e) => set("hasImdbReview", e.target.value)} className={selectCls}>
-                <option value="all">Crítica IMDb: todas</option>
-                <option value="yes">Con crítica IMDb</option>
-                <option value="no">Sin crítica IMDb</option>
+                <option value="all">{t("diario.criticaTodas")}</option>
+                <option value="yes">{t("diario.conCritica")}</option>
+                <option value="no">{t("diario.sinCritica")}</option>
               </select>
 
               <select value={filters.importedFromImdb} onChange={(e) => set("importedFromImdb", e.target.value)} className={selectCls}>
-                <option value="all">Origen: todas</option>
-                <option value="yes">Importadas de IMDb</option>
-                <option value="no">Añadidas manualmente</option>
+                <option value="all">{t("diario.origenTodas")}</option>
+                <option value="yes">{t("diario.importadas")}</option>
+                <option value="no">{t("diario.manuales")}</option>
               </select>
 
               {/* Ordenar (solo móvil) */}
               <div className="flex items-center gap-2 sm:hidden w-full pt-2.5 border-t border-(--border) mt-1">
-                <span className="text-[11px] uppercase tracking-widest text-text-faint shrink-0">Ordenar:</span>
+                <span className="text-[11px] uppercase tracking-widest text-text-faint shrink-0">{t("diario.ordenar")}</span>
                 <select
                   value={filters.sortKey}
                   onChange={(e) => set("sortKey", e.target.value as SortKey)}
@@ -304,7 +302,7 @@ export function MoviesList({ movies, total, generos, anios }: Props) {
                 <button
                   onClick={() => set("sortOrder", filters.sortOrder === "asc" ? "desc" : "asc")}
                   className="flex p-2.5 rounded-[6px] border border-(--border) text-text-mid hover:text-text bg-(--surface) transition-colors shrink-0"
-                  title={filters.sortOrder === "asc" ? "Ascendente" : "Descendente"}
+                  title={filters.sortOrder === "asc" ? t("diario.ascendente") : t("diario.descendente")}
                 >
                   <ArrowUpDown size={14} className={filters.sortOrder === "asc" ? "" : "rotate-180"} />
                 </button>
@@ -326,11 +324,9 @@ export function MoviesList({ movies, total, generos, anios }: Props) {
       <div className="flex-1 overflow-y-auto px-3 sm:px-6 pb-6">
         {paginated.length === 0 ? (
           <div className="flex flex-col items-center justify-center py-24 text-center">
-            <p className="text-text-faint text-sm">Sin resultados para los filtros actuales.</p>
+            <p className="text-text-faint text-sm">{t("diario.sinResultados")}</p>
             {hasActiveFilters && (
-              <button onClick={clearFilters} className="mt-3 text-(--accent) text-sm hover:underline">
-                Limpiar filtros
-              </button>
+              <button onClick={clearFilters} className="mt-3 text-(--accent) text-sm hover:underline">{t("diario.limpiarFiltros")}</button>
             )}
           </div>
         ) : filters.view === "grid" ? (
@@ -345,7 +341,7 @@ export function MoviesList({ movies, total, generos, anios }: Props) {
             <button
               onClick={() => goToPage(page - 1)}
               disabled={page <= 1}
-              aria-label="Página anterior"
+              aria-label={t("diario.paginaAnterior")}
               className="tap-target rounded-[6px] border border-(--border) text-text-mid hover:text-text disabled:opacity-30 disabled:cursor-default transition-colors"
             >
               <ChevronLeft size={16} aria-hidden="true" />
@@ -380,7 +376,7 @@ export function MoviesList({ movies, total, generos, anios }: Props) {
             <button
               onClick={() => goToPage(page + 1)}
               disabled={page >= pageCount}
-              aria-label="Página siguiente"
+              aria-label={t("diario.paginaSiguiente")}
               className="tap-target rounded-[6px] border border-(--border) text-text-mid hover:text-text disabled:opacity-30 disabled:cursor-default transition-colors"
             >
               <ChevronRight size={16} aria-hidden="true" />
@@ -483,13 +479,13 @@ function ListView({ movies, marathonDays }: { movies: MovieItem[]; marathonDays:
         <thead>
           <tr className="border-b border-(--border) bg-(--surface)">
             <th className="w-10" />
-            <th className="px-3 py-2.5 text-left text-[11px] uppercase tracking-widest text-text-faint font-medium">Película</th>
-            <th className="px-3 py-2.5 text-left text-[11px] uppercase tracking-widest text-text-faint font-medium w-16">Año</th>
-            <th className="px-3 py-2.5 text-left text-[11px] uppercase tracking-widest text-text-faint font-medium hidden md:table-cell">Director</th>
-            <th className="px-3 py-2.5 text-center text-[11px] uppercase tracking-widest text-text-faint font-medium w-20">Mi nota</th>
+            <th className="px-3 py-2.5 text-left text-[11px] uppercase tracking-widest text-text-faint font-medium">{t("diario.colPelicula")}</th>
+            <th className="px-3 py-2.5 text-left text-[11px] uppercase tracking-widest text-text-faint font-medium w-16">{t("diario.colAnio")}</th>
+            <th className="px-3 py-2.5 text-left text-[11px] uppercase tracking-widest text-text-faint font-medium hidden md:table-cell">{t("diario.colDirector")}</th>
+            <th className="px-3 py-2.5 text-center text-[11px] uppercase tracking-widest text-text-faint font-medium w-20">{t("diario.colMiNota")}</th>
             <th className="px-3 py-2.5 text-center text-[11px] uppercase tracking-widest text-text-faint font-medium w-20 hidden sm:table-cell">IMDb</th>
-            <th className="px-3 py-2.5 text-left text-[11px] uppercase tracking-widest text-text-faint font-medium w-32 hidden lg:table-cell">Vista el</th>
-            <th className="px-3 py-2.5 text-left text-[11px] uppercase tracking-widest text-text-faint font-medium w-28 hidden xl:table-cell">Estado</th>
+            <th className="px-3 py-2.5 text-left text-[11px] uppercase tracking-widest text-text-faint font-medium w-32 hidden lg:table-cell">{t("diario.colVistaEl")}</th>
+            <th className="px-3 py-2.5 text-left text-[11px] uppercase tracking-widest text-text-faint font-medium w-28 hidden xl:table-cell">{t("diario.colEstado")}</th>
           </tr>
         </thead>
         <tbody className="divide-y divide-(--border)">
@@ -577,7 +573,7 @@ function MarathonChip({ movie, days }: { movie: MovieItem; days: Map<string, num
 }
 
 function MarathonBadge({ count }: { count: number }) {
-  const label = count === 2 ? "Doble sesión" : count === 3 ? "Triple sesión" : `Maratón ×${count}`;
+  const label = count === 2 ? t("diario.dobleSesion") : count === 3 ? t("diario.tripleSesion") : `Maratón ×${count}`;
   return (
     <span
       title={`${count} películas vistas el mismo día`}

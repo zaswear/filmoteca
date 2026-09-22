@@ -6,11 +6,13 @@ import { parseMovie } from "@/lib/types";
 import { WatchlistList } from "@/components/movies/watchlist-list";
 import { BackLink } from "@/components/ui/back-link";
 
+import { DATE_LOCALE } from "@/lib/i18n";
+import { t } from "@/lib/i18n";
 export const dynamic = "force-dynamic";
-export const metadata = { title: "Pendientes" };
+export const metadata = { title: t("pend.titulo") };
 
 const fmtRelease = (d: Date) =>
-  d.toLocaleDateString("es-ES", { day: "numeric", month: "long", year: "numeric" });
+  d.toLocaleDateString(DATE_LOCALE, { day: "numeric", month: "long", year: "numeric" });
 
 export default async function WatchlistPage() {
   // Sin `select` venía también la sinopsis de cada pendiente: 433 KB de HTML
@@ -49,27 +51,21 @@ export default async function WatchlistPage() {
           <div className="mb-3">
             <BackLink />
           </div>
-          <h1 className="font-display font-semibold text-[38px] italic leading-none text-text">
-            Lista de pendientes
-          </h1>
-          <p className="text-xs text-text-faint font-mono mt-2">
-            Películas marcadas para ver en el futuro
-          </p>
+          <h1 className="font-display font-semibold text-[38px] italic leading-none text-text">{t("pend.encabezado")}</h1>
+          <p className="text-xs text-text-faint font-mono mt-2">{t("pend.subtitulo")}</p>
         </div>
         <Link
           href="/peliculas/nueva"
           className="flex items-center gap-1.5 px-4 py-2 bg-(--accent) hover:bg-(--accent-hover) text-bg text-sm font-medium rounded-[6px] transition-colors"
         >
-          <Plus size={14} /> Nueva película
-        </Link>
+          <Plus size={14} />{t("pend.nueva")}</Link>
       </div>
 
       {/* Próximamente: estrenos aún no disponibles */}
       {upcoming.length > 0 && (
         <section className="space-y-3">
           <h2 className="flex items-center gap-2 font-display font-semibold text-[22px] italic text-text">
-            <CalendarClock size={18} className="text-(--accent)" aria-hidden="true" /> Próximamente
-          </h2>
+            <CalendarClock size={18} className="text-(--accent)" aria-hidden="true" />{t("pend.proximamente")}</h2>
           <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {upcoming.map((m) => (
               <li key={m.id}>

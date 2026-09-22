@@ -6,6 +6,7 @@ import { X, Download, Loader2, Image as ImageIcon } from "lucide-react";
 import { useDialog } from "@/lib/use-dialog";
 
 import { APP_NAME, APP_TAGLINE } from "@/lib/branding";
+import { t } from "@/lib/i18n";
 interface PostcardModalProps {
   isOpen: boolean;
   onClose: () => void;
@@ -50,14 +51,14 @@ export function PostcardModal({ isOpen, onClose, movie }: PostcardModalProps) {
 
     const canvas = canvasRef.current;
     if (!canvas) {
-      setError("Error interno del lienzo");
+      setError(t("postal.errorLienzo"));
       setExporting(false);
       return;
     }
 
     const ctx = canvas.getContext("2d");
     if (!ctx) {
-      setError("No se pudo obtener el contexto del lienzo");
+      setError(t("postal.errorContexto"));
       setExporting(false);
       return;
     }
@@ -89,7 +90,7 @@ export function PostcardModal({ isOpen, onClose, movie }: PostcardModalProps) {
         
         await new Promise<void>((resolve, reject) => {
           img.onload = () => resolve();
-          img.onerror = () => reject(new Error("No se pudo cargar el póster por CORS o red"));
+          img.onerror = () => reject(new Error(t("postal.errorPoster")));
           img.src = movie.posterUrl!;
         });
 
@@ -115,7 +116,7 @@ export function PostcardModal({ isOpen, onClose, movie }: PostcardModalProps) {
         ctx.fillStyle = "rgba(0, 0, 0, 0.4)";
         ctx.font = "italic 24px Georgia, serif";
         ctx.textAlign = "center";
-        ctx.fillText("Sin póster", 250, 370);
+        ctx.fillText(t("form.sinPoster"), 250, 370);
       }
 
       // 3. Pintar información textual a la derecha
@@ -155,7 +156,7 @@ export function PostcardModal({ isOpen, onClose, movie }: PostcardModalProps) {
         wrapCanvasText(ctx, `"${cleanReview}"`, 540, reviewStartY, 580, 32, 11);
       } else {
         ctx.fillStyle = "rgba(0, 0, 0, 0.3)";
-        ctx.fillText("Sin crítica escrita...", 540, reviewStartY);
+        ctx.fillText(t("postal.sinCritica"), 540, reviewStartY);
       }
 
       // 6. Sello Postal Retro (arriba a la derecha)
@@ -174,7 +175,7 @@ export function PostcardModal({ isOpen, onClose, movie }: PostcardModalProps) {
       link.click();
     } catch (err) {
       console.error(err);
-      setError("No se pudo exportar la imagen. Verifica los permisos de CORS del póster.");
+      setError(t("postal.errorExportar"));
     } finally {
       setExporting(false);
     }
@@ -288,12 +289,11 @@ export function PostcardModal({ isOpen, onClose, movie }: PostcardModalProps) {
         {/* Cabecera */}
         <div className="flex items-center justify-between px-6 py-4 border-b border-(--border)">
           <h3 id="postcard-title" className="font-display font-medium text-lg italic text-text flex items-center gap-2">
-            <ImageIcon size={18} className="text-(--accent)" aria-hidden="true" /> Exportar Postal Coleccionable
-          </h3>
+            <ImageIcon size={18} className="text-(--accent)" aria-hidden="true" />{t("postal.exportar")}</h3>
           <button
             type="button"
             onClick={onClose}
-            aria-label="Cerrar"
+            aria-label={t("comun.cerrar")}
             className="tap-target -mr-2 rounded text-text-faint hover:text-text transition-colors"
           >
             <X size={20} aria-hidden="true" />
@@ -303,7 +303,7 @@ export function PostcardModal({ isOpen, onClose, movie }: PostcardModalProps) {
         {/* Vista Previa Scrollable */}
         <div className="flex-1 overflow-y-auto p-6 flex flex-col items-center justify-center bg-bg/50">
           <p className="text-xs text-text-faint font-mono mb-4 text-center">
-            VISTA PREVIA DE LA POSTAL DE ALTA RESOLUCIÓN (1200x800)
+            {t("postal.vistaPrevia")}
           </p>
 
           {/* Postal Mockup HTML */}
@@ -323,9 +323,7 @@ export function PostcardModal({ isOpen, onClose, movie }: PostcardModalProps) {
                   <NextImage src={movie.posterUrl} alt={movie.title} width={400} height={600} sizes="(max-width: 640px) 90vw, 400px" className="w-full h-full object-cover" />
                 </div>
               ) : (
-                <div className="w-full aspect-2/3 bg-black/5 border border-black/10 rounded flex items-center justify-center text-xs italic text-black/40">
-                  Sin póster
-                </div>
+                <div className="w-full aspect-2/3 bg-black/5 border border-black/10 rounded flex items-center justify-center text-xs italic text-black/40">{t("form.sinPoster")}</div>
               )}
             </div>
 
@@ -349,12 +347,12 @@ export function PostcardModal({ isOpen, onClose, movie }: PostcardModalProps) {
                 )}
 
                 <p className="font-serif italic text-xs text-black/80 leading-relaxed line-clamp-6 pr-10">
-                  {cleanReview ? `"${cleanReview}"` : "Sin crítica escrita..."}
+                  {cleanReview ? `"${cleanReview}"` : t("postal.sinCritica")}
                 </p>
               </div>
 
               <div className="text-[9px] font-serif italic text-black/40 border-t border-black/5 pt-2 mt-2">
-                Director&rsquo;s Cut — Mi diario de cine
+                {APP_NAME} — {APP_TAGLINE}
               </div>
             </div>
           </div>
@@ -367,9 +365,7 @@ export function PostcardModal({ isOpen, onClose, movie }: PostcardModalProps) {
           <button
             onClick={onClose}
             className="px-4 py-2 text-sm text-text-mid hover:text-text rounded-[6px] hover:bg-(--surface-hi) transition-colors"
-          >
-            Cerrar
-          </button>
+          >{t("comun.cerrar")}</button>
           <button
             onClick={handleDownload}
             disabled={exporting}

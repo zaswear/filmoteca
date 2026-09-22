@@ -3,8 +3,9 @@ import path from "path";
 import { db } from "@/lib/db";
 import { SugerenciasList } from "@/components/movies/sugerencias-list";
 
+import { t } from "@/lib/i18n";
 export const dynamic = "force-dynamic";
-export const metadata = { title: "Sugerencias de Películas" };
+export const metadata = { title: t("sugPagina.titulo") };
 
 export default async function SugerenciasPage() {
   // 1. Obtener todas las películas ya registradas en la DB (tanto vistas como pendientes)

@@ -4,6 +4,9 @@ import { MOVIE_STATUS_LABELS, WATCH_FORMAT_LABELS, type MovieParsed } from "@/li
 import { PosterTilt } from "@/components/movies/poster-tilt";
 import { TicketCode } from "@/components/ui/ticket-code";
 
+import { DATE_LOCALE } from "@/lib/i18n";
+import { t } from "@/lib/i18n";
+import { APP_NAME, APP_TAGLINE } from "@/lib/branding";
 /**
  * La cabecera de la ficha es una entrada de cine: mismo motivo que la marca
  * (logo «full»). El cuerpo lleva los datos impresos como campos de la
@@ -49,7 +52,7 @@ export function MovieTicket({ movie, id }: { movie: MovieParsed; id: number }) {
           <div className="flex-1 min-w-0 px-5 pt-4 pb-5 sm:px-7 sm:pt-5 sm:pb-7">
             {/* Microimpresión de archivo, como la parte superior de un ticket */}
             <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-text-faint pb-2.5 mb-4 border-b border-(--border) flex flex-wrap items-baseline justify-between gap-x-3 gap-y-0.5">
-              <span>Director&rsquo;s Cut · Diario cinematográfico</span>
+              <span>{APP_NAME} · {APP_TAGLINE}</span>
               <span>Entrada nº {String(id).padStart(4, "0")}</span>
             </p>
 
@@ -75,7 +78,7 @@ export function MovieTicket({ movie, id }: { movie: MovieParsed; id: number }) {
               </p>
             )}
             {!movie.year && !movie.durationMin && movie.genres.length === 0 && (
-              <p className="font-mono text-[11px] text-text-faint mb-1.5">Ficha sin datos de catalogación</p>
+              <p className="font-mono text-[11px] text-text-faint mb-1.5">{t("billete.sinDatos")}</p>
             )}
             {movie.directors.length > 0 && (
               <p className="font-mono text-[11px] uppercase tracking-[0.14em] text-text mb-5">
@@ -108,9 +111,7 @@ export function MovieTicket({ movie, id }: { movie: MovieParsed; id: number }) {
                 </span>
               )}
               {movie.hasImdbReview && (
-                <span className="text-[11px] px-2.5 py-1 rounded-sm bg-(--surface-hi) text-text-mid">
-                  Crítica en IMDb
-                </span>
+                <span className="text-[11px] px-2.5 py-1 rounded-sm bg-(--surface-hi) text-text-mid">{t("billete.criticaImdb")}</span>
               )}
             </div>
 
@@ -118,33 +119,33 @@ export function MovieTicket({ movie, id }: { movie: MovieParsed; id: number }) {
             <dl className="space-y-2.5 text-sm border-t border-dashed border-(--border) pt-5">
               {movie.cast.length > 0 && (
                 <div className="flex gap-3">
-                  <dt className="text-text-faint w-24 shrink-0 text-[11px] uppercase tracking-wider font-medium">Reparto</dt>
+                  <dt className="text-text-faint w-24 shrink-0 text-[11px] uppercase tracking-wider font-medium">{t("billete.reparto")}</dt>
                   <dd className="text-text-mid">{movie.cast.slice(0, 5).join(", ")}{movie.cast.length > 5 ? "…" : ""}</dd>
                 </div>
               )}
               {movie.country && (
                 <div className="flex gap-3">
-                  <dt className="text-text-faint w-24 shrink-0 text-[11px] uppercase tracking-wider font-medium">País</dt>
+                  <dt className="text-text-faint w-24 shrink-0 text-[11px] uppercase tracking-wider font-medium">{t("form.pais")}</dt>
                   <dd className="text-text-mid">{movie.country}</dd>
                 </div>
               )}
               {movie.language && (
                 <div className="flex gap-3">
-                  <dt className="text-text-faint w-24 shrink-0 text-[11px] uppercase tracking-wider font-medium">Idioma</dt>
+                  <dt className="text-text-faint w-24 shrink-0 text-[11px] uppercase tracking-wider font-medium">{t("form.idioma")}</dt>
                   <dd className="text-text-mid">{movie.language}</dd>
                 </div>
               )}
               {movie.rated && (
                 <div className="flex gap-3">
-                  <dt className="text-text-faint w-24 shrink-0 text-[11px] uppercase tracking-wider font-medium">Clasificación</dt>
+                  <dt className="text-text-faint w-24 shrink-0 text-[11px] uppercase tracking-wider font-medium">{t("form.clasificacion")}</dt>
                   <dd className="font-mono text-text-mid">{movie.rated}</dd>
                 </div>
               )}
               {movie.watchedAt && (
                 <div className="flex gap-3">
-                  <dt className="text-text-faint w-24 shrink-0 text-[11px] uppercase tracking-wider font-medium">Vista el</dt>
+                  <dt className="text-text-faint w-24 shrink-0 text-[11px] uppercase tracking-wider font-medium">{t("diario.colVistaEl")}</dt>
                   <dd className="font-mono text-text">
-                    {new Date(movie.watchedAt).toLocaleDateString("es-ES", { day: "numeric", month: "long", year: "numeric" })}
+                    {new Date(movie.watchedAt).toLocaleDateString(DATE_LOCALE, { day: "numeric", month: "long", year: "numeric" })}
                     {movie.watchFormat && (
                       <span className="ml-2.5 inline-flex items-center">
                         <span className={`watch-badge watch-badge-${movie.watchFormat}`}>
@@ -185,9 +186,7 @@ export function MovieTicket({ movie, id }: { movie: MovieParsed; id: number }) {
                   {movie.imdbId}
                 </p>
               )}
-              <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-(--accent) mt-1">
-                Admite una entrada
-              </p>
+              <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-(--accent) mt-1">{t("billete.admiteUna")}</p>
             </div>
           </div>
 

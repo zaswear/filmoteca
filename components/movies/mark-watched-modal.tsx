@@ -12,6 +12,7 @@ import { WATCH_FORMAT_LABELS, type MovieParsed } from "@/lib/types";
 import { useDialog } from "@/lib/use-dialog";
 import { anunciar } from "@/components/ui/live-region";
 
+import { t } from "@/lib/i18n";
 interface MarkWatchedModalProps {
   // El modal no enseña la sinopsis, así que no la pide: así la watchlist puede
   // traer sus 74 pendientes sin ella.
@@ -47,7 +48,7 @@ export function MarkWatchedModal({ movie, onClose, onSuccess }: MarkWatchedModal
   // podía tabular fuera del diálogo hacia la página de detrás.
   function close() {
     if (saving || stamped) return;
-    if (!draft.message || window.confirm("¿Cerrar? Tu borrador local se conserva si el dispositivo permite guardarlo.")) onClose();
+    if (!draft.message || window.confirm(t("marcar.confirmCerrar"))) onClose();
   }
   useEffect(() => () => clearTimeout(stampTimer.current), []);
   const dialogRef = useDialog<HTMLDivElement>(close);
@@ -76,7 +77,7 @@ export function MarkWatchedModal({ movie, onClose, onSuccess }: MarkWatchedModal
 
       if (!res.ok) {
         const data = await res.json();
-        throw new Error(data.error || "Error al actualizar la película");
+        throw new Error(data.error || t("marcar.errorActualizar"));
       }
 
       draft.saved();
@@ -85,7 +86,7 @@ export function MarkWatchedModal({ movie, onClose, onSuccess }: MarkWatchedModal
       stampTimer.current = setTimeout(onSuccess, 650);
     } catch (err) {
       console.error(err);
-      const mensaje = err instanceof Error ? err.message : "Error al guardar el visionado";
+      const mensaje = err instanceof Error ? err.message : t("marcar.errorVisionado");
       setError(mensaje);
       // assertive: es un error y el usuario está esperando el resultado de una
       // acción que acaba de lanzar; interrumpir aquí es lo correcto.
@@ -112,20 +113,18 @@ export function MarkWatchedModal({ movie, onClose, onSuccess }: MarkWatchedModal
         {stamped && (
           <div className="absolute inset-0 z-20 flex flex-col items-center justify-center gap-3 bg-(--surface)/85">
             <span className="animate-stamp flex items-center gap-2.5 border-[3px] border-(--accent) rounded-xl bg-(--surface-hi) px-7 py-3.5 font-display text-2xl tracking-wide text-(--accent) uppercase">
-              <Check size={26} aria-hidden="true" /> Vista
-            </span>
+              <Check size={26} aria-hidden="true" />{t("marcar.vista")}</span>
             <span className="font-mono text-xs text-text-mid uppercase tracking-widest">{movie.title}</span>
           </div>
         )}
         {/* Cabecera */}
         <div className="flex items-center justify-between px-6 py-4 border-b border-(--border)">
           <h3 id="mark-watched-title" className="font-display font-medium text-lg italic text-text flex items-center gap-2">
-            <Film size={18} className="text-(--accent)" aria-hidden="true" /> Registrar visionado
-          </h3>
+            <Film size={18} className="text-(--accent)" aria-hidden="true" />{t("marcar.registrar")}</h3>
           <button
             type="button"
             onClick={close}
-            aria-label="Cerrar"
+            aria-label={t("comun.cerrar")}
             className="tap-target -mr-2 rounded text-text-faint hover:text-text transition-colors"
           >
             <X size={20} aria-hidden="true" />
@@ -152,16 +151,14 @@ export function MarkWatchedModal({ movie, onClose, onSuccess }: MarkWatchedModal
                 className="w-12 h-18 object-cover rounded shadow-md shrink-0"
               />
             ) : (
-              <div className="w-12 h-18 bg-bg flex items-center justify-center rounded text-[8px] italic text-text-faint border border-border">
-                Sin póster
-              </div>
+              <div className="w-12 h-18 bg-bg flex items-center justify-center rounded text-[8px] italic text-text-faint border border-border">{t("form.sinPoster")}</div>
             )}
             <div className="min-w-0 flex flex-col justify-center">
               <h4 className="font-display font-semibold italic text-base text-text leading-snug truncate">
                 {movie.title}
               </h4>
               <p className="text-xs text-text-faint font-mono mt-0.5">
-                {movie.year ? `${movie.year}` : "Año no registrado"}
+                {movie.year ? `${movie.year}` : t("marcar.sinAnio")}
                 {movie.durationMin ? ` · ${movie.durationMin} min` : ""}
               </p>
             </div>
@@ -174,8 +171,7 @@ export function MarkWatchedModal({ movie, onClose, onSuccess }: MarkWatchedModal
             {/* Puntuación */}
             <div>
               <label className="block text-[11px] uppercase tracking-widest text-text-faint mb-1.5 flex items-center gap-1.5">
-                <Star size={12} className="text-(--accent)" /> Mi puntuación
-              </label>
+                <Star size={12} className="text-(--accent)" />{t("form.miPuntuacion")}</label>
               <RatingInput value={myRating} onChange={(value) => setField("myRating", value)} />
             </div>
 
@@ -183,8 +179,7 @@ export function MarkWatchedModal({ movie, onClose, onSuccess }: MarkWatchedModal
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
                 <label htmlFor="mw-date" className="block text-[11px] uppercase tracking-widest text-text-faint mb-1.5 flex items-center gap-1.5">
-                  <Calendar size={12} aria-hidden="true" /> Fecha de visionado
-                </label>
+                  <Calendar size={12} aria-hidden="true" />{t("form.fechaVisionado")}</label>
                 <input
                   id="mw-date"
                   type="date"
@@ -197,8 +192,7 @@ export function MarkWatchedModal({ movie, onClose, onSuccess }: MarkWatchedModal
 
               <div>
                 <label htmlFor="mw-format" className="block text-[11px] uppercase tracking-widest text-text-faint mb-1.5 flex items-center gap-1.5">
-                  <Film size={12} aria-hidden="true" /> Formato
-                </label>
+                  <Film size={12} aria-hidden="true" />{t("form.formato")}</label>
                 <select
                   id="mw-format"
                   value={watchFormat}
@@ -218,14 +212,13 @@ export function MarkWatchedModal({ movie, onClose, onSuccess }: MarkWatchedModal
             {/* Notas libres */}
             <div>
               <label htmlFor="mw-notes" className="block text-[11px] uppercase tracking-widest text-text-faint mb-1.5 flex items-center gap-1.5">
-                <BookOpen size={12} aria-hidden="true" /> Notas privadas
-              </label>
+                <BookOpen size={12} aria-hidden="true" />{t("marcar.notasPrivadas")}</label>
               <textarea
                 id="mw-notes"
                 value={notes}
                 onChange={(e) => setField("notes", e.target.value)}
                 rows={2}
-                placeholder="Notas libres, dónde la viste, acompañantes..."
+                placeholder={t("marcar.notasAyuda")}
                 className="w-full bg-(--surface) border border-(--border) rounded-[6px] px-3 py-2 text-[15px] text-text placeholder:text-text-faint focus:outline-hidden focus:border-(--border-focus) transition-colors resize-none"
               />
             </div>
@@ -239,9 +232,7 @@ export function MarkWatchedModal({ movie, onClose, onSuccess }: MarkWatchedModal
               disabled={saving || !draft.ready || !!draft.pending}
               onClick={close}
               className="px-4 py-2 text-sm text-text-mid hover:text-text rounded-[6px] hover:bg-(--surface-hi) transition-colors"
-            >
-              Cancelar
-            </button>
+            >{t("comun.cancelar")}</button>
             <button
               type="submit"
               disabled={saving || !draft.ready || !!draft.pending}
@@ -249,8 +240,7 @@ export function MarkWatchedModal({ movie, onClose, onSuccess }: MarkWatchedModal
             >
               {saving ? (
                 <>
-                  <Loader2 size={14} className="animate-spin" /> Guardando...
-                </>
+                  <Loader2 size={14} className="animate-spin" />{t("comun.guardando")}</>
               ) : (
                 "Marcar como Vista"
               )}

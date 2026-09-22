@@ -21,6 +21,7 @@ import {
 import { WATCH_FORMAT_LABELS, MOVIE_STATUS_LABELS } from "@/lib/types";
 import type { Image as DBImage } from "@/lib/generated/prisma";
 
+import { t } from "@/lib/i18n";
 interface Props {
   mode:        "create" | "edit";
   movieId?:    number;
@@ -114,20 +115,20 @@ export function MovieForm({ mode, movieId, initial = {}, initialImages = [], suc
         if (imdbIdParam && /^tt\d+$/.test(imdbIdParam)) {
           const res = await fetch(`/api/omdb/${imdbIdParam}`);
           const data = await res.json();
-          if (!res.ok) throw new Error(data.error || "Error cargando OMDb");
+          if (!res.ok) throw new Error(data.error || t("form.errorOmdb"));
           parsed = data.parsed;
         } else if (tmdbIdParam) {
           const res = await fetch(`/api/tmdb/${tmdbIdParam}`);
           const data = await res.json();
-          if (!res.ok) throw new Error(data.error || "Error cargando TMDB");
+          if (!res.ok) throw new Error(data.error || t("form.errorTmdb"));
           parsed = data.parsed;
         }
         if (parsed) {
           setForm((prev) => ({ ...prev, ...parsed }));
         }
       } catch (err) {
-        console.error("Error al pre-cargar película:", err);
-        setError("No se pudo pre-cargar la información de la película.");
+        console.error("Failed to preload film:", err);
+        setError(t("form.errorPrecarga"));
       } finally {
         setSaving(false);
       }
@@ -148,7 +149,7 @@ export function MovieForm({ mode, movieId, initial = {}, initialImages = [], suc
     // `review` sigue en el estado y se sigue enviando aunque ya no haya caja
     // para escribirlo: un borrador antiguo con crítica y sin título se
     // perdería sin avisar al elegir otra película.
-    if ((form.title || form.review || form.notes) && !window.confirm("¿Cambiar de película? Se sustituirá el formulario y su borrador local.")) return;
+    if ((form.title || form.review || form.notes) && !window.confirm(t("form.confirmCambiar"))) return;
     const local = new Date();
     local.setMinutes(local.getMinutes() - local.getTimezoneOffset());
     setForm({ ...EMPTY, status: "vista", watchedAt: local.toISOString().slice(0, 10), ...data });
@@ -183,7 +184,7 @@ export function MovieForm({ mode, movieId, initial = {}, initialImages = [], suc
         setDuplicateId(data.id ?? null);
         return;
       }
-      if (!res.ok) throw new Error(data.error?.formErrors?.[0] ?? data.error ?? "Error al guardar");
+      if (!res.ok) throw new Error(data.error?.formErrors?.[0] ?? data.error ?? t("form.errorGuardar"));
 
       // Clear auto-saved draft on success
       draft.saved();
@@ -192,7 +193,7 @@ export function MovieForm({ mode, movieId, initial = {}, initialImages = [], suc
       router.push(successUrl ?? defaultUrl);
       router.refresh();
     } catch (err) {
-      setError(err instanceof Error ? err.message : "Error desconocido");
+      setError(err instanceof Error ? err.message : t("form.errorDesconocido"));
     } finally {
       setSaving(false);
     }
@@ -216,19 +217,19 @@ export function MovieForm({ mode, movieId, initial = {}, initialImages = [], suc
       <Reel i={0}>
         <header className="mb-8">
           <h1 className="font-display font-semibold italic text-[34px] sm:text-[42px] leading-[1.05] text-text text-balance">
-            {mode === "create" ? "Añadir película" : (form.title || "Editar película")}
+            {mode === "create" ? t("form.anadir") : (form.title || t("form.editar"))}
           </h1>
         </header>
       </Reel>
 
-      {draft.pending && <p className="text-text-mid mb-2">Borrador de «{draft.pending.title || "Película nueva"}»</p>}
+      {draft.pending && <p className="text-text-mid mb-2">Borrador de «{draft.pending.title || t("form.nueva")}»</p>}
       <DraftNotice pending={!!draft.pending} message={draft.message} restore={draft.restore} discard={draft.discard} />
       <fieldset inert={!draft.ready || !!draft.pending || saving || searching} disabled={!draft.ready || !!draft.pending || saving || searching}>
       {/* ── Búsqueda OMDb (solo create) ── */}
       {mode === "create" && (
         <Reel i={1} className="mb-10">
           <details open={!form.imdbId}>
-            <summary className="min-h-11 cursor-pointer text-accent">{form.imdbId ? "Cambiar película" : "Buscar película"}</summary>
+            <summary className="min-h-11 cursor-pointer text-accent">{form.imdbId ? t("form.cambiar") : t("form.buscar")}</summary>
             <OmdbSearch onSelect={onOmdbSelect} onLoadingChange={setSearching} />
           </details>
         </Reel>
@@ -250,7 +251,7 @@ export function MovieForm({ mode, movieId, initial = {}, initialImages = [], suc
             ) : (
               <div className="w-full h-full flex flex-col items-center justify-center gap-2 text-text-faint">
                 <Film size={26} strokeWidth={1.4} />
-                <span className="text-sm">Sin póster</span>
+                <span className="text-sm">{t("form.sinPoster")}</span>
               </div>
             )}
           </div>
@@ -266,12 +267,12 @@ export function MovieForm({ mode, movieId, initial = {}, initialImages = [], suc
                 {form.posterUrl && <Image src={form.posterUrl} alt="" width={64} height={96} className="rounded object-cover md:hidden" />}
                 <p className="font-display text-2xl">{form.title}{form.year ? ` (${form.year})` : ""}</p>
               </div>}
-              <SectionTitle>Mi registro</SectionTitle>
+              <SectionTitle>{t("form.miRegistro")}</SectionTitle>
             </div>
             <div className="space-y-5">
 
               <div className="grid grid-cols-2 gap-3">
-                <Field label="Estado">
+                <Field label={t("form.estado")}>
                   <Select
                     value={form.status}
                     onChange={(e) => set("status", e.target.value as MovieCreateInput["status"])}
@@ -281,7 +282,7 @@ export function MovieForm({ mode, movieId, initial = {}, initialImages = [], suc
                     ))}
                   </Select>
                 </Field>
-                <Field label="Mi puntuación">
+                <Field label={t("form.miPuntuacion")}>
                   <RatingInput
                     value={form.myRating}
                     onChange={(v) => set("myRating", v)}
@@ -290,7 +291,7 @@ export function MovieForm({ mode, movieId, initial = {}, initialImages = [], suc
               </div>
 
               <div className="grid grid-cols-2 gap-3">
-                <Field label="Fecha de visionado">
+                <Field label={t("form.fechaVisionado")}>
                   <Input
                     type="date"
                     value={form.watchedAt ? form.watchedAt.slice(0, 10) : ""}
@@ -300,12 +301,12 @@ export function MovieForm({ mode, movieId, initial = {}, initialImages = [], suc
                     }}
                   />
                 </Field>
-                <Field label="Formato">
+                <Field label={t("form.formato")}>
                   <Select
                     value={form.watchFormat ?? ""}
                     onChange={(e) => set("watchFormat", (e.target.value || null) as MovieCreateInput["watchFormat"])}
                   >
-                    <option value="">— Sin especificar —</option>
+                    <option value="">{t("comun.sinEspecificar")}</option>
                     {WATCH_FORMATS.map((f) => (
                       <option key={f} value={f}>{WATCH_FORMAT_LABELS[f]}</option>
                     ))}
@@ -324,7 +325,7 @@ export function MovieForm({ mode, movieId, initial = {}, initialImages = [], suc
                   onChange={(e) => set("hasImdbReview", e.target.checked)}
                   className="accent-(--accent) w-4 h-4"
                 />
-                <span className="text-sm text-text-mid">Tengo crítica publicada en IMDb</span>
+                <span className="text-sm text-text-mid">{t("form.criticaImdb")}</span>
               </label>
 
               {/* El editor enriquecido (Tiptap, cuatro dependencias y la caja
@@ -332,20 +333,20 @@ export function MovieForm({ mode, movieId, initial = {}, initialImages = [], suc
                   Lo que de verdad se escribe son dos frases, así que la caja
                   es un textarea. Las críticas antiguas siguen en la base y se
                   siguen mostrando en la ficha. */}
-              <Field label="Nota rápida">
+              <Field label={t("form.notaRapida")}>
                 <Textarea
                   value={form.notes ?? ""}
                   onChange={(e) => set("notes", e.target.value || null)}
                   rows={4}
-                  placeholder="Dos frases bastan: qué te pareció, con quién la viste, qué te recordó…"
+                  placeholder={t("form.notaRapidaAyuda")}
                 />
               </Field>
 
-              <Field label="Sagas / Colecciones">
+              <Field label={t("form.sagas")}>
                 <Input
                   value={strTags(form.collections ?? [])}
                   onChange={(e) => set("collections", parseTags(e.target.value))}
-                  placeholder="Saga de El Padrino, Trilogía de Batman de Nolan…"
+                  placeholder={t("form.sagasAyuda")}
                 />
               </Field>
 
@@ -353,10 +354,10 @@ export function MovieForm({ mode, movieId, initial = {}, initialImages = [], suc
           </Reel>
 
           <details className="space-y-5" open={!form.imdbId}>
-            <summary className="min-h-11 cursor-pointer text-accent">Ficha técnica · revisar metadatos</summary>
+            <summary className="min-h-11 cursor-pointer text-accent">{t("form.fichaTecnica")}</summary>
             <div className="space-y-5">
 
-          <Field label="URL del póster">
+          <Field label={t("form.urlPoster")}>
             <Input
               value={form.posterUrl ?? ""}
               onChange={(e) => set("posterUrl", e.target.value || null)}
@@ -365,7 +366,7 @@ export function MovieForm({ mode, movieId, initial = {}, initialImages = [], suc
             />
           </Field>
 
-              <Field label="IMDb ID *">
+              <Field label={t("form.imdbId")}>
                 <Input
                   value={form.imdbId}
                   onChange={(e) => set("imdbId", e.target.value)}
@@ -375,17 +376,17 @@ export function MovieForm({ mode, movieId, initial = {}, initialImages = [], suc
                 />
               </Field>
 
-              <Field label="Título *">
+              <Field label={t("form.titulo")}>
                 <input
                   className={cn(fieldBase, "text-[22px] font-display italic")}
                   value={form.title}
                   onChange={(e) => set("title", e.target.value)}
-                  placeholder="Título de la película"
+                  placeholder={t("form.tituloAyuda")}
                   required
                 />
               </Field>
 
-              <Field label="Título original">
+              <Field label={t("form.tituloOriginal")}>
                 <Input
                   value={form.originalTitle ?? ""}
                   onChange={(e) => set("originalTitle", e.target.value || null)}
@@ -394,7 +395,7 @@ export function MovieForm({ mode, movieId, initial = {}, initialImages = [], suc
               </Field>
 
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                <Field label="Año">
+                <Field label={t("form.anio")}>
                   <Input
                     type="number" min={1880} max={2100}
                     value={form.year ?? ""}
@@ -403,7 +404,7 @@ export function MovieForm({ mode, movieId, initial = {}, initialImages = [], suc
                     className="font-mono"
                   />
                 </Field>
-                <Field label="Duración (min)">
+                <Field label={t("form.duracion")}>
                   <Input
                     type="number" min={1}
                     value={form.durationMin ?? ""}
@@ -412,48 +413,48 @@ export function MovieForm({ mode, movieId, initial = {}, initialImages = [], suc
                     className="font-mono"
                   />
                 </Field>
-                <Field label="Clasificación">
+                <Field label={t("form.clasificacion")}>
                   <Input
                     value={form.rated ?? ""}
                     onChange={(e) => set("rated", e.target.value || null)}
-                    placeholder="R, PG-13…"
+                    placeholder={t("form.clasificacionAyuda")}
                   />
                 </Field>
               </div>
 
-              <Field label="Director(es)">
+              <Field label={t("form.directores")}>
                 <Input
                   value={strTags(form.directors)}
                   onChange={(e) => set("directors", parseTags(e.target.value))}
-                  placeholder="Denis Villeneuve, Christopher Nolan…"
+                  placeholder={t("form.directoresAyuda")}
                 />
               </Field>
 
-              <Field label="Reparto (primeros 5)">
+              <Field label={t("form.reparto")}>
                 <Input
                   value={strTags(form.cast)}
                   onChange={(e) => set("cast", parseTags(e.target.value))}
-                  placeholder="Actor 1, Actor 2…"
+                  placeholder={t("form.repartoAyuda")}
                 />
               </Field>
 
-              <Field label="Géneros">
+              <Field label={t("form.generos")}>
                 <Input
                   value={strTags(form.genres)}
                   onChange={(e) => set("genres", parseTags(e.target.value))}
-                  placeholder="Drama, Ciencia ficción…"
+                  placeholder={t("form.generosAyuda")}
                 />
               </Field>
 
               <div className="grid grid-cols-2 gap-3">
-                <Field label="País">
+                <Field label={t("form.pais")}>
                   <Input
                     value={form.country ?? ""}
                     onChange={(e) => set("country", e.target.value || null)}
                     placeholder="United States"
                   />
                 </Field>
-                <Field label="Idioma">
+                <Field label={t("form.idioma")}>
                   <Input
                     value={form.language ?? ""}
                     onChange={(e) => set("language", e.target.value || null)}
@@ -463,7 +464,7 @@ export function MovieForm({ mode, movieId, initial = {}, initialImages = [], suc
               </div>
 
               <div className="grid grid-cols-2 gap-3">
-                <Field label="Puntuación IMDb">
+                <Field label={t("form.puntuacionImdb")}>
                   <Input
                     type="number" min={0} max={10} step={0.1}
                     value={form.imdbRating ?? ""}
@@ -472,7 +473,7 @@ export function MovieForm({ mode, movieId, initial = {}, initialImages = [], suc
                     className="font-mono"
                   />
                 </Field>
-                <Field label="Votos IMDb">
+                <Field label={t("form.votosImdb")}>
                   <Input
                     type="number" min={0}
                     value={form.imdbVotes ?? ""}
@@ -483,12 +484,12 @@ export function MovieForm({ mode, movieId, initial = {}, initialImages = [], suc
                 </Field>
               </div>
 
-              <Field label="Sinopsis">
+              <Field label={t("form.sinopsis")}>
                 <Textarea
                   value={form.plot ?? ""}
                   onChange={(e) => set("plot", e.target.value || null)}
                   rows={4}
-                  placeholder="Sinopsis oficial…"
+                  placeholder={t("form.sinopsisAyuda")}
                 />
               </Field>
             </div>
@@ -497,7 +498,7 @@ export function MovieForm({ mode, movieId, initial = {}, initialImages = [], suc
           {/* ── Imágenes (solo en modo edición) ── */}
           {mode === "edit" && movieId && (
             <Reel i={5}>
-              <SectionTitle>Galería de fotos</SectionTitle>
+              <SectionTitle>{t("form.galeria")}</SectionTitle>
               <ImageGallery
                 images={images.filter((i) => i.type === "gallery")}
                 onDelete={(id) => setImages((prev) => prev.filter((i) => i.id !== id))}
@@ -510,7 +511,7 @@ export function MovieForm({ mode, movieId, initial = {}, initialImages = [], suc
               />
 
               <div className="mt-10">
-                <SectionTitle>Pósteres alternativos</SectionTitle>
+                <SectionTitle>{t("form.postersAlt")}</SectionTitle>
                 <ImageGallery
                   images={images.filter((i) => i.type === "poster_alt")}
                   onDelete={(id) => setImages((prev) => prev.filter((i) => i.id !== id))}
@@ -533,22 +534,19 @@ export function MovieForm({ mode, movieId, initial = {}, initialImages = [], suc
         <div className="mt-8 flex items-start gap-3 p-4 rounded-md border border-(--warning) bg-[oklch(75%_0.12_85/10%)]">
           <AlertTriangle size={18} className="text-(--warning) shrink-0 mt-0.5" />
           <div className="flex-1 min-w-0">
-            <p className="text-sm font-medium text-text">Esta película ya está en tu colección.</p>
+            <p className="text-sm font-medium text-text">{t("form.yaEnColeccion")}</p>
             <div className="flex items-center gap-4 mt-2 flex-wrap">
               <a
                 href={`/peliculas/${duplicateId}`}
                 className="inline-flex items-center gap-1.5 text-sm text-accent hover:text-accent-hover transition-colors"
-              >
-                Ver ficha existente <ArrowRight size={13} />
+              >{t("form.verFicha")}<ArrowRight size={13} />
               </a>
               {successUrl && (
                 <button
                   type="button"
                   onClick={() => router.push(successUrl)}
                   className="text-sm text-text-faint hover:text-text transition-colors"
-                >
-                  Continuar sin guardar
-                </button>
+                >{t("form.continuarSinGuardar")}</button>
               )}
             </div>
           </div>
@@ -564,18 +562,16 @@ export function MovieForm({ mode, movieId, initial = {}, initialImages = [], suc
           <div className="flex items-center gap-3 shrink-0">
             <button
               type="button"
-              onClick={() => { if (window.confirm("¿Salir de la edición? El borrador local se conserva si el dispositivo permite guardarlo.")) router.back(); }}
+              onClick={() => { if (window.confirm(t("form.confirmSalir"))) router.back(); }}
               className="px-4 py-2 text-sm text-text-mid border border-(--border) rounded-md hover:text-text hover:border-(--border-hi) transition-colors"
-            >
-              Cancelar
-            </button>
+            >{t("comun.cancelar")}</button>
             <button
               type="submit"
               disabled={saving || searching || !draft.ready || !!draft.pending}
               className="inline-flex items-center justify-center gap-2 px-5 py-2.5 sm:px-8 bg-accent hover:bg-accent-hover text-bg text-sm font-semibold rounded-md transition-[background-color,transform] duration-200 active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none sm:min-w-[180px]"
             >
               {saving && <Loader2 size={14} className="animate-spin" />}
-              {mode === "create" ? "Guardar película" : "Guardar cambios"}
+              {mode === "create" ? t("form.guardarPelicula") : t("form.guardarCambios")}
             </button>
           </div>
         </div>

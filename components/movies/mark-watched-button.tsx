@@ -6,6 +6,7 @@ import { Check } from "lucide-react";
 import { MarkWatchedModal } from "./mark-watched-modal";
 import type { MovieParsed } from "@/lib/types";
 
+import { t } from "@/lib/i18n";
 export function MarkWatchedButton({ movie }: { movie: MovieParsed }) {
   const router = useRouter();
   const [open, setOpen] = useState(false);
@@ -14,12 +15,12 @@ export function MarkWatchedButton({ movie }: { movie: MovieParsed }) {
     <>
       <button
         onClick={() => setOpen(true)}
-        title="Marcar como vista"
+        title={t("marcar.boton")}
         className="tap-target gap-1.5 px-2 sm:px-3 text-sm text-text-mid hover:text-text hover:bg-(--surface-hi) transition-colors"
       >
         <Check size={17} aria-hidden="true" />
-        <span className="hidden sm:inline">Marcar como vista</span>
-        <span className="sr-only sm:hidden">Marcar como vista</span>
+        <span className="hidden sm:inline">{t("marcar.boton")}</span>
+        <span className="sr-only sm:hidden">{t("marcar.boton")}</span>
       </button>
       {open && (
         <MarkWatchedModal

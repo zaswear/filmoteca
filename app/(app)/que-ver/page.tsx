@@ -4,8 +4,9 @@ import { buildTasteProfile } from "@/lib/taste-profile";
 import { QueVerClient } from "./que-ver-client";
 import { BackLink } from "@/components/ui/back-link";
 
+import { t } from "@/lib/i18n";
 export const dynamic = "force-dynamic";
-export const metadata = { title: "¿Qué veo?" };
+export const metadata = { title: t("queVer.titulo") };
 
 export default async function QueVerPage() {
   // select ligero: el cliente solo usa estos campos, no la sinopsis/crítica.

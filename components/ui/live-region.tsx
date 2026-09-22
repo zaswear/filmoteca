@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
  *
  * La app hace bastante trabajo asíncrono —guardar una ficha, importar un CSV,
  * marcar como vista, pedir sugerencias— y hasta ahora el resultado solo se
- * comunicaba visualmente. Para quien usa lector de pantalla, pulsar "Guardar"
+ * comunicaba visualmente. Para quien usa lector de pantalla, pulsar «Guardar»
  * y no oír nada es indistinguible de que el botón no haya funcionado.
  *
  * Va montada una sola vez en AppShell. Los componentes no la importan: llaman
@@ -15,8 +15,8 @@ import { useEffect, useState } from "react";
  * handler suelto puede anunciar sin necesidad de contexto ni de props.
  *
  *   import { anunciar } from "@/components/ui/live-region";
- *   anunciar("Película guardada");
- *   anunciar("Error al guardar", "assertive");
+ *   anunciar(t("live.guardada"));
+ *   anunciar(t("form.errorGuardar"), "assertive");
  */
 const EVENTO = "dc-announce";
 

@@ -3,24 +3,26 @@ import Image from "next/image";
 import { ArrowRight, CalendarClock, Plus } from "lucide-react";
 import { db } from "@/lib/db";
 
+import { DATE_LOCALE, t } from "@/lib/i18n";
 export const dynamic = "force-dynamic";
-export const metadata = { title: "Inicio" };
+export const metadata = { title: t("inicio.titulo") };
 
 const DIA = 24 * 60 * 60 * 1000;
 
 function haceCuanto(fecha: Date | null): string {
-  if (!fecha) return "sin fecha";
+  if (!fecha) return t("inicio.sinFecha");
   const dias = Math.round((Date.now() - fecha.getTime()) / DIA);
-  if (dias <= 0) return "hoy";
-  if (dias === 1) return "ayer";
-  if (dias < 30) return `hace ${dias} días`;
-  return fecha.toLocaleDateString("es-ES", { day: "numeric", month: "long" });
+  if (dias <= 0) return t("inicio.hoy");
+  if (dias === 1) return t("inicio.ayer");
+  if (dias < 30) return t("inicio.haceDias", { n: dias });
+  return fecha.toLocaleDateString(DATE_LOCALE, { day: "numeric", month: "long" });
 }
 
-const nota = (n: number) => n.toString().replace(".", ",");
+// El separador decimal lo pone el idioma: 7,5 en español, 7.5 en inglés.
+const nota = (n: number) => n.toLocaleString(DATE_LOCALE);
 
 const fmtEstreno = (d: Date) =>
-  d.toLocaleDateString("es-ES", { day: "numeric", month: "long" });
+  d.toLocaleDateString(DATE_LOCALE, { day: "numeric", month: "long" });
 
 /**
  * El diario no tenía inicio: `/` redirigía al listado de 490 películas. Esta
@@ -46,7 +48,7 @@ function Resumen({ cifras, className }: { cifras: { k: string; v: string }[]; cl
         href="/que-ver"
         className="flex items-center justify-between gap-4 min-h-[60px] px-5 bg-(--text) text-(--bg) hover:opacity-90 transition-opacity"
       >
-        <span className="font-display text-[17px]">No sé qué ver — elige por mí</span>
+        <span className="font-display text-[17px]">{t("inicio.eligePorMi")}</span>
         <ArrowRight size={21} aria-hidden="true" />
       </Link>
     </div>
@@ -90,10 +92,10 @@ export default async function InicioPage() {
 
   const media = conNota._avg.myRating;
   const cifras = [
-    { k: "Vistas", v: String(vistas) },
-    { k: "Nota media", v: media === null ? "—" : nota(Math.round(media * 10) / 10) },
-    { k: "Pendientes", v: String(totalPendientes) },
-    { k: "Descartadas", v: String(descartadas) },
+    { k: t("inicio.vistas"), v: String(vistas) },
+    { k: t("inicio.notaMedia"), v: media === null ? "—" : nota(Math.round(media * 10) / 10) },
+    { k: t("inicio.pendientes"), v: String(totalPendientes) },
+    { k: t("inicio.descartadas"), v: String(descartadas) },
   ];
 
   const director = (raw: string | null) => {
@@ -112,14 +114,14 @@ export default async function InicioPage() {
       {ultima ? (
         <section className="space-y-4">
           <h1 className="text-[11px] uppercase tracking-[0.14em] text-text-mid font-semibold">
-            Lo último que viste · {haceCuanto(ultima.watchedAt)}
+            {t("inicio.loUltimo")} · {haceCuanto(ultima.watchedAt)}
           </h1>
           <div className="flex flex-col sm:flex-row gap-6 sm:gap-10">
             <Link href={`/peliculas/${ultima.id}`} className="relative block w-[220px] sm:w-[300px] shrink-0">
               {ultima.posterUrl ? (
                 <Image
                   src={ultima.posterUrl}
-                  alt={`Cartel de ${ultima.title}`}
+                  alt={t("comun.cartelDe", { titulo: ultima.title })}
                   width={300}
                   height={450}
                   className="w-full h-auto object-cover"
@@ -158,12 +160,12 @@ export default async function InicioPage() {
         <section className="space-y-6">
           <div className="space-y-3">
             <h1 className="font-display text-[40px] sm:text-[52px] leading-[0.98] text-text">
-              Tu diario está en blanco
+              {t("inicio.vacioTitulo")}
             </h1>
             <p className="font-mono text-xl text-text-mid max-w-[52ch]">
               {vistas > 0
-                ? "Tienes películas vistas, pero ninguna con fecha de visionado, así que no hay una «última». Al registrar la fecha aparecerán aquí."
-                : "Registra la primera película que hayas visto y esta pantalla empezará a contarte por dónde vas."}
+                ? t("inicio.sinFechaTexto")
+                : t("inicio.vacioTexto")}
             </p>
           </div>
           <Resumen cifras={cifras} />
@@ -174,11 +176,11 @@ export default async function InicioPage() {
         <section className="space-y-4">
           <div className="flex items-baseline gap-4">
             <h2 className="text-[11px] uppercase tracking-[0.14em] text-text-mid font-semibold">
-              Esta semana
+              {t("inicio.estaSemana")}
             </h2>
             <span className="flex-1 h-px bg-(--border)" />
             <Link href="/watchlist" className="text-sm font-semibold text-accent">
-              Próximos estrenos
+              {t("inicio.proximosEstrenos")}
             </Link>
           </div>
           <ul className="flex gap-3 overflow-x-auto pb-1">
@@ -202,7 +204,7 @@ export default async function InicioPage() {
                       {m.releaseDate && (
                         <p className="mt-1 inline-flex items-center gap-1 rounded-full bg-(--accent-dim) px-2 py-0.5 font-mono text-[10px] text-(--accent)">
                           <CalendarClock size={11} aria-hidden="true" />
-                          {disponible ? "Ya disponible" : `Sale el ${fmtEstreno(m.releaseDate)}`}
+                          {disponible ? t("inicio.yaDisponible") : t("inicio.saleEl", { fecha: fmtEstreno(m.releaseDate) })}
                         </p>
                       )}
                     </div>
@@ -217,18 +219,18 @@ export default async function InicioPage() {
       <section className="space-y-4">
         <div className="flex items-baseline gap-4">
           <h2 className="text-[11px] uppercase tracking-[0.14em] text-text-mid font-semibold">
-            Esta noche puedes ver
+            {t("inicio.estaNoche")}
           </h2>
           <span className="flex-1 h-px bg-(--border)" />
           <Link href="/watchlist" className="text-sm font-semibold text-accent">
-            Las {totalPendientes} pendientes
+            {t("inicio.lasPendientes", { n: totalPendientes })}
           </Link>
         </div>
 
         {pendientes.length === 0 ? (
           <p className="text-text-mid">
-            No tienes pendientes disponibles.{" "}
-            <Link href="/descubrir/cartelera" className="text-accent underline">Busca algo en Descubrir.</Link>
+            {t("inicio.sinPendientes")}{" "}
+            <Link href="/descubrir/cartelera" className="text-accent underline">{t("inicio.buscaDescubrir")}</Link>
           </p>
         ) : (
           <ul className="grid grid-cols-2 lg:grid-cols-4 gap-5">
@@ -242,7 +244,7 @@ export default async function InicioPage() {
                     <span className="block overflow-hidden rounded-[4px] shadow-(--shadow-poster) transition-transform duration-200 ease-out group-hover:-translate-y-1 group-active:translate-y-0">
                       <Image
                         src={p.posterUrl}
-                        alt={`Cartel de ${p.title}`}
+                        alt={t("comun.cartelDe", { titulo: p.title })}
                         width={300}
                         height={450}
                         className="w-full h-auto object-cover transition-transform duration-200 ease-out group-hover:scale-[1.04] group-active:scale-100"
@@ -271,7 +273,7 @@ export default async function InicioPage() {
         className="inline-flex tap-target gap-2 px-5 bg-(--accent) text-(--bg) font-semibold"
       >
         <Plus size={16} aria-hidden="true" />
-        Registrar una película
+        {t("inicio.registrarPelicula")}
       </Link>
     </div>
   );

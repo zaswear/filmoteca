@@ -2,6 +2,7 @@
 
 import { useEffect, useId, useRef, useState } from "react";
 
+import { t } from "@/lib/i18n";
 /**
  * Confirmación en el sitio, en vez de `window.confirm`.
  *
@@ -9,20 +10,20 @@ import { useEffect, useId, useRef, useState } from "react";
  * anclado arriba del todo, lejos del botón que lo ha provocado. Aquí el botón
  * se sustituye por la pregunta y sus dos respuestas, en su misma posición.
  *
- * El foco va a "Cancelar", no a la respuesta destructiva: quien ha activado el
+ * El foco va a «Cancelar», no a la respuesta destructiva: quien ha activado el
  * botón con Enter podría encadenar un segundo Enter y borrar sin leer. Escape
  * también cancela. La pregunta se anuncia con role="alert" porque el cambio
  * ocurre lejos del foco anterior.
  *
- *   <InlineConfirm question="¿Eliminar esta película?" confirmLabel="Eliminar"
+ *   <InlineConfirm question={t("borrar.confirmCorto")} confirmLabel={t("comun.eliminar")}
  *                  onConfirm={borrar}>
- *     {(pedir) => <button onClick={pedir}>Eliminar</button>}
+ *     {(pedir) => <button onClick={pedir}>{t("comun.eliminar")}</button>}
  *   </InlineConfirm>
  */
 export function InlineConfirm({
   question,
-  confirmLabel = "Sí, eliminar",
-  cancelLabel = "Cancelar",
+  confirmLabel = t("borrar.siEliminar"),
+  cancelLabel = t("comun.cancelar"),
   onConfirm,
   children,
 }: {

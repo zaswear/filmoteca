@@ -7,8 +7,9 @@ import { ImportTable } from "@/components/movies/import-table";
 import { SignOutButton } from "@/components/ui/sign-out-button";
 import { PasswordForm } from "@/components/settings/password-form";
 
+import { t } from "@/lib/i18n";
 export const dynamic = "force-dynamic";
-export const metadata = { title: "Ajustes" };
+export const metadata = { title: t("ajustes.titulo") };
 
 /**
  * Lo que se usa una vez al año y no merece un sitio en el menú: importar el
@@ -29,72 +30,70 @@ export default async function AjustesPage() {
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-8 py-6 sm:py-8 space-y-10">
       <header className="space-y-3">
-        <h1 className="font-display text-[38px] text-text leading-none">Ajustes</h1>
+        <h1 className="font-display text-[38px] text-text leading-none">{t("ajustes.titulo")}</h1>
         <p className="font-mono text-text-mid text-lg">
-          Lo que se usa una vez al año y no merece un sitio en el menú.
+          {t("ajustes.subtitulo")}
         </p>
       </header>
 
       <section className="space-y-4">
         <h2 className="text-[11px] uppercase tracking-[0.14em] text-text-mid font-semibold">
-          Importar historial de IMDb
+          {t("ajustes.importarImdb")}
         </h2>
         {rows.length === 0 ? (
           <div className="border border-(--border) bg-surface p-6 space-y-2">
             <p className="text-text-mid">
-              No hay ningún CSV en <code className="font-mono text-text">/export_imdb</code>.
+              {t("ajustes.sinCsv")} <code className="font-mono text-text">/export_imdb</code>.
             </p>
             <p className="text-text-faint text-sm">
-              Exporta tus listas desde IMDb, deja los archivos en esa carpeta y recarga esta
-              página. Se leen del disco del servidor, no se suben por el navegador.
+              {t("ajustes.sinCsvAyuda")}
             </p>
           </div>
         ) : (
           <ImportTable rows={rows} />
         )}
         <p className="text-text-faint text-sm max-w-prose">
-          La watchlist de JustWatch se importa con <code className="font-mono">import_justwatch_csv.py</code>,
-          un script local: no hay endpoint para hacerlo desde aquí.
+          {t("ajustes.justwatch")} <code className="font-mono">import_justwatch_csv.py</code>,{" "}
+          {t("ajustes.justwatchAyuda")}
         </p>
       </section>
 
       <section className="space-y-4">
-        <h2 className="text-[11px] uppercase tracking-[0.14em] text-text-mid font-semibold">Otros</h2>
+        <h2 className="text-[11px] uppercase tracking-[0.14em] text-text-mid font-semibold">{t("ajustes.otros")}</h2>
         <div className="border-t border-(--text)">
           <Link
             href="/compras-bluray"
             className="flex items-center gap-4 py-4 border-b border-(--border) hover:bg-surface transition-colors"
           >
-            <span className="w-56 font-display text-[19px] text-text">Compras Blu-ray</span>
+            <span className="w-56 font-display text-[19px] text-text">{t("ajustes.comprasBluray")}</span>
             <span className="flex-1 font-mono text-text-mid">
-              Tu lista de ediciones por comprar · {purchases} {purchases === 1 ? "apuntada" : "apuntadas"}
+              {t("ajustes.comprasTexto")} · {purchases} {purchases === 1 ? t("ajustes.apuntada") : t("ajustes.apuntadas")}
             </span>
             <span aria-hidden="true" className="text-text-faint">›</span>
           </Link>
           <div className="flex items-center gap-4 py-4 border-b border-(--border)">
-            <span className="w-56 font-display text-[19px] text-text">Fuentes de Descubrir</span>
+            <span className="w-56 font-display text-[19px] text-text">{t("ajustes.fuentesDescubrir")}</span>
             <span className="flex-1 font-mono text-text-mid">
-              Cartelera de Utrecht, sugerencias, mubis y Top LGBT+
+              {t("ajustes.fuentesDescubrirTexto")}
             </span>
           </div>
         </div>
       </section>
 
       <section className="space-y-4">
-        <h2 className="text-[11px] uppercase tracking-[0.14em] text-text-mid font-semibold">Cuenta</h2>
+        <h2 className="text-[11px] uppercase tracking-[0.14em] text-text-mid font-semibold">{t("ajustes.cuenta")}</h2>
         {session ? (
           <PasswordForm />
         ) : (
           <p className="font-mono text-text-mid">
-            <Link href="/login" className="text-(--accent) hover:underline">Entra</Link> para
-            cambiar la contraseña.
+            <Link href="/login" className="text-(--accent) hover:underline">{t("ajustes.entra")}</Link>{" "}
+            {t("ajustes.entraTexto")}
           </p>
         )}
         <p className="text-text-faint text-sm max-w-prose">
-          Si no puedes entrar, el reset va por la terminal:{" "}
+          {t("ajustes.resetTexto")}{" "}
           <code className="font-mono text-text">npm run admin:password -- &apos;contraseña nueva&apos;</code>.
-          Escribe en la base de datos, así que vale igual para producción y no hace falta
-          redesplegar.
+          {t("ajustes.resetAyuda")}
         </p>
       </section>
 

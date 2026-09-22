@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 
+import { t } from "@/lib/i18n";
 interface Props {
   value?:    number | null;
   onChange?: (v: number | null) => void;
@@ -57,12 +58,12 @@ export function RatingInput({ value, onChange, className }: Props) {
           step={0.1}
           value={actual ?? 0}
           onChange={(e) => aplicar(Math.round(parseFloat(e.target.value) * 10) / 10)}
-          aria-label="Mi puntuación, de 0 a 10 con un decimal"
+          aria-label={t("nota.slider")}
           className="flex-1 min-h-11 accent-(--accent)"
         />
 
         <input
-          aria-label="Mi puntuación, escrita"
+          aria-label={t("nota.campo")}
           inputMode="decimal"
           type="number"
           min={0}

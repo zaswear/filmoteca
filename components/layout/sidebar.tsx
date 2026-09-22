@@ -8,6 +8,7 @@ import { SearchTrigger } from "./search-command";
 import { Logo } from "./logo";
 import { cn } from "@/lib/utils";
 
+import { t } from "@/lib/i18n";
 interface NavItem {
   href: string;
   label: string;
@@ -26,11 +27,11 @@ interface NavGroup {
 const NAV_GROUPS: NavGroup[] = [
   {
     items: [
-      { href: "/", label: "Inicio" },
-      { href: "/peliculas", label: "Diario" },
-      { href: "/descubrir", label: "Descubrir" },
-      { href: "/que-ver", label: "¿Qué veo?" },
-      { href: "/balance", label: "Balance" },
+      { href: "/", label: t("nav.inicio") },
+      { href: "/peliculas", label: t("nav.diario") },
+      { href: "/descubrir", label: t("nav.descubrir") },
+      { href: "/que-ver", label: t("nav.queVeo") },
+      { href: "/balance", label: t("nav.balance") },
     ],
   },
 ];
@@ -57,13 +58,13 @@ export function Sidebar({ isOpen = false, onClose }: SidebarProps) {
     )}>
       {/* Wordmark + close button mobile */}
       <div className="px-5 pt-7 pb-6 flex items-center justify-between">
-        <Link href="/" onClick={onClose} aria-label="Inicio">
+        <Link href="/" onClick={onClose} aria-label={t("nav.inicio")}>
           <Logo size={18} className="select-none" />
         </Link>
         <button
           onClick={onClose}
           className="md:hidden tap-target -mr-2 rounded text-text-faint hover:text-text transition-colors"
-          aria-label="Cerrar menú"
+          aria-label={t("nav.cerrarMenu")}
         >
           <X size={16} aria-hidden="true" />
         </button>
@@ -85,7 +86,7 @@ export function Sidebar({ isOpen = false, onClose }: SidebarProps) {
           className="tap-target w-full gap-2 bg-(--accent) text-(--bg) font-semibold text-[14px] px-4 hover:bg-(--accent-hover) transition-colors"
         >
           <Plus size={15} aria-hidden="true" />
-          Registrar
+          {t("nav.registrar")}
         </Link>
       </div>
 
@@ -135,7 +136,7 @@ export function Sidebar({ isOpen = false, onClose }: SidebarProps) {
           className="flex items-center gap-2.5 px-3 py-2 rounded-[6px] text-sm text-text-faint hover:text-text hover:bg-(--surface-hi) transition-colors duration-150 w-full"
         >
           <Settings size={15} className="shrink-0" />
-          Ajustes
+          {t("nav.ajustes")}
         </Link>
       </div>
       <div className="px-3 pb-3">
@@ -144,7 +145,7 @@ export function Sidebar({ isOpen = false, onClose }: SidebarProps) {
           className="flex items-center gap-2.5 px-3 py-2 rounded-[6px] text-sm text-text-faint hover:text-text hover:bg-(--surface-hi) transition-colors duration-150 w-full"
         >
           <LogOut size={15} className="shrink-0" />
-          Cerrar sesión
+          {t("nav.cerrarSesion")}
         </button>
       </div>
     </aside>

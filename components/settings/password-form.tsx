@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { signOut } from "next-auth/react";
 
+import { t } from "@/lib/i18n";
 const MIN_PASSWORD = 12;
 
 /**
@@ -24,7 +25,7 @@ export function PasswordForm() {
     e.preventDefault();
     setError("");
     if (nueva !== repetida) {
-      setError("La contraseña nueva y su repetición no coinciden.");
+      setError(t("pass.noCoinciden"));
       return;
     }
     if (nueva.length < MIN_PASSWORD) {
@@ -42,7 +43,7 @@ export function PasswordForm() {
 
     if (!res || !res.ok) {
       const cuerpo = res ? await res.json().catch(() => null) : null;
-      setError(cuerpo?.error ?? "No se pudo cambiar la contraseña.");
+      setError(cuerpo?.error ?? t("pass.error"));
       return;
     }
 
@@ -58,9 +59,7 @@ export function PasswordForm() {
 
   if (hecho) {
     return (
-      <p role="status" className="font-mono text-text-mid">
-        Contraseña cambiada. Se han cerrado las sesiones abiertas; entrando de nuevo…
-      </p>
+      <p role="status" className="font-mono text-text-mid">{t("pass.cambiada")}</p>
     );
   }
 
@@ -68,14 +67,14 @@ export function PasswordForm() {
     <form onSubmit={handleSubmit} className="max-w-sm space-y-5">
       <Campo
         id="password-actual"
-        label="Contraseña actual"
+        label={t("pass.actual")}
         autoComplete="current-password"
         value={actual}
         onChange={setActual}
       />
       <Campo
         id="password-nueva"
-        label="Contraseña nueva"
+        label={t("pass.nueva")}
         autoComplete="new-password"
         value={nueva}
         onChange={setNueva}
@@ -83,7 +82,7 @@ export function PasswordForm() {
       />
       <Campo
         id="password-repetida"
-        label="Repite la nueva"
+        label={t("pass.repetir")}
         autoComplete="new-password"
         value={repetida}
         onChange={setRepetida}
@@ -94,7 +93,7 @@ export function PasswordForm() {
         disabled={guardando}
         className="tap-target w-full rounded-[6px] bg-(--accent) py-2.5 text-[14px] font-medium tracking-wide text-bg transition-colors duration-150 hover:bg-(--accent-hover) disabled:cursor-not-allowed disabled:opacity-50"
       >
-        {guardando ? "Guardando…" : "Cambiar contraseña"}
+        {guardando ? t("comun.guardando") : t("pass.cambiar")}
       </button>
     </form>
   );

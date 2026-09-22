@@ -11,8 +11,12 @@
  * escondía 32 en "Suspense"), las estadísticas partían los recuentos y el
  * perfil de gusto de "¿Qué veo?" trataba "Action" y "Acción" como dos géneros.
  *
- * Manda el español porque la interfaz está en español.
+ * Manda el idioma de la interfaz (`NEXT_PUBLIC_APP_LOCALE`): en una instancia
+ * en inglés, "Acción" importada de un CSV viejo se normaliza a "Action", y al
+ * revés. Sin esto, cambiar de idioma partiría en dos los recuentos de las
+ * estadísticas y el perfil de gusto de «¿Qué veo?».
  */
+import { LOCALE } from "./i18n.ts";
 
 /** Inglés (OMDb / IMDb) → español (TMDB es-ES). Solo lo que difiere. */
 const EN_ES: Record<string, string> = {
@@ -51,10 +55,22 @@ const YA_ES = new Set(Object.values(EN_ES).map((g) => g.toLowerCase()));
  * Devuelve el género en su forma canónica. Si no se reconoce, lo deja como
  * viene: mejor un género desconocido intacto que perderlo por el camino.
  */
+/** Español → inglés, la vuelta de `EN_ES`, para las instancias en inglés. */
+const ES_EN: Record<string, string> = Object.fromEntries(
+  Object.entries(EN_ES).map(([en, es]) => [es.toLowerCase(), en.charAt(0).toUpperCase() + en.slice(1)]),
+);
+
 export function canonicalGenre(raw: string): string {
   const g = raw.trim();
   if (!g) return "";
   const k = g.toLowerCase();
+
+  if (LOCALE === "en") {
+    const en = ES_EN[k];
+    if (en) return en;
+    // Ya viene en inglés: solo normaliza la mayúscula inicial.
+    return g.charAt(0).toUpperCase() + g.slice(1);
+  }
 
   const es = EN_ES[k];
   if (es) return es;

@@ -6,6 +6,7 @@ import { Loader2, CheckSquare, Square, AlertCircle, CheckCircle } from "lucide-r
 import { cn } from "@/lib/utils";
 import type { CsvRow } from "@/lib/csv";
 
+import { t } from "@/lib/i18n";
 interface Row extends CsvRow {
   exists:        boolean;
   hasImdbReview: boolean;
@@ -79,7 +80,7 @@ export function ImportTable({ rows: initial }: Props) {
       });
 
       const data: ImportResult = await res.json();
-      if (!res.ok) throw new Error((data as { error?: string }).error ?? "Error al importar");
+      if (!res.ok) throw new Error((data as { error?: string }).error ?? t("importar.error"));
       setResult(data);
 
       // Marca las importadas como existentes
@@ -92,7 +93,7 @@ export function ImportTable({ rows: initial }: Props) {
         router.refresh();
       }
     } catch (err) {
-      setError(err instanceof Error ? err.message : "Error desconocido");
+      setError(err instanceof Error ? err.message : t("form.errorDesconocido"));
     } finally {
       setLoading(false);
     }
@@ -132,15 +133,11 @@ export function ImportTable({ rows: initial }: Props) {
           <button
             onClick={() => selectAll(true)}
             className="text-xs text-text-faint hover:text-text transition-colors px-2 py-1 rounded hover:bg-(--surface-hi)"
-          >
-            Seleccionar todo
-          </button>
+          >{t("importar.seleccionarTodo")}</button>
           <button
             onClick={() => selectAll(false)}
             className="text-xs text-text-faint hover:text-text transition-colors px-2 py-1 rounded hover:bg-(--surface-hi)"
-          >
-            Ninguna
-          </button>
+          >{t("importar.ninguna")}</button>
         </div>
       </div>
 
@@ -184,10 +181,10 @@ export function ImportTable({ rows: initial }: Props) {
             <thead>
               <tr className="border-b border-(--border) bg-(--surface)">
                 <th className="w-12 px-3 py-3" />
-                <th className="px-3 py-3 text-left text-[11px] uppercase tracking-widest text-text-faint font-medium">Título</th>
-                <th className="px-3 py-3 text-left text-[11px] uppercase tracking-widest text-text-faint font-medium w-16">Año</th>
-                <th className="px-3 py-3 text-left text-[11px] uppercase tracking-widest text-text-faint font-medium w-24">Puntuación IMDb</th>
-                <th className="px-3 py-3 text-left text-[11px] uppercase tracking-widest text-text-faint font-medium w-28">Mi Puntuación (1-10)</th>
+                <th className="px-3 py-3 text-left text-[11px] uppercase tracking-widest text-text-faint font-medium">{t("importar.titulo")}</th>
+                <th className="px-3 py-3 text-left text-[11px] uppercase tracking-widest text-text-faint font-medium w-16">{t("form.anio")}</th>
+                <th className="px-3 py-3 text-left text-[11px] uppercase tracking-widest text-text-faint font-medium w-24">{t("form.puntuacionImdb")}</th>
+                <th className="px-3 py-3 text-left text-[11px] uppercase tracking-widest text-text-faint font-medium w-28">{t("importar.miPuntuacion")}</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-(--border)">
@@ -210,7 +207,7 @@ export function ImportTable({ rows: initial }: Props) {
                       onClick={() => toggleSelected(row.imdbId)}
                       disabled={row.exists}
                       className="text-text-faint hover:text-text disabled:cursor-default transition-colors"
-                      aria-label={row.selected ? "Deseleccionar" : "Seleccionar"}
+                      aria-label={row.selected ? t("importar.deseleccionar") : t("importar.seleccionar")}
                     >
                       {row.selected && !row.exists
                         ? <CheckSquare size={16} className="text-(--accent)" />
@@ -257,9 +254,7 @@ export function ImportTable({ rows: initial }: Props) {
         <button
           onClick={() => router.push("/admin/import")}
           className="px-4 py-2 text-sm text-text-mid border border-(--border) rounded-[6px] hover:text-text hover:border-(--border-hi) transition-colors"
-        >
-          Cancelar
-        </button>
+        >{t("comun.cancelar")}</button>
         <button
           onClick={handleImport}
           disabled={loading || selectedRows.length === 0}
@@ -267,7 +262,7 @@ export function ImportTable({ rows: initial }: Props) {
         >
           {loading && <Loader2 size={14} className="animate-spin" />}
           {loading
-            ? "Importando…"
+            ? t("importar.importando")
             : `Importar seleccionadas`}
         </button>
       </div>

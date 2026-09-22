@@ -4,6 +4,7 @@ import { useState } from "react";
 import { signIn } from "next-auth/react";
 import { useRouter, useSearchParams } from "next/navigation";
 
+import { t } from "@/lib/i18n";
 export function LoginForm() {
   const router      = useRouter();
   const params      = useSearchParams();
@@ -27,7 +28,7 @@ export function LoginForm() {
     });
 
     if (result?.error) {
-      setError("Usuario o contraseña incorrectos.");
+      setError(t("login.error"));
       setLoading(false);
     } else {
       router.push(callbackUrl);
@@ -42,9 +43,7 @@ export function LoginForm() {
         <label
           htmlFor="username"
           className="block text-[11px] uppercase tracking-[0.12em] text-text-faint font-mono"
-        >
-          Usuario
-        </label>
+        >{t("login.usuario")}</label>
         <input
           id="username"
           type="text"
@@ -53,7 +52,7 @@ export function LoginForm() {
           autoComplete="username"
           autoFocus
           required
-          placeholder="Usuario"
+          placeholder={t("login.usuario")}
           className="w-full bg-(--bg)/50 border border-(--border) rounded-[6px] px-4 py-2.5 text-[15px] text-text placeholder:text-text-faint transition-colors duration-150 focus:outline-hidden focus:border-(--border-focus)"
         />
       </div>
@@ -64,7 +63,7 @@ export function LoginForm() {
           htmlFor="password"
           className="block text-[11px] uppercase tracking-[0.12em] text-text-faint font-mono"
         >
-          Contraseña
+          {t("login.password")}
         </label>
         <input
           id="password"
@@ -87,7 +86,7 @@ export function LoginForm() {
         disabled={loading}
         className="w-full rounded-[6px] py-2.5 text-[14px] font-medium tracking-wide bg-(--accent) hover:bg-(--accent-hover) text-bg cursor-pointer transition-colors duration-150 disabled:opacity-50 disabled:cursor-not-allowed"
       >
-        {loading ? "Entrando…" : "Entrar"}
+        {loading ? t("login.entrando") : t("login.entrar")}
       </button>
     </form>
   );

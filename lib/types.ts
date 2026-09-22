@@ -1,3 +1,5 @@
+import { t } from "./i18n.ts";
+
 // ─── Tipos de dominio ─────────────────────────────────────────────────────────
 
 export type WatchFormat =
@@ -18,20 +20,22 @@ export type ImageType = "gallery" | "poster_alt";
 
 // ─── Labels para UI ───────────────────────────────────────────────────────────
 
+// Las etiquetas se calculan al importar, no son constantes escritas: el idioma
+// se fija al construir (ver lib/i18n), así que esto se resuelve una vez.
 export const WATCH_FORMAT_LABELS: Record<WatchFormat, string> = {
-  cine:      "Cine",
-  streaming: "Streaming",
-  bluray:    "Blu-ray",
-  dvd:       "DVD",
-  digital:   "Digital",
-  otro:      "Otro",
+  cine:      t("formato.cine"),
+  streaming: t("formato.streaming"),
+  bluray:    t("formato.bluray"),
+  dvd:       t("formato.dvd"),
+  digital:   t("formato.digital"),
+  otro:      t("formato.otro"),
 };
 
 export const MOVIE_STATUS_LABELS: Record<MovieStatus, string> = {
-  vista:       "Vista",
-  pendiente:   "Pendiente",
-  en_progreso: "En progreso",
-  descartada:  "Descartada",
+  vista:       t("estado.vista"),
+  pendiente:   t("estado.pendiente"),
+  en_progreso: t("estado.enProgreso"),
+  descartada:  t("estado.descartada"),
 };
 
 export const WATCH_FORMATS: WatchFormat[] = [

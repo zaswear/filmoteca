@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { ShoppingBag, Plus, Trash2, Loader2, ExternalLink, Calendar } from "lucide-react";
 
+import { DATE_LOCALE, t } from "@/lib/i18n";
 interface MubisItem {
   title: string;
   link: string;
@@ -51,14 +52,14 @@ export function BlurayPurchaseList({
 
       if (!res.ok) {
         const data = await res.json();
-        throw new Error(data.error || "Error al añadir película");
+        throw new Error(data.error || t("bluray.errorAnadir"));
       }
 
       const newItem = await res.json();
       setSavedItems((prev) => [newItem, ...prev]);
     } catch (err) {
       console.error(err);
-      setError(err instanceof Error ? err.message : "Error al guardar la película");
+      setError(err instanceof Error ? err.message : t("bluray.errorGuardar"));
     } finally {
       setAddingLink(null);
     }
@@ -74,13 +75,13 @@ export function BlurayPurchaseList({
 
       if (!res.ok) {
         const data = await res.json();
-        throw new Error(data.error || "Error al eliminar de la lista");
+        throw new Error(data.error || t("bluray.errorEliminar"));
       }
 
       setSavedItems((prev) => prev.filter((item) => item.id !== id));
     } catch (err) {
       console.error(err);
-      setError(err instanceof Error ? err.message : "Error al eliminar la película");
+      setError(err instanceof Error ? err.message : t("bluray.errorEliminarPeli"));
     } finally {
       setDeletingId(null);
     }
@@ -104,7 +105,7 @@ export function BlurayPurchaseList({
               : "border-transparent text-text-faint hover:text-text-mid"
           }`}
         >
-          Novedades Mubis ({feedItems.length})
+          {t("bluray.novedades")} ({feedItems.length})
         </button>
         <button
           onClick={() => setActiveTab("lista")}
@@ -123,10 +124,8 @@ export function BlurayPurchaseList({
         feedItems.length === 0 ? (
           <div className="text-center py-20 bg-(--surface) border border-(--border) rounded-xl">
             <ShoppingBag size={32} className="mx-auto text-text-faint mb-3 opacity-60 animate-pulse" />
-            <p className="text-text-mid text-sm font-medium">No hay novedades disponibles</p>
-            <p className="text-xs text-text-faint mt-1 px-4 max-w-sm mx-auto">
-              No se han podido cargar las noticias de Mubis. Inténtalo de nuevo más tarde.
-            </p>
+            <p className="text-text-mid text-sm font-medium">{t("bluray.sinNovedades")}</p>
+            <p className="text-xs text-text-faint mt-1 px-4 max-w-sm mx-auto">{t("bluray.errorMubis")}</p>
           </div>
         ) : (
           <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
@@ -162,7 +161,7 @@ export function BlurayPurchaseList({
                     <div>
                       <span className="font-mono text-[10px] text-text-faint uppercase tracking-wider block">
                         {item.pubDate
-                          ? new Date(item.pubDate).toLocaleDateString("es-ES", {
+                          ? new Date(item.pubDate).toLocaleDateString(DATE_LOCALE, {
                               day: "numeric",
                               month: "short",
                               year: "numeric",
@@ -183,14 +182,11 @@ export function BlurayPurchaseList({
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-1 text-[11px] font-mono text-text-mid hover:text-text transition-colors"
-                      >
-                        Ver en Mubis <ExternalLink size={10} />
+                      >{t("bluray.verMubis")}<ExternalLink size={10} />
                       </a>
 
                       {isSaved ? (
-                        <span className="text-xs font-semibold text-success bg-success/10 border border-success/20 px-2.5 py-1 rounded">
-                          En la lista
-                        </span>
+                        <span className="text-xs font-semibold text-success bg-success/10 border border-success/20 px-2.5 py-1 rounded">{t("bluray.enLista")}</span>
                       ) : (
                         <button
                           type="button"
@@ -202,8 +198,7 @@ export function BlurayPurchaseList({
                             <Loader2 size={12} className="animate-spin" />
                           ) : (
                             <>
-                              <Plus size={12} /> Añadir
-                            </>
+                              <Plus size={12} />{t("bluray.anadir")}</>
                           )}
                         </button>
                       )}
@@ -217,9 +212,9 @@ export function BlurayPurchaseList({
       ) : savedItems.length === 0 ? (
         <div className="text-center py-20 bg-(--surface) border border-(--border) rounded-xl">
           <ShoppingBag size={32} className="mx-auto text-text-faint mb-3 opacity-60" />
-          <p className="text-text-mid text-sm font-medium">Tu lista de compras está vacía</p>
+          <p className="text-text-mid text-sm font-medium">{t("bluray.listaVacia")}</p>
           <p className="text-xs text-text-faint mt-1 px-4 max-w-sm mx-auto">
-            Ve a la pestaña &quot;Novedades Mubis&quot; para añadir películas en Blu-ray a tu lista de la compra.
+            {t("bluray.listaVaciaAyuda")}
           </p>
         </div>
       ) : (
@@ -257,7 +252,7 @@ export function BlurayPurchaseList({
                       disabled={isDeleting}
                       onClick={() => handleDelete(item.id)}
                       className="p-2.5 rounded-full bg-(--error) hover:bg-error/80 text-white shadow-sm transition-[transform,background-color] duration-150 transform scale-90 group-hover:scale-100"
-                      title="Eliminar de la lista"
+                      title={t("bluray.eliminar")}
                     >
                       {isDeleting ? (
                         <Loader2 size={16} className="animate-spin" />
@@ -271,7 +266,7 @@ export function BlurayPurchaseList({
                         target="_blank"
                         rel="noopener noreferrer"
                         className="p-2.5 rounded-full bg-surface hover:bg-border text-text shadow-sm transition-[transform,background-color] duration-150 transform scale-90 group-hover:scale-100"
-                        title="Ver artículo original"
+                        title={t("bluray.verArticulo")}
                       >
                         <ExternalLink size={16} />
                       </a>
@@ -292,7 +287,7 @@ export function BlurayPurchaseList({
                     <div className="flex items-center gap-1 text-[10px] text-text-faint font-mono mt-2 pt-2 border-t border-(--border)">
                       <Calendar size={10} />
                       <span>
-                        {new Date(item.createdAt).toLocaleDateString("es-ES")}
+                        {new Date(item.createdAt).toLocaleDateString(DATE_LOCALE)}
                       </span>
                     </div>
                   )}

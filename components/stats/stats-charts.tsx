@@ -3,6 +3,7 @@
 import { useMemo, useSyncExternalStore } from "react";
 import type { StatsData } from "./stats-section";
 
+import { DATE_LOCALE, t } from "@/lib/i18n";
 // ─── Barras inline (sin dependencias de charting) ─────────────────────────────
 
 type Datum = { label: string; value: number };
@@ -147,7 +148,12 @@ export function StatsCharts({ data }: { data: StatsData }) {
   const heatmapMonths = useMemo(() => {
     if (heatmapData.length === 0 || weeks.length === 0) return [];
     const months: { label: string; weekIndex: number }[] = [];
-    const MONTH_NAMES = ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"];
+    // Los nombres de mes los da Intl, no una lista escrita: así salen en el
+    // idioma de la instancia sin un diccionario que mantener.
+    const fmtMes = new Intl.DateTimeFormat(DATE_LOCALE, { month: "short" });
+    const MONTH_NAMES = Array.from({ length: 12 }, (_, i) =>
+      fmtMes.format(new Date(Date.UTC(2020, i, 1))),
+    );
     let lastMonth = -1;
     weeks.forEach((week, weekIdx) => {
       const day = week.find((d) => d !== null);
@@ -172,40 +178,40 @@ export function StatsCharts({ data }: { data: StatsData }) {
 
       {/* ── Summary cards ── */}
       <div className="grid grid-cols-3 gap-4">
-        <StatCard value={summary.watched} label="Películas vistas" />
-        <StatCard value={summary.avgMyRating ?? "—"} label="Nota media" sub={`sobre ${summary.totalWithRating}`} />
+        <StatCard value={summary.watched} label={t("stats.peliculasVistas")} />
+        <StatCard value={summary.avgMyRating ?? "—"} label={t("stats.notaMedia")} sub={`sobre ${summary.totalWithRating}`} />
         <StatCard value={summary.avgImdbRating ?? "—"} label="Puntuación IMDb" />
       </div>
 
       {/* ── Hitos del diario ── */}
       {(data.recordMonth || data.streaks || data.houseDirector || data.genreThisYear || data.genreGlobal) && (
-        <Section title="Hitos del diario">
+        <Section title={t("stats.hitos")}>
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
             {data.recordMonth && (
               <StatCard
                 value={data.recordMonth.count}
-                label="Mes récord"
-                sub={`${data.recordMonth.label} · ${data.recordMonth.count} ${data.recordMonth.count === 1 ? "película" : "películas"}`}
+                label={t("stats.mesRecord")}
+                sub={`${data.recordMonth.label} · ${data.recordMonth.count} ${data.recordMonth.count === 1 ? t("stats.pelicula") : t("stats.peliculas")}`}
               />
             )}
             {data.streaks && (
               <StatCard
                 value={data.streaks.current}
-                label="Racha actual"
-                sub={`${data.streaks.current === 1 ? "día seguido" : "días seguidos"} con cine`}
+                label={t("stats.rachaActual")}
+                sub={`${data.streaks.current === 1 ? t("stats.diaSeguido") : t("stats.diasSeguidos")} con cine`}
               />
             )}
             {data.streaks && (
               <StatCard
                 value={data.streaks.best}
-                label="Mejor racha"
-                sub={`${data.streaks.best === 1 ? "día seguido" : "días seguidos"} con cine`}
+                label={t("stats.mejorRacha")}
+                sub={`${data.streaks.best === 1 ? t("stats.diaSeguido") : t("stats.diasSeguidos")} con cine`}
               />
             )}
             {data.houseDirector && (
               <StatCard
                 value={data.houseDirector.count}
-                label="Director de la casa"
+                label={t("stats.directorCasa")}
                 sub={data.houseDirector.director}
               />
             )}
@@ -219,7 +225,7 @@ export function StatsCharts({ data }: { data: StatsData }) {
             {data.genreGlobal && (
               <StatCard
                 value={data.genreGlobal.count}
-                label="Tu año en géneros · global"
+                label={t("stats.anioGeneros")}
                 sub={`${data.genreGlobal.genre} en todo el diario`}
               />
             )}
@@ -230,22 +236,22 @@ export function StatsCharts({ data }: { data: StatsData }) {
       {/* ── Década + Heatmap ── */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {byDecade.length > 1 && (
-          <Section title="Películas por década">
+          <Section title={t("stats.porDecada")}>
             <VBars data={byDecade.map((d) => ({ label: d.label, value: d.count }))} height={200} />
           </Section>
         )}
 
         {mounted && heatmapData.length > 0 && (
-          <Section title="Mi actividad del último año">
+          <Section title={t("stats.actividad")}>
             <div className="bg-(--surface) border border-(--border) rounded-md p-4 sm:p-5 overflow-x-auto">
               <div className="min-w-[680px] flex flex-col">
                 <svg width="700" height="120" className="text-text font-mono text-[9px]">
                   {heatmapMonths.map((m, idx) => (
                     <text key={idx} x={35 + m.weekIndex * 13} y={12} fill="var(--text-faint)">{m.label}</text>
                   ))}
-                  <text x={0} y={42} fill="var(--text-faint)">Lun</text>
-                  <text x={0} y={68} fill="var(--text-faint)">Mié</text>
-                  <text x={0} y={94} fill="var(--text-faint)">Vie</text>
+                  <text x={0} y={42} fill="var(--text-faint)">{t("stats.lun")}</text>
+                  <text x={0} y={68} fill="var(--text-faint)">{t("stats.mie")}</text>
+                  <text x={0} y={94} fill="var(--text-faint)">{t("stats.vie")}</text>
                   {weeks.map((week, weekIdx) => (
                     <g key={weekIdx} transform={`translate(${35 + weekIdx * 13}, 20)`}>
                       {week.map((day, dayIdx) => {
@@ -257,7 +263,7 @@ export function StatsCharts({ data }: { data: StatsData }) {
                         return (
                           <rect key={dayIdx} x={0} y={dayIdx * 13} width={10} height={10} rx={1.5} fill={fill}
                             className="transition-colors duration-150 hover:stroke-white hover:stroke-[0.5px] cursor-pointer">
-                            <title>{`${day.key}: ${day.count} ${day.count === 1 ? "película vista" : "películas vistas"}`}</title>
+                            <title>{`${day.key}: ${day.count} ${day.count === 1 ? t("stats.peliculaVista") : t("stats.peliculasVistasMin")}`}</title>
                           </rect>
                         );
                       })}
@@ -265,12 +271,12 @@ export function StatsCharts({ data }: { data: StatsData }) {
                   ))}
                 </svg>
                 <div className="flex justify-end items-center gap-1.5 text-[10px] text-text-faint font-mono mt-3 pr-4">
-                  <span>Menos</span>
+                  <span>{t("stats.menos")}</span>
                   <span className="w-2.5 h-2.5 rounded-[1.5px]" style={{ backgroundColor: "oklch(100% 0 0 / 4%)" }} />
                   <span className="w-2.5 h-2.5 rounded-[1.5px]" style={{ backgroundColor: "oklch(74% 0.13 72 / 35%)" }} />
                   <span className="w-2.5 h-2.5 rounded-[1.5px]" style={{ backgroundColor: "oklch(74% 0.13 72 / 70%)" }} />
                   <span className="w-2.5 h-2.5 rounded-[1.5px]" style={{ backgroundColor: "var(--accent)" }} />
-                  <span>Más</span>
+                  <span>{t("stats.mas")}</span>
                 </div>
               </div>
             </div>
@@ -281,12 +287,12 @@ export function StatsCharts({ data }: { data: StatsData }) {
       {/* ── Género + Directores ── */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {byGenre.length > 0 && (
-          <Section title="Géneros más vistos">
+          <Section title={t("stats.generosMas")}>
             <HBars data={byGenre.map((g) => ({ label: g.genre, value: g.count }))} />
           </Section>
         )}
         {byDirector.length > 0 && (
-          <Section title="Top directores">
+          <Section title={t("stats.topDirectores")}>
             <HBars data={byDirector.map((d) => ({ label: d.director, value: d.count }))} color="oklch(67% 0.12 155)" />
           </Section>
         )}
@@ -294,27 +300,23 @@ export function StatsCharts({ data }: { data: StatsData }) {
 
       {/* ── Joyas Ocultas ── */}
       {(gems.directors.length > 0 || gems.genres.length > 0) && (
-        <Section title="Joyas Ocultas (Recomendaciones)">
+        <Section title={t("stats.joyas")}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
-              <h3 className="font-mono text-xs uppercase tracking-widest text-text-faint mb-3">
-                Directores con nota alta y pocos visionados (1-2 películas)
-              </h3>
+              <h3 className="font-mono text-xs uppercase tracking-widest text-text-faint mb-3">{t("stats.joyasAyuda")}</h3>
               {gems.directors.length === 0 ? (
-                <p className="text-sm text-text-faint bg-(--surface) border border-(--border) rounded px-4 py-3 italic">
-                  No se han encontrado directores recomendados.
-                </p>
+                <p className="text-sm text-text-faint bg-(--surface) border border-(--border) rounded px-4 py-3 italic">{t("stats.joyasVacio")}</p>
               ) : (
                 <div className="space-y-3">
                   {gems.directors.map((d) => (
                     <div key={d.name} className="flex justify-between items-center bg-(--surface) border border-(--border) rounded px-4 py-3">
                       <div>
                         <p className="font-display font-medium text-base italic">{d.name}</p>
-                        <p className="text-xs text-text-faint mt-0.5">{d.count} {d.count === 1 ? "película vista" : "películas vistas"}</p>
+                        <p className="text-xs text-text-faint mt-0.5">{d.count} {d.count === 1 ? t("stats.peliculaVista") : t("stats.peliculasVistasMin")}</p>
                       </div>
                       <div className="text-right">
                         <p className="font-mono text-lg font-bold text-(--accent)">{d.average.toFixed(1)}</p>
-                        <p className="text-[9px] uppercase tracking-widest text-text-faint">Nota media</p>
+                        <p className="text-[9px] uppercase tracking-widest text-text-faint">{t("stats.notaMedia")}</p>
                       </div>
                     </div>
                   ))}
@@ -322,24 +324,20 @@ export function StatsCharts({ data }: { data: StatsData }) {
               )}
             </div>
             <div>
-              <h3 className="font-mono text-xs uppercase tracking-widest text-text-faint mb-3">
-                Géneros con nota alta y pocos visionados (1-3 películas)
-              </h3>
+              <h3 className="font-mono text-xs uppercase tracking-widest text-text-faint mb-3">{t("stats.joyasGeneros")}</h3>
               {gems.genres.length === 0 ? (
-                <p className="text-sm text-text-faint bg-(--surface) border border-(--border) rounded px-4 py-3 italic">
-                  No se han encontrado géneros recomendados.
-                </p>
+                <p className="text-sm text-text-faint bg-(--surface) border border-(--border) rounded px-4 py-3 italic">{t("stats.joyasGenerosVacio")}</p>
               ) : (
                 <div className="space-y-3">
                   {gems.genres.map((g) => (
                     <div key={g.name} className="flex justify-between items-center bg-(--surface) border border-(--border) rounded px-4 py-3">
                       <div>
                         <p className="font-display font-medium text-base italic">{g.name}</p>
-                        <p className="text-xs text-text-faint mt-0.5">{g.count} {g.count === 1 ? "película vista" : "películas vistas"}</p>
+                        <p className="text-xs text-text-faint mt-0.5">{g.count} {g.count === 1 ? t("stats.peliculaVista") : t("stats.peliculasVistasMin")}</p>
                       </div>
                       <div className="text-right">
                         <p className="font-mono text-lg font-bold text-(--accent)">{g.average.toFixed(1)}</p>
-                        <p className="text-[9px] uppercase tracking-widest text-text-faint">Nota media</p>
+                        <p className="text-[9px] uppercase tracking-widest text-text-faint">{t("stats.notaMedia")}</p>
                       </div>
                     </div>
                   ))}
@@ -364,7 +362,7 @@ export function StatsCharts({ data }: { data: StatsData }) {
 
       {/* ── Sesiones por mes (los byMonth que ya se calculaban en servidor) ── */}
       {data.byMonth.some((m) => m.count > 0) && (
-        <Section title="Últimos 24 meses">
+        <Section title={t("stats.ultimos24")}>
           <VBars data={data.byMonth.map((m) => ({ label: m.label, value: m.count }))} height={180} />
         </Section>
       )}

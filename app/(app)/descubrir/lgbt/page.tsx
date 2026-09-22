@@ -5,8 +5,9 @@ import { db } from "@/lib/db";
 import { LgbtList } from "@/components/movies/lgbt-list";
 import { RainbowGradient } from "@/components/ui/rainbow-gradient";
 
+import { t } from "@/lib/i18n";
 export const dynamic = "force-dynamic";
-export const metadata = { title: "Top LGBT+ Películas" };
+export const metadata = { title: t("topLgbt.titulo") };
 
 export default async function LgbtPage() {
   // 1. Obtener todas las películas de la base de datos con su estado para marcar vistas/pendientes
@@ -44,16 +45,12 @@ export default async function LgbtPage() {
       {/* Cabecera */}
       <div className="border-b border-(--border) pb-6 flex items-center justify-between">
         <div>
-          <h2 className="font-display text-[22px] leading-none text-text flex items-center gap-3">
-            Cine LGBT+ 
-            <div className="relative inline-block w-7 h-7">
+          <h2 className="font-display text-[22px] leading-none text-text flex items-center gap-3">{t("topLgbt.encabezado")}<div className="relative inline-block w-7 h-7">
               <Heart size={28} className="absolute text-transparent select-none animate-pulse" style={{ stroke: "url(#rainbow-header)", fill: "url(#rainbow-header)" }} />
               <RainbowGradient id="rainbow-header" diagonal />
             </div>
           </h2>
-          <p className="text-xs text-text-faint font-mono mt-2 uppercase tracking-widest">
-            Las películas de temática gay y queer mejor valoradas del año
-          </p>
+          <p className="text-xs text-text-faint font-mono mt-2 uppercase tracking-widest">{t("topLgbt.subtitulo")}</p>
         </div>
       </div>
 

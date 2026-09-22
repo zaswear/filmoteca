@@ -7,7 +7,8 @@ import { Search, Loader2, CornerDownLeft } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useDialog } from "@/lib/use-dialog";
 
-// Buscador global tipo paleta de comandos, coherente con "En el último episodio".
+import { t } from "@/lib/i18n";
+// Buscador global tipo paleta de comandos.
 // El modal es único y global (en AppShell). Se abre con Ctrl/⌘+K, con "/" o con
 // el evento "dc-open-search" que disparan los botones de disparo (sidebar/header).
 
@@ -209,7 +210,7 @@ export function SearchCommand() {
         ref={dialogRef}
         role="dialog"
         aria-modal="true"
-        aria-label="Buscar película"
+        aria-label={t("buscador.abrir")}
         className="w-full max-w-lg overflow-hidden rounded-xl border border-(--border-hi) bg-(--surface) shadow-[var(--shadow-modal)]"
         onClick={(e) => e.stopPropagation()}
         onKeyDown={onListKey}
@@ -220,8 +221,8 @@ export function SearchCommand() {
             ref={inputRef}
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="Buscar una película…"
-            aria-label="Buscar una película"
+            placeholder={t("buscador.placeholder")}
+            aria-label={t("buscador.etiqueta")}
             className="flex-1 bg-transparent text-sm outline-none placeholder:text-text-faint"
           />
           {loading && <Loader2 size={16} className="animate-spin text-text-faint" aria-hidden="true" />}
@@ -229,7 +230,7 @@ export function SearchCommand() {
         <div ref={listRef} className="max-h-[60vh] overflow-y-auto p-2">
           {!loading && results.length === 0 && (
             <p className="px-3 py-6 text-center text-sm text-text-faint">
-              {query.trim() ? "Sin resultados" : "Tu colección está vacía"}
+              {query.trim() ? t("buscador.sinResultados") : t("buscador.coleccionVacia")}
             </p>
           )}
           {results.map((r, i) => {
@@ -315,7 +316,7 @@ export function SearchTrigger({ className, compact = false }: { className?: stri
   return (
     <button
       onClick={open}
-      aria-label="Buscar películas"
+      aria-label={t("buscador.buscarPeliculas")}
       title={`Buscar · ${tecla} o /`}
       className={cn(
         "flex w-full items-center gap-2 rounded-[6px] border border-(--border) bg-(--surface-hi)/40 px-3 py-2 text-sm text-text-faint transition-colors hover:border-(--border-hi) hover:text-text-mid",
@@ -323,7 +324,7 @@ export function SearchTrigger({ className, compact = false }: { className?: stri
       )}
     >
       <Search size={15} aria-hidden="true" />
-      <span className="flex-1 text-left">Buscar…</span>
+      <span className="flex-1 text-left">{t("buscador.corto")}</span>
       <kbd className="rounded border border-(--border) px-1.5 py-0.5 font-mono text-[10px] whitespace-nowrap">{tecla}</kbd>
     </button>
   );

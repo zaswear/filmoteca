@@ -5,6 +5,7 @@ import { uploadImage } from "@/lib/cloudinary";
 import { cn } from "@/lib/utils";
 import type { Image as DBImage } from "@/lib/generated/prisma";
 
+import { t } from "@/lib/i18n";
 interface Props {
   movieId:  number;
   type?:    "gallery" | "poster_alt";
@@ -57,7 +58,7 @@ export function ImageUploader({ movieId, type = "gallery", onUpload, className }
         }),
       });
 
-      if (!res.ok) throw new Error("Error al guardar imagen en base de datos");
+      if (!res.ok) throw new Error(t("subir.errorBd"));
       const dbImage: DBImage = await res.json();
 
       updateFile(id, { status: "done", progress: 100 });
@@ -65,7 +66,7 @@ export function ImageUploader({ movieId, type = "gallery", onUpload, className }
     } catch (err) {
       updateFile(id, {
         status: "error",
-        error:  err instanceof Error ? err.message : "Error al subir",
+        error:  err instanceof Error ? err.message : t("subir.error"),
       });
     }
   }
@@ -100,7 +101,7 @@ export function ImageUploader({ movieId, type = "gallery", onUpload, className }
           Arrastra imágenes aquí o{" "}
           <span className="text-(--accent) font-medium">haz clic para seleccionar</span>
         </p>
-        <p className="text-xs text-text-faint mt-1">JPG, PNG, WEBP — máx 10 MB por imagen</p>
+        <p className="text-xs text-text-faint mt-1">{t("subir.formatos")}</p>
       </div>
 
       <input
@@ -144,7 +145,7 @@ export function ImageUploader({ movieId, type = "gallery", onUpload, className }
                 )}
 
                 {f.status === "done" && (
-                  <p className="text-xs text-(--success) mt-0.5">Subida correctamente</p>
+                  <p className="text-xs text-(--success) mt-0.5">{t("subir.ok")}</p>
                 )}
 
                 {f.status === "error" && (

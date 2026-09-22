@@ -12,6 +12,7 @@ import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 
 import { APP_AUTHOR } from "@/lib/branding";
+import { t } from "@/lib/i18n";
 /** sessionStorage y no localStorage: la posición de scroll caduca con la
  *  pestaña. Volver mañana a la 4ª pantalla de Películas no tendría sentido. */
 const scrollKey = (path: string) => `dc-scroll:${path}`;
@@ -125,12 +126,12 @@ export function AppShell({ children }: { children: React.ReactNode }) {
           <button
             onClick={() => setOpen(true)}
             className="tap-target -ml-1.5 rounded-md text-text-mid hover:text-text hover:bg-surface-hi transition-colors"
-            aria-label="Abrir menú"
+            aria-label={t("nav.abrirMenu")}
             aria-expanded={open}
           >
             <Menu size={18} aria-hidden="true" />
           </button>
-          <Link href="/" aria-label="Inicio" className="leading-none">
+          <Link href="/" aria-label={t("nav.inicio")} className="leading-none">
             <Logo size={16} />
           </Link>
           <SearchTrigger compact className="ml-auto" />
@@ -150,11 +151,11 @@ export function AppShell({ children }: { children: React.ReactNode }) {
         {/* Mobile bottom dock navigation */}
         <nav className="fixed bottom-0 left-0 right-0 z-30 h-16 bg-surface border-t border-border flex items-center justify-around md:hidden">
           {[
-            { href: "/", icon: Home, label: "Inicio" },
-            { href: "/peliculas", icon: Film, label: "Diario" },
-            { href: "/peliculas/nueva", icon: Plus, label: "Registrar" },
-            { href: "/descubrir", icon: Compass, label: "Descubrir" },
-            { href: "/balance", icon: BarChart3, label: "Balance" }
+            { href: "/", icon: Home, label: t("nav.inicio") },
+            { href: "/peliculas", icon: Film, label: t("nav.diario") },
+            { href: "/peliculas/nueva", icon: Plus, label: t("nav.registrar") },
+            { href: "/descubrir", icon: Compass, label: t("nav.descubrir") },
+            { href: "/balance", icon: BarChart3, label: t("nav.balance") }
           ].map((item) => {
             const active =
               item.href === "/" ? pathname === "/"

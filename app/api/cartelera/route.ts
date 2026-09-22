@@ -7,7 +7,10 @@ export const dynamic = 'force-dynamic';
 export async function GET(req: Request) {
   try {
     const { searchParams } = new URL(req.url);
-    const city = searchParams.get("city") || "Utrecht"; // Por defecto Utrecht
+    // Sin ciudad no se inventa una: se devuelven los pases de todas. Con una
+    // ciudad por defecto escrita aquí, una instancia montada en otro sitio veía
+    // una cartelera vacía sin explicación.
+    const city = searchParams.get("city")?.trim() || null;
 
     // Obtenemos la fecha de hoy, estableciendo la hora a 00:00:00 para la búsqueda en DB
     const today = new Date();
@@ -19,10 +22,7 @@ export async function GET(req: Request) {
       where: {
         showtimes: {
           some: {
-            city: {
-              equals: city,
-              mode: 'insensitive'
-            },
+            ...(city ? { city: { equals: city, mode: "insensitive" as const } } : {}),
             date: {
               gte: today,
             }
@@ -32,10 +32,7 @@ export async function GET(req: Request) {
       include: {
         showtimes: {
           where: {
-            city: {
-              equals: city,
-              mode: 'insensitive'
-            },
+            ...(city ? { city: { equals: city, mode: "insensitive" as const } } : {}),
             date: {
               gte: today,
             }

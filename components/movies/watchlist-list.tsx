@@ -8,6 +8,7 @@ import { MarkWatchedModal } from "./mark-watched-modal";
 import { SeatIcon } from "@/components/ui/seat-icon";
 import type { MovieParsed } from "@/lib/types";
 
+import { t } from "@/lib/i18n";
 /**
  * Una pendiente **sin la sinopsis**, que es el texto largo de verdad y no se
  * pinta en ningún sitio de esta lista. `review` y `notes` sí viajan: el modal
@@ -56,9 +57,7 @@ export function WatchlistList({ initialMovies }: WatchlistListProps) {
             </div>
             <div>
               <p className="font-mono text-2xl font-bold">{totalCount}</p>
-              <p className="text-[11px] uppercase tracking-widest text-text-faint mt-0.5">
-                Películas por ver
-              </p>
+              <p className="text-[11px] uppercase tracking-widest text-text-faint mt-0.5">{t("watch.titulo")}</p>
             </div>
           </div>
         </div>
@@ -68,10 +67,8 @@ export function WatchlistList({ initialMovies }: WatchlistListProps) {
       {movies.length === 0 ? (
         <div className="text-center py-20 bg-(--surface) border border-(--border) rounded-xl">
           <Film size={32} className="mx-auto text-text-faint mb-3 opacity-60" />
-          <p className="text-text-mid text-sm font-medium">No tienes ninguna película en tu lista de pendientes.</p>
-          <p className="text-xs text-text-faint mt-1 px-4 max-w-sm mx-auto">
-            Añade o importa nuevas películas para planificar tus visionados aquí.
-          </p>
+          <p className="text-text-mid text-sm font-medium">{t("watch.vacio")}</p>
+          <p className="text-xs text-text-faint mt-1 px-4 max-w-sm mx-auto">{t("watch.vacioAyuda")}</p>
         </div>
       ) : (
         // Filas densas, no fichas. Esta lista no es para leer sobre las
@@ -143,7 +140,7 @@ export function WatchlistList({ initialMovies }: WatchlistListProps) {
                     className="flex items-center gap-1.5 h-9 px-2.5 sm:px-3 bg-(--accent) hover:bg-(--accent-hover) text-bg text-xs font-semibold rounded-[6px] transition-colors cursor-pointer"
                   >
                     <Check size={14} />
-                    <span className="hidden sm:inline">Vista</span>
+                    <span className="hidden sm:inline">{t("marcar.vista")}</span>
                   </button>
                 </div>
               </div>

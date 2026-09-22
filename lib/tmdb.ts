@@ -1,5 +1,6 @@
 import { canonicalGenres } from "./genres";
 
+import { TMDB_LANGUAGE, LOCALE } from "./i18n.ts";
 const BASE  = "https://api.themoviedb.org/3";
 const IMG   = "https://image.tmdb.org/t/p";
 
@@ -60,7 +61,7 @@ export async function searchTmdb(
   query: string,
   year?: string
 ): Promise<TmdbSearchResult[]> {
-  const params = new URLSearchParams({ query, language: "es-ES", include_adult: "false" });
+  const params = new URLSearchParams({ query, language: TMDB_LANGUAGE, include_adult: "false" });
   if (year) params.set("year", year);
   const res = await fetch(`${BASE}/search/movie?${params}`, {
     headers: headers(),
@@ -73,7 +74,7 @@ export async function searchTmdb(
 
 export async function getTmdbById(tmdbId: number): Promise<TmdbMovie | null> {
   const res = await fetch(
-    `${BASE}/movie/${tmdbId}?language=es-ES&append_to_response=credits,videos&include_video_language=es,en,null`,
+    `${BASE}/movie/${tmdbId}?language=${TMDB_LANGUAGE}&append_to_response=credits,videos&include_video_language=${LOCALE},en,null`,
     { headers: headers(), next: { revalidate: 86400 } }
   );
   if (res.status === 404) return null;
@@ -120,7 +121,7 @@ export function parseTmdbMovie(m: TmdbMovie) {
 
 export async function getTmdbMovieByImdbId(imdbId: string): Promise<TmdbMovie | null> {
   try {
-    const params = new URLSearchParams({ external_source: "imdb_id", language: "es-ES" });
+    const params = new URLSearchParams({ external_source: "imdb_id", language: TMDB_LANGUAGE });
     const res = await fetch(`${BASE}/find/${imdbId}?${params}`, {
       headers: headers(),
       next: { revalidate: 86400 },

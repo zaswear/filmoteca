@@ -7,8 +7,9 @@ import { LoginForm } from "./login-form";
 import { PosterWall } from "./poster-wall";
 import { Logo } from "@/components/layout/logo";
 
+import { t } from "@/lib/i18n";
 export const dynamic = "force-dynamic";
-export const metadata = { title: "Entrar" };
+export const metadata = { title: t("login.entrar") };
 
 async function getPosters(): Promise<string[]> {
   try {

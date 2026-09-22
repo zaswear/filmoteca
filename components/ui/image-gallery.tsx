@@ -8,6 +8,7 @@ import { cn } from "@/lib/utils";
 import { useDialog } from "@/lib/use-dialog";
 import type { Image as DBImage } from "@/lib/generated/prisma";
 
+import { t } from "@/lib/i18n";
 interface Props {
   images:    DBImage[];
   onDelete?: (id: number) => void;
@@ -61,9 +62,7 @@ export function ImageGallery({ images, onDelete, className }: Props) {
 
   if (!images.length) {
     return (
-      <p className={cn("text-sm text-text-faint italic", className)}>
-        Sin imágenes todavía.
-      </p>
+      <p className={cn("text-sm text-text-faint italic", className)}>{t("galeria.vacia")}</p>
     );
   }
 
@@ -84,7 +83,7 @@ export function ImageGallery({ images, onDelete, className }: Props) {
                 type="button"
                 onClick={() => setLightboxIdx(idx)}
                 className="absolute inset-0 w-full h-full focus:outline-hidden focus-visible:ring-2 focus-visible:ring-(--accent)"
-                aria-label="Ampliar imagen"
+                aria-label={t("galeria.ampliar")}
               >
                 <Image
                   src={src}
@@ -100,7 +99,7 @@ export function ImageGallery({ images, onDelete, className }: Props) {
                 <button
                   onClick={(e) => { e.stopPropagation(); handleDelete(img); }}
                   disabled={deletingId === img.id}
-                  aria-label="Eliminar imagen"
+                  aria-label={t("galeria.eliminar")}
                   className={cn(
                     "absolute top-1.5 right-1.5 w-6 h-6 rounded-full flex items-center justify-center z-10",
                     "bg-black/60 text-white opacity-0 group-hover:opacity-100",
@@ -126,7 +125,7 @@ export function ImageGallery({ images, onDelete, className }: Props) {
           ref={lightboxRef}
           role="dialog"
           aria-modal="true"
-          aria-label="Imagen ampliada"
+          aria-label={t("galeria.ampliada")}
           className="fixed inset-0 z-50 flex items-center justify-center"
           onClick={closeLightbox}
         >
@@ -166,7 +165,7 @@ export function ImageGallery({ images, onDelete, className }: Props) {
           <button
             onClick={closeLightbox}
             className="tap-target absolute top-4 right-4 z-20 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors"
-            aria-label="Cerrar"
+            aria-label={t("comun.cerrar")}
           >
             <X size={18} />
           </button>
@@ -176,7 +175,7 @@ export function ImageGallery({ images, onDelete, className }: Props) {
             <button
               onClick={(e) => { e.stopPropagation(); goPrev(); }}
               className="tap-target absolute left-4 top-1/2 -translate-y-1/2 z-20 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors"
-              aria-label="Anterior"
+              aria-label={t("galeria.anterior")}
             >
               <ChevronLeft size={22} />
             </button>
@@ -187,7 +186,7 @@ export function ImageGallery({ images, onDelete, className }: Props) {
             <button
               onClick={(e) => { e.stopPropagation(); goNext(); }}
               className="tap-target absolute right-4 top-1/2 -translate-y-1/2 z-20 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors"
-              aria-label="Siguiente"
+              aria-label={t("galeria.siguiente")}
             >
               <ChevronRight size={22} />
             </button>
@@ -203,10 +202,9 @@ export function ImageGallery({ images, onDelete, className }: Props) {
               }}
               disabled={deletingId === lightboxImage.id}
               className="absolute bottom-4 right-4 z-20 flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/10 hover:bg-red-500/60 text-white text-xs transition-colors disabled:opacity-40"
-              aria-label="Eliminar imagen"
+              aria-label={t("galeria.eliminar")}
             >
-              <Trash2 size={13} /> Eliminar
-            </button>
+              <Trash2 size={13} />{t("comun.eliminar")}</button>
           )}
         </div>
       )}

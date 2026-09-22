@@ -6,6 +6,7 @@ import { Plus, Trash2, Loader2 } from "lucide-react";
 import { InlineConfirm } from "@/components/ui/inline-confirm";
 import { RatingInput } from "@/components/ui/rating-input";
 
+import { t, DATE_LOCALE } from "@/lib/i18n";
 export interface Revisionado {
   id: number;
   watchedAt: string;
@@ -23,7 +24,7 @@ interface Props {
 const HOY = () => new Date().toISOString().slice(0, 10);
 
 const fecha = (iso: string) =>
-  new Date(iso).toLocaleDateString("es-ES", { day: "numeric", month: "long", year: "numeric" });
+  new Date(iso).toLocaleDateString(DATE_LOCALE, { day: "numeric", month: "long", year: "numeric" });
 
 const nota = (n: number) => String(n).replace(".", ",");
 
@@ -59,14 +60,14 @@ export function ViewingsSection({ movieId, primero, revisionados }: Props) {
           notes: apunte || null,
         }),
       });
-      if (!res.ok) throw new Error("No se ha guardado el revisionado. Puedes reintentar.");
+      if (!res.ok) throw new Error(t("visionados.errorGuardar"));
       setAbierto(false);
       setPuntuacion(null);
       setApunte("");
       setCuando(HOY);
       router.refresh();
     } catch (e) {
-      setError(e instanceof Error ? e.message : "Error al guardar");
+      setError(e instanceof Error ? e.message : t("form.errorGuardar"));
     } finally {
       setGuardando(false);
     }
@@ -77,10 +78,10 @@ export function ViewingsSection({ movieId, primero, revisionados }: Props) {
     setError("");
     try {
       const res = await fetch(`/api/movies/${movieId}/viewings/${id}`, { method: "DELETE" });
-      if (!res.ok) throw new Error("No se ha borrado. Puedes reintentar.");
+      if (!res.ok) throw new Error(t("visionados.errorBorrar"));
       router.refresh();
     } catch (e) {
-      setError(e instanceof Error ? e.message : "Error al borrar");
+      setError(e instanceof Error ? e.message : t("visionados.errorBorrarTitulo"));
     } finally {
       setBorrando(null);
     }
@@ -90,7 +91,7 @@ export function ViewingsSection({ movieId, primero, revisionados }: Props) {
     <section className="mb-10">
       <div className="flex items-baseline gap-3 mb-4">
         <h2 className="section-heading">
-          {veces <= 1 ? "Visionados" : `Vista ${veces} veces`}
+          {veces <= 1 ? t("visionados.titulo") : `Vista ${veces} veces`}
         </h2>
         <span className="flex-1 h-px bg-(--border)" />
         <button
@@ -99,9 +100,7 @@ export function ViewingsSection({ movieId, primero, revisionados }: Props) {
           aria-expanded={abierto}
           className="tap-target gap-2 px-3 text-sm font-semibold text-text hover:text-(--accent) transition-colors"
         >
-          <Plus size={15} aria-hidden="true" />
-          Apuntar revisionado
-        </button>
+          <Plus size={15} aria-hidden="true" />{t("visionados.apuntar")}</button>
       </div>
 
       {error && <p role="alert" className="text-(--error) text-sm mb-3">{error}</p>}
@@ -109,9 +108,7 @@ export function ViewingsSection({ movieId, primero, revisionados }: Props) {
       {abierto && (
         <form onSubmit={guardar} className="border border-(--border) bg-surface p-4 mb-5 space-y-4">
           <div className="flex flex-wrap gap-5 items-start">
-            <label className="grid gap-2 text-[11px] uppercase tracking-widest text-text-mid font-semibold">
-              Cuándo
-              <input
+            <label className="grid gap-2 text-[11px] uppercase tracking-widest text-text-mid font-semibold">{t("visionados.cuando")}<input
                 type="date"
                 value={cuando}
                 max={HOY()}
@@ -120,19 +117,15 @@ export function ViewingsSection({ movieId, primero, revisionados }: Props) {
                 className="min-h-11 w-48 bg-(--bg) border border-(--border) px-3 text-base text-text"
               />
             </label>
-            <div className="grid gap-2 text-[11px] uppercase tracking-widest text-text-mid font-semibold">
-              Nota de esta vez
-              <RatingInput value={puntuacion} onChange={setPuntuacion} />
+            <div className="grid gap-2 text-[11px] uppercase tracking-widest text-text-mid font-semibold">{t("visionados.notaEstaVez")}<RatingInput value={puntuacion} onChange={setPuntuacion} />
             </div>
           </div>
-          <label className="grid gap-2 text-[11px] uppercase tracking-widest text-text-mid font-semibold">
-            Apunte
-            <textarea
+          <label className="grid gap-2 text-[11px] uppercase tracking-widest text-text-mid font-semibold">{t("visionados.apunte")}<textarea
               value={apunte}
               onChange={(e) => setApunte(e.target.value)}
               rows={2}
               maxLength={2000}
-              placeholder="Qué te ha parecido esta vez, con quién la viste…"
+              placeholder={t("visionados.apunteAyuda")}
               className="w-full bg-(--bg) border border-(--border) p-3 font-mono text-lg text-text resize-none"
             />
           </label>
@@ -142,15 +135,13 @@ export function ViewingsSection({ movieId, primero, revisionados }: Props) {
               disabled={guardando}
               className="tap-target px-5 bg-(--accent) text-(--bg) font-semibold text-sm disabled:opacity-50"
             >
-              {guardando ? <Loader2 size={15} className="animate-spin" /> : "Guardar"}
+              {guardando ? <Loader2 size={15} className="animate-spin" /> : t("comun.guardar")}
             </button>
             <button
               type="button"
               onClick={() => setAbierto(false)}
               className="tap-target px-4 border border-(--border) text-text-mid text-sm"
-            >
-              Cancelar
-            </button>
+            >{t("comun.cancelar")}</button>
           </div>
         </form>
       )}
@@ -164,8 +155,8 @@ export function ViewingsSection({ movieId, primero, revisionados }: Props) {
             </span>
             <span className="flex-1 font-mono text-lg text-text-mid">{v.notes ?? ""}</span>
             <InlineConfirm
-              question="¿Borrar este revisionado?"
-              confirmLabel="Sí, borrar"
+              question={t("visionados.confirmBorrar")}
+              confirmLabel={t("visionados.siBorrar")}
               onConfirm={() => borrar(v.id)}
             >
               {(pedirConfirmacion) => (
@@ -192,13 +183,11 @@ export function ViewingsSection({ movieId, primero, revisionados }: Props) {
               {primero.myRating == null ? "" : nota(primero.myRating)}
             </span>
             <span className="flex-1 font-mono text-lg text-text-faint">
-              {revisionados.length > 0 ? "La primera vez" : ""}
+              {revisionados.length > 0 ? t("visionados.primeraVez") : ""}
             </span>
           </li>
         ) : (
-          <li className="py-3 border-b border-(--border) font-mono text-lg text-text-mid">
-            Sin fecha de visionado. Ponla en la ficha y aparecerá aquí.
-          </li>
+          <li className="py-3 border-b border-(--border) font-mono text-lg text-text-mid">{t("visionados.sinFecha")}</li>
         )}
       </ol>
     </section>

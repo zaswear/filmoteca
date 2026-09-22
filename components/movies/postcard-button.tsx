@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Image as ImageIcon } from "lucide-react";
 import { PostcardModal } from "./postcard-modal";
 
+import { t } from "@/lib/i18n";
 interface PostcardButtonProps {
   movie: {
     title: string;
@@ -25,11 +26,11 @@ export function PostcardButton({ movie }: PostcardButtonProps) {
       <button
         onClick={() => setIsOpen(true)}
         className="tap-target gap-1.5 px-2 sm:px-3 text-sm text-text-mid hover:text-text hover:bg-(--surface-hi) transition-colors"
-        title="Crear una postal de esta película"
+        title={t("postal.crearAyuda")}
       >
         <ImageIcon size={17} aria-hidden="true" />
-        <span className="hidden sm:inline">Postal</span>
-        <span className="sr-only sm:hidden">Crear postal</span>
+        <span className="hidden sm:inline">{t("postal.postal")}</span>
+        <span className="sr-only sm:hidden">{t("postal.crear")}</span>
       </button>
       <PostcardModal
         isOpen={isOpen}

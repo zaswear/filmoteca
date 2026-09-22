@@ -1,6 +1,13 @@
 #!/usr/bin/env python3
 """
-Extrae la cartelera de Filmladder para múltiples ciudades y la guarda en la base de datos (cinema_movies, cinema_showtimes).
+Extrae la cartelera de Filmladder y la guarda en la base (cinema_movies,
+cinema_showtimes).
+
+OJO: Filmladder.nl solo cubre los PAÍSES BAJOS, así que este scraper sirve tal
+cual únicamente para ciudades holandesas. Es un ejemplo de cómo alimentar las
+dos tablas; para otro país hace falta otra fuente que escriba en el mismo
+esquema. Las ciudades salen de CINEMA_CITIES (variable de entorno), no de una
+lista escrita aquí.
 """
 
 import os
@@ -26,7 +33,11 @@ def load_env():
 load_env()
 DB_URL = os.environ.get("DATABASE_URL_UNPOOLED") or os.environ.get("DATABASE_URL")
 
-CITIES = ["utrecht", "amsterdam", "rotterdam", "den-haag"]
+CITIES = [
+    c.strip().lower().replace(" ", "-")
+    for c in os.environ.get("CINEMA_CITIES", "").split(",")
+    if c.strip()
+]
 
 def scrape_city(city):
     url = f"https://www.filmladder.nl/{city}/bioscopen"

@@ -2,11 +2,13 @@ import Image from "next/image";
 import { Disc3, ExternalLink, Star } from "lucide-react";
 import { getBlurayReleases } from "@/lib/bluray-releases";
 
-export const metadata = { title: "Lanzamientos Blu-ray" };
+import { DATE_LOCALE } from "@/lib/i18n";
+import { t } from "@/lib/i18n";
+export const metadata = { title: t("lanz.titulo") };
 export const revalidate = 21600;
 
 function formatDate(value: string): string {
-    return new Date(value).toLocaleDateString("es-ES", {
+    return new Date(value).toLocaleDateString(DATE_LOCALE, {
         day: "numeric",
         month: "long",
         year: "numeric",
@@ -21,22 +23,16 @@ export default async function LanzamientosBlurayPage() {
             <header className="border-b border-(--border) pb-6">
                 <div className="flex items-center gap-3">
                     <Disc3 size={28} className="text-(--accent)" aria-hidden="true" />
-                    <h2 className="font-display text-[22px] leading-none text-text">
-                        Lanzamientos Blu-ray
-                    </h2>
+                    <h2 className="font-display text-[22px] leading-none text-text">{t("lanz.titulo")}</h2>
                 </div>
-                <p className="mt-3 max-w-2xl text-xs uppercase tracking-widest text-text-faint font-mono">
-                    Ediciones de los últimos 6 meses y anunciadas, con audio castellano y nota IMDb de 7,5 o más
-                </p>
+                <p className="mt-3 max-w-2xl text-xs uppercase tracking-widest text-text-faint font-mono">{t("lanz.subtitulo")}</p>
             </header>
 
             {releases.length === 0 ? (
                 <div className="border border-(--border) bg-(--surface) px-6 py-20 text-center">
                     <Disc3 size={34} className="mx-auto mb-3 text-text-faint opacity-60" aria-hidden="true" />
-                    <p className="text-sm font-medium text-text-mid">No hay lanzamientos que cumplan los filtros.</p>
-                    <p className="mx-auto mt-2 max-w-md text-xs text-text-faint">
-                        La lista se actualiza cada seis horas a partir de las fichas de Mubis y las notas de IMDb.
-                    </p>
+                    <p className="text-sm font-medium text-text-mid">{t("lanz.vacio")}</p>
+                    <p className="mx-auto mt-2 max-w-md text-xs text-text-faint">{t("lanz.ayuda")}</p>
                 </div>
             ) : (
                 <div className="grid grid-cols-1 gap-6 xl:grid-cols-2">
@@ -77,15 +73,14 @@ export default async function LanzamientosBlurayPage() {
                                             <Star size={13} fill="currentColor" aria-hidden="true" />
                                             IMDb {release.imdbRating.toFixed(1)}
                                         </span>
-                                        <span title={release.audio}>Audio castellano confirmado</span>
+                                        <span title={release.audio}>{t("lanz.audioConfirmado")}</span>
                                     </div>
                                     <a
                                         href={release.link}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="inline-flex items-center gap-1 text-[11px] font-mono text-text-mid transition-colors hover:text-text"
-                                    >
-                                        Ver edición en Mubis <ExternalLink size={10} aria-hidden="true" />
+                                    >{t("lanz.verEdicion")}<ExternalLink size={10} aria-hidden="true" />
                                     </a>
                                 </div>
                             </div>

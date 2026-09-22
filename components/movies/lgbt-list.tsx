@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Film, Clock, Loader2, Play, EyeOff, Heart, Eye, Youtube, Check } from "lucide-react";
 
+import { t } from "@/lib/i18n";
 interface LgbtMovie {
   tmdbId: number;
   imdbId: string;
@@ -66,7 +67,7 @@ export function LgbtList({ initialMovies, initialDbStatus }: LgbtListProps) {
 
       if (!res.ok) {
         const data = await res.json();
-        throw new Error(data.error || "Error al registrar la película");
+        throw new Error(data.error || t("lgbt.errorRegistrar"));
       }
 
       // Al añadir a pendientes, la tarjeta se queda un instante más con el
@@ -82,7 +83,7 @@ export function LgbtList({ initialMovies, initialDbStatus }: LgbtListProps) {
       }
     } catch (err) {
       console.error(err);
-      setError(err instanceof Error ? err.message : "Error al procesar la solicitud");
+      setError(err instanceof Error ? err.message : t("sug.errorSolicitud"));
     } finally {
       setAddingId(null);
       setIgnoringId(null);
@@ -93,10 +94,8 @@ export function LgbtList({ initialMovies, initialDbStatus }: LgbtListProps) {
     return (
       <div className="text-center py-20 bg-(--surface) border border-(--border) rounded-xl">
         <Heart size={32} className="mx-auto text-text-faint mb-3 animate-pulse" />
-        <p className="text-text-mid text-sm font-medium">No quedan películas en el top</p>
-        <p className="text-xs text-text-faint mt-1 px-4 max-w-sm mx-auto">
-          Las del top ya están en tu diario o las has ignorado. El top se regenera semanalmente.
-        </p>
+        <p className="text-text-mid text-sm font-medium">{t("lgbt.vacio")}</p>
+        <p className="text-xs text-text-faint mt-1 px-4 max-w-sm mx-auto">{t("lgbt.vacioAyuda")}</p>
       </div>
     );
   }
@@ -150,8 +149,7 @@ export function LgbtList({ initialMovies, initialDbStatus }: LgbtListProps) {
                 {stampedId === m.imdbId && (
                   <div className="absolute inset-0 z-30 flex items-center justify-center rounded-xl bg-(--surface)/70">
                     <span className="animate-stamp flex items-center gap-2 border-2 border-(--accent) rounded-lg bg-(--surface-hi) px-5 py-2 font-display text-lg tracking-wide text-(--accent) uppercase">
-                      <Check size={20} aria-hidden="true" /> En pendientes
-                    </span>
+                      <Check size={20} aria-hidden="true" />{t("lgbt.enPendientes")}</span>
                   </div>
                 )}
                 <div className="flex flex-col sm:flex-row gap-6">
@@ -177,7 +175,7 @@ export function LgbtList({ initialMovies, initialDbStatus }: LgbtListProps) {
                       <button
                         onClick={() => toggleTrailer(m.imdbId)}
                         className="absolute inset-0 bg-black/45 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
-                        aria-label="Reproducir tráiler"
+                        aria-label={t("sug.trailer")}
                       >
                         <span className="p-3.5 rounded-full bg-(--accent) hover:bg-(--accent-hover) text-bg shadow-(--shadow-raised) transform scale-90 group-hover:scale-100 transition-[transform,background-color] duration-300">
                           <Play size={18} className="fill-bg ml-0.5" />
@@ -222,13 +220,11 @@ export function LgbtList({ initialMovies, initialDbStatus }: LgbtListProps) {
                       <div className="flex flex-wrap items-center gap-1.5">
                         {currentStatus === "vista" && (
                           <span className="flex items-center gap-1 px-2.5 py-1 text-xs font-semibold text-success bg-success/10 border border-success/20 rounded">
-                            <Eye size={12} /> Vista
-                          </span>
+                            <Eye size={12} />{t("marcar.vista")}</span>
                         )}
                         {currentStatus === "pendiente" && (
                           <span className="flex items-center gap-1 px-2.5 py-1 text-xs font-semibold text-warning bg-warning/10 border border-warning/20 rounded">
-                            <Clock size={12} /> En Watchlist
-                          </span>
+                            <Clock size={12} />{t("lgbt.enWatchlist")}</span>
                         )}
 
                         {!currentStatus && (
@@ -239,22 +235,21 @@ export function LgbtList({ initialMovies, initialDbStatus }: LgbtListProps) {
                               onClick={() => handleAdd(m, "pendiente")}
                               className="flex items-center gap-1 px-3 py-1.5 text-xs font-medium rounded bg-(--surface-hi) hover:bg-(--border) border border-(--border) text-text transition-colors cursor-pointer"
                             >
-                              {isAdding ? <Loader2 size={12} className="animate-spin" /> : <><Clock size={12} /> Watchlist</>}
+                              {isAdding ? <Loader2 size={12} className="animate-spin" /> : <><Clock size={12} />{t("lgbt.watchlist")}</>}
                             </button>
 
                             <Link
                               href={`/peliculas/nueva?imdbId=${m.imdbId}`}
                               className="flex items-center gap-1 px-3 py-1.5 text-xs font-medium bg-(--accent) hover:bg-(--accent-hover) text-bg rounded transition-colors"
                             >
-                              <Film size={12} /> Vista
-                            </Link>
+                              <Film size={12} />{t("marcar.vista")}</Link>
 
                             <button
                               type="button"
                               disabled={isAdding || isIgnoring}
                               onClick={() => handleAdd(m, "descartada")}
                               className="p-1.5 text-text-faint hover:text-error hover:bg-error/10 border border-transparent hover:border-error/20 rounded transition-colors cursor-pointer"
-                              title="Ignorar esta película"
+                              title={t("lgbt.ignorar")}
                             >
                               {isIgnoring ? <Loader2 size={12} className="animate-spin" /> : <EyeOff size={12} />}
                             </button>
@@ -266,8 +261,7 @@ export function LgbtList({ initialMovies, initialDbStatus }: LgbtListProps) {
                             href={`/peliculas/nueva?imdbId=${m.imdbId}`}
                             className="flex items-center gap-1 px-2 py-1 text-xs font-medium bg-(--accent) hover:bg-(--accent-hover) text-bg rounded transition-colors"
                           >
-                            <Film size={11} /> Registrar Vista
-                          </Link>
+                            <Film size={11} />{t("sug.registrarVista")}</Link>
                         )}
                       </div>
 
@@ -277,7 +271,7 @@ export function LgbtList({ initialMovies, initialDbStatus }: LgbtListProps) {
                           className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium border border-(--border-hi) hover:bg-(--surface-hi) rounded transition-colors text-text-mid hover:text-text shrink-0 cursor-pointer"
                         >
                           <Youtube size={13} className="text-red-500 fill-red-500/10" />
-                          {isTrailerOpen ? "Ocultar tráiler" : "Ver tráiler"}
+                          {isTrailerOpen ? t("lgbt.ocultarTrailer") : t("lgbt.verTrailer")}
                         </button>
                       )}
                     </div>

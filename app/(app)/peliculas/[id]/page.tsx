@@ -10,12 +10,13 @@ import { MarkWatchedButton } from "@/components/movies/mark-watched-button";
 import { PostcardButton } from "@/components/movies/postcard-button";
 import { MovieTicket } from "@/components/movies/movie-ticket";
 
+import { t } from "@/lib/i18n";
 export const dynamic = "force-dynamic";
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
   const movie  = await db.movie.findUnique({ where: { id: parseInt(id) } });
-  return { title: movie?.title ?? "Película" };
+  return { title: movie?.title ?? t("ficha.pelicula") };
 }
 
 export default async function MovieDetailPage({ params }: { params: Promise<{ id: string }> }) {
@@ -54,8 +55,8 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ id
           className="tap-target gap-2 -ml-2 px-2 text-sm text-text-mid hover:text-text transition-colors"
         >
           <ArrowLeft size={17} aria-hidden="true" />
-          <span className="hidden sm:inline">Películas</span>
-          <span className="sr-only sm:hidden">Volver al diario</span>
+          <span className="hidden sm:inline">{t("ficha.peliculas")}</span>
+          <span className="sr-only sm:hidden">{t("ficha.volver")}</span>
         </Link>
         <div className="flex items-center gap-0.5 sm:gap-1">
           {(movie.status === "pendiente" || movie.status === "en_progreso") && (
@@ -64,12 +65,12 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ id
           <PostcardButton movie={movie} />
           <Link
             href={`/peliculas/${id}/editar`}
-            title="Editar"
+            title={t("ficha.editar")}
             className="tap-target gap-1.5 px-2 sm:px-3 text-sm text-text-mid hover:text-text hover:bg-(--surface-hi) transition-colors"
           >
             <Pencil size={17} aria-hidden="true" />
-            <span className="hidden sm:inline">Editar</span>
-            <span className="sr-only sm:hidden">Editar</span>
+            <span className="hidden sm:inline">{t("ficha.editar")}</span>
+            <span className="sr-only sm:hidden">{t("ficha.editar")}</span>
           </Link>
           <DeleteMovieButton movieId={id} />
         </div>
@@ -81,7 +82,7 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ id
       {/* ── Sinopsis ── */}
       {movie.plot && (
         <section className="mb-10">
-          <h2 className="section-heading mb-3">Sinopsis</h2>
+          <h2 className="section-heading mb-3">{t("form.sinopsis")}</h2>
           <p className="text-text-mid text-[15px] leading-relaxed max-w-2xl">{movie.plot}</p>
         </section>
       )}
@@ -89,7 +90,7 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ id
       {/* ── Tráiler ── */}
       {movie.trailerKey && (
         <section className="mb-10">
-          <h2 className="section-heading mb-3">Tráiler</h2>
+          <h2 className="section-heading mb-3">{t("ficha.trailer")}</h2>
           <div className="aspect-video w-full max-w-3xl rounded-lg overflow-hidden border border-(--border) shadow-raised bg-black">
             <iframe
               src={`https://www.youtube.com/embed/${movie.trailerKey}`}
@@ -105,7 +106,7 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ id
       {/* ── Mi crítica ── */}
       {movie.review && (
         <section className="mb-10">
-          <h2 className="section-heading mb-4">Mi crítica</h2>
+          <h2 className="section-heading mb-4">{t("ficha.miCritica")}</h2>
           <div
             className="prose-review max-w-2xl"
             dangerouslySetInnerHTML={{ __html: movie.review }}
@@ -116,7 +117,7 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ id
       {/* ── Notas ── */}
       {movie.notes && (
         <section className="mb-10">
-          <h2 className="section-heading mb-3">Notas</h2>
+          <h2 className="section-heading mb-3">{t("ficha.notas")}</h2>
           <p className="text-text-mid text-sm leading-relaxed whitespace-pre-wrap max-w-2xl">{movie.notes}</p>
         </section>
       )}
@@ -139,7 +140,7 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ id
       {/* ── Galería ── */}
       {gallery.length > 0 && (
         <section className="mb-10">
-          <h2 className="section-heading mb-4">Galería</h2>
+          <h2 className="section-heading mb-4">{t("ficha.galeria")}</h2>
           <ImageGallery images={gallery} />
         </section>
       )}
@@ -147,7 +148,7 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ id
       {/* ── Pósteres alternativos ── */}
       {posterAlts.length > 0 && (
         <section className="mb-10">
-          <h2 className="section-heading mb-4">Pósteres alternativos</h2>
+          <h2 className="section-heading mb-4">{t("form.postersAlt")}</h2>
           <ImageGallery images={posterAlts} />
         </section>
       )}

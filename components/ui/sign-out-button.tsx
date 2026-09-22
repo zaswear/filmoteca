@@ -2,6 +2,7 @@
 
 import { signOut } from "next-auth/react";
 
+import { t } from "@/lib/i18n";
 interface Props {
   className?: string;
   children?: React.ReactNode;
@@ -13,7 +14,7 @@ export function SignOutButton({ className, children }: Props) {
       onClick={() => signOut({ callbackUrl: "/login" })}
       className={className}
     >
-      {children ?? "Cerrar sesión"}
+      {children ?? t("nav.cerrarSesion")}
     </button>
   );
 }

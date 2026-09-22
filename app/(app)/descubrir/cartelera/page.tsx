@@ -5,6 +5,8 @@ import Image from "next/image";
 import { CalendarDays, Film, MapPin } from "lucide-react";
 import { PosterSkeleton } from "@/components/ui/poster-skeleton";
 
+import { t } from "@/lib/i18n";
+import { CINEMA_CITIES } from "@/lib/branding";
 interface Showtime {
   id: number;
   cinemaName: string;
@@ -22,11 +24,11 @@ interface CinemaMovie {
   showtimes: Showtime[];
 }
 
-const CITIES = ["Utrecht", "Amsterdam", "Rotterdam", "Den Haag"];
+
 
 export default function CarteleraPage() {
   const [movies, setMovies] = useState<CinemaMovie[]>([]);
-  const [selectedCity, setSelectedCity] = useState("Utrecht");
+  const [selectedCity, setSelectedCity] = useState(CINEMA_CITIES[0] ?? "");
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -36,12 +38,12 @@ export default function CarteleraPage() {
       setError(null);
       try {
         const response = await fetch(`/api/cartelera?city=${encodeURIComponent(selectedCity)}`);
-        if (!response.ok) throw new Error("Error al obtener la cartelera");
+        if (!response.ok) throw new Error(t("cartelera.error"));
         const data = await response.json();
         if (data.success) {
           setMovies(data.movies);
         } else {
-          throw new Error(data.error || "Error desconocido");
+          throw new Error(data.error || t("form.errorDesconocido"));
         }
       } catch (err) {
         setError(err instanceof Error ? err.message : String(err));
@@ -67,12 +69,10 @@ export default function CarteleraPage() {
       {/* Cabecera compacta */}
       <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
         <h2 className="font-display text-[22px] text-text flex items-center gap-2">
-          <Film className="w-6 h-6 text-accent" />
-          Cartelera
-        </h2>
+          <Film className="w-6 h-6 text-accent" />{t("cartelera.titulo")}</h2>
 
         <div className="flex items-center gap-1 bg-surface border border-border rounded-lg p-1 overflow-x-auto hide-scrollbar">
-          {CITIES.map((city) => (
+          {CINEMA_CITIES.map((city) => (
             <button
               key={city}
               onClick={() => setSelectedCity(city)}
@@ -93,7 +93,7 @@ export default function CarteleraPage() {
         <div
           className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-x-4 gap-y-6 sm:gap-y-8"
           role="status"
-          aria-label="Cargando cartelera…"
+          aria-label={t("cartelera.cargando")}
         >
           {Array.from({ length: 5 }, (_, i) => (
             <PosterSkeleton key={i} className="rounded-xl" />
@@ -102,14 +102,14 @@ export default function CarteleraPage() {
       ) : error ? (
         <div className="bg-error/10 border border-error text-error p-4 rounded-lg">
           <p className="flex items-center gap-2">
-            <span className="font-bold">Error:</span> {error}
+            <span className="font-bold">{t("cartelera.errorPrefijo")}</span> {error}
           </p>
         </div>
       ) : movies.length === 0 ? (
         <div className="text-center py-20 bg-surface rounded-xl border border-border">
           <CalendarDays className="w-14 h-14 text-text-faint mx-auto mb-4" />
           <h2 className="text-lg font-semibold text-text mb-1">No hay películas en {selectedCity}</h2>
-          <p className="text-text-mid text-sm">Prueba con otra ciudad o vuelve más tarde.</p>
+          <p className="text-text-mid text-sm">{t("cartelera.errorAyuda")}</p>
         </div>
       ) : (
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-x-4 gap-y-6 sm:gap-y-8">
@@ -168,7 +168,7 @@ export default function CarteleraPage() {
                             target="_blank"
                             rel="noopener noreferrer"
                             className="px-1.5 py-0.5 rounded text-xs font-mono text-text-mid bg-surface-hi hover:bg-accent hover:text-white border border-border hover:border-accent transition-colors cursor-pointer"
-                            title="Comprar entrada"
+                            title={t("cartelera.comprar")}
                           >
                             {st.startTime}
                           </a>

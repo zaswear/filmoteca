@@ -6,6 +6,7 @@ import { Search, Loader2 } from "lucide-react";
 import type { MovieCreateInput } from "@/lib/schemas";
 import { cn } from "@/lib/utils";
 
+import { t } from "@/lib/i18n";
 type Source = "omdb" | "tmdb";
 
 interface SearchResult {
@@ -73,7 +74,7 @@ export function OmdbSearch({ onSelect, onLoadingChange }: Props) {
         const data = await res.json();
         if (!res.ok) throw new Error(data.error);
         if (!Array.isArray(data) || data.length === 0) {
-          setError(year ? `Sin resultados para "${q}" (${year}). Prueba sin año.` : "Sin resultados.");
+          setError(year ? `Sin resultados para "${q}" (${year}). Prueba sin año.` : t("omdb.sinResultados"));
         } else {
           setResults(data);
         }
@@ -85,13 +86,13 @@ export function OmdbSearch({ onSelect, onLoadingChange }: Props) {
         const data = await res.json();
         if (!res.ok) throw new Error(data.error);
         if (!Array.isArray(data) || data.length === 0) {
-          setError("Sin resultados en TMDB.");
+          setError(t("omdb.sinResultadosTmdb"));
         } else {
           setResults(data);
         }
       }
     } catch (err) {
-      setError(err instanceof Error ? err.message : "Error de búsqueda");
+      setError(err instanceof Error ? err.message : t("omdb.errorBusqueda"));
     } finally {
       setLoading(false);
       onLoadingChange?.(false);
@@ -120,7 +121,7 @@ export function OmdbSearch({ onSelect, onLoadingChange }: Props) {
       setQuery("");
       setYear("");
     } catch (err) {
-      setError(err instanceof Error ? err.message : "Error al cargar película");
+      setError(err instanceof Error ? err.message : t("omdb.errorCargar"));
     } finally {
       setLoading(false);
       onLoadingChange?.(false);
@@ -133,7 +134,7 @@ export function OmdbSearch({ onSelect, onLoadingChange }: Props) {
     <div className="space-y-3">
       {/* Selector de fuente */}
       <div className="flex flex-wrap items-center gap-2">
-        <span className="text-[11px] uppercase tracking-widest text-text-faint">Fuente:</span>
+        <span className="text-[11px] uppercase tracking-widest text-text-faint">{t("omdb.fuente")}</span>
         <div className="flex border border-(--border) rounded-[6px] overflow-hidden">
           {(["tmdb", "omdb"] as Source[]).map((s) => (
             <button
@@ -152,7 +153,7 @@ export function OmdbSearch({ onSelect, onLoadingChange }: Props) {
           ))}
         </div>
         <span className="text-[10px] text-text-faint">
-          {source === "tmdb" ? "Sin límite diario · mejor calidad" : "1.000 req/día"}
+          {source === "tmdb" ? t("omdb.tmdbAyuda") : t("omdb.omdbAyuda")}
         </span>
       </div>
 
@@ -161,13 +162,13 @@ export function OmdbSearch({ onSelect, onLoadingChange }: Props) {
         <div className="relative flex-1 min-w-[160px]">
           <Search size={15} className="absolute left-3 top-1/2 -translate-y-1/2 text-text-faint" />
           <input
-            aria-label="Buscar película"
+            aria-label={t("omdb.buscarEtiqueta")}
             ref={inputRef}
             type="text"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             onKeyDown={(e) => e.key === "Enter" && (e.preventDefault(), search())}
-            placeholder={source === "omdb" ? "Título o IMDb ID (tt…)" : "Título de la película"}
+            placeholder={source === "omdb" ? t("omdb.placeholderTitulo") : t("form.tituloAyuda")}
             className={`${inputCls} w-full pl-9 pr-4 py-2.5`}
           />
         </div>
@@ -176,8 +177,8 @@ export function OmdbSearch({ onSelect, onLoadingChange }: Props) {
           value={year}
           onChange={(e) => setYear(e.target.value.replace(/\D/g, "").slice(0, 4))}
           onKeyDown={(e) => e.key === "Enter" && (e.preventDefault(), search())}
-          placeholder="Año"
-          aria-label="Año de estreno"
+          placeholder={t("form.anio")}
+          aria-label={t("omdb.anioAyuda")}
           inputMode="numeric"
           maxLength={4}
           className={`${inputCls} w-20 px-3 py-2.5 font-mono text-center`}
@@ -188,7 +189,7 @@ export function OmdbSearch({ onSelect, onLoadingChange }: Props) {
           disabled={loading}
           className="flex items-center gap-2 px-4 py-2.5 bg-(--accent) text-bg text-sm font-medium rounded-[6px] hover:bg-(--accent-hover) transition-colors disabled:opacity-50"
         >
-          {loading ? <Loader2 size={14} className="animate-spin" /> : "Buscar"}
+          {loading ? <Loader2 size={14} className="animate-spin" /> : t("omdb.buscar")}
         </button>
       </div>
 

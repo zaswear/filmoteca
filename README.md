@@ -1,173 +1,207 @@
 # Filmoteca
 
-Un diario de cine que es tuyo. Apuntas lo que ves, le pones nota, escribes lo que
-te pareció — y los datos se quedan en tu base de datos, no en la de nadie más.
+**English** · [Español](README.es.md)
 
-Es de **una sola persona por instancia**: no hay registro, ni muro social, ni
-perfiles públicos. Montas la tuya, entras con tu usuario y ya.
+A film diary that's yours. You log what you watch, rate it, write what you
+thought — and the data stays in your own database, not in someone else's.
 
-> Sin capturas todavía. Si montas una instancia y quieres aportar una, abre un issue.
+It's **one person per instance**: no sign-up, no social feed, no public
+profiles. You deploy your own, you sign in, that's it.
 
-## Qué hace
+> No screenshots yet. If you run an instance and want to contribute one, open an
+> issue.
 
-- **Registrar visionados.** Una película puede verse varias veces; cada visionado
-  guarda su fecha, su formato (cine, Blu-ray, streaming…) y su nota.
-- **Reseñas** en HTML, con un editor propio.
-- **Importar tu historial de IMDb.** Exportas tus ratings desde IMDb, sueltas el
-  CSV en `export_imdb/` y eliges desde la web cuáles importar. Cada una se
-  enriquece con OMDb antes de guardarse.
-- **Ficha automática** desde TMDB y OMDb: sinopsis, reparto, duración, nota y
-  votos de IMDb, póster y tráiler.
-- **Qué ver**, un buscador en lenguaje natural: «algo corto de los 90 que no haya
-  visto». Es la única parte con IA, y es opcional.
-- **Estadísticas** — barras y mapa de calor dibujados en CSS, sin librería de
-  gráficos.
-- **Descubrir**: cartelera, próximos Blu-ray y listas temáticas.
-- **Postal exportable** de una película, con su nota y su reseña, para compartir.
-- **PWA**: se instala en el móvil y la carcasa funciona sin conexión.
+## What it does
 
-## Antes de empezar
+- **Log viewings.** A film can be watched more than once; each viewing keeps its
+  own date, format (cinema, Blu-ray, streaming…) and rating.
+- **Reviews** in rich text, with a built-in editor.
+- **Import your IMDb history.** Export your ratings from IMDb, drop the CSV in
+  `export_imdb/` and pick from the web which ones to import. Each one is
+  enriched from OMDb before it's saved.
+- **Automatic details** from TMDB and OMDb: plot, cast, runtime, IMDb rating and
+  votes, poster and trailer.
+- **What to watch**, a natural-language picker: "something short from the 90s I
+  haven't seen". It's the only part that uses AI, and it's optional.
+- **Statistics** — bars and a heatmap drawn in CSS, no charting library.
+- **Discover**: what's in cinemas, upcoming Blu-rays and themed lists.
+- **An exportable postcard** of a film, with its rating and review, to share.
+- **PWA**: installs on your phone, and the shell works offline.
 
-Necesitas tres cosas, todas con plan gratuito:
+## Before you start
 
-| | Para qué | Dónde |
+You need three things, all with a free tier:
+
+| | What for | Where |
 |---|---|---|
-| **PostgreSQL** | Tus datos | [Neon](https://neon.tech) va bien, pero sirve cualquiera |
-| **TMDB** | Fichas y pósters | [themoviedb.org/settings/api](https://www.themoviedb.org/settings/api) — el token *bearer v4* |
-| **OMDb** | Nota y votos de IMDb | [omdbapi.com/apikey](https://www.omdbapi.com/apikey.aspx) — 1.000 peticiones/día |
+| **PostgreSQL** | Your data | [Neon](https://neon.tech) works well, but any will do |
+| **TMDB** | Details and posters | [themoviedb.org/settings/api](https://www.themoviedb.org/settings/api) — the *v4 bearer* token |
+| **OMDb** | IMDb rating and votes | [omdbapi.com/apikey](https://www.omdbapi.com/apikey.aspx) — 1,000 requests/day |
 
-Opcionales: **Cloudinary** (solo si quieres subir tus propias fotos; sin ella se
-usan los pósters de TMDB) y una **clave de Anthropic** (solo para el buscador en
-lenguaje natural).
+Optional: **Cloudinary** (only if you want to upload your own photos; without it
+TMDB posters are used) and an **Anthropic key** (only for the natural-language
+picker).
 
-Node 20 o superior.
+Node 20 or newer.
 
-## Instalación
+## Install
 
 ```bash
 git clone https://github.com/zaswear/filmoteca.git
 cd filmoteca
 npm install
 
-cp .env.example .env        # rellena DATABASE_URL, TMDB y OMDb
-npm run db:deploy           # crea las tablas
-npm run admin:password -- 'tu contraseña'
+cp .env.example .env        # fill in DATABASE_URL, TMDB and OMDb
+npm run db:deploy           # create the tables
+npm run admin:password -- 'your password'
 npm run dev
 ```
 
-Abre <http://localhost:3000>. Te pedirá el usuario de `ADMIN_USER` y la
-contraseña que acabas de poner.
+Open <http://localhost:3000>. It'll ask for the username from `ADMIN_USER` and
+the password you just set.
 
-### Sobre la contraseña
+### About the password
 
-No vive en una variable de entorno: vive en la base, hasheada con scrypt. Eso
-significa que se cambia **sin volver a desplegar**, y que el reset funciona
-cuando no puedes entrar a la web — que es justo cuando hace falta:
+It doesn't live in an environment variable: it lives in the database, hashed
+with scrypt. That means you change it **without redeploying**, and the reset
+works when you can't get into the web — which is exactly when you need it:
 
 ```bash
-npm run admin:password -- 'contraseña nueva'
+npm run admin:password -- 'new password'
 ```
 
-Al cambiarla se invalidan las sesiones abiertas. Si no hay fila de credencial ni
-`ADMIN_PASSWORD_HASH`, el login **falla cerrado**: no entra nadie.
+Changing it invalidates open sessions. With no credential row and no
+`ADMIN_PASSWORD_HASH`, login **fails closed**: nobody gets in.
 
-## Desplegar
+## Deploy
 
-Funciona en cualquier sitio que corra Next.js. En Vercel: importas el repo, pegas
-las variables de `.env.example` y listo — el `build` ya lanza `prisma generate`.
+It runs anywhere Next.js runs. On Vercel: import the repo, paste the variables
+from `.env.example`, done — `build` already runs `prisma generate`.
 
-En un VPS:
+On a VPS:
 
 ```bash
 npm ci && npm run build
-npm start                   # o detrás de pm2 / systemd
+npm start                   # or behind pm2 / systemd
 ```
 
-Pon `NEXTAUTH_URL` y `NEXT_PUBLIC_APP_URL` a tu dominio real, y genera un
-`NEXTAUTH_SECRET` nuevo con `openssl rand -hex 32`.
+Point `NEXTAUTH_URL` and `NEXT_PUBLIC_APP_URL` at your real domain, and generate
+a fresh `NEXTAUTH_SECRET` with `openssl rand -hex 32`.
 
-La app se sirve con `robots: noindex, nofollow`. Es un diario personal, no una
-web pública: si quieres que Google lo indexe, cámbialo en `app/layout.tsx`.
+The app is served with `robots: noindex, nofollow`. It's a personal diary, not a
+public site: if you want Google to index it, change it in `app/layout.tsx`.
 
-## Ponerle tu nombre
+## Language
 
-Cuatro variables, ningún fichero que tocar:
+The interface ships in **English and Spanish**. You pick at deploy time, not at
+runtime:
 
 ```env
-NEXT_PUBLIC_APP_NAME="Mi cine"
-NEXT_PUBLIC_APP_TAGLINE="Lo que veo"
-NEXT_PUBLIC_APP_URL="https://micine.ejemplo"
-NEXT_PUBLIC_APP_AUTHOR=""     # vacío = sin pie de página
+NEXT_PUBLIC_APP_LOCALE="en"    # "es" is the default
 ```
 
-Next las hornea en el bundle al construir: después de cambiarlas hace falta un
-rebuild, no basta con reiniciar. Salen en el título, el logo, el manifiesto de la
-PWA y la postal exportable, todo desde [`lib/branding.ts`](lib/branding.ts).
+It switches the whole interface, the language requested from TMDB (plots and
+titles), date formatting and the decimal separator. Next bakes it into the
+bundle at build time, so changing it needs a rebuild.
 
-El icono del billete es un SVG en [`components/layout/logo.tsx`](components/layout/logo.tsx),
-sin dependencias. Cámbialo si quieres otra cosa.
+There's no language switcher in the app, on purpose: an instance belongs to one
+person, who picks their language once. A switcher would force `[locale]` route
+segments and negotiation middleware for a change nobody makes twice.
+
+The dictionaries live in [`lib/locales/`](lib/locales/), 400 keys each. English
+is typed against Spanish, so **a missing key is a compile error**, not an empty
+string in production. To add a language: copy `es.ts`, translate it, and add it
+to the map in [`lib/i18n.ts`](lib/i18n.ts).
+
+## Making it yours
+
+Four variables, no files to touch:
+
+```env
+NEXT_PUBLIC_APP_NAME="My cinema"
+NEXT_PUBLIC_APP_TAGLINE="What I watch"
+NEXT_PUBLIC_APP_URL="https://mycinema.example"
+NEXT_PUBLIC_APP_AUTHOR=""     # empty = no footer
+```
+
+Plus the cities for the "In cinemas" filter, which is empty otherwise:
+
+```env
+NEXT_PUBLIC_CINEMA_CITIES="London,Manchester,Bristol"
+```
+
+Next bakes these into the bundle at build time: changing them needs a rebuild,
+not a restart. They show up in the title, the logo, the PWA manifest and the
+exportable postcard, all from [`lib/branding.ts`](lib/branding.ts).
+
+The ticket icon is an SVG in
+[`components/layout/logo.tsx`](components/layout/logo.tsx), no dependencies.
+Swap it for something else if you like.
 
 ## Stack
 
-| Capa | Qué |
+| Layer | What |
 |---|---|
 | Framework | Next.js 16 · App Router · React 19 · TypeScript |
-| Base de datos | PostgreSQL · Prisma 5 |
-| Acceso | NextAuth 4 · JWT · credencial scrypt en la base |
-| Estilos | Tailwind 4 · OKLCH |
-| Tipografía | Archivo Black · Archivo · Newsreader |
-| Gráficos | Ninguna librería — CSS |
-| Datos | TMDB · OMDb |
-| Imágenes | Cloudinary (opcional) |
+| Database | PostgreSQL · Prisma 5 |
+| Auth | NextAuth 4 · JWT · scrypt credential in the database |
+| Styling | Tailwind 4 · OKLCH |
+| Type | Archivo Black · Archivo · Newsreader |
+| Charts | No library — CSS |
+| Data | TMDB · OMDb |
+| Images | Cloudinary (optional) |
 
-## Comandos
+## Commands
 
 ```bash
-npm run dev            # desarrollo
-npm run build          # build de producción
-npm start              # servir el build
+npm run dev            # development
+npm run build          # production build
+npm start              # serve the build
 
 npm run lint           # ESLint (--max-warnings=0)
 npm run typecheck      # tsc --noEmit
-npm test               # tests con node --test
+npm test               # tests with node --test
 
-npm run db:deploy      # aplica las migraciones (base vacía)
-npm run db:migrate     # crea una migración nueva tras tocar el schema
-npm run db:generate    # regenera el cliente Prisma
+npm run db:deploy      # apply migrations (empty database)
+npm run db:migrate     # create a new migration after changing the schema
+npm run db:generate    # regenerate the Prisma client
 npm run db:studio      # Prisma Studio
-npm run admin:password -- 'contraseña'
+npm run admin:password -- 'password'
 ```
 
-**No uses `prisma db push` contra una base con datos.** Sincroniza el esquema a
-la brava y puede vaciar tablas enteras — pasó, y por eso no hay script para él.
+**Don't run `prisma db push` against a database with data in it.** It syncs the
+schema bluntly and can empty whole tables — it happened, which is why there's no
+script for it.
 
-## Estructura
+## Layout
 
 ```
 app/
-  (app)/          páginas con sesión: películas, watchlist, qué ver, stats…
-  api/            rutas de servidor: TMDB, OMDb, imágenes, importación
+  (app)/          signed-in pages: films, watchlist, what to watch, stats…
+  api/            server routes: TMDB, OMDb, images, import
   login/
-components/       interfaz (movies/, layout/, stats/, ui/)
+components/       interface (movies/, layout/, stats/, ui/)
 lib/
-  branding.ts     el nombre de tu instancia
-  tmdb.ts omdb.ts wrappers de las dos APIs
-  csv.ts          parser de las exportaciones de IMDb
-  auth.ts         NextAuth + credencial
-prisma/           schema y migraciones
-scripts/          utilidades sueltas (importadores, backfills)
-export_imdb/      tus CSV de IMDb — gitignored
+  branding.ts     your instance's name
+  i18n.ts         t() and the locale
+  locales/        es.ts · en.ts dictionaries
+  tmdb.ts omdb.ts wrappers for both APIs
+  csv.ts          parser for IMDb exports
+  auth.ts         NextAuth + credential
+prisma/           schema and migrations
+scripts/          one-off utilities (importers, backfills)
+export_imdb/      your IMDb CSVs — gitignored
 ```
 
-## Contribuir
+## Contributing
 
-Issues y PRs, bienvenidos. Antes de abrir un PR: `npm run lint`,
-`npm run typecheck` y `npm test` en verde.
+Issues and PRs welcome. Before opening a PR: `npm run lint`, `npm run typecheck`
+and `npm test` green.
 
-Ten en cuenta que esto nació como una app personal y sigue siéndolo: el objetivo
-no es convertirla en multiusuario. Si tu idea empieza por «y si varios
-usuarios…», probablemente quieras otro proyecto.
+Bear in mind this started as a personal app and still is one: the goal isn't to
+turn it multi-user. If your idea starts with "what if several users…", you
+probably want a different project.
 
-## Licencia
+## Licence
 
-MIT — ver [LICENSE](LICENSE).
+MIT — see [LICENSE](LICENSE).

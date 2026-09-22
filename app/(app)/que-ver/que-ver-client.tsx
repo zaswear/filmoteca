@@ -8,6 +8,7 @@ import type { MovieQueVer } from "@/lib/types";
 import { MOODS, recommend, type TasteProfile, type WatchFilters, type Pick } from "@/lib/what-to-watch";
 import { cn } from "@/lib/utils";
 
+import { t } from "@/lib/i18n";
 export function QueVerClient({
   pool,
   taste,
@@ -69,7 +70,7 @@ export function QueVerClient({
       setSeed((s) => s + 1);
       setRan(true);
     } catch {
-      setAiNote("No pude interpretar eso; usa los ánimos de abajo.");
+      setAiNote(t("queVer.errorInterpretar"));
     } finally {
       setAiBusy(false);
     }
@@ -80,32 +81,25 @@ export function QueVerClient({
       {/* Cabecera */}
       <div className="border-b border-(--border) pb-6">
         <h1 className="font-display font-semibold text-[38px] italic leading-none text-text flex items-center gap-2">
-          <Dices size={30} className="text-(--accent)" aria-hidden="true" /> ¿Qué veo?
-        </h1>
-        <p className="text-xs text-text-faint font-mono mt-2">
-          Una peli de tus pendientes según tu ánimo y lo que sueles puntuar alto.
-        </p>
+          <Dices size={30} className="text-(--accent)" aria-hidden="true" />{t("queVer.titulo")}</h1>
+        <p className="text-xs text-text-faint font-mono mt-2">{t("queVer.subtitulo")}</p>
       </div>
 
       {pool.length === 0 ? (
-        <p className="text-sm text-text-faint bg-(--surface) border border-(--border) rounded-md px-4 py-6 text-center italic">
-          No tienes películas pendientes. Añade alguna a tu watchlist primero.
-        </p>
+        <p className="text-sm text-text-faint bg-(--surface) border border-(--border) rounded-md px-4 py-6 text-center italic">{t("queVer.sinPendientes")}</p>
       ) : (
         <>
           {/* Texto libre (IA) */}
           {aiEnabled && (
             <div>
-              <label htmlFor="qv-text" className="block text-[11px] uppercase tracking-widest text-text-faint mb-1.5">
-                Dime qué te apetece
-              </label>
+              <label htmlFor="qv-text" className="block text-[11px] uppercase tracking-widest text-text-faint mb-1.5">{t("queVer.dime")}</label>
               <div className="flex gap-2">
                 <input
                   id="qv-text"
                   value={freeText}
                   onChange={(e) => setFreeText(e.target.value)}
                   onKeyDown={(e) => e.key === "Enter" && interpret()}
-                  placeholder="algo como Interstellar pero más ligero…"
+                  placeholder={t("queVer.placeholder")}
                   className="flex-1 bg-(--surface) border border-(--border) rounded-[6px] px-3 py-2 text-[15px] text-text placeholder:text-text-faint focus:outline-hidden focus:border-(--border-focus)"
                 />
                 <button
@@ -122,7 +116,7 @@ export function QueVerClient({
 
           {/* Ánimos */}
           <div className="space-y-3">
-            <span className="block text-[11px] uppercase tracking-widest text-text-faint">O elige un ánimo</span>
+            <span className="block text-[11px] uppercase tracking-widest text-text-faint">{t("queVer.elegirAnimo")}</span>
             <div className="flex flex-wrap gap-2">
               {MOODS.map((m) => (
                 <button
@@ -147,8 +141,7 @@ export function QueVerClient({
                     : "border-(--border) text-text-mid hover:border-(--border-hi) hover:text-text"
                 )}
               >
-                <Clock size={13} /> Noche corta
-              </button>
+                <Clock size={13} />{t("queVer.nocheCorta")}</button>
             </div>
           </div>
 
@@ -159,12 +152,12 @@ export function QueVerClient({
             onClick={recomendar}
             className="inline-flex items-center gap-2 px-5 py-2.5 bg-(--accent) hover:bg-(--accent-hover) text-bg text-sm font-semibold rounded-[6px] transition-colors"
           >
-            <Dices size={16} /> {ran ? "Otra" : "Recomiéndame"}
+            <Dices size={16} /> {ran ? t("queVer.otra") : t("queVer.recomiendame")}
           </button>
 
           {/* Resultado */}
           {ran && !hero && (
-            <p className="text-sm text-text-faint italic">Nada encaja con esos filtros. Prueba otro ánimo o quita «noche corta».</p>
+            <p className="text-sm text-text-faint italic">{t("queVer.sinEncaje")}</p>
           )}
 
           {hero && (
@@ -172,7 +165,7 @@ export function QueVerClient({
               <HeroPick pick={hero} />
               {alts.length > 0 && (
                 <div>
-                  <span className="block text-[11px] uppercase tracking-widest text-text-faint mb-3">Otras opciones</span>
+                  <span className="block text-[11px] uppercase tracking-widest text-text-faint mb-3">{t("queVer.otrasOpciones")}</span>
                   <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                     {alts.map((p) => (
                       <Link
@@ -222,8 +215,7 @@ function HeroPick({ pick }: { pick: Pick }) {
           href={`/peliculas/${m.id}`}
           className="mt-auto self-start inline-flex items-center gap-1.5 px-4 py-2 bg-(--accent) hover:bg-(--accent-hover) text-bg text-sm font-semibold rounded-[6px] transition-colors"
         >
-          <Play size={14} className="fill-current" /> Ver ficha
-        </Link>
+          <Play size={14} className="fill-current" />{t("queVer.verFicha")}</Link>
       </div>
     </div>
   );

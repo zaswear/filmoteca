@@ -5,11 +5,12 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 
+import { t } from "@/lib/i18n";
 const FUENTES = [
-  { href: "/descubrir/cartelera", label: "En cines" },
-  { href: "/descubrir/sugerencias", label: "Sugerencias" },
-  { href: "/descubrir/bluray", label: "Blu-ray" },
-  { href: "/descubrir/lgbt", label: "Top LGBT+" },
+  { href: "/descubrir/cartelera", label: t("tabs.enCines") },
+  { href: "/descubrir/sugerencias", label: t("tabs.sugerencias") },
+  { href: "/descubrir/bluray", label: t("tabs.bluray") },
+  { href: "/descubrir/lgbt", label: t("tabs.topLgbt") },
 ];
 
 export function DescubrirTabs() {
@@ -41,7 +42,7 @@ export function DescubrirTabs() {
 
   return (
     <nav
-      aria-label="Fuentes"
+      aria-label={t("tabs.fuentes")}
       className="relative flex gap-0 mt-5 border-b border-(--text) overflow-x-auto"
     >
       <span

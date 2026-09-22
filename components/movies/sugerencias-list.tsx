@@ -5,6 +5,12 @@ import Link from "next/link";
 import Image from "next/image";
 import { Film, Clock, Sparkles, Check, Loader2, ChevronLeft, ChevronRight, Play, Image as ImageIcon, EyeOff, RefreshCw } from "lucide-react";
 
+import { t } from "@/lib/i18n";
+import { APP_NAME } from "@/lib/branding";
+
+// El resguardo pequeño solo tiene sitio para dos caracteres, así que en vez de
+// «D·C» escrito a mano se sacan las iniciales del nombre de la instancia.
+const INICIALES = APP_NAME.split(/\s+/).map((p) => p[0]).join("·").slice(0, 3).toUpperCase();
 // Nº de ticket decorativo, fijado una vez al importar (antes Math.random en render).
 const TICKET_NO = Math.floor(Math.random() * 9000 + 1000);
 
@@ -71,14 +77,14 @@ function TicketLoader() {
         .tk-caption{margin-top:auto;margin-bottom:16px;font-family:var(--font-bebas),Impact,sans-serif;
           letter-spacing:.28em;color:#cda85a;font-size:14px;z-index:3;}
       `}} />
-      <div className="tk-stage" role="status" aria-live="polite" aria-label="Generando sugerencias">
+      <div className="tk-stage" role="status" aria-live="polite" aria-label={t("sug.generando")}>
         <div className="tk-machine"><div className="tk-slot" /></div>
         <div className="tk-ticket">
-          <div className="tk-half tk-top"><span>ADMIT ONE</span><b>D·C</b></div>
+          <div className="tk-half tk-top"><span>ADMIT ONE</span><b>{INICIALES}</b></div>
           <div className="tk-perf" />
-          <div className="tk-half tk-bottom"><span>DIRECTOR&apos;S CUT</span><span>Nº {TICKET_NO}</span></div>
+          <div className="tk-half tk-bottom"><span>{APP_NAME.toUpperCase()}</span><span>Nº {TICKET_NO}</span></div>
         </div>
-        <div className="tk-caption">IMPRIMIENDO NUEVAS SUGERENCIAS…</div>
+        <div className="tk-caption">{t("sug.imprimiendo")}</div>
       </div>
     </div>
   );
@@ -132,12 +138,12 @@ export function SugerenciasList({ initialSuggestions }: SugerenciasListProps) {
     try {
       const res = await fetch("/api/sugerencias/refresh", { method: "POST" });
       const data = await res.json().catch(() => ({}));
-      if (!res.ok) throw new Error(data.error || "No se pudieron generar sugerencias");
+      if (!res.ok) throw new Error(data.error || t("sug.errorGenerar"));
       setSuggestions(Array.isArray(data.suggestions) ? data.suggestions : []);
       setCurrentIndex(0);
       setShowTrailer(false);
     } catch (e) {
-      setError(e instanceof Error ? e.message : "Error al recargar sugerencias");
+      setError(e instanceof Error ? e.message : t("sug.errorRecargar"));
     } finally {
       setRefreshing(false);
     }
@@ -167,8 +173,8 @@ export function SugerenciasList({ initialSuggestions }: SugerenciasListProps) {
 
       if (!res.ok) {
         const data = await res.json();
-        if (res.status === 409) throw new Error("Ya está en tu diario");
-        throw new Error(data.error || "No se pudo añadir a pendientes");
+        if (res.status === 409) throw new Error(t("sug.yaEnDiario"));
+        throw new Error(data.error || t("sug.errorPendientes"));
       }
 
       setSuccessId(s.imdbId);
@@ -193,7 +199,7 @@ export function SugerenciasList({ initialSuggestions }: SugerenciasListProps) {
 
     } catch (err) {
       console.error(err);
-      setError(err instanceof Error ? err.message : "Error al procesar la solicitud");
+      setError(err instanceof Error ? err.message : t("sug.errorSolicitud"));
     } finally {
       setAddingId(null);
     }
@@ -223,7 +229,7 @@ export function SugerenciasList({ initialSuggestions }: SugerenciasListProps) {
 
       if (!res.ok) {
         const data = await res.json();
-        throw new Error(data.error || "No se pudo ignorar la película");
+        throw new Error(data.error || t("sug.errorIgnorar"));
       }
 
       setSuccessId(s.imdbId);
@@ -247,7 +253,7 @@ export function SugerenciasList({ initialSuggestions }: SugerenciasListProps) {
 
     } catch (err) {
       console.error(err);
-      setError(err instanceof Error ? err.message : "Error al descartar la película");
+      setError(err instanceof Error ? err.message : t("sug.errorDescartar"));
     } finally {
       setIgnoringId(null);
     }
@@ -267,9 +273,7 @@ export function SugerenciasList({ initialSuggestions }: SugerenciasListProps) {
         disabled={refreshing}
         className="inline-flex items-center gap-2 rounded-md border border-(--border) bg-(--surface) px-4 py-2 text-sm font-semibold text-text-mid transition-colors hover:border-[#cc2323] hover:text-(--text) disabled:opacity-50"
       >
-        <RefreshCw size={15} />
-        Recargar sugerencias
-      </button>
+        <RefreshCw size={15} />{t("sug.recargar")}</button>
     </div>
   );
 
@@ -325,16 +329,12 @@ export function SugerenciasList({ initialSuggestions }: SugerenciasListProps) {
 
           {/* Tablero retro */}
           <div className="bg-[#fcfaf5] rounded p-6 shadow-inner text-center relative flex flex-col justify-center min-h-[160px] border-4 border-neutral-900 overflow-hidden">
-            <div className="text-neutral-800 text-xs sm:text-sm font-black tracking-[0.25em] font-marquee select-none mb-1">
-              ¿HAS VISTO ESTA?
-            </div>
+            <div className="text-neutral-800 text-xs sm:text-sm font-black tracking-[0.25em] font-marquee select-none mb-1">{t("sug.hasVisto")}</div>
             <div className="py-1 flex items-center justify-center min-h-[70px]">
-              <h1 className="font-marquee text-4xl sm:text-6xl md:text-7xl font-extrabold uppercase text-[#cc2323] tracking-widest leading-none select-none drop-shadow-[0_2px_1.5px_rgba(0,0,0,0.25)]">
-                ¡ESTÁS AL DÍA!
-              </h1>
+              <h1 className="font-marquee text-4xl sm:text-6xl md:text-7xl font-extrabold uppercase text-[#cc2323] tracking-widest leading-none select-none drop-shadow-[0_2px_1.5px_rgba(0,0,0,0.25)]">{t("sug.alDiaMayus")}</h1>
             </div>
             <div className="text-neutral-600 text-[10px] sm:text-xs font-bold tracking-[0.18em] font-marquee select-none mt-2">
-              DIRECTOR&apos;S CUT  •  NUEVAS RECOMENDACIONES CADA DOMINGO  •  SHOWTIME
+              {APP_NAME.toUpperCase()}  •  {t("sug.marquesina")}  •  SHOWTIME
             </div>
           </div>
         </div>
@@ -347,7 +347,7 @@ export function SugerenciasList({ initialSuggestions }: SugerenciasListProps) {
 
         <div className="text-center py-20 bg-(--surface) border border-(--border) rounded-md">
           <Sparkles size={32} className="mx-auto text-text-faint mb-3" />
-          <p className="text-text-mid text-sm font-medium">¡Estás al día!</p>
+          <p className="text-text-mid text-sm font-medium">{t("sug.alDia")}</p>
           <p className="text-xs text-text-faint mt-1 px-4 max-w-sm mx-auto">
             Has visto o añadido a pendientes todas las sugerencias actuales. Pulsa recargar para imprimir nuevas, o espera al workflow semanal.
           </p>
@@ -363,7 +363,7 @@ export function SugerenciasList({ initialSuggestions }: SugerenciasListProps) {
   const isSuccess = successId === current.imdbId;
 
   // Variables para la marquesina activa
-  const marqueeTopText = "¿HAS VISTO ESTA?";
+  const marqueeTopText = t("sug.hasVisto");
   const marqueeTitle = current.title;
   const marqueeBottomText = `4K DOLBY SYSTEM  •  ${current.year}  •  ${current.genres.slice(0, 2).join(" / ").toUpperCase()}  •  18:30H  22:00H`;
 
@@ -510,20 +510,19 @@ export function SugerenciasList({ initialSuggestions }: SugerenciasListProps) {
             onClick={handlePrev}
             disabled={suggestions.length <= 1}
             className="p-2 text-text-mid hover:text-text bg-surface hover:bg-border border border-border rounded transition-colors disabled:opacity-30 disabled:pointer-events-none"
-            aria-label="Sugerencia anterior"
+            aria-label={t("sug.anterior")}
           >
             <ChevronLeft size={20} />
           </button>
           
-          <div className="font-mono text-xs text-text-mid">
-            Ficha <span className="text-text font-bold">{currentIndex + 1}</span> de <span className="text-text font-bold">{suggestions.length}</span>
+          <div className="font-mono text-xs text-text-mid">{t("sug.ficha")}<span className="text-text font-bold">{currentIndex + 1}</span> de <span className="text-text font-bold">{suggestions.length}</span>
           </div>
 
           <button
             onClick={handleNext}
             disabled={suggestions.length <= 1}
             className="p-2 text-text-mid hover:text-text bg-surface hover:bg-border border border-border rounded transition-colors disabled:opacity-30 disabled:pointer-events-none"
-            aria-label="Siguiente sugerencia"
+            aria-label={t("sug.siguiente")}
           >
             <ChevronRight size={20} />
           </button>
@@ -549,9 +548,7 @@ export function SugerenciasList({ initialSuggestions }: SugerenciasListProps) {
                 <button
                   onClick={() => setShowTrailer(false)}
                   className="absolute top-3 right-3 z-10 px-3 py-1.5 text-xs font-mono bg-bg/85 hover:bg-bg text-text border border-border rounded shadow-sm backdrop-blur-xs transition-colors"
-                >
-                  Ver Póster
-                </button>
+                >{t("sug.verPoster")}</button>
               </div>
             ) : (
               <div className="w-full h-full relative">
@@ -577,7 +574,7 @@ export function SugerenciasList({ initialSuggestions }: SugerenciasListProps) {
                     <button
                       onClick={() => setShowTrailer(true)}
                       className="p-5 rounded-full bg-accent hover:bg-accent-hover text-bg shadow-raised transform scale-90 group-hover:scale-100 transition-[transform,background-color] duration-300"
-                      aria-label="Reproducir Tráiler"
+                      aria-label={t("sug.trailer")}
                     >
                       <Play size={28} className="fill-bg ml-1" />
                     </button>
@@ -615,15 +612,13 @@ export function SugerenciasList({ initialSuggestions }: SugerenciasListProps) {
 
               {current.plot ? (
                 <div className="space-y-2 pt-2">
-                  <span className="text-[10px] font-mono text-text-faint uppercase tracking-wider block">Sinopsis</span>
+                  <span className="text-[10px] font-mono text-text-faint uppercase tracking-wider block">{t("sug.sinopsis")}</span>
                   <p className="text-base text-text-mid leading-relaxed font-sans max-w-2xl">
                     {current.plot}
                   </p>
                 </div>
               ) : (
-                <p className="text-sm text-text-faint italic font-sans pt-2">
-                  Sinopsis no disponible en español.
-                </p>
+                <p className="text-sm text-text-faint italic font-sans pt-2">{t("sug.sinSinopsis")}</p>
               )}
             </div>
 
@@ -645,12 +640,10 @@ export function SugerenciasList({ initialSuggestions }: SugerenciasListProps) {
                     <Loader2 size={16} className="animate-spin" />
                   ) : isSuccess && addingId === current.imdbId ? (
                     <span className="inline-flex items-center gap-1 animate-stamp">
-                      <Check size={16} /> Guardada
-                    </span>
+                      <Check size={16} />{t("sug.guardada")}</span>
                   ) : (
                     <>
-                      <Clock size={16} /> Añadir a Pendientes
-                    </>
+                      <Clock size={16} />{t("sug.anadirPendientes")}</>
                   )}
                 </button>
 
@@ -659,8 +652,7 @@ export function SugerenciasList({ initialSuggestions }: SugerenciasListProps) {
                   href={`/peliculas/nueva?imdbId=${current.imdbId}`}
                   className="flex items-center gap-2 px-5 py-2.5 text-sm font-medium bg-accent hover:bg-accent-hover text-bg rounded transition-colors"
                 >
-                  <Film size={16} /> Registrar Vista
-                </Link>
+                  <Film size={16} />{t("sug.registrarVista")}</Link>
 
                 {/* Botón Ignorar */}
                 <button
@@ -668,14 +660,13 @@ export function SugerenciasList({ initialSuggestions }: SugerenciasListProps) {
                   disabled={isAdding || isIgnoring || isSuccess}
                   onClick={() => handleIgnore(current)}
                   className="flex items-center gap-2 px-4 py-2.5 text-sm font-medium rounded border border-border text-text-faint hover:text-error hover:border-error/30 bg-transparent transition-colors"
-                  title="Ignorar esta película (no volverá a aparecer)"
+                  title={t("sug.ignorarAyuda")}
                 >
                   {isIgnoring ? (
                     <Loader2 size={16} className="animate-spin" />
                   ) : (
                     <>
-                      <EyeOff size={16} /> No me interesa
-                    </>
+                      <EyeOff size={16} />{t("sug.noInteresa")}</>
                   )}
                 </button>
               </div>
@@ -688,12 +679,10 @@ export function SugerenciasList({ initialSuggestions }: SugerenciasListProps) {
                 >
                   {showTrailer ? (
                     <>
-                      <ImageIcon size={14} /> Mostrar Ficha/Póster
-                    </>
+                      <ImageIcon size={14} />{t("sug.mostrarFicha")}</>
                   ) : (
                     <>
-                      <Play size={14} className="fill-current" /> Reproducir Tráiler
-                    </>
+                      <Play size={14} className="fill-current" />{t("sug.trailer")}</>
                   )}
                 </button>
               )}

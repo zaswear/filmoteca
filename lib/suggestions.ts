@@ -3,6 +3,8 @@
 // para caber en el timeout de la función serverless. Devuelve el array (no
 // escribe ficheros: el FS de Vercel es de solo lectura).
 
+import { TMDB_LANGUAGE } from "./i18n.ts";
+
 const BASE = "https://api.themoviedb.org/3";
 
 function tmdbHeaders() {
@@ -64,12 +66,12 @@ export async function generateSuggestions(
   //    pool amplio del que sigan quedando candidatas tras excluir tu colección
   //    (y que cada recarga traiga pelis distintas).
   const lists: { path: string; params: Record<string, string> }[] = [
-    { path: "movie/popular", params: { page: rndPage(), language: "es-ES" } },
-    { path: "movie/popular", params: { page: rndPage(), language: "es-ES" } },
-    { path: "movie/top_rated", params: { page: rndPage(), language: "es-ES" } },
-    { path: "movie/top_rated", params: { page: rndPage(), language: "es-ES" } },
-    { path: "discover/movie", params: { page: rndPage(), language: "es-ES", sort_by: "vote_average.desc", "vote_count.gte": "300", "primary_release_date.gte": "2000-01-01" } },
-    { path: "discover/movie", params: { page: rndPage(), language: "es-ES", sort_by: "popularity.desc", "vote_count.gte": "200" } },
+    { path: "movie/popular", params: { page: rndPage(), language: TMDB_LANGUAGE } },
+    { path: "movie/popular", params: { page: rndPage(), language: TMDB_LANGUAGE } },
+    { path: "movie/top_rated", params: { page: rndPage(), language: TMDB_LANGUAGE } },
+    { path: "movie/top_rated", params: { page: rndPage(), language: TMDB_LANGUAGE } },
+    { path: "discover/movie", params: { page: rndPage(), language: TMDB_LANGUAGE, sort_by: "vote_average.desc", "vote_count.gte": "300", "primary_release_date.gte": "2000-01-01" } },
+    { path: "discover/movie", params: { page: rndPage(), language: TMDB_LANGUAGE, sort_by: "popularity.desc", "vote_count.gte": "200" } },
   ];
   const pages = await Promise.all(
     lists.map((l) => tmdb(l.path, l.params).catch(() => ({ results: [] }))),
@@ -98,7 +100,7 @@ export async function generateSuggestions(
   const detailed = await mapPool(shuffled, 8, async (c): Promise<Suggestion | null> => {
     try {
       const d = await tmdb(`movie/${c.tmdbId}`, {
-        language: "es-ES",
+        language: TMDB_LANGUAGE,
         append_to_response: "external_ids,videos",
       });
       const imdbId = d.imdb_id || d.external_ids?.imdb_id;
