@@ -1,4 +1,5 @@
 import { PrismaClient } from '../lib/generated/prisma/index.js';
+import { generarTexto } from './ia-local.mjs';
 
 const db = new PrismaClient();
 
@@ -44,22 +45,14 @@ Si la imagen es muy vibrante con luces rosas/azules/moradas, es 'neón'. Si los 
 
 Responde SOLO con la categoría exacta elegida.`;
 
-      const apiKey = process.env.GEMINI_API_KEY;
-      const apiRes = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          contents: [{
-            parts: [
-              { text: prompt },
-              { inline_data: { mime_type: mimeType, data: buffer.toString("base64") } }
-            ]
-          }]
-        })
+      const respuesta = await generarTexto(prompt, {
+        imagen: { base64: buffer.toString("base64"), mimeType },
       });
-
-      const apiData = await apiRes.json();
-      const text = apiData.candidates?.[0]?.content?.parts?.[0]?.text?.trim()?.toLowerCase()?.replace(".", "") || "";
+      if (respuesta === null) {
+        console.error("Sin IA disponible: ni Ollama local ni GEMINI_API_KEY.");
+        break;
+      }
+      const text = respuesta.toLowerCase().replace(".", "").trim();
       
       if (TONES.includes(text)) {
         await db.movie.update({

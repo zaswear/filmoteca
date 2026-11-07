@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import { CalendarDays, Film, MapPin } from "lucide-react";
+import { CalendarDays, ChevronDown, Film, MapPin } from "lucide-react";
 import { PosterSkeleton } from "@/components/ui/poster-skeleton";
 
 import { t } from "@/lib/i18n";
@@ -152,31 +152,37 @@ export default function CarteleraPage() {
                   {movie.title}
                 </a>
 
-                {/* Horas por cine */}
-                <div className="mt-1.5 space-y-1.5">
-                  {Object.entries(grouped).map(([cinema, times]) => (
-                    <div key={cinema}>
-                      <span className="text-[10px] uppercase tracking-wide text-text-faint inline-flex items-center gap-1">
-                        <MapPin size={10} />
-                        {cinema}
-                      </span>
-                      <div className="mt-0.5 flex flex-wrap gap-1">
-                        {times.map((st) => (
-                          <a
-                            key={st.id}
-                            href={st.ticketUrl || movie.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="px-1.5 py-0.5 rounded text-xs font-mono text-text-mid bg-surface-hi hover:bg-accent hover:text-white border border-border hover:border-accent transition-colors cursor-pointer"
-                            title={t("cartelera.comprar")}
-                          >
-                            {st.startTime}
-                          </a>
-                        ))}
+                {/* Horas por cine, plegadas: abiertas tapaban la rejilla de pósters */}
+                <details className="group/horas mt-1.5">
+                  <summary className="list-none [&::-webkit-details-marker]:hidden inline-flex items-center gap-1 min-h-[32px] text-xs font-medium text-text-mid hover:text-accent transition-colors cursor-pointer select-none">
+                    <ChevronDown size={14} className="transition-transform group-open/horas:rotate-180" aria-hidden />
+                    {t("cartelera.horarios", { n: movie.showtimes.length })}
+                  </summary>
+                  <div className="mt-1 space-y-1.5">
+                    {Object.entries(grouped).map(([cinema, times]) => (
+                      <div key={cinema}>
+                        <span className="text-[10px] uppercase tracking-wide text-text-faint inline-flex items-center gap-1">
+                          <MapPin size={10} />
+                          {cinema}
+                        </span>
+                        <div className="mt-0.5 flex flex-wrap gap-1">
+                          {times.map((st) => (
+                            <a
+                              key={st.id}
+                              href={st.ticketUrl || movie.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="px-1.5 py-0.5 rounded text-xs font-mono text-text-mid bg-surface-hi hover:bg-accent hover:text-white border border-border hover:border-accent transition-colors cursor-pointer"
+                              title={t("cartelera.comprar")}
+                            >
+                              {st.startTime}
+                            </a>
+                          ))}
+                        </div>
                       </div>
-                    </div>
-                  ))}
-                </div>
+                    ))}
+                  </div>
+                </details>
               </article>
             );
           })}

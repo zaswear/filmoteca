@@ -93,11 +93,18 @@ export function extractReleaseDate(description: string): Date | null {
     return Number.isNaN(date.getTime()) ? null : date;
 }
 
-export function extractAudio(html: string): string | null {
+/** Texto de la fila «Audio» de la ficha, o null si mubis aún no lo ha publicado
+ *  (pasa en los anuncios: la ficha existe antes que las especificaciones). */
+export function extractAudioText(html: string): string | null {
     const match = html.match(/<th[^>]*>\s*Audio\s*<\/th>[\s\S]*?<td[^>]*>([\s\S]*?)<\/td>/i);
-    if (!match) return null;
+    const audio = match ? stripTags(match[1]) : "";
+    return audio || null;
+}
 
-    const audio = stripTags(match[1]);
+export function extractAudio(html: string): string | null {
+    const audio = extractAudioText(html);
+    if (!audio) return null;
+
     // «Español latino» contiene «español», así que la comprobación ingenua daba
     // por bueno un disco doblado solo en latino y la ficha anunciaba «audio
     // castellano confirmado» sin serlo. Se descartan primero esas pistas.
@@ -122,15 +129,81 @@ export function extractYear(html: string): string | null {
     return match ? match[1] : null;
 }
 
-export function extractTitle(html: string): string | null {
-    const rawTitle = html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i)?.[1];
-    if (!rawTitle) return null;
-
-    const limpio = stripTags(rawTitle)
+/** Quita formato y edición: «Aniquilación - Edición Metálica Blu-ray» → «Aniquilación». */
+export function cleanTitle(raw: string): string | null {
+    const limpio = stripTags(raw)
         .replace(SUFIJO_FORMATO, "")
         .replace(SUFIJO_EDICION, "")
         .trim();
 
     return limpio || null;
+}
+
+export function extractTitle(html: string): string | null {
+    const rawTitle = html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i)?.[1];
+    return rawTitle ? cleanTitle(rawTitle) : null;
+}
+
+// ─── Calendario mensual ──────────────────────────────────────────────────────
+//
+// El RSS de mubis (`mubis.xml`) es su feed de NOTICIAS: 25 artículos, unas dos
+// semanas, y los resúmenes con decenas de lanzamientos no traen un título
+// aprovechable. La sección salía con dos películas. El calendario
+// `/novedades-en-blu-ray/todas?categoria=peliculas&periodo=M-AAAA` lista todas
+// las películas del mes agrupadas por día, con histórico y anuncios.
+
+export interface ListingItem {
+    link: string;
+    title: string;
+    /** "YYYY-MM-DD" */
+    releaseDate: string;
+    posterUrl: string | null;
+}
+
+export function monthListingUrl(year: number, month: number): string {
+    return `${MUBIS_ORIGIN}/novedades-en-blu-ray/todas?categoria=peliculas&periodo=${month}-${year}`;
+}
+
+const DIA_SEMANA = /^(?:lunes|martes|mi[ée]rcoles|jueves|viernes|s[áa]bado|domingo)\s+(\d{1,2})$/i;
+
+/**
+ * Cada día va en un `<h3>Martes  6</h3>` seguido de sus tarjetas. Los demás
+ * `<h3>` de la página (pie: «Contacto», «Contenidos»…) no casan con el patrón
+ * de día y cortan el bloque anterior sin aportar nada.
+ */
+export function parseMonthListing(html: string, year: number, month: number): ListingItem[] {
+    const items: ListingItem[] = [];
+    const seen = new Set<string>();
+    const bloques = html.split(/<h3[^>]*>/i).slice(1);
+
+    for (const bloque of bloques) {
+        const cierre = bloque.indexOf("</h3>");
+        if (cierre < 0) continue;
+        const dia = stripTags(bloque.slice(0, cierre)).match(DIA_SEMANA);
+        if (!dia) continue;
+        const releaseDate = `${year}-${String(month).padStart(2, "0")}-${dia[1].padStart(2, "0")}`;
+
+        const tarjeta = /<a href="(\/titulos\/[^"]+)"[^>]*>\s*<img[^>]*?src="([^"]+)"[\s\S]*?<strong>\s*<a href="\1">([\s\S]*?)<\/a>/gi;
+        let m: RegExpExecArray | null;
+        while ((m = tarjeta.exec(bloque.slice(cierre))) !== null) {
+            const link = absoluteMubisUrl(decodeHtml(m[1]));
+            const title = cleanTitle(m[3]);
+            if (!title || seen.has(link)) continue;
+            seen.add(link);
+            items.push({ link, title, releaseDate, posterUrl: absoluteMubisUrl(decodeHtml(m[2])) });
+        }
+    }
+
+    return items;
+}
+
+/** Meses {year, month} desde `atras` meses antes de `hoy` hasta `adelante` después. */
+export function monthsAround(hoy: Date, atras: number, adelante: number): { year: number; month: number }[] {
+    const meses: { year: number; month: number }[] = [];
+    for (let d = -atras; d <= adelante; d++) {
+        const f = new Date(Date.UTC(hoy.getUTCFullYear(), hoy.getUTCMonth() + d, 1));
+        meses.push({ year: f.getUTCFullYear(), month: f.getUTCMonth() + 1 });
+    }
+    return meses;
 }
 

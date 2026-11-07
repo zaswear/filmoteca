@@ -116,6 +116,24 @@ CREATE TABLE "admin_credential" (
 );
 
 -- CreateTable
+CREATE TABLE "bluray_releases" (
+    "id" SERIAL NOT NULL,
+    "mubis_url" TEXT NOT NULL,
+    "title" TEXT NOT NULL,
+    "release_date" DATE NOT NULL,
+    "mubis_poster_url" TEXT,
+    "audio" TEXT,
+    "castellano" BOOLEAN NOT NULL DEFAULT false,
+    "imdb_id" TEXT,
+    "imdb_rating" DOUBLE PRECISION,
+    "poster_url" TEXT,
+    "checked_at" TIMESTAMP(3),
+    "created_at" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+
+    CONSTRAINT "bluray_releases_pkey" PRIMARY KEY ("id")
+);
+
+-- CreateTable
 CREATE TABLE "_CollectionToMovie" (
     "A" INTEGER NOT NULL,
     "B" INTEGER NOT NULL
@@ -162,6 +180,12 @@ CREATE INDEX "cinema_showtimes_city_idx" ON "cinema_showtimes"("city");
 
 -- CreateIndex
 CREATE INDEX "cinema_showtimes_cinema_name_idx" ON "cinema_showtimes"("cinema_name");
+
+-- CreateIndex
+CREATE UNIQUE INDEX "bluray_releases_mubis_url_key" ON "bluray_releases"("mubis_url");
+
+-- CreateIndex
+CREATE INDEX "bluray_releases_release_date_idx" ON "bluray_releases"("release_date");
 
 -- CreateIndex
 CREATE UNIQUE INDEX "_CollectionToMovie_AB_unique" ON "_CollectionToMovie"("A", "B");

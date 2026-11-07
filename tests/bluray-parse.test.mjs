@@ -2,6 +2,7 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import {
   extractTitle, extractYear, extractReleaseDate, extractAudio, extractTitlePageUrl, parseFeed,
+  parseMonthListing, monthsAround,
 } from "../lib/bluray-parse.ts";
 
 // El <h1> de mubis es el nombre de la EDICIÓN, no el de la película. Si no se
@@ -60,4 +61,50 @@ test("parseFeed saca enlace, descripción e imagen de cada item", () => {
   assert.equal(items[0].link, "https://www.mubis.es/a");
   assert.equal(items[0].posterUrl, "https://www.mubis.es/media/a.jpg");
   assert.equal(items[1].posterUrl, null);
+});
+
+// ─── Calendario mensual ──────────────────────────────────────────────────────
+
+const LISTADO = `
+<h3>Martes  6</h3>
+  <div style="float: left;"><div>
+    <a href="/titulos/dobermann-blu-ray" title="Dobermann Blu-ray"><img alt="Dobermann Blu-ray" loading="lazy" src="/media/releases/1/2/dobermann-m.jpg" style="width: 190px;" /></a>
+  </div>
+  <strong><a href="/titulos/dobermann-blu-ray">Dobermann</a></strong><br /><span></span></div>
+<h3>Martes 13</h3>
+  <div><div>
+    <a href="/titulos/aniquilacion-edicion-metalica-blu-ray" title="x"><img alt="x" src="/media/releases/3/4/aniquilacion-m.jpg" /></a>
+  </div>
+  <strong><a href="/titulos/aniquilacion-edicion-metalica-blu-ray">Aniquilación - Edición Metálica</a></strong></div>
+<h3>Contacto</h3>
+  <a href="/titulos/todos">Base de datos</a>
+`;
+
+test("parseMonthListing saca película, día y carátula de cada tarjeta", () => {
+    assert.deepEqual(parseMonthListing(LISTADO, 2026, 10), [
+        {
+            link: "https://www.mubis.es/titulos/dobermann-blu-ray",
+            title: "Dobermann",
+            releaseDate: "2026-10-06",
+            posterUrl: "https://www.mubis.es/media/releases/1/2/dobermann-m.jpg",
+        },
+        {
+            link: "https://www.mubis.es/titulos/aniquilacion-edicion-metalica-blu-ray",
+            title: "Aniquilación",
+            releaseDate: "2026-10-13",
+            posterUrl: "https://www.mubis.es/media/releases/3/4/aniquilacion-m.jpg",
+        },
+    ]);
+});
+
+test("parseMonthListing ignora los <h3> que no son un día", () => {
+    const soloPie = "<h3>Contacto</h3><a href=\"/titulos/x\" title=\"x\"><img src=\"/a.jpg\"></a><strong><a href=\"/titulos/x\">X</a></strong>";
+    assert.deepEqual(parseMonthListing(soloPie, 2026, 10), []);
+});
+
+test("monthsAround cruza el cambio de año", () => {
+    assert.deepEqual(
+        monthsAround(new Date("2026-02-15T12:00:00Z"), 2, 1),
+        [{ year: 2025, month: 12 }, { year: 2026, month: 1 }, { year: 2026, month: 2 }, { year: 2026, month: 3 }],
+    );
 });

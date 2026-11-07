@@ -115,14 +115,21 @@ def main():
     if not DB_URL:
         print("ERROR: DATABASE_URL no encontrada.")
         sys.exit(1)
+
+    if not CITIES:
+        print("ERROR: CINEMA_CITIES vacía; no hay ciudades que scrapear.")
+        sys.exit(1)
         
     print("Iniciando scraping de Filmladder...")
     
     all_movies = {} # url -> movie_data
     
+    sin_resultados = []
     for city in CITIES:
         print(f"Scrapeando {city}...")
         movies = scrape_city(city)
+        if not movies:
+            sin_resultados.append(city)
         for m in movies:
             key = m['title']
             if key not in all_movies:
@@ -142,11 +149,31 @@ def main():
                 })
                 
     print(f"Total películas únicas encontradas: {len(all_movies)}")
+
+    # Cero resultados es un fallo (Filmladder caído, HTML cambiado), no una
+    # cartelera vacía: sin esta guarda el DELETE de abajo la dejaba en blanco.
+    if not all_movies:
+        print("ERROR: 0 películas; no toco la base para no vaciar la cartelera.")
+        sys.exit(1)
     
+    # Una ciudad a cero con las demás bien es el HTML de esa ciudad roto: el
+    # DELETE de abajo la dejaría sin cartelera sin que nadie se enterase.
+    if sin_resultados and not os.environ.get("ALLOW_SHRINK"):
+        print(f"ERROR: sin películas en {', '.join(sin_resultados)}; no toco la base.")
+        sys.exit(1)
+
     try:
         conn = psycopg2.connect(DB_URL)
         cur = conn.cursor()
-        
+
+        nuevas = sum(len(i["showtimes"]) for i in all_movies.values())
+        cur.execute("SELECT count(*) FROM cinema_showtimes")
+        previas = cur.fetchone()[0]
+        if previas >= 40 and nuevas < previas * 0.25 and not os.environ.get("ALLOW_SHRINK"):
+            print(f"ERROR: {nuevas} sesiones frente a {previas}; caída sospechosa. "
+                  "Si es real, relanza con ALLOW_SHRINK=1.")
+            sys.exit(1)
+
         # Eliminar las sesiones futuras para reemplazarlas
         cur.execute("DELETE FROM cinema_showtimes")
         

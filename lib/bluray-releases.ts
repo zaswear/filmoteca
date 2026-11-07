@@ -1,17 +1,9 @@
-import { getOmdbById } from "./omdb";
-import { searchTmdb, getTmdbById, posterUrl as tmdbPoster } from "./tmdb";
+import { db } from "./db";
 
-import {
-    type FeedItem,
-    extractAudio,
-    extractReleaseDate,
-    extractTitle,
-    extractTitlePageUrl,
-    extractYear,
-    parseFeed,
-} from "./bluray-parse";
-
-const FEED_URL = "https://www.mubis.es/mubis.xml";
+// La sección lee la tabla bluray_releases, que llena cada semana
+// scripts/sync-bluray.mjs a partir del calendario mensual de mubis. Antes esta
+// función pedía el RSS de noticias de mubis en cada render y lo enriquecía al
+// vuelo: 25 artículos, unas dos semanas, y la sección salía con dos películas.
 
 export interface BlurayRelease {
     title: string;
@@ -23,87 +15,62 @@ export interface BlurayRelease {
     audio: string;
 }
 
-
-async function getText(url: string): Promise<string | null> {
-    const response = await fetch(url, {
-        headers: { "User-Agent": "Mozilla/5.0 (compatible; MovieDiary/1.0)" },
-        next: { revalidate: 21600 },
-    });
-    return response.ok ? response.text() : null;
-}
-
-async function enrichItem(item: FeedItem, today: Date): Promise<BlurayRelease | null> {
-    const releaseDate = extractReleaseDate(item.description);
-    const titlePageUrl = extractTitlePageUrl(item.description);
-    if (!releaseDate || !titlePageUrl) return null;
-
-    // Ventana de la sección: los últimos 6 meses y todo lo anunciado a futuro.
-    const ventana = new Date(today);
-    ventana.setMonth(ventana.getMonth() - 6);
-    if (releaseDate < ventana) return null;
-
-    const titlePage = await getText(titlePageUrl);
-    if (!titlePage) return null;
-
-    const audio = extractAudio(titlePage);
-    const title = extractTitle(titlePage);
-    if (!audio || !title) return null;
-
-    // La búsqueda va por TMDb, no por OMDb: mubis da el título en español y OMDb
-    // solo indexa el original/inglés, así que `?s=El Club de los Poetas Muertos`
-    // devuelve «Movie not found!» y la página se quedaba siempre vacía. TMDb sí
-    // busca en es-ES; de ahí sacamos el imdbId y con él pedimos la nota a OMDb.
-    const year = extractYear(titlePage);
-    const candidato =
-        (year ? (await searchTmdb(title, year))[0] : undefined) ??
-        (await searchTmdb(title))[0];
-    if (!candidato) return null;
-
-    const ficha = await getTmdbById(candidato.id);
-    if (!ficha?.imdb_id) return null;
-
-    const movie = await getOmdbById(ficha.imdb_id);
-    const rating = movie ? Number.parseFloat(movie.imdbRating) : Number.NaN;
-    if (!movie || !Number.isFinite(rating) || rating < 7.5) return null;
-
-    return {
-        title,
-        link: titlePageUrl,
-        // La imagen del feed de mubis falla a menudo (src truncado en &,
-        // lazy-loading), y por eso las tarjetas se quedaban con el placeholder.
-        // El flujo ya trae la ficha de TMDb: su póster es fiable y el dominio
-        // image.tmdb.org ya está en remotePatterns. La de mubis queda de apoyo.
-        posterUrl: tmdbPoster(ficha.poster_path, "w342") ?? item.posterUrl,
-        releaseDate: releaseDate.toISOString(),
-        imdbId: movie.imdbID,
-        imdbRating: rating,
-        audio,
-    };
-}
+const NOTA_MINIMA = 7.5;
+const MESES_ATRAS = 6;
 
 export async function getBlurayReleases(): Promise<BlurayRelease[]> {
-    const xml = await getText(FEED_URL);
-    if (!xml) return [];
+    const hoy = new Date();
+    hoy.setUTCHours(0, 0, 0, 0);
+    const desde = new Date(hoy);
+    desde.setUTCMonth(desde.getUTCMonth() - MESES_ATRAS);
 
-    const today = new Date();
-    today.setHours(0, 0, 0, 0);
-
-    const releases = await Promise.all(
-        parseFeed(xml).map((item) => enrichItem(item, today).catch(() => null)),
-    );
-
-    const hoy = today.toISOString();
-
-    return releases
-        .filter((release): release is BlurayRelease => release !== null)
-        .sort((a, b) => {
-            // Primero lo anunciado (lo más próximo primero) y después lo ya
-            // publicado (lo más reciente primero).
-            const aFutura = a.releaseDate >= hoy;
-            const bFutura = b.releaseDate >= hoy;
-            if (aFutura !== bFutura) return aFutura ? -1 : 1;
-            return aFutura
-                ? a.releaseDate.localeCompare(b.releaseDate)
-                : b.releaseDate.localeCompare(a.releaseDate);
+    let filas;
+    try {
+        filas = await db.blurayRelease.findMany({
+            where: {
+                releaseDate: { gte: desde },
+                castellano: true,
+                imdbRating: { gte: NOTA_MINIMA },
+                imdbId: { not: null },
+            },
         });
+    } catch (error) {
+        // P2021: la tabla aún no existe porque el script no ha corrido nunca
+        // (la crea él). La sección sale vacía en vez de romper la página.
+        if ((error as { code?: string }).code === "P2021") return [];
+        throw error;
+    }
+
+    const hoyIso = hoy.toISOString();
+    const releases: BlurayRelease[] = filas.map((f) => ({
+        title: f.title,
+        link: f.mubisUrl,
+        // El póster de TMDb es fiable; la carátula de mubis queda de apoyo.
+        posterUrl: f.posterUrl ?? f.mubisPosterUrl,
+        releaseDate: f.releaseDate.toISOString(),
+        imdbId: f.imdbId as string,
+        imdbRating: f.imdbRating as number,
+        audio: f.audio ?? "",
+    }));
+
+    releases.sort((a, b) => {
+        // Primero lo anunciado (lo más próximo primero) y después lo ya
+        // publicado (lo más reciente primero).
+        const aFutura = a.releaseDate >= hoyIso;
+        const bFutura = b.releaseDate >= hoyIso;
+        if (aFutura !== bFutura) return aFutura ? -1 : 1;
+        return aFutura
+            ? a.releaseDate.localeCompare(b.releaseDate)
+            : b.releaseDate.localeCompare(a.releaseDate);
+    });
+
+    // Una película con varias ediciones (Blu-ray, UHD, metálica…) sale una vez:
+    // la tarjeta muestra la película, no la edición. Se queda la primera tras
+    // ordenar, que es la más próxima o la más reciente.
+    const vistas = new Set<string>();
+    return releases.filter((r) => {
+        if (vistas.has(r.imdbId)) return false;
+        vistas.add(r.imdbId);
+        return true;
+    });
 }
