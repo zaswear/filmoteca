@@ -12,11 +12,15 @@ function formatDate(value: string): string {
         day: "numeric",
         month: "long",
         year: "numeric",
+        // `releaseDate` es un día a medianoche UTC: sin esto, en un huso al
+        // oeste de Greenwich saldría el día anterior.
+        timeZone: "UTC",
     });
 }
 
 export default async function LanzamientosBlurayPage() {
     const releases = await getBlurayReleases();
+    const hoy = new Date(new Date().setUTCHours(0, 0, 0, 0)).toISOString();
 
     return (
         <div className="mx-auto max-w-6xl space-y-8 px-4 py-6 sm:px-8 sm:py-8">
@@ -60,7 +64,7 @@ export default async function LanzamientosBlurayPage() {
                             <div className="flex min-w-0 flex-1 flex-col justify-between gap-5">
                                 <div>
                                     <p className="font-mono text-[10px] uppercase tracking-wider text-text-faint">
-                                        Sale el {formatDate(release.releaseDate)}
+                                        {t(release.releaseDate >= hoy ? "inicio.saleEl" : "lanz.salio", { fecha: formatDate(release.releaseDate) })}
                                     </p>
                                     <h2 className="mt-2 line-clamp-3 font-display text-xl font-semibold italic leading-snug text-text">
                                         {release.title}

@@ -1,26 +1,11 @@
 [
   {
-    "tmdbId": 1513996,
-    "imdbId": "tt31190636",
-    "title": "Maya & Samar",
-    "year": 2026,
-    "rating": 7.9,
-    "plot": "En 'Maya & Samar' (2026), dos vidas aparentemente dispares, Maya y Samar, se entrelazan de forma inesperada a raíz de un suceso extraordinario. Forzados a colaborar ante circunstancias desconocidas, se embarcan en un viaje que los sumerge en un mundo de misterios y desafíos. Juntos, deberán confiar el uno en el otro para desvelar verdades ocultas y encontrar su camino en una aventura que redefinirá su futuro.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/6UdKNWOlZFTiGxOyaOoNZcqMj7t.jpg",
-    "genres": [
-      "Drama",
-      "Romance",
-      "Suspense"
-    ],
-    "trailerKey": "j3As7e7iTAM"
-  },
-  {
     "tmdbId": 1517123,
     "imdbId": "tt37660509",
     "title": "En el camino",
     "year": 2026,
-    "rating": 7.7,
-    "plot": "\"En el camino\" presenta a Veneno, un joven vagabundo rebelde que, necesitado de transporte, conoce a Muñeco, un camionero duro y hermético. Lo persuade para sumergirse en el hipermasculino mundo del transporte de carga a través del norte de México. En su trayecto, una inesperada intimidad florece entre ellos. No obstante, las sombras del pasado de Veneno resurgen, poniendo en peligro mortal a ambos.",
+    "rating": 8.4,
+    "plot": "Veneno, un joven vagabundo rebelde, frecuenta restaurantes de carretera donde se acuesta con camioneros. Con una necesidad urgente de que alguien le lleve, conoce a Muñeco, un conductor duro y reservado. Convence a Muñeco para que le adentre en el hipermasculino mundo del transporte a larga distancia a través del norte de México. Mientras viajan juntos creándose una inesperada intimidad entre ellos, las sombras del pasado de Veneno resurgen, poniendo en peligro la vida de ambos.",
     "posterUrl": "https://image.tmdb.org/t/p/w500/7tBqPnIbdw9r5C8thiUGQokIbTF.jpg",
     "genres": [
       "Drama",
@@ -30,12 +15,55 @@
     "trailerKey": "Az3tphO-lx4"
   },
   {
+    "tmdbId": 1422041,
+    "imdbId": "tt35511966",
+    "title": "La bola negra",
+    "year": 2026,
+    "rating": 8,
+    "plot": "Las vidas interconectadas de tres hombres en tres épocas distintas, tres existencias íntimamente ligadas por la sexualidad y el deseo, el dolor y la herencia.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/t1azKLExwUxKj6v6m2L535evuRa.jpg",
+    "genres": [
+      "Drama",
+      "Bélica"
+    ],
+    "trailerKey": "9NNU-vSeOB0"
+  },
+  {
+    "tmdbId": 1513996,
+    "imdbId": "tt31190636",
+    "title": "Maya & Samar",
+    "year": 2026,
+    "rating": 7.6,
+    "plot": null,
+    "posterUrl": "https://image.tmdb.org/t/p/w500/6UdKNWOlZFTiGxOyaOoNZcqMj7t.jpg",
+    "genres": [
+      "Drama",
+      "Romance",
+      "Suspense"
+    ],
+    "trailerKey": "j3As7e7iTAM"
+  },
+  {
+    "tmdbId": 772506,
+    "imdbId": "tt11866682",
+    "title": "Amor es amor",
+    "year": 2026,
+    "rating": 7.6,
+    "plot": "Enrique Juárez es un prometedor actor mexicano de telenovelas a punto de convertirse en protagonista, que tiene que esconder su verdadero yo para alcanzar el estrellato.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/klwPK4U79XyZxfUJmXmqsK4ppor.jpg",
+    "genres": [
+      "Comedia",
+      "Romance"
+    ],
+    "trailerKey": "AlE1gH-qkZA"
+  },
+  {
     "tmdbId": 1397485,
     "imdbId": "tt32432654",
     "title": "Girls Like Girls",
     "year": 2026,
-    "rating": 7.5,
-    "plot": "La película 'Girls Like Girls' (2026) sigue a Coley, una joven de 17 años del Oregón rural, quien, tras la muerte de su madre, se enfrenta al desafío de la intimidad. El encuentro con Sonya despertará en ella nuevos y complejos sentimientos. No obstante, las profundas dudas sobre sí misma pondrán a prueba la posibilidad de una conexión significativa entre ambas.",
+    "rating": 7.4,
+    "plot": "Coley, una joven de 17 años del rural Oregón, enfrenta la intimidad tras la muerte de su madre. Conocer a Sonya despierta nuevos sentimientos, pero las dudas sobre sí misma dificultan su conexión.",
     "posterUrl": "https://image.tmdb.org/t/p/w500/6i8ho7dRcR2722sJfoYHT1GIY36.jpg",
     "genres": [
       "Romance",
@@ -44,25 +72,12 @@
     "trailerKey": "ZC1kEknG2ro"
   },
   {
-    "tmdbId": 1398655,
-    "imdbId": "tt34915693",
-    "title": "Blue Film",
-    "year": 2026,
-    "rating": 7.4,
-    "plot": "En 'Blue Film' (2026), Aaron Eagle es un joven fetichista que transmite en vivo por webcam. Cuando acepta pasar la noche con un cliente anónimo, lo que parecía una noche más toma un giro inesperado. Aaron descubre un inquietante vínculo que lo conecta directamente con su propio pasado.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/7wECL45CnlFWsiadBHwArgVJ1nL.jpg",
-    "genres": [
-      "Drama"
-    ],
-    "trailerKey": "oZI8G4lfbgc"
-  },
-  {
     "tmdbId": 1418582,
     "imdbId": "tt40001699",
     "title": "Quince días",
     "year": 2026,
-    "rating": 7.4,
-    "plot": "En 'Quince días' (2026), Felipe solo busca un verano tranquilo, disfrutando de musicales con el artista de su madre. Sin embargo, su apacible estío toma un giro inesperado cuando su amor platónico de la adolescencia irrumpe en escena. Este repentino reencuentro amenaza con revolucionar sus planes, transformando sus vacaciones en una experiencia inolvidable donde los sentimientos y el pasado chocan.",
+    "rating": 7.3,
+    "plot": "Felipe solo quería disfrutar de un verano tranquilo viendo musicales con la artista de su madre... hasta que llega su 'crush' de la adolescencia para unirse a la fiesta.",
     "posterUrl": "https://image.tmdb.org/t/p/w500/f52tZybwHnomYCkRhe9rHMSEz5j.jpg",
     "genres": [
       "Comedia",
@@ -76,8 +91,8 @@
     "title": "Heartstopper para siempre",
     "year": 2026,
     "rating": 7.2,
-    "plot": "En 'Heartstopper para siempre' (2026), un nuevo curso escolar da la bienvenida a la entrañable pandilla de Truham-Higgs. Mientras la relación entre Nick y Charlie se consolida y profundiza, la pareja se enfrenta a la emocionante e incierta perspectiva de su futuro. Juntos, con el apoyo incondicional de sus amigos, explorarán las posibilidades y los caminos que les esperan, definiendo lo que significa amar y crecer.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/4rsI2lhFLBXPtVScJ3rBKHwIt5b.jpg",
+    "plot": "Empieza un nuevo curso para la pandilla de Truham-Higgs. Mientras la relación de Nick y Charlie se hace más fuerte, ambos piensan en cómo será su futuro.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/r4lVJVO1BeBb11cBcXBdbHc9e9k.jpg",
     "genres": [
       "Romance",
       "Drama"
@@ -85,18 +100,32 @@
     "trailerKey": "locuQ-skySE"
   },
   {
-    "tmdbId": 772506,
-    "imdbId": "tt11866682",
-    "title": "Amor es amor",
+    "tmdbId": 1518731,
+    "imdbId": "tt33400312",
+    "title": "Αρκουδότρυπα",
     "year": 2026,
     "rating": 7.1,
-    "plot": "En 'Amor es amor' (2026), Enrique Juárez es un prometedor actor mexicano de telenovelas. A punto de alcanzar el rol protagónico que lo catapultaría al estrellato, se ve obligado a ocultar su verdadera identidad. Su ascenso al éxito pende de un hilo, exigiéndole un profundo sacrificio personal.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/klwPK4U79XyZxfUJmXmqsK4ppor.jpg",
+    "plot": null,
+    "posterUrl": "https://image.tmdb.org/t/p/w500/ktXPMgv10szw1G8FZhES88sxwSG.jpg",
     "genres": [
-      "Comedia",
-      "Romance"
+      "Drama",
+      "Romance",
+      "Misterio"
     ],
-    "trailerKey": "AlE1gH-qkZA"
+    "trailerKey": "SQQGxmHX4Bc"
+  },
+  {
+    "tmdbId": 1398655,
+    "imdbId": "tt34915693",
+    "title": "Blue Film",
+    "year": 2026,
+    "rating": 7,
+    "plot": "Aaron Eagle, un joven fetichista que transmite vídeo en tiempo real por internet a través de su cámara web, acepta pasar la noche con un cliente anónimo, pero descubre un inquietante vínculo con su pasado.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/7wECL45CnlFWsiadBHwArgVJ1nL.jpg",
+    "genres": [
+      "Drama"
+    ],
+    "trailerKey": "oZI8G4lfbgc"
   },
   {
     "tmdbId": 1034716,
@@ -104,7 +133,7 @@
     "title": "Gente que conocemos en vacaciones",
     "year": 2026,
     "rating": 7,
-    "plot": "En 'Gente que conocemos en vacaciones' (2026), conocemos a Poppy, un espíritu libre y aventurero, y a Alex, un hombre meticuloso y obsesionado con la planificación. A lo largo de incontables viajes compartidos, esta peculiar pareja de amigos comienza a cuestionarse si sus opuestas personalidades los destinan a algo más que una simple amistad. ¿Serán las diferencias que los unen la clave para el amor perfecto?",
+    "plot": "Poppy es un espíritu libre y a Alex le gusta planificarlo todo. Tras muchas vacaciones juntos, estos amigos tan diferentes se preguntan si serán la pareja perfecta.",
     "posterUrl": "https://image.tmdb.org/t/p/w500/lCbXqv2NOFoV8L0dYjcSz64zlUs.jpg",
     "genres": [
       "Comedia",
@@ -117,8 +146,8 @@
     "imdbId": "tt36591456",
     "title": "A una isla de ti",
     "year": 2026,
-    "rating": 6.7,
-    "plot": "En 'A una isla de ti' (2026), un cocinero con el corazón roto busca consuelo en Gran Canaria. Acompañado por su amigo, queda cautivado por la exuberancia de la isla, su vibrante cultura y exquisita cocina. Sin embargo, su viaje de autodescubrimiento toma un giro inesperado cuando su corazón encuentra una conexión profunda y sorprendente con el padre de su amigo, desafiando sus expectativas y abriéndolo a un amor imprevisto.",
+    "rating": 6.9,
+    "plot": "Un cocinero con el corazón partido va de vacaciones a Gran Canaria con su amigo, enamorándose de la isla, su cultura y cocina-e inesperadamente, del padre de su amigo.",
     "posterUrl": "https://image.tmdb.org/t/p/w500/j3siQa1NL6L2wIiZ0r6fKacBIp.jpg",
     "genres": [
       "Comedia",
@@ -127,18 +156,19 @@
     "trailerKey": "g5lhmH6pN_E"
   },
   {
-    "tmdbId": 1507796,
-    "imdbId": "tt31936369",
-    "title": "On the Sea",
+    "tmdbId": 1403903,
+    "imdbId": "tt35050890",
+    "title": "Ato Noturno",
     "year": 2026,
-    "rating": 6.8,
-    "plot": "\"On the Sea\" (2026) nos sumerge en una inmersiva odisea donde un grupo de individuos, con motivaciones ocultas, se aventura en alta mar. Lo que comienza como una expedición o una huida, se transforma en un tenso enfrentamiento contra la inmensidad del océano y los misterios que guarda. A medida que los secretos personales salen a flote, deberán luchar por la supervivencia y desentrañar una verdad que podría alterar sus destinos para siempre.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/hP4JpQe7F7rcs5lOH97fM7kaSFs.jpg",
+    "rating": 6.9,
+    "plot": "Matías, un actor talentoso pero controversial, ensaya una obra junto a su compañero de piso Fabio. Ambos atraen la atención de una agente de casting, pero solo Fabio consigue una audición para una gran serie. Matías, devastado, encuentra consuelo en Rafael, un misterioso político que oculta su identidad mientras se postula para la alcaldía. Juntos, exploran su pasión clandestina y, con el tiempo, alcanzan el éxito: Matías obtiene el papel protagonista y Rafael gana apoyo en las encuestas. Pero su creciente temeridad despierta celos en Fabio y alarma entre los patrocinadores, convirtiendo su historia en un peligroso juego de fama y deseo. (FIRE!!)",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/o0uHoWYGsZaGSC6O9iTRy4sAz5J.jpg",
     "genres": [
       "Drama",
+      "Suspense",
       "Romance"
     ],
-    "trailerKey": "od_S8t86F0M"
+    "trailerKey": "J1wofdezg4s"
   },
   {
     "tmdbId": 1564614,
@@ -146,8 +176,8 @@
     "title": "Leviticus",
     "year": 2026,
     "rating": 6.8,
-    "plot": "En 'Leviticus' (2026), la aparente calma de un remoto pueblo rural se rompe cuando dos adolescentes se enfrentan a una aterradora entidad sobrenatural. Esta fuerza malevola se manifiesta adoptando la forma de la persona que más anhelan, manipulando sus deseos más profundos. A medida que la violencia escala, los jóvenes deberán confrontar una pesadilla personal donde sus mayores anhelos se convierten en su peor tormento.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/gS8Z2lepduus8x6Crwzb85F6Gli.jpg",
+    "plot": "Dos adolescentes en un pequeño pueblo rural son atormentados por una violenta entidad sobrenatural que adopta la forma de la persona que más desean.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/tGS5jugRsn7KwZLrvkqWeMtR7nB.jpg",
     "genres": [
       "Terror",
       "Romance"
@@ -159,8 +189,8 @@
     "imdbId": "tt38503727",
     "title": "Montréal, ma belle",
     "year": 2026,
-    "rating": 6.7,
-    "plot": "\"Montréal, ma belle\" nos transporta al vibrante corazón de la ciudad que le da nombre, testigo de historias donde el amor, el misterio y el autodescubrimiento se entrelazan. Seguimos a personajes cuyas vidas se cruzan inesperadamente, desvelando pasiones ocultas y secretos guardados entre sus calles adoquinadas y modernos rascacielos. La esencia misma de Montréal se convierte en el catalizador de sus destinos, guiándolos hacia revelaciones que cambiarán sus vidas para siempre.",
+    "rating": 6.8,
+    "plot": null,
     "posterUrl": "https://image.tmdb.org/t/p/w500/xgJqnAfbI7IlSre1zEdMFxrkRD5.jpg",
     "genres": [
       "Drama",
@@ -169,17 +199,30 @@
     "trailerKey": "0A9_uxkwWng"
   },
   {
-    "tmdbId": 1286491,
-    "imdbId": "tt23745668",
-    "title": "Jimpa",
+    "tmdbId": 1154730,
+    "imdbId": "tt36107185",
+    "title": "La Gradiva",
     "year": 2026,
-    "rating": 6.7,
-    "plot": "Jimpa (2026) se adentra en un misterio envolvente que desafía la percepción de la realidad. La trama sigue a un individuo en una búsqueda inesperada, enfrentándose a un legado oculto y decisiones trascendentales. Con un telón de fondo cautivador, la película explora los límites de la verdad y el destino, prometiendo una experiencia cinematográfica de profundo impacto.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/giSERsYBGUcfj9ctB0h9d5ympo8.jpg",
+    "rating": 7,
+    "plot": "Un pequeño grupo de estudiantes de secundaria franceses realiza una excursión escolar a Pompeya para descubrir sus ruinas y los cuerpos petrificados por el Vesubio en el año 79 d. C. Es en esta ciudad fantasma donde, de repente, se ven invadidos por una sensación vertiginosa. Uno tras otro, James, Toni, Suzanne y su profesora de latín, la señora Mercier, se dejan arrastrar por el deseo, la ira y la desesperación, hasta que se entregan por completo a ellos y lo pierden todo.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/aFrhFiIhdf2klvXq8VFcB06b5pS.jpg",
     "genres": [
       "Drama"
     ],
-    "trailerKey": "UVOUZBm5vwg"
+    "trailerKey": "5yY6V9MbEoE"
+  },
+  {
+    "tmdbId": 1232667,
+    "imdbId": "tt30343126",
+    "title": "Te extraño, te amo",
+    "year": 2026,
+    "rating": 6.6,
+    "plot": "Una viuda dura y afligida se ve obligada a planear el funeral de su marido con un completo desconocido, el asistente de su hijo, con quien no tenía relación.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/rSyzo9gfS0wdUZl0u9WqRRFNUXv.jpg",
+    "genres": [
+      "Drama"
+    ],
+    "trailerKey": "qriWSK376U0"
   },
   {
     "tmdbId": 1427653,
@@ -187,7 +230,7 @@
     "title": "Departures",
     "year": 2026,
     "rating": 6.6,
-    "plot": "En 'Departures' (2026), Benji y Jake conectan de inmediato en la puerta de embarque de un aeropuerto. Su relación florece con viajes a Ámsterdam y momentos íntimos, revelando complejas dinámicas de poder. Esta comedia dramática británica disecciona una relación tóxica que, de emocionantes escapadas, pronto se desintegra en un vínculo de conveniencia, inevitablemente abocado al fracaso y a un doloroso desamor.",
+    "plot": "Benji se encuentra con Jake en la puerta de embarque de un aeropuerto y surge una química instantánea. Su relación se desarrolla a través de viajes a Ámsterdam y momentos de intimidad, revelando unas complejas dinámicas de poder. Una comedia dramática británica imprescindible que disecciona una relación tóxica con humor y emoción en estado puro. Inspirada en un desamor real, lo que empieza como unas emocionantes escapadas mensuales a la capital holandesa pronto se desmorona hasta convertirse en una relación de conveniencia abocada al fracaso. Incapaz de pasar página tras ser abandonado, Benji entra en una espiral de adicción y encuentros esporádicos, atormentado por el amor que perdió.",
     "posterUrl": "https://image.tmdb.org/t/p/w500/4RWHAhtsj68zp02pWUlKs2UPMys.jpg",
     "genres": [
       "Drama",
@@ -196,73 +239,16 @@
     "trailerKey": "s2LLsEmk7fc"
   },
   {
-    "tmdbId": 1403903,
-    "imdbId": "tt35050890",
-    "title": "Ato Noturno",
+    "tmdbId": 1286491,
+    "imdbId": "tt23745668",
+    "title": "Jimpa",
     "year": 2026,
-    "rating": 6.6,
-    "plot": "En \"Ato Noturno\" (2026), Matías, un talentoso actor con un pasado polémico, busca el éxito junto a su compañero de piso Fabio. Cuando solo Fabio consigue una audición importante, Matías halla consuelo en Rafael, un misterioso político que oculta su identidad mientras se postula para la alcaldía. Su pasión clandestina los lleva al éxito en sus respectivas carreras, pero su creciente audacia despierta celos y preocupación. La película explora un peligroso juego de ambición, deseo y fama, donde el amor y el poder colisionan.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/o0uHoWYGsZaGSC6O9iTRy4sAz5J.jpg",
-    "genres": [
-      "Drama",
-      "Suspense",
-      "Romance"
-    ],
-    "trailerKey": "J1wofdezg4s"
-  },
-  {
-    "tmdbId": 1240889,
-    "imdbId": "tt35298123",
-    "title": "Adolescencia, sexo y muerte en campamento Miasma",
-    "year": 2026,
-    "rating": 6.4,
-    "plot": "Tras años de secuelas fallidas, la saga slasher 'Campamento Miasma' confía su resurrección a una joven directora. Cuando esta visita a la misteriosa estrella del film original, ahora aislada, ambas se sumergen en una espiral fatal. Sangre, deseo, miedo y delirio se entrelazan en un viaje oscuro que redefinirá el terror y el legado del campamento.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/8UTCpwvHxWPllCJ7YnaCbffmYyD.jpg",
-    "genres": [
-      "Comedia",
-      "Terror",
-      "Romance"
-    ],
-    "trailerKey": "j9TsiTgYZGw"
-  },
-  {
-    "tmdbId": 1232667,
-    "imdbId": "tt30343126",
-    "title": "Te extraño, te amo",
-    "year": 2026,
-    "rating": 6.4,
-    "plot": "La película 'Te extraño, te amo' (2026) nos presenta a una viuda dura y afligida que se enfrenta a la inesperada tarea de planificar el funeral de su marido. Sin embargo, la situación se complica al descubrir que deberá hacerlo junto a un completo desconocido: el asistente de su hijo, con quien carecía de toda relación. Esta colaboración forzada en medio del luto promete un peculiar camino hacia la aceptación.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/rSyzo9gfS0wdUZl0u9WqRRFNUXv.jpg",
+    "rating": 6.5,
+    "plot": null,
+    "posterUrl": "https://image.tmdb.org/t/p/w500/giSERsYBGUcfj9ctB0h9d5ympo8.jpg",
     "genres": [
       "Drama"
     ],
-    "trailerKey": "qriWSK376U0"
-  },
-  {
-    "tmdbId": 1088548,
-    "imdbId": "tt28088049",
-    "title": "Amarga Navidad",
-    "year": 2026,
-    "rating": 6.2,
-    "plot": "En 'Amarga Navidad' (2026), Elsa, directora de publicidad, se sumerge en el trabajo tras el fallecimiento de su madre en diciembre. Un ataque de pánico la detiene, forzándola a buscar un respiro. Decide escapar a Lanzarote con su amiga Patricia, dejando a su pareja en Madrid. Un viaje inesperado que promete confrontar el duelo y la necesidad de sanar en un lugar ajeno a su realidad habitual.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/ji29dXqoeIsQiVnXAkzI4nzxMjr.jpg",
-    "genres": [
-      "Drama",
-      "Comedia"
-    ],
-    "trailerKey": "SNbVMk-nLu4"
-  },
-  {
-    "tmdbId": 1288059,
-    "imdbId": "tt32332915",
-    "title": "Quiero Tu Sexo",
-    "year": 2026,
-    "rating": 6.2,
-    "plot": "Cuando el ingenuo Elliot consigue un excitante trabajo para la renombrada artista, ícono y provocadora Erika Tracy, sus fantasías se hacen realidad al ser elegido como su musa sexual. Sin embargo, Elliot pronto se ve superado. Erika lo sumerge en un viaje mucho más profundo de lo imaginado, adentrándolo en un vertiginoso mundo de sexo, obsesión, poder, traición y asesinato.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/aMFx35t0T61S1ILDZrycPFRu95u.jpg",
-    "genres": [
-      "Comedia"
-    ],
-    "trailerKey": "q5oWCPS3akw"
+    "trailerKey": "UVOUZBm5vwg"
   }
 ]

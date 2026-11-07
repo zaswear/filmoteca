@@ -37,30 +37,14 @@ async function fetchTMDB(endpoint, token, params = {}) {
   return res.json();
 }
 
-async function generateAiSummary(title, year, originalPlot, apiKey) {
-  if (!apiKey) return originalPlot;
+async function generateAiSummary(title, year, originalPlot) {
   try {
-    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`;
-    const prompt = `Escribe un resumen global corto y atractivo en español de la película '${title}' (${year}). El argumento original en inglés es: "${originalPlot || 'No disponible'}". El resumen debe ser descriptivo, en tono de sinopsis cinematográfica formal, y no debe exceder las 80 palabras. Evita spoilers y ve directo a la trama.`;
-    
-    const res = await fetch(url, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        contents: [{ parts: [{ text: prompt }] }]
-      })
-    });
-    
-    if (!res.ok) {
-      console.warn(`  -> Gemini API respondió con error: ${res.status}`);
-      return originalPlot;
-    }
-    
-    const data = await res.json();
-    const text = data.candidates?.[0]?.content?.parts?.[0]?.text;
+    const { generarTexto } = await import("./ia-local.mjs");
+    const prompt = `Escribe un resumen global corto y atractivo en español de la película '${title}' (${year}). El argumento original en inglés es: "${originalPlot || 'No disponible'}". El resumen debe ser descriptivo, en tono de sinopsis cinematográfica formal, y no debe exceder las 80 palabras. Evita spoilers y ve directo a la trama. Responde solo con el resumen, sin título ni introducción.`;
+    const text = await generarTexto(prompt);
     if (text) {
       console.log(`  -> Resumen de IA generado para ${title}`);
-      return text.trim();
+      return text;
     }
     return originalPlot;
   } catch (err) {
@@ -198,8 +182,7 @@ async function main() {
         const aiPlot = await generateAiSummary(
           candidate.title,
           candidate.year,
-          details.overview || candidate.plot,
-          process.env.GEMINI_API_KEY
+          details.overview || candidate.plot
         );
 
         suggestions.push({

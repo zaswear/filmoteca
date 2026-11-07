@@ -1,389 +1,294 @@
 [
   {
-    "tmdbId": 350,
-    "imdbId": "tt0458352",
-    "title": "El diablo viste de Prada",
-    "year": 2006,
-    "rating": 7.4,
-    "plot": "En el vertiginoso mundo de la moda en Nueva York, la revista 'Runway' es el Santo Grial. Dirigida con puño de hierro y elegante manicura por Miranda Priestly, trabajar en ella es un temible reto para todo aquel que quiera triunfar en ese mundo. Hacerlo como ayudante de Miranda podría abrirle cualquier puerta a Andy Sachs, recientemente graduada. Pero ella es una chica que destaca por su desaliño dentro del pequeño ejército de guapísimas redactoras de la revista. Andy comprende muy pronto que para triunfar en ese negocio va a necesitar algo más que iniciativa y determinación. Y la prueba definitiva está delante de ella, vestida de Prada de pies a cabeza.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/gvBvYFS9LVeukBYcdBX2HJZN4DL.jpg",
+    "tmdbId": 255709,
+    "imdbId": "tt3153634",
+    "title": "So Won",
+    "year": 2013,
+    "rating": 8.4,
+    "plot": "Una niña llamada So Won se convierte en víctima de la violencia. Su familia pasa por la desesperación y el dolor al intentar abrir otra puerta en su vida.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/PZlNvDwKwHeHUsXnd6SEDXWZNn.jpg",
     "genres": [
-      "Drama",
-      "Comedia"
-    ],
-    "trailerKey": "bb3NblYZwQU"
-  },
-  {
-    "tmdbId": 210577,
-    "imdbId": "tt2267998",
-    "title": "Perdida",
-    "year": 2014,
-    "rating": 7.9,
-    "plot": "El día de su quinto aniversario de boda, Nick Dunne informa de que su esposa Amy ha desaparecido misteriosamente. Pronto la presión policial y mediática hace que el retrato de felicidad doméstica que ofrece Nick empiece a tambalearse. Además, su extraña conducta lo convierte en sospechoso, y todo el mundo comienza a preguntase si Nick mató a su esposa...",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/bkIhygnbv9ydlDo4SEsOcqGgQD4.jpg",
-    "genres": [
-      "Misterio",
-      "Suspense",
       "Drama"
     ],
-    "trailerKey": "UXyP5leMzf8"
+    "trailerKey": null
   },
   {
-    "tmdbId": 1311031,
-    "imdbId": "tt32820897",
-    "title": "Guardianes de la noche: Kimetsu no Yaiba La fortaleza infinita",
-    "year": 2025,
-    "rating": 8.8,
-    "plot": "El Cuerpo de Cazadores de Demonios se enfrenta a los Doce Kizuki restantes antes de enfrentarse a Muzan en el Castillo del Infinito para derrotarlo de una vez por todas.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/lYnhd124Fi3vVYlh6qmItxpGZXd.jpg",
+    "tmdbId": 476292,
+    "imdbId": "tt7339826",
+    "title": "Maquia, una historia de amor inmortal",
+    "year": 2018,
+    "rating": 8.1,
+    "plot": "Maquia pertenece a un grupo de gente que deja de envejecer en la adolescencia. Aunque vive tranquila, se siente sola. Esa tranquilidad se rompe cuando un ejército les invade para buscar el secreto de la inmortalidad. Maquia escapa, pero pierde a sus amigos y su hogar. En el bosque conocerá a Ariel, un pequeño que ha perdido a sus padres. La historia desarrolla la relación entre Maquia, que no envejece, y Ariel, que sí.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/hUJvmSl8EOFAYgXO1VfwNoQPRLX.jpg",
     "genres": [
       "Animación",
-      "Acción",
+      "Drama",
       "Fantasía"
     ],
-    "trailerKey": "X3E4zogzWsY"
+    "trailerKey": "nwfnYhDjNJc"
   },
   {
-    "tmdbId": 945961,
-    "imdbId": "tt18412256",
-    "title": "Alien. Romulus",
-    "year": 2024,
-    "rating": 7.2,
-    "plot": "Mientras rebuscan en las profundidades de una estación espacial abandonada, un grupo de jóvenes colonizadores del espacio se encuentra cara a cara con la forma de vida más aterradora del universo. Nueva película de la saga Alien.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/8PYqGSd8MOm5ce8io4qNSAiSExW.jpg",
+    "tmdbId": 3933,
+    "imdbId": "tt0121164",
+    "title": "La novia cadáver",
+    "year": 2005,
+    "rating": 7.6,
+    "plot": "Ambientada en un pueblecito europeo en el siglo XIX, esta película de animación fotograma a fotograma cuenta la historia de Victor, un joven que es llevado de repente al infierno, donde se casa con una misteriosa Novia Cadáver, mientras que su verdadera novia, Victoria espera en el mundo de los vivos. A pesar de que la tierra de los muertos resulta ser más colorista que su estricta educación victoriana, Victor aprende que no hay nada en este mundo, ni en el siguiente, que pueda separarle de su único y verdadero amor.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/3ALM0VeZjGUryAqWo6pqohzbLDh.jpg",
     "genres": [
-      "Terror",
-      "Ciencia ficción"
-    ],
-    "trailerKey": "ozlGL6qsB_I"
-  },
-  {
-    "tmdbId": 260514,
-    "imdbId": "tt3606752",
-    "title": "Cars 3",
-    "year": 2017,
-    "rating": 6.9,
-    "plot": "Sorprendido por una nueva generación de corredores ultrarrápidos, el legendario Rayo McQueen queda relegado repentinamente del deporte que tanto ama. Para retomar su carrera, va a necesitar la ayuda de una joven mecánica de carreras, Cruz Ramírez, que tiene su propio plan para ganar, además de la inspiración del fallecido Fabuloso Hudson Hornet y un par de giros inesperados. ¡Y para probar que el nº95 no está ni mucho menos acabado, el campeón tendrá que poner a prueba su valía en el gran circuito de la Copa Piston!",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/4tp9W3QAbQcpanBtBceZtHD10UT.jpg",
-    "genres": [
-      "Animación",
-      "Drama",
-      "Familia",
-      "Aventura"
-    ],
-    "trailerKey": "MKeUsy-d3_k"
-  },
-  {
-    "tmdbId": 1318447,
-    "imdbId": "tt16431404",
-    "title": "Depredador dominante",
-    "year": 2026,
-    "rating": 6.9,
-    "plot": "Una mujer en duelo se adentra en la naturaleza de Australia para ponerse a prueba y queda atrapada en un juego mortal con un astuto asesino que la considera su presa.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/mV7uFS1U8iP0p4CcXZp4znBVpch.jpg",
-    "genres": [
-      "Acción",
-      "Suspense"
-    ],
-    "trailerKey": null
-  },
-  {
-    "tmdbId": 73861,
-    "imdbId": "tt1273235",
-    "title": "A Serbian Film",
-    "year": 2010,
-    "rating": 5.4,
-    "plot": "Milo, una estrella del porno ya retirada que vive con su mujer y su hijo, está pasando por apuros económicos. Una cita con una antigua compañera de rodaje, la pornostar Layla, le presenta la oportunidad de trabajar con un tipo llamado Vukmir en su nueva película de porno experimental. Milos acaba aceptando sin saber exactamente lo que va a rodar y acaba sumergido en una tormenta de depravación violencia, snuff, pedofilia, y drogas que lo dejan en un abismo de locura.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/qT312t40YmlOSsOXOoOLDCvRbPx.jpg",
-    "genres": [
-      "Crimen",
-      "Terror",
-      "Suspense"
-    ],
-    "trailerKey": null
-  },
-  {
-    "tmdbId": 49051,
-    "imdbId": "tt0903624",
-    "title": "El hobbit: Un viaje inesperado",
-    "year": 2012,
-    "rating": 7.4,
-    "plot": "Precuela de la trilogía \"El Señor de los Anillos\", obra de J.R.R. Tolkien. En compañía del mago Gandalf y de trece enanos, el hobbit Bilbo Bolsón emprende un viaje a través del país de los elfos y los bosques de los trolls, desde las mazmorras de los orcos hasta la Montaña Solitaria, donde el dragón Smaug esconde el tesoro de los Enanos. Finalmente, en las profundidades de la Tierra, encuentra el Anillo Único, hipnótico objeto que será posteriormente causa de tantas sangrientas batallas en la Tierra Media.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/1id2xLxg750ojOWvGWeqPIxmOIF.jpg",
-    "genres": [
-      "Aventura",
+      "Romance",
       "Fantasía",
-      "Acción"
+      "Animación"
     ],
-    "trailerKey": "Y5wMFIVvnsE"
+    "trailerKey": "6wcj_aJ15gI"
   },
   {
-    "tmdbId": 808,
-    "imdbId": "tt0126029",
-    "title": "Shrek",
-    "year": 2001,
-    "rating": 7.8,
-    "plot": "Hace mucho, mucho tiempo, en una lejanísima ciénaga vivía un intratable ogro llamado Shrek. Pero de repente, un día, su absoluta soledad se ve interrumpida por una invasión de sorprendentes personajes de cuento. Hay ratoncitos ciegos en su comida, un enorme y malísimo lobo en su cama, tres cerditos sin hogar y otros muchos seres increíbles que han sido deportados de su reino por el malvado Lord Farquaad. Para conseguir salvar su terreno, y de paso a sí mismo, Shrek hace un pacto con Farquaad y emprende viaje para conseguir que la preciosa princesa Fiona sea la novia del Lord. En tan importante misión le acompañan un burro chistoso, dispuesto a hacer cualquier cosa por Shrek. Todo, menos estarse calladito. Rescatar a la princesa de una dragona enamoradiza que suelta fuego al respirar va a resultar una tontería comparado con lo que ocurre cuando el oscuro secreto que la joven guardaba es revelado.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/jTQONM7jt1yv2lL972TtmWO0UIZ.jpg",
+    "tmdbId": 334543,
+    "imdbId": "tt3741834",
+    "title": "Lion",
+    "year": 2016,
+    "rating": 8,
+    "plot": "El pequeño Saroo, de cinco años, se pierde en un tren en el que recorrerá miles de kilómetros por la India, lejos de su casa y de su familia. Saroo tendrá que aprender a vivir solo en Calcuta, antes de que una pareja australiana lo adopte. Veinticinco años después, y contando tan sólo con sus recuerdos, una determinación inquebrantable y las posibilidades que le proporciona la herramienta de búsqueda Google Earth, comenzará a buscar a su familia perdida, para reencontrarse con ellos.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/jp0Q2YPjMdJVkVY2cHudit4klFX.jpg",
     "genres": [
-      "Animación",
-      "Comedia",
-      "Fantasía",
-      "Aventura",
-      "Familia"
+      "Drama"
     ],
-    "trailerKey": "B88JfTyJ1Fw"
+    "trailerKey": "XeIztsBZFlE"
   },
   {
-    "tmdbId": 4935,
-    "imdbId": "tt0347149",
-    "title": "El castillo ambulante",
-    "year": 2004,
-    "rating": 8.4,
-    "plot": "Sophie, una joven sobre la que pesa una horrible maldición que le confiere el aspecto de una anciana, decide pedir ayuda al mago Howl, que vive en un castillo ambulante, pero tal vez sea Howl quien necesite la ayuda de Sophie.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/p8EARnEw8KPZzlZg3vkseYVMczu.jpg",
-    "genres": [
-      "Fantasía",
-      "Animación",
-      "Aventura"
-    ],
-    "trailerKey": null
-  },
-  {
-    "tmdbId": 1054867,
-    "imdbId": "tt30144839",
-    "title": "Una batalla tras otra",
-    "year": 2025,
-    "rating": 7.3,
-    "plot": "Un ex revolucionario, tras años apartado de la lucha, se ve obligado a volver a la acción para enfrentar a viejos enemigos en un ambiente cargado de tensión política, racismo y violencia militar... Adaptación modernizada de la novela 'Vineland', de Thomas Pynchon (1990), sobre los movimientos radicales de los años sesenta.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/iZ1499F6hYxDxiqioy8oSUaxipG.jpg",
+    "tmdbId": 290098,
+    "imdbId": "tt4016934",
+    "title": "La doncella",
+    "year": 2016,
+    "rating": 8.2,
+    "plot": "Corea, década de 1930, durante la colonización japonesa. Una joven llamada Sookee es contratada como doncella de una rica mujer japonesa, Hideko, que vive recluida en una gran mansión bajo la influencia de un tirano. Sookee guarda un secreto y con la ayuda de un estafador que se hace pasar por un conde japonés, planea algo para Hideko.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/1CJWo3mJwNEi0RsSZyxbgVFOj8B.jpg",
     "genres": [
       "Suspense",
-      "Crimen",
-      "Comedia"
-    ],
-    "trailerKey": "U_wQ_20g8Jw"
-  },
-  {
-    "tmdbId": 1087192,
-    "imdbId": "tt26743210",
-    "title": "Cómo entrenar a tu dragón",
-    "year": 2025,
-    "rating": 7.9,
-    "plot": "En la escarpada isla de Mema, donde vikingos y dragones han sido enemigos acérrimos durante generaciones, Hipo se desmarca desafiando siglos de tradición cuando entabla amistad con Desdentao, un temido dragón Furia Nocturna. Su insólito vínculo revela la verdadera naturaleza de los dragones y desafía los cimientos de la sociedad vikinga.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/9Zr7ZyiMpgMhhxJQi1tQJp9LGho.jpg",
-    "genres": [
-      "Fantasía",
-      "Familia",
-      "Acción",
-      "Aventura"
-    ],
-    "trailerKey": "Ns6ZEpQ1xS0"
-  },
-  {
-    "tmdbId": 283995,
-    "imdbId": "tt3896198",
-    "title": "Guardianes de la galaxia Vol. 2",
-    "year": 2017,
-    "rating": 7.6,
-    "plot": "Continúan las aventuras del equipo en su travesía por los confines del cosmos. Los Guardianes deberán luchar para mantener unida a su nueva familia mientras intentan resolver el misterio de los verdaderos orígenes de Peter Quill. Viejos rivales se convertirán en nuevos aliados, y queridos personajes de los cómics clásicos acudirán en ayuda de nuestros héroes a medida que el universo cinematográfico de Marvel continúa expandiéndose.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/kdg6Y06jfq9FV7qknWNcKLYtBJn.jpg",
-    "genres": [
-      "Ciencia ficción",
-      "Aventura",
-      "Acción"
-    ],
-    "trailerKey": "ISS-a7b0iHw"
-  },
-  {
-    "tmdbId": 98,
-    "imdbId": "tt0172495",
-    "title": "Gladiator",
-    "year": 2000,
-    "rating": 8.2,
-    "plot": "En el año 180, el Imperio Romano domina todo el mundo conocido. Tras una gran victoria sobre los bárbaros del norte, el anciano emperador Marco Aurelio decide transferir el poder a Máximo, bravo general de sus ejércitos y hombre de inquebrantable lealtad al imperio. Pero su hijo Cómodo, que aspiraba al trono, no lo acepta y trata de asesinar a Máximo.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/90QFOG5zSN4cbrIVs4DL4ePAuA5.jpg",
-    "genres": [
-      "Acción",
       "Drama",
-      "Aventura"
-    ],
-    "trailerKey": "W3xjHIdaGww"
-  },
-  {
-    "tmdbId": 271110,
-    "imdbId": "tt3498820",
-    "title": "Capitán América: Civil War",
-    "year": 2016,
-    "rating": 7.5,
-    "plot": "Steve Rogers lidera un nuevo equipo de Vengadores en su esfuerzo por proteger a la humanidad. Tras otro incidente internacional relacionado con los Vengadores que ocasiona daños colaterales, la presión política fuerza a crear un sistema de registro y un cuerpo gubernamental para determinar cuándo se requiere los servicios del equipo. El nuevo status quo divide a los Vengadores mientras intentan salvar al mundo de un nuevo y perverso villano.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/jPPy7tCfglppQo6J9nGwU6UmJ8X.jpg",
-    "genres": [
-      "Aventura",
-      "Acción",
-      "Ciencia ficción"
-    ],
-    "trailerKey": "6aWYmFCRsEI"
-  },
-  {
-    "tmdbId": 228150,
-    "imdbId": "tt2713180",
-    "title": "Corazones de acero",
-    "year": 2014,
-    "rating": 7.5,
-    "plot": "Abril de 1945. Al mando del veterano sargento Wardaddy, un pelotón de cinco soldados americanos a bordo de un carro de combate -el Fury- ha de luchar contra un ejército nazi al borde de la desesperación, pues los alemanes saben que su derrota estaba ya cantada por aquel entonces.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/kbtH5G8L8REzy72LkLmKYoBVaGv.jpg",
-    "genres": [
-      "Bélica",
-      "Drama",
-      "Acción"
-    ],
-    "trailerKey": "wn-MarXmrbo"
-  },
-  {
-    "tmdbId": 1446474,
-    "imdbId": "tt35018922",
-    "title": "La venganza del Hombre del Saco",
-    "year": 2025,
-    "rating": 5.4,
-    "plot": "Un grupo de amigos lleva a su amigo recién sobrio a unas colinas remotas para ayudarlo a mantenerse limpio. Pero cuando comienzan a ocurrir sucesos inquietantes y la gente desaparece, todos deben preguntarse si están siendo perseguidos por el Boogeyman o si sus propias mentes están empezando a desmoronarse.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/hzDAeqxG62Q8pZoD3gQEbiGabh9.jpg",
-    "genres": [
-      "Terror",
-      "Comedia"
-    ],
-    "trailerKey": null
-  },
-  {
-    "tmdbId": 1632181,
-    "imdbId": "tt40187050",
-    "title": "Socias por accidente",
-    "year": 2026,
-    "rating": 8.8,
-    "plot": "Alexa, una elegante relacionista pública, y Regina, una entrenadora de carácter fuerte y espíritu independiente, llevan vidas completamente opuestas hasta que un mismo hombre entra en su historia. Tras una coincidencia inesperada, ambas descubren que fueron engañadas por la misma persona y que sus caminos están más entrelazados de lo que imaginaban. Obligadas a unir fuerzas, Alexa y Regina pasarán de la desconfianza a una alianza improbable que pondrá a prueba sus diferencias, sus decisiones y su idea de lo que significa apoyarse entre mujeres.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/sr1Yoj6XLPTWYcbDoBy67xivW4I.jpg",
-    "genres": [
-      "Comedia",
       "Romance"
     ],
     "trailerKey": null
   },
   {
-    "tmdbId": 724089,
-    "imdbId": "tt13535454",
-    "title": "Gabriel's Inferno: Part II",
-    "year": 2020,
-    "rating": 8.3,
-    "plot": "Basado en la novela más vendida de Sylvain Reynard, el profesor Gabriel Emerson se ha embarcado en un apasionado pero clandestino romance con su antigua alumna, Julia Mitchell.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/x5o8cLZfEXMoZczTYWLrUo1P7UJ.jpg",
-    "genres": [
-      "Romance",
-      "Drama"
-    ],
-    "trailerKey": null
-  },
-  {
-    "tmdbId": 696374,
-    "imdbId": "tt11316854",
-    "title": "Gabriel's Inferno",
-    "year": 2020,
-    "rating": 8.4,
-    "plot": "El enigmático y atractivo profesor Gabriel Emerson, reconocido especialista en Dante, es un hombre torturado por su pasado y orgulloso del prestigio que ha conseguido, aunque también es consciente de que es un imán para el pecado y, en especial, para la lujuria.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/oyG9TL7FcRP4EZ9Vid6uKzwdndz.jpg",
-    "genres": [
-      "Romance",
-      "Drama"
-    ],
-    "trailerKey": null
-  },
-  {
-    "tmdbId": 912649,
-    "imdbId": "tt16366836",
-    "title": "Venom: El último baile",
-    "year": 2024,
-    "rating": 6.7,
-    "plot": "Eddie y Venom están a la fuga. Perseguidos por sus sendos mundos y cada vez más cercados, el dúo se ve abocado a tomar una decisión devastadora que hará que caiga el telón sobre el último baile de Venom y Eddie.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/toZiAd0n0NKhiuHTiGk7kBMmhtG.jpg",
-    "genres": [
-      "Ciencia ficción",
-      "Acción",
-      "Aventura"
-    ],
-    "trailerKey": "wuXjTZjYZQY"
-  },
-  {
-    "tmdbId": 1010581,
-    "imdbId": "tt21909764",
-    "title": "Culpa mía",
+    "tmdbId": 385687,
+    "imdbId": "tt5433140",
+    "title": "Fast & Furious X",
     "year": 2023,
-    "rating": 7.7,
-    "plot": "Noah debe dejar su ciudad, novio y amigos para mudarse a la mansión de William Leister, el flamante y rico marido de su madre Rafaela. Por otro lado, con 17 años, orgullosa e independiente, Noah se resiste a vivir en una mansión rodeada de lujo. Allí conoce a Nick, su nuevo hermanastro, y el choque de sus fuertes personalidades se hace evidente desde el primer momento.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/gp31EwMH5D2bftOjscwkgTmoLAB.jpg",
+    "rating": 7,
+    "plot": "Durante numerosas misiones más que imposibles, Dom Toretto y su familia han sido capaces de ser más listos, de tener más valor y de ir más rápido que cualquier enemigo que se cruzara con ellos. Pero ahora tendrán que enfrentarse al oponente más letal que jamás hayan conocido: Un terrible peligro que resurge del pasado, que se mueve por una sangrienta sed de venganza y que está dispuesto a destrozar a la familia y destruir para siempre todo lo que a Dom le importa.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/3P9QvWVN02Etn4kYGC702WVoXEb.jpg",
     "genres": [
-      "Drama",
-      "Romance",
+      "Acción",
+      "Crimen",
       "Suspense"
     ],
-    "trailerKey": "1SqMjrE0J6E"
+    "trailerKey": "KOQy0AwA7k8"
   },
   {
-    "tmdbId": 324857,
-    "imdbId": "tt4633694",
-    "title": "Spider-Man: un nuevo universo",
-    "year": 2018,
-    "rating": 8.4,
-    "plot": "En un universo paralelo donde Peter Parker ha muerto, un joven de secundaria llamado Miles Morales es el nuevo Spider-Man. Sin embargo, cuando el líder mafioso Wilson Fisk construye el 'Super Colisionador' trae a una versión alternativa de Peter Parker que tratará de enseñar a Miles como ser un mejor Spider-Man. Pero no será el único Spider Man en entrar a este universo:  cuatro versiones alternativas buscan regresar a su universo antes de que toda la realidad se colapse.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/xRMZikjAHNFebD1FLRqgDZeGV4a.jpg",
+    "tmdbId": 16237,
+    "imdbId": "tt0816671",
+    "title": "Jóvenes Titanes: Misión Tokio",
+    "year": 2006,
+    "rating": 7.9,
+    "plot": "Cuando unos ninjas con altas tecnologías atacan la torre de la ciudad, Robin, Starfire, Cyborg, Raven y Beast Boy entran en acción. Robin descubre que los ninjas han sido enviados por el misterioso y amenazante criminal japonés conocido como Brushogun, por lo que los titanes deberán viajar hasta Tokio para detener al villano. (FILMAFFINITY)",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/qaDfL5fQru8ecfCrpCMH1T4dSaR.jpg",
     "genres": [
       "Animación",
       "Acción",
-      "Aventura",
-      "Ciencia ficción"
+      "Ciencia ficción",
+      "Película de TV"
     ],
-    "trailerKey": "qLObEn9IK20"
+    "trailerKey": null
   },
   {
-    "tmdbId": 505642,
-    "imdbId": "tt9114286",
-    "title": "Black Panther: Wakanda Forever",
+    "tmdbId": 10681,
+    "imdbId": "tt0910970",
+    "title": "WALL·E: Batallón de limpieza",
+    "year": 2008,
+    "rating": 8.1,
+    "plot": "En el año 2800, en un planeta Tierra devastado y sin vida, tras cientos de solitarios años haciendo aquello para lo que fue construido -limpiar el planeta de basura- el pequeño robot WALL•E descubre una nueva misión en su vida cuando se encuentra con una moderna y lustrosa robot exploradora llamada EVE. Ambos viajarán a lo largo de la galaxia y vivirán una emocionante e inolvidable aventura.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/5CXpoYB2YAZRPBcv9pjkgR6tZ0X.jpg",
+    "genres": [
+      "Animación",
+      "Familia",
+      "Ciencia ficción"
+    ],
+    "trailerKey": "4rDD3SccHxQ"
+  },
+  {
+    "tmdbId": 762975,
+    "imdbId": "tt4614584",
+    "title": "Corazones malheridos",
     "year": 2022,
-    "rating": 7,
-    "plot": "La reina Ramonda, Shuri, M’Baku, Okoye y las Dora Milaje, luchan para proteger su nación de la injerencia de potencias mundiales a raíz de la muerte del rey T’Challa. Mientras los wakandianos se esfuerzan por adaptarse a su nueva etapa, los héroes deben actuar unidos, con la ayuda del Perro de la Guerra Nakia y Everett Ross, y forzar un nuevo destino para el reino de Wakanda.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/mYpT2R7639KvKZ668uoQGS2QNFp.jpg",
+    "rating": 8,
+    "plot": "Una aspirante a música y un marine a punto de irse a Irak deciden casarse por conveniencia. Pero una tragedia pronto convierte su relación falsa en algo muy real.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/ndp4yIfg04i3raprDJ0UKWD8IK9.jpg",
+    "genres": [
+      "Romance",
+      "Drama"
+    ],
+    "trailerKey": null
+  },
+  {
+    "tmdbId": 138843,
+    "imdbId": "tt1457767",
+    "title": "Expediente Warren",
+    "year": 2013,
+    "rating": 7.5,
+    "plot": "Basada en una historia real documentada por los reputados demonólogos Ed y Lorraine Warren. Narra los encuentros sobrenaturales que vivió la familia Perron en su casa de Rhode Island a principios de los 70. El matrimonio Warren, investigadores de renombre en el mundo de los fenómenos paranormales, acudieron a la llamada de esta familia aterrorizada por la presencia en su granja de un ser maligno.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/sKuHxkCogdk6YWzTyXYPoo9qd9n.jpg",
+    "genres": [
+      "Terror",
+      "Suspense"
+    ],
+    "trailerKey": "1kOlrEwTfco"
+  },
+  {
+    "tmdbId": 582,
+    "imdbId": "tt0405094",
+    "title": "La vida de los otros",
+    "year": 2006,
+    "rating": 8,
+    "plot": "El capitán Gerd Wiesler (Ulrich Mühe) es un oficial extremadamente competente de la Stasi, la todopoderosa policía secreta del régimen comunista de la antigua República Democrática Alemana. Pero, cuando en 1984 le encomiendan que espíe a la pareja formada por el prestigioso escritor Georg Dreyman (Sebastian Koch) y la popular actriz Christa-Maria Sieland (Martina Gedenk), no sabe hasta qué punto esa misión va a influir en su propia vida...",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/huApj1ufTmVTDcKqi2SY3zmqcyJ.jpg",
+    "genres": [
+      "Drama",
+      "Suspense"
+    ],
+    "trailerKey": null
+  },
+  {
+    "tmdbId": 641,
+    "imdbId": "tt0180093",
+    "title": "Réquiem por un sueño",
+    "year": 2000,
+    "rating": 8,
+    "plot": "Harry (Jared Leto) vive con su atormentada madre Sara (Ellen Burstyn), y mientras él sueña con una vida mejor, ella está permanentemente a dieta para el día que pueda cumplir su mayor ilusión; aparecer en su concurso televisivo preferido. La ambición de Harry y su novia Marion (Jennifer Connelly) es hacerse ricos vendiendo droga con su amigo Tyrone (Marlon Wayans), y utilizar las ganancias para abrir un negocio propio, pero nunca llega el dinero suficiente para iniciar su plan. A pesas de todo, Harry y Marion no se resignan a vivir una existencia que consideran despreciable, por lo que harán lo impensable para conseguir la vida que anhelan.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/2B5brHMhaHN1d9KmdeZI6RlU3aE.jpg",
+    "genres": [
+      "Drama"
+    ],
+    "trailerKey": null
+  },
+  {
+    "tmdbId": 137113,
+    "imdbId": "tt1631867",
+    "title": "Al filo del mañana",
+    "year": 2014,
+    "rating": 7.6,
+    "plot": "En un futuro no muy lejano, invade la Tierra una raza de extraterrestres invencibles. Al comandante William Cage, un oficial que nunca ha entrado en combate, le encargan una misión casi suicida y resulta muerto. Entra entonces en un bucle temporal, en el que se ve obligado a luchar y morir una y otra vez. Pero las múltiples batallas que libra lo hacen cada vez más hábil y eficaz en su lucha contra los alienígenas. Su compañera de combate es Rita Vrataski, una guerrera de las Fuerzas Especiales. Adaptación del manga de Hiroshi Sakurazaka.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/vNjwi0STOwzmwE9laZSMYYh2JPE.jpg",
     "genres": [
       "Acción",
-      "Aventura",
       "Ciencia ficción"
     ],
-    "trailerKey": "Sog5AgxPwu0"
+    "trailerKey": "EoEeZHPf5NE"
   },
   {
-    "tmdbId": 1058694,
-    "imdbId": "tt14570440",
-    "title": "Radical",
-    "year": 2023,
+    "tmdbId": 770156,
+    "imdbId": "tt11916254",
+    "title": "Un ángel en nuestras vidas",
+    "year": 2020,
+    "rating": 8.4,
+    "plot": "Las segundas oportunidades comienzan cuando un criminal endurecido se cruza con una niña precoz a la que un ángel ayuda a cambiar de corazón durante la temporada navideña.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/f938pbdnA0rYQCkdB2RIKLluJpW.jpg",
+    "genres": [
+      "Drama",
+      "Familia"
+    ],
+    "trailerKey": null
+  },
+  {
+    "tmdbId": 1317149,
+    "imdbId": "tt31514146",
+    "title": "Incontrolable (I Swear)",
+    "year": 2025,
     "rating": 8.3,
-    "plot": "En una ciudad fronteriza mexicana plagada de abandono, corrupción y violencia, un profesor frustrado prueba un nuevo método radical para romper la apatía de sus alumnos y desbloquear su curiosidad, su potencial... y puede que incluso su genialidad. Basada en una historia real.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/eSatbygYZp8ooprBHZdb6GFZxGB.jpg",
+    "plot": "La historia real de John Davidson. Diagnosticado con Tourette a los 15 años, señalado como loco por sus compañeros, luchó con una condición que pocos habían presenciado. Ya adulto, hizo campaña en favor del síndrome de Tourette .",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/zKv4nZRFg84yuBtnaY8MdNf67Zr.jpg",
     "genres": [
-      "Drama"
+      "Drama",
+      "Historia"
     ],
-    "trailerKey": "tttHqw-kBGk"
+    "trailerKey": "0GpFrpgrIvI"
   },
   {
-    "tmdbId": 466420,
-    "imdbId": "tt5537002",
-    "title": "Los asesinos de la luna",
-    "year": 2023,
-    "rating": 7.4,
-    "plot": "Miembros de la tribu Osage de los Estados Unidos, son asesinados bajo misteriosas circunstancias en la década de 1920 provocando una importante investigación por el FBI involucrando a J. Edgar Hoover.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/731ydMfVJaIyR1bhFEeX7rubqGH.jpg",
+    "tmdbId": 400928,
+    "imdbId": "tt4481414",
+    "title": "Un don excepcional",
+    "year": 2017,
+    "rating": 8,
+    "plot": "Ambientada en un pueblo costero de Florida, Gifted cuenta la historia de Frank Adler, un hombre soltero que cría a su sobrina Mary tras el fallecimiento de su madre. La niña tiene una gran habilidad para las matemáticas y su abuela Evelyn lo sabe bien. Mientras que su tío intenta que la vida de la pequeña sea lo más normal posible y que disfrute de su infancia, Evelyn tiene otros planes para ella. Como consecuencia, Frank se verá obligado a luchar desesperadamente por su custodia.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/wVPGBiFx8y20tac8ayS2HANZ9aB.jpg",
     "genres": [
-      "Crimen",
-      "Historia",
-      "Drama"
+      "Drama",
+      "Comedia"
     ],
-    "trailerKey": "wyYsrrpZuD0"
+    "trailerKey": "7Bm4_SPYoBY"
+  },
+  {
+    "tmdbId": 494656,
+    "imdbId": "tt6772418",
+    "title": "La Leyenda del Charro Negro",
+    "year": 2018,
+    "rating": 8.3,
+    "plot": "Conoce la historia del Charro Negro, el hombre que pasa las noches a caballo buscando a sus víctimas.  Después de liberar al Chupacabras, Leo San Juan, decide que es el momento de regresar junto con su hermano Nando a casa de su abuela. A mitad del camino, el Charro Negro logra confundir a Leo y por su culpa, una niña inocente es arrastrada al inframundo. Leo se ve obligado a reparar el daño. Sus amigos acudirán para intentar ayudarle y poder salir de allí cuanto antes. Pero no es casualidad que el Charro haya elegido involucrar a Leo, sus intenciones van más allá de conseguir un alma nueva.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/fDLJ5vIeRL68cIHlob11w2pBzH0.jpg",
+    "genres": [
+      "Animación",
+      "Fantasía",
+      "Acción",
+      "Familia"
+    ],
+    "trailerKey": "YclerlveAm4"
+  },
+  {
+    "tmdbId": 1288445,
+    "imdbId": "tt32338669",
+    "title": "El motín",
+    "year": 2026,
+    "rating": 7.6,
+    "plot": "Después de que su jefe, un industrial multimillonario, sea asesinado delante de él, Cole Reed se ve obligado a cargar con la culpa del crimen, lo que le obliga a huir mientras trabaja para descubrir una conspiración internacional.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/5zmLk7K4wHWG68OlniFzrNrZjJE.jpg",
+    "genres": [
+      "Acción",
+      "Suspense"
+    ],
+    "trailerKey": "H7NbMxeWMvs"
+  },
+  {
+    "tmdbId": 359724,
+    "imdbId": "tt1950186",
+    "title": "Le Mans '66",
+    "year": 2019,
+    "rating": 8,
+    "plot": "Se centra en un excéntrico y decidido equipo americano de ingenieros y diseñadores liderados por el visionario automovilístico Carroll Shelby y su conductor británico Ken Miles. Henry Ford II y Lee Iacocca les dan la misión de construir desde cero un nuevo automóvil con el fin de derrocar el dominio de Ferrari en el Campeonato del Mundo de Le Mans de 1966.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/kFkZFPBU7vnDDu4m9eOgk7w9W7O.jpg",
+    "genres": [
+      "Drama",
+      "Historia",
+      "Acción"
+    ],
+    "trailerKey": "e8zheK44LQE"
+  },
+  {
+    "tmdbId": 446893,
+    "imdbId": "tt6587640",
+    "title": "Trolls 2: Gira mundial",
+    "year": 2020,
+    "rating": 7.2,
+    "plot": "En una aventura que les llevará más allá de todo lo que habían conocido, Poppy y Branch descubren que su tribu de Trolls es solo una de las seis que existen, que el resto están repartidas en seis reinos y consagradas a seis tipos distintos de música: funk, country, tecno, clásica, pop y rock. La reina Bárbara, miembro de la realeza del hard rock, y su padre, el Rey Metal, quieren acabar con el resto de géneros musicales e imponer el reinado del rock. Con el destino del mundo en juego, Poppy y Branch, junto con el resto de la pandilla — Grandullón, Chanelle, Satén, Cooper y Guy Diamante—, visitarán los demás reinos para unir a los Trolls contra los planes de Barb de eclipsarlos a todos.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/9GdgycCYq3vnxLHw5Ldah8JEjH4.jpg",
+    "genres": [
+      "Familia",
+      "Animación",
+      "Comedia",
+      "Fantasía",
+      "Aventura",
+      "Música"
+    ],
+    "trailerKey": "6zaZFUqURFA"
   },
   {
     "tmdbId": 1383731,
@@ -400,270 +305,17 @@
     "trailerKey": null
   },
   {
-    "tmdbId": 786892,
-    "imdbId": "tt12037194",
-    "title": "Furiosa: De la saga Mad Max",
-    "year": 2024,
-    "rating": 7.4,
-    "plot": "En un mundo postapocalíptico donde todo ha perdido su valor, los pocos supervivientes se guían por la ley del más fuerte. Sin aprecio por la vida, lo único que despierta un brutal interés es la gasolina, sinónimo de poder y objetivo de bandas armadas hasta los dientes y sin escrúpulos. En este contexto conoceremos la  historia de la arrebatadoramente despiadada, salvaje y joven Furiosa, quien cae en manos de una horda de motoristas y debe sobrevivir a muchas pruebas mientras reúne los medios para encontrar el camino de vuelta a casa. Precuela de 'Mad Max: Furia en la carretera' (2015).",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/tGHUlykWn9V2IIQ4ZaATIAq9VLB.jpg",
+    "tmdbId": 1273221,
+    "imdbId": "tt32093575",
+    "title": "Scary Movie: Terroríficamente Incorrecta",
+    "year": 2026,
+    "rating": 6.3,
+    "plot": "Veintiséis años después de conseguir escapar de un asesino enmascarado sospechosamente familiar, el \"Core Four\" está de vuelta en el punto de mira del asesino y ninguna película de terror está a salvo.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/qhGf7btEU9hcGz3A0lneNptJKL7.jpg",
     "genres": [
-      "Acción",
-      "Ciencia ficción",
-      "Aventura"
-    ],
-    "trailerKey": "52dKmsFt6Ek"
-  },
-  {
-    "tmdbId": 845781,
-    "imdbId": "tt14948432",
-    "title": "Red One",
-    "year": 2024,
-    "rating": 7,
-    "plot": "Tras el secuestro de Papá Noel (nombre en clave: RED ONE), el Jefe de Seguridad del Polo Norte (Dwayne Johnson) debe formar equipo con el cazarrecompensas más infame del mundo (Chris Evans) en una misión trotamundos llena de acción para salvar la Navidad.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/dpskAcm71w5v8zQ8RmPmJiP31Om.jpg",
-    "genres": [
-      "Acción",
-      "Aventura",
-      "Comedia",
-      "Fantasía"
-    ],
-    "trailerKey": "RcER0_lZ2F4"
-  },
-  {
-    "tmdbId": 546554,
-    "imdbId": "tt8946378",
-    "title": "Puñales por la espalda",
-    "year": 2019,
-    "rating": 7.8,
-    "plot": "Cuando el renombrado novelista de misterio Harlan Thrombey es encontrado muerto en su mansión justo después de su 85 cumpleaños, el inquisitivo y cortés detective Benoit Blanc es misteriosamente reclutado para investigar. Se moverá entre una red de pistas falsas y mentiras interesadas para tratar de descubrir la verdad tras la prematura muerte del escritor.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/7scJ3fVmwdSpGG87wvxH3kk0RPc.jpg",
-    "genres": [
-      "Comedia",
-      "Crimen",
-      "Misterio"
-    ],
-    "trailerKey": "HA7DVsvOzw8"
-  },
-  {
-    "tmdbId": 644479,
-    "imdbId": "tt5869370",
-    "title": "Dedicada A Mi Ex",
-    "year": 2019,
-    "rating": 8.3,
-    "plot": "La película cuenta la historia de Ariel, un joven de 21 años que decide formar una banda de rock para competir por un premio de diez mil dólares en un concurso de bandas musicales, esta es la última opción cuando intenta obtener dinero para salvar su relación. y se reúne con su ex novia, que se rompe debido al viaje que debe hacer a Finlandia para una pasantía. Ariel con su amiga Ortega, decide hacer un casting para encontrar a los otros miembros de la banda, aunque no saben nada de música, formando así una banda con miembros que tienen personalidades diversas y opuestas.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/xc4bTXVwYNXi10jG9dwcaYt5IpU.jpg",
-    "genres": [
-      "Drama",
       "Comedia"
     ],
-    "trailerKey": null
-  },
-  {
-    "tmdbId": 1284041,
-    "imdbId": "tt32268156",
-    "title": "La última casa",
-    "year": 2026,
-    "rating": 6.9,
-    "plot": "Una familia encerrada en su casa misteriosamente tendrá que unirse para sobrevivir a la escasez de recursos y a la siniestra amenaza que no los deja salir.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/CIGQ7ONbNaSDK3KGkXjBILcj1d.jpg",
-    "genres": [
-      "Terror",
-      "Ciencia ficción",
-      "Suspense"
-    ],
-    "trailerKey": "4I2bcxL8Wxw"
-  },
-  {
-    "tmdbId": 980431,
-    "imdbId": "tt18259538",
-    "title": "Avatar Aang: El último maestro del aire",
-    "year": 2026,
-    "rating": 9.1,
-    "plot": "Cuando el Avatar Aang, el último maestro del aire del mundo, descubre un poder ancestral que podría salvar a su cultura de la extinción, él y sus amigos se lanzan a la búsqueda de ese poder antes de que caiga en malas manos.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/gXyICsxc1amVyziopCT4yhnelNv.jpg",
-    "genres": [
-      "Animación",
-      "Aventura",
-      "Fantasía",
-      "Acción"
-    ],
-    "trailerKey": null
-  },
-  {
-    "tmdbId": 58496,
-    "imdbId": "tt1424432",
-    "title": "Senna",
-    "year": 2010,
-    "rating": 8.1,
-    "plot": "Documental que recorre la vida del legendario piloto Ayrton Senna desde la temporada de su debut en 1984 hasta su prematura muerte una década después en el circuito de Imola. Cuenta una historia excepcional, dejando las técnicas habituales del documental para adoptar una visión más cinematográfica y basándose en material sorprendente e inédito extraído en gran parte de los archivos de la Fórmula 1.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/nZbLCbRoP6iJq5sr8daHQzjnzFh.jpg",
-    "genres": [
-      "Documental"
-    ],
-    "trailerKey": null
-  },
-  {
-    "tmdbId": 11324,
-    "imdbId": "tt1130884",
-    "title": "Shutter Island",
-    "year": 2010,
-    "rating": 8.2,
-    "plot": "Verano de 1954. Los agentes judiciales Teddy Daniels y Chuck Aule son destinados a una remota isla del puerto de Boston para investigar la desaparición de una peligrosa asesina recluida en el hospital psiquiátrico Ashecliffe, un centro penitenciario para criminales perturbados dirigido por el siniestro doctor John Cawley. Pronto descubrirán que el centro guarda muchos secretos, y que la isla esconde algo más peligroso que los pacientes.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/56utveUWJwmG12YU7c2zKw6pbRZ.jpg",
-    "genres": [
-      "Drama",
-      "Suspense",
-      "Misterio"
-    ],
-    "trailerKey": "vmvDCDC9Ylc"
-  },
-  {
-    "tmdbId": 855,
-    "imdbId": "tt0265086",
-    "title": "Black Hawk derribado",
-    "year": 2001,
-    "rating": 7.4,
-    "plot": "Octubre de 1993. Soldados americanos de élite son enviados a Mogadiscio (Somalia) en una misión de paz de las Naciones Unidas. El fin se supone que es salvar vidas, no segarlas. Pero resulta que el principal objetivo de la misión es capturar al caudillo Aidid y acabar de raíz con la guerra. Al principio, todo parece ir bien, hasta que dos helicópteros Black Hawk, aparentemente invencibles, son derribados. Entonces la misión se convierte en una desesperada carrera para rescatar a la tripulación y a los soldados de tierra que han quedado atrapados o han resultado heridos en el accidente.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/5chWdaHyaHWd5KaVxK94lbTDCdC.jpg",
-    "genres": [
-      "Acción",
-      "Bélica",
-      "Historia"
-    ],
-    "trailerKey": "_vJltamBoy8"
-  },
-  {
-    "tmdbId": 950387,
-    "imdbId": "tt3566834",
-    "title": "Una película de Minecraft",
-    "year": 2025,
-    "rating": 6.2,
-    "plot": "Cuatro inadaptados se encuentran luchando con problemas ordinarios cuando de repente se ven arrastrados a través de un misterioso portal al Mundo Exterior: un extraño país de las maravillas cúbico que se nutre de la imaginación. Para volver a casa, tendrán que dominar este mundo mientras se embarcan en una búsqueda mágica con un inesperado experto artesano, Steve.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/mFjtmmh4RtK9tLv1aPnUsl6st3m.jpg",
-    "genres": [
-      "Familia",
-      "Fantasía",
-      "Comedia",
-      "Aventura"
-    ],
-    "trailerKey": "NOAmJa-dhCA"
-  },
-  {
-    "tmdbId": 1232449,
-    "imdbId": "tt15245268",
-    "title": "Young hearts",
-    "year": 2024,
-    "rating": 8.6,
-    "plot": "Elias se siente atraído por su nuevo vecino Alexander. Pronto se da cuenta de que está realmente enamorado por primera vez.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/3fTngLHmgVERMlVPeHUpyj9aUa8.jpg",
-    "genres": [
-      "Drama",
-      "Romance"
-    ],
-    "trailerKey": null
-  },
-  {
-    "tmdbId": 255709,
-    "imdbId": "tt3153634",
-    "title": "So Won",
-    "year": 2013,
-    "rating": 8.4,
-    "plot": "Una niña llamada So Won se convierte en víctima de la violencia. Su familia pasa por la desesperación y el dolor al intentar abrir otra puerta en su vida.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/PZlNvDwKwHeHUsXnd6SEDXWZNn.jpg",
-    "genres": [
-      "Drama"
-    ],
-    "trailerKey": null
-  },
-  {
-    "tmdbId": 1156594,
-    "imdbId": "tt33311244",
-    "title": "Culpa nuestra",
-    "year": 2025,
-    "rating": 7.4,
-    "plot": "La boda de Jenna y Lion propicia el tan deseado reencuentro entre Noah y Nick tiempo después de su ruptura. La incapacidad de Nick para perdonar a Noah se alza como una barrera insalvable. Él, heredero de las empresas de su abuelo y ella, empezando su vida laboral, se resisten a alimentar una llama que aún sigue viva. Pero una vez que sus caminos se han vuelto a cruzar, ¿será el amor más fuerte que el rencor? Secuela de \"Culpa tuya\".",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/6kmi6vmp6iOn4KzI7WfnVtAeJhU.jpg",
-    "genres": [
-      "Romance",
-      "Drama"
-    ],
-    "trailerKey": "g4rcFcbYGv8"
-  },
-  {
-    "tmdbId": 687163,
-    "imdbId": "tt12042730",
-    "title": "Proyecto Salvación",
-    "year": 2026,
-    "rating": 8.6,
-    "plot": "El profesor de ciencias Ryland Grace se despierta en una nave espacial a años luz de casa sin recordar quién es ni cómo ha llegado hasta allí. A medida que recupera la memoria, empieza a descubrir su misión: resolver el enigma de la misteriosa sustancia que provoca la extinción del sol. Deberá recurrir a sus conocimientos científicos y a sus ideas poco ortodoxas para salvar todo lo que hay en la Tierra de la extinción... pero una amistad inesperada significa que quizá no tenga que hacerlo solo.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/7lwOTxajURKEWO6gI370NTrVdBO.jpg",
-    "genres": [
-      "Ciencia ficción",
-      "Aventura"
-    ],
-    "trailerKey": "in-lUuKi0eE"
-  },
-  {
-    "tmdbId": 122,
-    "imdbId": "tt0167260",
-    "title": "El señor de los anillos: El retorno del rey",
-    "year": 2003,
-    "rating": 8.5,
-    "plot": "Las fuerzas de Saruman han sido destruidas, y su fortaleza sitiada. Ha llegado el momento de que se decida el destino de la Tierra Media, y por primera vez en mucho tiempo, parece que hay una pequeña esperanza. La atención del señor oscuro Sauron se centra ahora en Gondor, el último reducto de los hombres, y del cual Aragorn tendrá que reclamar el trono para ocupar su puesto de rey. Pero las fuerzas de Sauron ya se preparan para lanzar el último y definitivo ataque contra el reino de Gondor, la batalla que decidirá el destino de todos. Mientras tanto, Frodo y Sam continuan su camino hacia Mordor, a la espera de que Sauron no repare en que dos pequeños Hobbits se acercan cada día más al final de su camino, el Monte del Destino.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/mWuFbQrXyLk2kMBKF9TUPtDwuPx.jpg",
-    "genres": [
-      "Aventura",
-      "Fantasía",
-      "Acción"
-    ],
-    "trailerKey": "h-9RYiqyqjk"
-  },
-  {
-    "tmdbId": 725273,
-    "imdbId": "tt11266868",
-    "title": "Solitary",
-    "year": 2020,
-    "rating": 5.1,
-    "plot": "Un hombre se despierta dentro de una habitación y descubre que es un prisionero enviado al espacio para formar la primera colonia humana fuera del planeta Tierra. Mientras tanto, su compañera de celda parece estar decidida a destruir todo lo que les rodea.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/i26Z84b8VOLQnSXPIV7tPVDU0us.jpg",
-    "genres": [
-      "Ciencia ficción"
-    ],
-    "trailerKey": null
-  },
-  {
-    "tmdbId": 1184918,
-    "imdbId": "tt29623480",
-    "title": "Robot salvaje",
-    "year": 2024,
-    "rating": 8.3,
-    "plot": "Esta aventura épica cuenta la historia de una robot, Rozzum 7-1-3-4, \"Roz\" para abreviar, que naufraga en una isla inhabitada y debe aprender a adaptarse a los entornos rigurosos construyendo relaciones con los animales de la isla y convirtiéndose en la madre adoptiva de una cría de ganso huérfana.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/a0a7RC01aTa7pOnskgJb3mCD2Ba.jpg",
-    "genres": [
-      "Familia",
-      "Animación",
-      "Ciencia ficción",
-      "Aventura"
-    ],
-    "trailerKey": "TTu_rks8mUc"
-  },
-  {
-    "tmdbId": 82702,
-    "imdbId": "tt1646971",
-    "title": "Cómo entrenar a tu dragón 2",
-    "year": 2014,
-    "rating": 7.7,
-    "plot": "Han pasado cinco años desde que Hipo empezó a entrenar a su dragón, rompiendo la tradición vikinga de cazarlos. Astrid y el resto de la pandilla han conseguido difundir en la isla un nuevo deporte: las carreras de dragones. Mientras realizan una carrera, atraviesan los cielos llegando a territorios inhóspitos, donde nadie antes ha estado. Durante un viaje descubren una cueva cubierta de hielo que resulta ser el refugio de cientos de dragones salvajes, a los que cuida un misterioso guardián. Hipo y los suyos se unen al guardián para proteger a los dragones de las fuerzas malignas que quieren acabar con ellos.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/bXcRw7FL8QzUZOvY2fZdwDv5ymQ.jpg",
-    "genres": [
-      "Fantasía",
-      "Acción",
-      "Aventura",
-      "Animación",
-      "Familia"
-    ],
-    "trailerKey": "Ag_fkJsqlNY"
+    "trailerKey": "kLZ7PGp7ZL0"
   },
   {
     "tmdbId": 939243,
@@ -682,64 +334,117 @@
     "trailerKey": "2YJXP8CKrNE"
   },
   {
-    "tmdbId": 810693,
-    "imdbId": "tt14331144",
-    "title": "Jujutsu Kaisen 0",
-    "year": 2021,
+    "tmdbId": 28178,
+    "imdbId": "tt1028532",
+    "title": "Siempre a tu lado (Hachiko)",
+    "year": 2009,
+    "rating": 8,
+    "plot": "Basada en una historia real. Un profesor de universidad adopta a un perro vagabundo en una estación del tren. Tras recabar información sobre el animal, el profesor descubre que el perro iba a los andenes a diario durante semanas para esperar el regreso de su amo, pero éste había muerto en un accidente en la ciudad. El perro Hachiko, al lado de su nuevo amo a quien también le cambiará la vida cuando descubre los lazos que se pueden crear entre un animal y una persona.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/rLPMD8BOHjvvjjCX7BZQdqNWBm2.jpg",
+    "genres": [
+      "Drama",
+      "Familia"
+    ],
+    "trailerKey": "_VgwwLKshDs"
+  },
+  {
+    "tmdbId": 786892,
+    "imdbId": "tt12037194",
+    "title": "Furiosa: De la saga Mad Max",
+    "year": 2024,
+    "rating": 7.4,
+    "plot": "En un mundo postapocalíptico donde todo ha perdido su valor, los pocos supervivientes se guían por la ley del más fuerte. Sin aprecio por la vida, lo único que despierta un brutal interés es la gasolina, sinónimo de poder y objetivo de bandas armadas hasta los dientes y sin escrúpulos. En este contexto conoceremos la  historia de la arrebatadoramente despiadada, salvaje y joven Furiosa, quien cae en manos de una horda de motoristas y debe sobrevivir a muchas pruebas mientras reúne los medios para encontrar el camino de vuelta a casa. Precuela de 'Mad Max: Furia en la carretera' (2015).",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/tGHUlykWn9V2IIQ4ZaATIAq9VLB.jpg",
+    "genres": [
+      "Acción",
+      "Ciencia ficción",
+      "Aventura"
+    ],
+    "trailerKey": "52dKmsFt6Ek"
+  },
+  {
+    "tmdbId": 1275779,
+    "imdbId": "tt15047880",
+    "title": "El día de la revelación",
+    "year": 2026,
+    "rating": 7.4,
+    "plot": "Entre conspiraciones gubernamentales y avances tecnológicos, toda la humanidad está a punto de conocer la verdad sobre la existencia extraterrestre y su devenir.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/dPTa7jSIeaDhie2d9JSZr7qI0Tf.jpg",
+    "genres": [
+      "Ciencia ficción",
+      "Suspense"
+    ],
+    "trailerKey": "-XXZgYygh40"
+  },
+  {
+    "tmdbId": 671,
+    "imdbId": "tt0241527",
+    "title": "Harry Potter y la piedra filosofal",
+    "year": 2001,
+    "rating": 7.9,
+    "plot": "Harry Potter es un huérfano que vive con sus desagradables tíos, los Dursley, y su repelente primo Dudley. Se acerca su undécimo cumpleaños y tiene pocas esperanzas de recibir algún regalo, ya que nunca nadie se acuerda de él. Sin embargo, pocos días antes de su cumpleaños, una serie de misteriosas cartas dirigidas a él y escritas con una estridente tinta verde rompen la monotonía de su vida: Harry es un mago y sus padres también lo eran.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/3MKK7vAJLtSkBTABMTjxf6TOCo3.jpg",
+    "genres": [
+      "Aventura",
+      "Fantasía"
+    ],
+    "trailerKey": "WE4AJuIvG1Y"
+  },
+  {
+    "tmdbId": 399106,
+    "imdbId": "tt5613056",
+    "title": "Piper",
+    "year": 2016,
     "rating": 8.1,
-    "plot": "Yuta Okkotsu es un nervioso estudiante de instituto que sufre un grave problema: su amiga de la infancia Rika se ha convertido en una maldición y no le deja en paz. Como Rika no es una maldición cualquiera, su situación es percibida por Satoru Gojo, un profesor del instituto Jujutsu, una escuela donde los exorcistas noveles aprenden a combatir las maldiciones. Gojo convence a Yuta para que se matricule, pero ¿podrá aprender lo suficiente a tiempo para enfrentarse a la Maldición que le persigue?",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/2ndvx03fmREMxEgaZ1vWt756TOQ.jpg",
+    "plot": "Piper es una cría de 'correlimos' (una especie de ave común en zonas húmedas) que se aventura fuera del nido por primera vez para buscar comida en la costa. El único problema es que la comida está enterrada bajo la arena de la orilla, donde llegan las olas húmedas, frías y aterradoras. Con la ayuda de un nuevo amigo, el pequeño pájaro se sumerge con la esperanza de superar sus miedos y llenar su tripa.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/pWreJldRrODmxreUWUnXudSbLNI.jpg",
     "genres": [
-      "Animación",
-      "Acción",
-      "Fantasía"
-    ],
-    "trailerKey": "80TsKHyg0CE"
-  },
-  {
-    "tmdbId": 569094,
-    "imdbId": "tt9362722",
-    "title": "Spider-Man: Cruzando el Multiverso",
-    "year": 2023,
-    "rating": 8.3,
-    "plot": "Tras reencontrarse con Gwen Stacy, el amigable vecindario de Spider-Man de Brooklyn al completo es catapultado a través del Multiverso, donde se encuentra con un equipo de Spidermans encargados de proteger su propia existencia. Pero cuando los héroes se enfrentan sobre cómo manejar una nueva amenaza, Miles se encuentra enfrentado a las otras Arañas y debe redefinir lo que significa ser un héroe para poder salvar a la gente que más quiere.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/37WcNMgNOMxdhT87MFl7tq7FM1.jpg",
-    "genres": [
-      "Animación",
-      "Acción",
-      "Aventura",
-      "Ciencia ficción"
-    ],
-    "trailerKey": "b_yMOiRgMmQ"
-  },
-  {
-    "tmdbId": 411,
-    "imdbId": "tt0363771",
-    "title": "Las crónicas de Narnia: El león, la bruja y el armario",
-    "year": 2005,
-    "rating": 7.1,
-    "plot": "La historia narra las aventuras de cuatro hermanos: Lucy, Edmund, Susan y Peter, que durante la Segunda Guerra Mundial descubren el mundo de Narnia, al que acceden a través de un armario mágico mientras juegan al escondite en la casa de campo de un viejo profesor. En Narnia descubrirán un mundo increíble habitado por animales que hablan, duendes, faunos, centauros y gigantes al que la Bruja Blanca- Jadis- ha condenado al invierno eterno. Con la ayuda del león Aslan, el noble soberano, los niños lucharán para vencer el poder que la Bruja Blanca ejerce sobre Narnia en una espectacular batalla y conseguir así liberarle de la maldición del frío.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/5WNqb7C6EX5r752mKjnfzxGvWui.jpg",
-    "genres": [
-      "Aventura",
       "Familia",
-      "Fantasía"
+      "Animación"
     ],
     "trailerKey": null
   },
   {
-    "tmdbId": 1022256,
-    "imdbId": "tt21819250",
-    "title": "Selena Gomez: Mi mente y yo",
-    "year": 2022,
-    "rating": 8.5,
-    "plot": "Tras años en el candelero, Selena Gómez alcanza un estatus de estrella inimaginable. Sin embargo, justo cuando conquista una nueva cima, un giro inesperado la sume en la oscuridad. Este documental, de una crudeza e intimidad únicas, abarca su viaje de seis años hacia una nueva luz.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/tPlQkVzDoIuhV5he0kntNXDcBrK.jpg",
+    "tmdbId": 13223,
+    "imdbId": "tt1205489",
+    "title": "Gran Torino",
+    "year": 2008,
+    "rating": 8,
+    "plot": "Walt Kowalski, un veterano de la guerra de Corea, es un obrero jubilado del sector del automóvil. Su máxima pasión es cuidar de su más preciado tesoro: un coche Gran Torino de 1972. Es un hombre inflexible y con una voluntad de hierro, al que le cuesta trabajo asimilar los cambios que se producen a su alrededor. Sin embargo, las circustancias harán que se vea obligado a replantearse sus ideas.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/7w54KRHdRokgXqxL59GKVau8e6l.jpg",
     "genres": [
-      "Documental",
-      "Música"
+      "Drama"
     ],
-    "trailerKey": "bQb-pzLcGCk"
+    "trailerKey": "U_bZWFLTp-c"
+  },
+  {
+    "tmdbId": 675,
+    "imdbId": "tt0373889",
+    "title": "Harry Potter y la Orden del Fénix",
+    "year": 2007,
+    "rating": 7.7,
+    "plot": "Harry Potter regresa por quinto año a Hogwarts aún sacudido por la tragedia ocurrida en el Torneo de los Tres Magos. Debido a que el Ministro de la Magia niega el regreso de Lord Voldemort, Harry se convierte en el centro de atención de la comunidad mágica. Mientras lucha con sus problemas en el colegio, incluyendo a la nueva profesora Dolores Umbridge, intentará aprender más sobre la misteriosa Orden del Fénix.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/vYUjcTKDXOHJOlilNK953m8zJww.jpg",
+    "genres": [
+      "Aventura",
+      "Fantasía"
+    ],
+    "trailerKey": "zqMjQXcpacg"
+  },
+  {
+    "tmdbId": 454639,
+    "imdbId": "tt0427340",
+    "title": "He-Man y los Masters del Universo",
+    "year": 2026,
+    "rating": 7.1,
+    "plot": "En las regiones más lejanas del espacio, el reino de Eternia está amenazado por el villano Skeletor y sus traviesos ejércitos de oscuridad. Para salvar el reino de su padre y proteger las vidas de sus seres queridos, el joven príncipe Adam tiene que recuperar una espada mítica y convertirse en el legendario guerrero conocido como He-Man.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/A6kqScyPEsn6akDS5HyPf9jE4Od.jpg",
+    "genres": [
+      "Acción",
+      "Fantasía",
+      "Ciencia ficción"
+    ],
+    "trailerKey": "G9h_pOtmkEg"
   },
   {
     "tmdbId": 1226841,
@@ -756,151 +461,238 @@
     "trailerKey": null
   },
   {
-    "tmdbId": 84334,
-    "imdbId": "tt2125608",
-    "title": "Searching for Sugar Man",
-    "year": 2012,
-    "rating": 7.9,
-    "plot": "Sixto Rodríguez fue un cantante de folk de Detroit que tuvo una carrera discográfica de corta duración, teniendo dos álbumes reconocidos, pero que no salieron a la venta, a principios de 1970.  Rodríguez continuó su carrera musical en el sur de África, convirtiéndose en un icono de la música pop, siendo un referente y sirviendo de inspiración a las futuras generaciones.  El largo rumor de que estaba muerto por suicidio, hizo que algunos fans de la década de los 90 buscaran la verdad del destino de su héroe.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/ucM98HuBHSWmn44oiE83hIDc6VB.jpg",
+    "tmdbId": 1195803,
+    "imdbId": "tt29611136",
+    "title": "Wicker",
+    "year": 2026,
+    "rating": 7.6,
+    "plot": "Una pescadora vive en la periferia de un pueblo costero; es soltera, apestosa y objeto de burlas constantes. Un día, harta de sus estirados y estrechos vecinos, encarga un marido de mimbre para ella.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/ewPz6uvKrbKlQrLRi1r9NTZQLzN.jpg",
     "genres": [
-      "Música",
-      "Documental"
-    ],
-    "trailerKey": "0fFQZK08oTI"
-  },
-  {
-    "tmdbId": 269149,
-    "imdbId": "tt2948356",
-    "title": "Zootrópolis",
-    "year": 2016,
-    "rating": 7.8,
-    "plot": "La moderna metrópoli mamífera de Zootrópolis es una ciudad absolutamente única. Está compuesta de barrios con diferentes hábitats como la lujosa Plaza Sahara, el Distrito Selva Tropical y el gélido Distrito Tundra. Es un crisol donde los animales de cada entorno conviven, un lugar donde no importa lo que seas. De hecho puedes ser cualquier cosa, desde un elefante enorme hasta la musaraña más diminuta. Pero cuando llega la optimista agente Judy Hopps, descubre que ser la primera conejita de un cuerpo policial compuesto de animales duros y enormes no es nada fácil. Pero está decidida a demostrar su valía y se mete de cabeza en un caso, a pesar de que eso significa trabajar con Nick Wilde, un zorro parlanchín y estafador, para resolver el misterio.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/4zIlT48TgNLuJpUtFOkFITHoCQE.jpg",
-    "genres": [
-      "Animación",
-      "Aventura",
-      "Familia",
+      "Romance",
+      "Fantasía",
       "Comedia"
     ],
-    "trailerKey": "FE_fc3xcLPY"
+    "trailerKey": "jA5zfiikcu8"
   },
   {
-    "tmdbId": 406997,
-    "imdbId": "tt2543472",
-    "title": "Wonder",
-    "year": 2017,
-    "rating": 8.1,
-    "plot": "Un niño de 10 años nacido con una deformidad facial que le ha obligado a ser operado 27 veces de cirugía, se esfuerza por encajar en su nuevo colegio.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/wowB0C4S5KX5SNbhGMkbZZEOqCR.jpg",
+    "tmdbId": 1476746,
+    "imdbId": "tt33214716",
+    "title": "The Florist",
+    "year": 2026,
+    "rating": 5.8,
+    "plot": "Un tranquilo horticultor que alberga una vida secreta como asesino letal ve peligrar su verdadera identidad cuando entabla una improbable amistad con un testigo de la corrupción policial.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/4tnRvIiWMzVA2Tw9c7INLo4sfo0.jpg",
     "genres": [
-      "Familia",
-      "Drama"
-    ],
-    "trailerKey": "S6AXHRx_0xk"
-  },
-  {
-    "tmdbId": 695721,
-    "imdbId": "tt10545296",
-    "title": "Los Juegos del Hambre: Balada de pájaros cantores y serpientes",
-    "year": 2023,
-    "rating": 7,
-    "plot": "Ambientada en un Panem postapocalíptico, nos traslada varias décadas antes del comienzo de las aventuras de Katniss Everdeen. El joven Coriolanus Snow será el mentor de Lucy Gray Baird, la chica elegida para ser homenajeada del empobrecido Distrito 12. La joven sorprenderá a todos cantando en la ceremonia de apertura de los Décimos Juegos del Hambre en los que Snow intentará aprovecharse de su talento y encanto para sobrevivir.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/2vIK81ikjvdewSLmrwIg7AMoJIv.jpg",
-    "genres": [
-      "Ciencia ficción",
-      "Acción"
-    ],
-    "trailerKey": "mKlSMLPzn7Q"
-  },
-  {
-    "tmdbId": 458156,
-    "imdbId": "tt6146586",
-    "title": "John Wick: Capítulo 3 - Parabellum",
-    "year": 2019,
-    "rating": 7.4,
-    "plot": "John Wick regresa a la acción, solo que esta vez con una recompensa de 14 millones de dólares sobre su cabeza y con un ejército de mercenarios intentando darle caza. Tras asesinar a uno de los miembros del gremio de asesinos al que pertenecía, Wick es expulsado de la organización, pasando a convertirse en el centro de atención de multitud de asesinos a sueldo que esperan detrás de cada esquina para tratar de deshacerse de él.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/aKw7oqYdfn4pkKYvp18Gd1YhK6m.jpg",
-    "genres": [
-      "Acción",
-      "Suspense",
-      "Crimen"
-    ],
-    "trailerKey": "UtWl7Lz6A10"
-  },
-  {
-    "tmdbId": 454626,
-    "imdbId": "tt3794354",
-    "title": "Sonic: La película",
-    "year": 2020,
-    "rating": 7.3,
-    "plot": "Sonic, el descarado erizo azul basado en la famosa serie de videojuegos de Sega, vivirá aventuras y desventuras cuando conoce a su amigo humano y policía, Tom Wachowski. Sonic y Tom unirán sus fuerzas para tratar de detener los planes del malvado Dr. Robotnik, que intenta atrapar a Sonic con el fin de emplear sus inmensos poderes para dominar el mundo.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/rK25c71fYVi0Bv7RrTChK7NAQjC.jpg",
-    "genres": [
-      "Acción",
-      "Ciencia ficción",
-      "Comedia",
-      "Familia"
-    ],
-    "trailerKey": "XPqAai3WBag"
-  },
-  {
-    "tmdbId": 549559,
-    "imdbId": "tt8760684",
-    "title": "Apolo 11",
-    "year": 2019,
-    "rating": 7.9,
-    "plot": "El baúl de la NASA se abre para proporcionar material inédito sobre la misión \"Apollo 11\", que llevaría por primera vez al hombre a la Luna. Las cámaras ubicadas en Cabo Cañaveral capturan los momentos más importantes del despegue de la nave. Unidas a las escenas filmadas en el interior del cohete espacial, ambas perspectivas ofrecen una visión íntima sobre las sensaciones que experimentaron los astronautas durante su misión.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/h69OPPojqbIObPCfVDsMJAPgPZm.jpg",
-    "genres": [
-      "Documental",
-      "Historia",
-      "Drama"
-    ],
-    "trailerKey": null
-  },
-  {
-    "tmdbId": 146233,
-    "imdbId": "tt1392214",
-    "title": "Prisioneros",
-    "year": 2013,
-    "rating": 8.1,
-    "plot": "Keller Dover se enfrenta a la peor de las pesadillas: Anna, su hija de seis años, ha desaparecido con su amiga Joy y, a medida que pasa el tiempo, el pánico lo va dominando. Desesperado, decide ocuparse personalmente del asunto. Pero, ¿hasta dónde está dispuesto a llegar para averiguar el paradero de su hija?",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/i6CcmOvJxBFH3mfhCHa3Njtelix.jpg",
-    "genres": [
-      "Drama",
-      "Suspense",
-      "Crimen"
-    ],
-    "trailerKey": "AiN1ahjVb3Y"
-  },
-  {
-    "tmdbId": 23160,
-    "imdbId": "tt0249241",
-    "title": "Armonías de Werckmeister",
-    "year": 2001,
-    "rating": 7.9,
-    "plot": "Un circo llega a un pequeño pueblo en el que todos sus habitantes se conocen. La llegada de este circo, que promete el espectáculo de ver a un Príncipe y una ballena gigante despierta recelos en los habitantes, que comienzan a manifestarse contra los signos de violencia callejera que encuentran y que atribuyen al circo. El protagonista asistirá atónito y perplejo a todos estos acontecimientos que se desencadenan de forma precipitada.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/vTKu9wMom1uNXpQqeB4Ba3sM0R7.jpg",
-    "genres": [
-      "Drama"
-    ],
-    "trailerKey": null
-  },
-  {
-    "tmdbId": 1233413,
-    "imdbId": "tt31193180",
-    "title": "Los pecadores",
-    "year": 2025,
-    "rating": 7.5,
-    "plot": "Tratando de dejar atrás sus problemáticas vidas, dos hermanos gemelos regresan a su pueblo natal para empezar de nuevo, solo para descubrir que un mal aún mayor les espera para darles la bienvenida.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/zdClwqpYQXBSCGGDMdtvsuggwec.jpg",
-    "genres": [
-      "Terror",
       "Acción",
       "Suspense"
     ],
-    "trailerKey": "XufPTI4PDLg"
+    "trailerKey": null
+  },
+  {
+    "tmdbId": 496243,
+    "imdbId": "tt6751668",
+    "title": "Parásitos",
+    "year": 2019,
+    "rating": 8.5,
+    "plot": "Tanto Gi Taek (Song Kang-ho) como su familia están sin trabajo. Cuando su hijo mayor, Gi Woo (Choi Woo-sik), empieza a dar clases particulares en casa de Park (Lee Seon-gyun), las dos familias, que tienen mucho en común pese a pertenecer a dos mundos totalmente distintos, comienzan una interrelación de resultados imprevisibles.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/4N55tgxDW0RRATyrZHbx0q9HUKv.jpg",
+    "genres": [
+      "Comedia",
+      "Suspense",
+      "Drama"
+    ],
+    "trailerKey": "-PtU49Aol00"
+  },
+  {
+    "tmdbId": 1226863,
+    "imdbId": "tt28650488",
+    "title": "Super Mario Galaxy la película",
+    "year": 2026,
+    "rating": 8.2,
+    "plot": "Secuela de 'Super Mario Bros: La película', basada en la saga 'Mario Galaxy'. Los hermanos Mario y Luigi y la princesa Peach emprenden una aventura hasta los confines del espacio y a través de la galaxia.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/79EVB4qhyfrdlMgT8GIRAikdzsQ.jpg",
+    "genres": [
+      "Familia",
+      "Comedia",
+      "Aventura",
+      "Fantasía",
+      "Animación"
+    ],
+    "trailerKey": "Hz57G2KaAp8"
+  },
+  {
+    "tmdbId": 950028,
+    "imdbId": "tt14173636",
+    "title": "La invitación",
+    "year": 2026,
+    "rating": 7.2,
+    "plot": "Una pareja invita a los vecinos a su casa, lo que desencadena una velada llena de giros inesperados, revelando emociones profundamente reprimidas y una sexualidad inexplorada en esta historia que explora las complejidades de las relaciones de hoy en día.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/21JnfyCARiRkms9AZHtTXiZKbIj.jpg",
+    "genres": [
+      "Comedia",
+      "Drama",
+      "Romance"
+    ],
+    "trailerKey": null
+  },
+  {
+    "tmdbId": 1228710,
+    "imdbId": "tt30825738",
+    "title": "The Mandalorian and Grogu",
+    "year": 2026,
+    "rating": 7.5,
+    "plot": "El Imperio ha caído y los señores de la guerra imperiales siguen dispersos por toda la galaxia. Mientras la incipiente Nueva República trabaja para proteger todo por lo que luchó la Rebelión, ha reclutado la ayuda del legendario cazarrecompensas mandaloriano Din Djarin y su joven aprendiz Grogu.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/sWitU9IjgFwf6y1OrI0zUaL3GNa.jpg",
+    "genres": [
+      "Acción",
+      "Aventura",
+      "Ciencia ficción"
+    ],
+    "trailerKey": "bDmr-8CaeBg"
+  },
+  {
+    "tmdbId": 417859,
+    "imdbId": "tt0448694",
+    "title": "El Gato con Botas",
+    "year": 2011,
+    "rating": 6.6,
+    "plot": "Mucho antes de que conociera a Shrek, el conocido espadachín, amante y fuera de la ley Gato con Botas se convierte en un héroe al emprender una aventura junto a la dura y espabilada Kitty Zarpassuaves y el astuto Humpty Dumpty para salvar a su pueblo. Complicándoles las cosas por el camino están los infames forajidos Jack y Jill, que harán cualquier cosa para que Gato y su banda no lo consigan.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/1VmrC82zY4U33l9UHlZTWDB1asN.jpg",
+    "genres": [
+      "Acción",
+      "Aventura",
+      "Animación",
+      "Comedia",
+      "Familia"
+    ],
+    "trailerKey": "DziSUWvULh8"
+  },
+  {
+    "tmdbId": 1377237,
+    "imdbId": "tt31349844",
+    "title": "Entrega al límite",
+    "year": 2026,
+    "rating": 8.3,
+    "plot": "Un exsoldado se ve envuelto en una brutal carrera contrarreloj cuando una entrega médica crucial los convierte, a él y a su inesperada compañera, en el objetivo de un cártel despiadado. A medida que la misión se transforma en una cacería mortal, cada desvío, retraso y bala los acerca más al fracaso. Acosados ​​por la traición desde todos los frentes, deberán sobrevivir a la persecución y entregar su carga para salvar la vida de una niña.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/pmjSjZtFOYDWhAs4B2AbBE8hTQf.jpg",
+    "genres": [
+      "Acción",
+      "Comedia"
+    ],
+    "trailerKey": null
+  },
+  {
+    "tmdbId": 1244492,
+    "imdbId": "tt31711040",
+    "title": "Look Back: Continúa dibujando",
+    "year": 2024,
+    "rating": 8.2,
+    "plot": "Fujino, una chica popular y extrovertida, es aclamada por sus compañeros de clase por sus cómics divertidos en el periódico de la clase. Un día, su profesora le pide que comparta el espacio con Kyomoto, un recluso que se ausenta de la escuela y cuyas hermosas obras de arte despiertan en ella un fervor competitivo. Lo que comienza como celos se transforma cuando Fujino se da cuenta de su pasión compartida por el dibujo.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/yGPEQdlYbAINCK7DbhhEY0UUycS.jpg",
+    "genres": [
+      "Animación",
+      "Drama"
+    ],
+    "trailerKey": null
+  },
+  {
+    "tmdbId": 489471,
+    "imdbId": "tt7286916",
+    "title": "The Dawn Wall",
+    "year": 2017,
+    "rating": 8,
+    "plot": "El legendario escalador Tommy Caldwell, secuestrado hace años en Kirguistán, intenta superar un bajo estado anímico escalando 900 metros de por la cara más escarpada de una legendaria roca: la Dawn Wall de El Capitan.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/bZQCNGb1II5eWASBhEgJBGxOPUM.jpg",
+    "genres": [
+      "Documental",
+      "Aventura"
+    ],
+    "trailerKey": null
+  },
+  {
+    "tmdbId": 2517,
+    "imdbId": "tt0408664",
+    "title": "Nadie sabe",
+    "year": 2004,
+    "rating": 8,
+    "plot": "En Tokyo, la imprudente madre soltera Keiko se muda a un pequeño apartamento con su hijo de doce años Akira Fukushima y, ocultos en maletas, sus hermanos Kyoko, Shigeru y Yuki. Los niños tienen diferentes padres y no van al colegio, pero llevan una vida feliz con su madre. Cuando Keiko encuentra un nuevo novio deja a los niños solos, dándole algo de dinero a Akira para que se encarge de sus hermanos. Cuando el dinero se acaba, Akira se las apaña para encontrar formas de sobrevivir con los pequeños sin electricidad, gas o agua en casa, y con el dueño pidiendo el alquiler.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/i3kXfpVgnTy3GkrRZDdzhWVOPar.jpg",
+    "genres": [
+      "Drama"
+    ],
+    "trailerKey": null
+  },
+  {
+    "tmdbId": 538362,
+    "imdbId": "tt7121252",
+    "title": "En mi propia piel",
+    "year": 2018,
+    "rating": 8,
+    "plot": "Stefano Cucchi, detenido en Roma por un delito de drogas, sufre una semana horrible de encarcelamiento que afecta a su familia para siempre.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/jOvvIZjdbGVpPaQ8upPpZzttO3T.jpg",
+    "genres": [
+      "Drama"
+    ],
+    "trailerKey": null
+  },
+  {
+    "tmdbId": 1058694,
+    "imdbId": "tt14570440",
+    "title": "Radical",
+    "year": 2023,
+    "rating": 8.3,
+    "plot": "En una ciudad fronteriza mexicana plagada de abandono, corrupción y violencia, un profesor frustrado prueba un nuevo método radical para romper la apatía de sus alumnos y desbloquear su curiosidad, su potencial... y puede que incluso su genialidad. Basada en una historia real.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/eSatbygYZp8ooprBHZdb6GFZxGB.jpg",
+    "genres": [
+      "Drama"
+    ],
+    "trailerKey": "tttHqw-kBGk"
+  },
+  {
+    "tmdbId": 598,
+    "imdbId": "tt0317248",
+    "title": "Ciudad de Dios",
+    "year": 2002,
+    "rating": 8.4,
+    "plot": "Basada en hechos reales, cuenta la historia del crecimiento del crimen organizado en los suburbios de la ciudad de Río de Janeiro, desde finales de los años sesenta hasta el comienzo de los ochenta, cuando el tráfico de drogas y la violencia impusieron su ley entre la miseria de las favelas.“Buscapé” tiene 11 años y es sólo un niño más en Cidade de Deus, un suburbio de Río de Janeiro. Tímido y delicado, observa a los niños duros de su barrio, sus robos, sus peleas, sus enfrentamientos diarios con la policía. Ya sabe lo que quiere ser si consigue sobrevivir: fotógrafo. “Dadinho”, un niño de su misma edad, se traslada al barrio. Sueña con ser el criminal más peligroso de Río de Janeiro y empieza su aprendizaje haciendo recados para los delincuentes locales. Dos vidas paralelas en Cidade de Deus.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/zYjngc6yGUO1IEuAwk0yAhg8CKh.jpg",
+    "genres": [
+      "Drama",
+      "Crimen"
+    ],
+    "trailerKey": "63kaF1n5sz0"
+  },
+  {
+    "tmdbId": 1327819,
+    "imdbId": "tt26443616",
+    "title": "Hoppers",
+    "year": 2026,
+    "rating": 8.1,
+    "plot": "Una amante de los animales aprovecha la oportunidad de utilizar una tecnología que coloca su conciencia en un castor robótico, descubriendo misterios dentro del mundo animal que van más allá de lo que podría haber imaginado.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/hJRMZZv1WUKWMYQ73VB8hdFq8tq.jpg",
+    "genres": [
+      "Animación",
+      "Aventura",
+      "Comedia",
+      "Familia",
+      "Ciencia ficción"
+    ],
+    "trailerKey": "bv0sKzFvpmo"
+  },
+  {
+    "tmdbId": 1314481,
+    "imdbId": "tt33612209",
+    "title": "El diablo viste de Prada 2",
+    "year": 2026,
+    "rating": 7,
+    "plot": "Sigue la lucha de Miranda Priestly contra Emily Charlton, su exasistente convertida en ejecutiva rival, mientras compiten por los ingresos por publicidad en medio de la decadencia de los medios impresos y Miranda se acerca a la jubilación.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/sz687EF7yJMS4VNEdHKT9ebkhA9.jpg",
+    "genres": [
+      "Comedia",
+      "Drama"
+    ],
+    "trailerKey": "IQD3qh7te2o"
   },
   {
     "tmdbId": 372058,
@@ -914,312 +706,6 @@
       "Animación",
       "Romance",
       "Drama"
-    ],
-    "trailerKey": null
-  },
-  {
-    "tmdbId": 614479,
-    "imdbId": "tt13405778",
-    "title": "Insidious: La puerta roja",
-    "year": 2023,
-    "rating": 6.5,
-    "plot": "Para enterrar sus demonios de una vez por todas, Josh Lambert y un ya universitario Dalton Lambert, deberán profundizar en El Mas Allá (The Further) más que nunca, enfrentándose al oscuro pasado familiar y a un huésped de nuevos horrores terroríficos que acechan tras la puerta roja.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/wD4eLIHUaTvrXQqAzlfduHQ1NYg.jpg",
-    "genres": [
-      "Terror",
-      "Suspense"
-    ],
-    "trailerKey": "uNZu5dNck9Y"
-  },
-  {
-    "tmdbId": 51822,
-    "imdbId": "tt0318292",
-    "title": "Amar te duele",
-    "year": 2002,
-    "rating": 8.1,
-    "plot": "Renata (Martha Higareda) pertenece a una familia de la alta sociedad mexicana. Ulises (Luis Fernando Peña) es pobre, y trabaja con su padre en el mercado. Los dos jóvenes se enamoran en un centro comercial, pero ese idilio adolescente se encuentra con el rechazo de sus familias y amigos...",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/wK5UVMVjWMLV71SLpCjUFrO8mHI.jpg",
-    "genres": [
-      "Drama",
-      "Romance"
-    ],
-    "trailerKey": null
-  },
-  {
-    "tmdbId": 30238,
-    "imdbId": "tt0358456",
-    "title": "Earthlings",
-    "year": 2005,
-    "rating": 8.1,
-    "plot": "Earthlings es un aclamado documental acerca de cómo nuestra especie utiliza actualmente a otras especies animales. Para ello se utilizan cámaras ocultas e imágenes del día a día de las prácticas de algunas de las más grandes industrias del mundo que se enriquecen con los animales. El documental está dividido en cinco partes: mascotas, alimentación, pieles, entretenimiento y experimentación. La finalidad del documental es la denuncia de las actividades especistas a las cuales la mayoría de la población está habituada y cuyo tipo de discriminación se ha normalizado hasta la fecha.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/fcRUYYyDWLJPlX7D6RPtQwdU7G2.jpg",
-    "genres": [
-      "Documental"
-    ],
-    "trailerKey": null
-  },
-  {
-    "tmdbId": 425909,
-    "imdbId": "tt4513678",
-    "title": "Cazafantasmas: Más allá",
-    "year": 2021,
-    "rating": 7.3,
-    "plot": "Al quedarse sin opciones y dinero, Callie, madre soltera, pone un pie en la pequeña ciudad de Summerville, Oklahoma, con sus dos hijos adolescentes, Phoebe y Trevor. Y ahora ya no hay vuelta atrás. Mientras la familia intenta establecerse en la destartalada casa del excéntrico difunto padre de Callie, secretos inesperados escondidos a plena vista, equipos misteriosos y un extraño vehículo pudriéndose en el granero parecen estar relacionados con la desconcertante actividad sísmica de la zona, y algo aún más impactante: el olvidado incidente del Hombre Malvavisco Stay-Puft en la ciudad de Nueva York de los años 80. Pero no ha habido ni un solo avistamiento de fantasmas desde los extraños acontecimientos de Los Cazafantasmas II (1989). ¿Se está repitiendo la historia? ¿Phoebe conectará los puntos, le dará voz a su abuelo y descubrirá la conexión de la familia con los Cazafantasmas originales (1984)?",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/1jy2R4irQMZEaHvGkKoyuaKJPJO.jpg",
-    "genres": [
-      "Fantasía",
-      "Comedia",
-      "Aventura"
-    ],
-    "trailerKey": "1I1JrPgoM8U"
-  },
-  {
-    "tmdbId": 840464,
-    "imdbId": "tt14850054",
-    "title": "Greenland 2",
-    "year": 2026,
-    "rating": 6.4,
-    "plot": "Después de sobrevivir al fin del mundo por la caída de un cometa, Jeff Garrity, junto con su mujer Allison y su hijo Nathan, deciden abandonar el búnker que les ha mantenido a salvo cinco años para buscar una zona en Europa que podría ser habitable. Así, el último refugio es el principio de un nuevo comienzo. Juntos emprenderán un viaje donde los desastres naturales y los humanos que sobrevivieron han convertido el mundo en un auténtico infierno.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/vPftEQkiMXzOEYfz1VjmERPcCa0.jpg",
-    "genres": [
-      "Aventura",
-      "Suspense",
-      "Ciencia ficción"
-    ],
-    "trailerKey": "ObUUuWCM-aQ"
-  },
-  {
-    "tmdbId": 767,
-    "imdbId": "tt0417741",
-    "title": "Harry Potter y el misterio del príncipe",
-    "year": 2009,
-    "rating": 7.7,
-    "plot": "En medio de los desastres que azotan a Inglaterra, Harry y sus compañeros vuelven a Hogwarts para cursar su sexto año de estudios; y aunque las medidas de seguridad han convertido al colegio en una fortaleza, algunos estudiantes son víctimas de ataques inexplicables. Harry sospecha que Draco Malfoy es el responsable de los mismos y decide averiguar la razón. Mientras tanto, Albus Dumbledore y el protagonista exploran el pasado de Lord Voldemort mediante recuerdos que el director ha recolectado. Con esto, Dumbledore planea preparar al muchacho para el día de la batalla final.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/tO0UGkNuQoxyXve0mvwtXP49NAO.jpg",
-    "genres": [
-      "Aventura",
-      "Fantasía"
-    ],
-    "trailerKey": "NaM7nKvX4Es"
-  },
-  {
-    "tmdbId": 12444,
-    "imdbId": "tt0926084",
-    "title": "Harry Potter y las Reliquias de la Muerte - Parte 1",
-    "year": 2010,
-    "rating": 7.7,
-    "plot": "Una tarea casi imposible cae sobre los hombros de Harry: deberá encontrar y destruir los horrocruxes restantes para dar fin al reinado de Lord Voldemort. En el episodio final de la saga, el hechicero de 17 años parte junto con sus amigos Hermione Granger y Ron Weasley en un peligroso viaje por Inglaterra para encontrar los objetos que contienen los fragmentos del alma del Señor Tenebroso, los cuales garantizan su longevidad. Pero el camino no será fácil pues el lado oscuro adquiere más poder con cada minuto que pasa y las lealtades serán puestas a prueba. Harry deberá usar todos los conocimientos que gracias a Dumbledore ha adquirido sobre su enemigo para poder encontrar la forma de sobrevivir a esta última aventura.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/w6wsYKdXERaXRdByPsI2O9rn20b.jpg",
-    "genres": [
-      "Aventura",
-      "Fantasía"
-    ],
-    "trailerKey": "f3O0odK1VIQ"
-  },
-  {
-    "tmdbId": 16761,
-    "imdbId": "tt0824696",
-    "title": "Una película de huevos",
-    "year": 2006,
-    "rating": 7.9,
-    "plot": "Un pequeño huevo llamado Toto decide que quiere cumplir su propósito en la vida y convertirse en un pollo en lugar de morir en un sartén; por lo que comienza una búsqueda para regresar a las granjas junto con su nuevo amigo, el ruidoso huevo Willy y un tocino. Los tres amigos enfrentarán muchos obstáculos en su búsqueda.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/nOpKmdBFxUBcB9XS8dEi78UZMWd.jpg",
-    "genres": [
-      "Animación",
-      "Comedia",
-      "Familia"
-    ],
-    "trailerKey": null
-  },
-  {
-    "tmdbId": 49013,
-    "imdbId": "tt1216475",
-    "title": "Cars 2",
-    "year": 2011,
-    "rating": 6.2,
-    "plot": "Rayo McQueen y su amigo, la grúa Mate, viajan al extranjero para participar en el primer Campeonato Mundial en el que se decidirá cuál es el coche más rápido del planeta. La primera etapa es Tokio (Japón), donde Mate tendrá que convertirse en un espía secreto al verse envuelto inesperadamente en un caso de espionaje internacional, que lo llevará a París y a Londres. También vivirán una aventura de proporciones épicas al viajar a Porto Corsa (Italia), para disputar el Campeonato. Sin embargo, los dos tendrán que renunciar a los placeres de la Riviera italiana -yates, playas y pasta al pesto- ya que Mate está muy ocupado con su labor de espía, mientras que McQueen compite contra los mejores coches del mundo.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/kxfxsxJJ8e3vCRRLSfcELHtgMLh.jpg",
-    "genres": [
-      "Animación",
-      "Familia",
-      "Aventura",
-      "Comedia"
-    ],
-    "trailerKey": "oGpIMRq1O3k"
-  },
-  {
-    "tmdbId": 1304313,
-    "imdbId": "tt32612507",
-    "title": "La momia de Lee Cronin",
-    "year": 2026,
-    "rating": 7.9,
-    "plot": "Nueva versión del clásico 'La momia'. La joven hija de un periodista desaparece en el desierto sin dejar rastro. Ocho años más tarde, la familia rota se conmociona cuando ella es devuelta a ellos, y lo que debiera haber sido una reunión jubilosa se convierte en una auténtica pesadilla.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/btXGqRlctQdbML6ifPmacZuykcC.jpg",
-    "genres": [
-      "Terror",
-      "Misterio"
-    ],
-    "trailerKey": "o7UFmdCgDEc"
-  },
-  {
-    "tmdbId": 613,
-    "imdbId": "tt0363163",
-    "title": "El hundimiento",
-    "year": 2004,
-    "rating": 7.9,
-    "plot": "Berlín, abril de 1945. En las calles de Berlín se libra una encarnizada batalla. Hitler y sus fieles se han atrincherado en un búnker. Entre ellos se encuentra Traudl Junge, la secretaria personal del Führer. En el exterior, la situación se recrudece. A pesar de que Berlín ya no puede resistir más, Hitler se niega a abandonar la ciudad y, acompañado de Eva Braun, prepara su despedida.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/wQRPfXAB0ORHECs589voFy71ilm.jpg",
-    "genres": [
-      "Drama",
-      "Historia",
-      "Bélica"
-    ],
-    "trailerKey": "Fb0Fb31LECY"
-  },
-  {
-    "tmdbId": 600354,
-    "imdbId": "tt10272386",
-    "title": "El padre",
-    "year": 2020,
-    "rating": 8.1,
-    "plot": "Anthony, un hombre de 80 años mordaz, algo travieso y que tercamente ha decidido vivir solo, rechaza todos y cada uno de las cuidadoras que su hija Anne intenta contratar para que le ayuden en casa. Está desesperada porque ya no puede visitarle a diario y siente que la mente de su padre empieza a fallar y se desconecta cada vez más de la realidad. Anne sufre la paulatina pérdida de su padre a medida que la mente de éste se deteriora, pero también se aferra al derecho a vivir su propia vida.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/oOYti9KmH3MP5R2rtXrRL06t8i0.jpg",
-    "genres": [
-      "Drama"
-    ],
-    "trailerKey": "WdapbGVGjo0"
-  },
-  {
-    "tmdbId": 953,
-    "imdbId": "tt0351283",
-    "title": "Madagascar",
-    "year": 2005,
-    "rating": 6.9,
-    "plot": "Cuenta la historia de cuatro divertidos animales del zoo de Central Park, Nueva York, (Alex el león, Marty la cebra, Gloria la hipopótamo y Melman la jirafa). Llevan toda su vida encerrados en cautividad sin poder experiemtnar el sabor de la libertad y se han propuesto idear un plan para salir de allí juntos. Un día, una serie de casualidades les llevan a lograr lo que tanto ansiaban y huyen de aquel lugar. Terminan en plena naturaleza, concretamente en la idílica isla de Madagascar. Allí descubrirán, a base de apasionantes aventuras, que la vida salvaje es muy diferente a lo que ellos pensaban y que vivir en libertad no es tan fácil como imaginaban.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/zrV5GnfCcLWzyjrFgYTpjQPRMfl.jpg",
-    "genres": [
-      "Aventura",
-      "Animación",
-      "Comedia",
-      "Familia"
-    ],
-    "trailerKey": "RZFaaamXo8A"
-  },
-  {
-    "tmdbId": 131631,
-    "imdbId": "tt1951265",
-    "title": "Los Juegos del Hambre: Sinsajo - Parte 1",
-    "year": 2014,
-    "rating": 6.8,
-    "plot": "Katniss Everdeen se encuentra en el Distrito 13 después de destrozar los Juegos para siempre. Bajo el liderazgo de la comandante Coin y el consejo de sus amigos más leales, Katniss extiende sus alas mientras lucha por salvar a Peeta Mellark y a una nación alentada por su valentía...",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/wfLsciidZamFPeOb4FD8ywk1Q9c.jpg",
-    "genres": [
-      "Ciencia ficción",
-      "Aventura",
-      "Suspense"
-    ],
-    "trailerKey": "N--eptTz7lw"
-  },
-  {
-    "tmdbId": 615457,
-    "imdbId": "tt7888964",
-    "title": "Nadie",
-    "year": 2021,
-    "rating": 7.9,
-    "plot": "Hutch Mansell, un padre de familia que aguanta con resignación y sin defenderse los golpes de la vida. Un don nadie.  Una noche, cuando dos ladrones entran en su casa, Hutch decide no actuar y no trata de defenderse ni al él mismo ni a su familia, convencido de que solo así evitará una escalada de violencia. Tras el ataque, su hija adolescente Blake no oculta su decepción, y su esposa Becca se aleja todavía más.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/ddO5a3tMPpQutSDQO1bESgLWadB.jpg",
-    "genres": [
-      "Acción",
-      "Suspense"
-    ],
-    "trailerKey": "Mzrib73dVbc"
-  },
-  {
-    "tmdbId": 265297,
-    "imdbId": "tt3674140",
-    "title": "La sal de la tierra",
-    "year": 2014,
-    "rating": 8.1,
-    "plot": "Desde hace cuarenta años, el fotógrafo Sebastião Salgado recorre los continentes captando la mutación de la humanidad. Testigo de grandes acontecimientos que han marcado nuestra historia reciente: conflictos internacionales, hambruna, éxodos, etc., ahora emprende camino hacia territorios vírgenes con grandiosos paisajes, descubriendo una fauna y una flora silvestres en el marco de un proyecto fotográfico gigantesco, tributo a la belleza del planeta. Su hijo Juliano, quien le acompañó en sus últimas travesías, y Wim Wenders, también fotógrafo, comparten con nosotros su mirada acerca de su vida y su obra.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/uW4UxJTHHqao9EWDZwapmCVK2Hv.jpg",
-    "genres": [
-      "Documental"
-    ],
-    "trailerKey": null
-  },
-  {
-    "tmdbId": 573164,
-    "imdbId": "tt8049994",
-    "title": "Un rescate de huevitos",
-    "year": 2021,
-    "rating": 7.9,
-    "plot": "Toto y Di son los padres de dos hermosos huevos: Uly y Max.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/72azVZArwRGSdTlQnLOSdLsyZJ7.jpg",
-    "genres": [
-      "Animación",
-      "Comedia",
-      "Aventura",
-      "Familia"
-    ],
-    "trailerKey": "wp5Tmxp1KdA"
-  },
-  {
-    "tmdbId": 346698,
-    "imdbId": "tt1517268",
-    "title": "Barbie",
-    "year": 2023,
-    "rating": 6.9,
-    "plot": "Barbie vive en Barbieland donde todo es ideal y lleno de música y color. Un buen día decide conocer el mundo real. Cuando el CEO de Mattel se entere, tratará de evitarlo a toda costa y devolver a Barbie a una caja.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/fNtqD4BTFj0Bgo9lyoAtmNFzxHN.jpg",
-    "genres": [
-      "Comedia",
-      "Aventura",
-      "Fantasía"
-    ],
-    "trailerKey": "EZzABx9RWoY"
-  },
-  {
-    "tmdbId": 265195,
-    "imdbId": "tt3011894",
-    "title": "Relatos salvajes",
-    "year": 2014,
-    "rating": 7.9,
-    "plot": "La desigualdad, la injusticia y la exigencia del mundo en que vivimos producen que muchas personas se estresen o se depriman. Algunas explotan. Esta es una película sobre ellos. Vulnerables ante una realidad que súbitamente se altera y se torna impredecible, los protagonistas cruzan la delgada frontera que divide a la civilización de la barbarie. Una traición amorosa, el retorno de un pasado reprimido, o la violencia contenida en un detalle cotidiano, se presentan para impulsarlos al vértigo de perder los estribos, al innegable placer de perder el control.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/vimbRR5XdkMj7CqnzVN92Cla8jN.jpg",
-    "genres": [
-      "Drama",
-      "Suspense",
-      "Comedia"
-    ],
-    "trailerKey": null
-  },
-  {
-    "tmdbId": 552524,
-    "imdbId": "tt11655566",
-    "title": "Lilo y Stitch",
-    "year": 2025,
-    "rating": 7.2,
-    "plot": "La conmovedora y divertidísima historia de una solitaria niña hawaiana y el extraterrestre fugitivo que la ayuda a reparar su desestructurada familia.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/4oLLOAT55JhAoe73VliaSKFvEEr.jpg",
-    "genres": [
-      "Familia",
-      "Ciencia ficción",
-      "Comedia"
-    ],
-    "trailerKey": "sa_6BS_VY-M"
-  },
-  {
-    "tmdbId": 155,
-    "imdbId": "tt0468569",
-    "title": "El caballero oscuro",
-    "year": 2008,
-    "rating": 8.5,
-    "plot": "Batman/Bruce Wayne regresa para continuar su guerra contra el crimen. Con la ayuda del teniente Jim Gordon y del Fiscal del Distrito Harvey Dent, Batman se propone destruir el crimen organizado en la ciudad de Gotham. El triunvirato demuestra su eficacia, pero, de repente, aparece Joker, un nuevo criminal que desencadena el caos y tiene aterrados a los ciudadanos.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/8QDQExnfNFOtabLDKqfDQuHDsIg.jpg",
-    "genres": [
-      "Acción",
-      "Suspense",
-      "Crimen"
     ],
     "trailerKey": null
   },
@@ -1239,425 +725,51 @@
     "trailerKey": "h-9RYiqyqjk"
   },
   {
-    "tmdbId": 1168190,
-    "imdbId": "tt33046197",
-    "title": "Los hermanos demolición",
-    "year": 2026,
-    "rating": 7.1,
-    "plot": "Un improbable dúo de hermanastros, uno un impulsivo detective y el otro un disciplinado, se ven atraídos por el asesinato de su padre en Hawai, lo que les lleva a un peligroso viaje para desenmascarar una conspiración de largo alcance.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/ttEESBvVrO8ngZr19qp6eBMVS9F.jpg",
-    "genres": [
-      "Acción",
-      "Comedia",
-      "Crimen",
-      "Misterio"
-    ],
-    "trailerKey": "hHSqxP7g8JY"
-  },
-  {
-    "tmdbId": 10138,
-    "imdbId": "tt1228705",
-    "title": "Iron Man 2",
-    "year": 2010,
-    "rating": 6.9,
-    "plot": "El mundo sabe que el multimillonario Tony Stark es Iron Man, el superhéroe enmascarado. Sometido a presiones por parte del gobierno, la prensa y la opinión pública para que comparta su tecnología con el ejército, Tony es reacio a desvelar los secretos de la armadura de Iron Man porque teme que esa información pueda caer en manos indeseables.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/ayyJVOV5I4MGjti7nIHC3mVCagR.jpg",
-    "genres": [
-      "Aventura",
-      "Acción",
-      "Ciencia ficción"
-    ],
-    "trailerKey": "HlOQqg8qy70"
-  },
-  {
-    "tmdbId": 1032863,
-    "imdbId": "tt22526100",
-    "title": "La hipótesis del amor",
-    "year": 2026,
-    "rating": 10,
-    "plot": null,
-    "posterUrl": "https://image.tmdb.org/t/p/w500/e89ZV1Ce3jyKIceHg7WzNqTkiN7.jpg",
-    "genres": [
-      "Romance",
-      "Comedia"
-    ],
-    "trailerKey": "zjWDAe3pPw4"
-  },
-  {
-    "tmdbId": 761053,
-    "imdbId": "tt13535456",
-    "title": "El infierno de Gabriel Parte 3",
-    "year": 2020,
-    "rating": 8.3,
-    "plot": null,
-    "posterUrl": "https://image.tmdb.org/t/p/w500/fYtHxTxlhzD4QWfEbrC1rypysSD.jpg",
-    "genres": [
-      "Romance",
-      "Drama"
-    ],
-    "trailerKey": null
-  },
-  {
-    "tmdbId": 406563,
-    "imdbId": "tt5726086",
-    "title": "Insidious: La última llave",
-    "year": 2018,
-    "rating": 6.3,
-    "plot": "La parapsicóloga Elise Rainier afronta su obsesión más temible y personal, ya que se siente atraída hacia el espectral hogar de su infancia, donde comenzó el terror.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/d5l0baYosvDH4HCEc6O7h1QgAp9.jpg",
-    "genres": [
-      "Terror",
-      "Suspense"
-    ],
-    "trailerKey": "lUwaosQZkHU"
-  },
-  {
-    "tmdbId": 68718,
-    "imdbId": "tt1853728",
-    "title": "Django desencadenado",
-    "year": 2012,
-    "rating": 8.2,
-    "plot": "Dos años antes de estallar la Guerra Civil (1861-1865), Schultz, un cazarrecompensas alemán que le sigue la pista a unos asesinos, le promete al esclavo Django dejarlo en libertad si le ayuda a atraparlos. Terminado con éxito el trabajo, Django prefiere seguir al lado del alemán y ayudarle a capturar a los delincuentes más buscados del Sur. Se convierte así en un experto cazador de recompensas, pero su único objetivo es rescatar a su esposa Broomhilda, a la que perdió por culpa del tráfico de esclavos. La búsqueda llevará a Django y a Schultz hasta Calvin Candie, el malvado propietario de la plantación \"Candyland\". La presencia de ambos en los alrededores de la propiedad, despierta las sospechas de Stephen, el esclavo de confianza de Candie.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/fIxAE6BKfAzhPRYm7DdldBaYu5T.jpg",
-    "genres": [
-      "Drama",
-      "Western"
-    ],
-    "trailerKey": "uAsVRKDJgGo"
-  },
-  {
-    "tmdbId": 1481343,
-    "imdbId": "tt36958312",
-    "title": "La Boca del Diablo",
-    "year": 2026,
-    "rating": 6.5,
-    "plot": "La aventura de un grupo de amigos universitarios en Tailandia se vuelve mortal cuando quedan atrapados en unas cuevas sumergidas con un peligroso depredador. A medida que el oxígeno se agota, los conflictos del pasado emergen en su desesperada lucha por la supervivencia.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/cPsXFr7g39Kjul7Wx8XBpZwkOS4.jpg",
-    "genres": [
-      "Terror",
-      "Suspense"
-    ],
-    "trailerKey": "iEYfTLsIqJ0"
-  },
-  {
-    "tmdbId": 157336,
-    "imdbId": "tt0816692",
-    "title": "Interstellar",
-    "year": 2014,
-    "rating": 8.5,
-    "plot": "Un grupo de exploradores hacen uso de un agujero de gusano recientemente descubierto para superar las limitaciones de los viajes espaciales tripulados y vencer las inmensas distancias que tiene un viaje interestelar.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/d1QKiYtceF3GDtxvTFXFAqwwah9.jpg",
-    "genres": [
-      "Aventura",
-      "Drama",
-      "Ciencia ficción"
-    ],
-    "trailerKey": "UoSSbmD9vqc"
-  },
-  {
-    "tmdbId": 103663,
-    "imdbId": "tt2106476",
-    "title": "La caza",
-    "year": 2012,
-    "rating": 8.1,
-    "plot": "Tras un divorcio difícil, Lucas, de cuarenta años, ha encontrado una nueva novia, un nuevo trabajo y se dispone a reconstruir su relación con Marcus, su hijo adolescente. Pero algo va mal. Un detalle. Un comentario inocente. Una mentira fortuita. Y mientras la nieve comienza a caer y las luces de Navidad se iluminan, la mentira se extiende como un virus invisible. El estupor y la desconfianza se propagan y la pequeña comunidad se sumerge en la histeria colectiva, obligando a Lucas a luchar por salvar su vida y su dignidad.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/kOIf3U36sLKaVjO5sUsifCsfQ4i.jpg",
-    "genres": [
-      "Drama"
-    ],
-    "trailerKey": null
-  },
-  {
-    "tmdbId": 22,
-    "imdbId": "tt0325980",
-    "title": "Piratas del Caribe: La maldición de la Perla Negra",
-    "year": 2003,
-    "rating": 7.8,
-    "plot": "El aventurero capitán Jack Sparrow recorre las aguas caribeñas. Pero su andanzas terminan cuando su enemigo, el capitán Barbossa le roba su barco, la Perla Negra, y ataca la ciudad de Port Royal, secuestrando a Elizabeth Swann, hija del gobernador. Will Turner, el amigo de la infancia de Elizabeth, se une a Jack para rescatarla y recuperar la Perla Negra. Pero el prometido de Elizabeth, comodoro Norrington, les persigue a bordo del HMS Impávido. Además, Barbossa y su tripulación son víctimas de un conjuro por el que están condenados a vivir eternamente, y a transformarse cada noche en esqueletos vivientes, en fantasmas guerreros.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/bVG48kmXuLaZYgPfSCmhs6EYFbX.jpg",
-    "genres": [
-      "Aventura",
-      "Fantasía",
-      "Acción"
-    ],
-    "trailerKey": "5Itr2jHuJaw"
-  },
-  {
-    "tmdbId": 156022,
-    "imdbId": "tt0455944",
-    "title": "The Equalizer",
-    "year": 2014,
-    "rating": 7.3,
-    "plot": "Robert McCall, un antiguo agente de la CIA que lleva ahora una vida tranquila, abandona su retiro para ayudar a Teri, que está siendo explotada por la mafia rusa. A pesar de que aseguró no volver a ser violento, contemplar tanta crueldad despertará en Robert un implacable y renovado deseo de justicia.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/wNKqSUg2lGAFaoingqmPJ05Qft5.jpg",
-    "genres": [
-      "Suspense",
-      "Acción",
-      "Crimen"
-    ],
-    "trailerKey": "rlMaxFG7blg"
-  },
-  {
-    "tmdbId": 393,
-    "imdbId": "tt0378194",
-    "title": "Kill Bill: Volumen 2",
-    "year": 2004,
-    "rating": 7.9,
-    "plot": "Tras eliminar a algunos de los miembros de la banda que intentó asesinarla el día de su boda, \"Mamba Negra\" prosigue su venganza e intenta acabar con el resto de la banda, en especial con su antiguo jefe, Bill, que la dio por muerta dejándola en coma.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/oEbYyyl3w2dptDZCfXr8NHEHFkl.jpg",
-    "genres": [
-      "Acción",
-      "Crimen",
-      "Suspense"
-    ],
-    "trailerKey": null
-  },
-  {
-    "tmdbId": 664767,
-    "imdbId": "tt9580138",
-    "title": "Mortal Kombat Legends: La venganza de Scorpion",
-    "year": 2020,
-    "rating": 8.1,
-    "plot": "Basado en el popular videojuego creado por Ed Boon y John Tovias, Mortal Kombat Legends: Scorpion’s Revenge pone el foco en un torneo único que se celebra una vez por generación y en el que se enfrentan los campeones de distintos reinos. El ganador determinará el destino de la Tierra y de sus habitantes.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/sqBl12v4AXVoc5PmeGnd8oZ7HHY.jpg",
-    "genres": [
-      "Animación",
-      "Acción",
-      "Fantasía"
-    ],
-    "trailerKey": null
-  },
-  {
-    "tmdbId": 299537,
-    "imdbId": "tt4154664",
-    "title": "Capitana Marvel",
-    "year": 2019,
-    "rating": 6.8,
-    "plot": "La historia sigue a Carol Danvers mientras se convierte en uno de los héroes más poderosos del universo, cuando la Tierra se encuentra atrapada en medio de una guerra galáctica entre dos razas alienígenas. Situada en los años 90, 'Capitana Marvel' es una historia nueva de un período de tiempo nunca antes visto en la historia del Universo Cinematográfico de Marvel.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/5SPa7dZ85p54xa7E9tHRmfKq5ce.jpg",
-    "genres": [
-      "Acción",
-      "Aventura",
-      "Ciencia ficción"
-    ],
-    "trailerKey": "MJIz2gf3Wa8"
-  },
-  {
-    "tmdbId": 10588,
-    "imdbId": "tt0312528",
-    "title": "El gato",
-    "year": 2003,
-    "rating": 5.4,
-    "plot": "Durante un día lluvioso, y mientras su madre está fuera, Conrad, Sally y su pez mascota reciben la visita del travieso Gato con Sombrero. La diversión pronto se convierte en caos, y los hermanos deben descubrir cómo librarse del maníaco Gato.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/61lpYW9NTJ1UYsCuE78lEvlHXzx.jpg",
-    "genres": [
-      "Fantasía",
-      "Aventura",
-      "Familia",
-      "Comedia"
-    ],
-    "trailerKey": "9RvX7pcQPg0"
-  },
-  {
-    "tmdbId": 698508,
-    "imdbId": "tt11365186",
-    "title": "Amor redentor",
-    "year": 2022,
-    "rating": 7.9,
-    "plot": "Situada en la Nueva Inglaterra de 1835,  la trama  sigue la historia de Angela, una pequeña que fue rechazada por su padre debido a que fue producto de una aventura adultera con su madre Mae. Desde entonces, la chica se sintió culpable de la depresión de su madre y de su propio abandono, creciendo con un evidente odio hacia los hombres, todos ellos obsesionados por la fiebre de oro de la época. En su adolescencia, Angela tuvo que venderse a la prostitución para tener un lugar donde dormir y en medio de ese odio, conoce a Michael Hosea, un hombre piadoso que parece cruzar su camino con Angela para conducirla al amor redentor de Dios, desafiando, día a día, las amargas expectativas y resistencia de ella, quien no parece creer que merece algo más en la vida, algo que pueda hacerla verdaderamente feliz.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/vBpxJkFsfSjghmrizJr5xhQyACQ.jpg",
-    "genres": [
-      "Romance",
-      "Drama",
-      "Western"
-    ],
-    "trailerKey": "8yWUympw3RY"
-  },
-  {
-    "tmdbId": 75656,
-    "imdbId": "tt1670345",
-    "title": "Ahora me ves…",
-    "year": 2013,
-    "rating": 7.3,
-    "plot": "Un equipo del FBI debe enfrentarse a una banda de criminales expertos en magia. Ellos son 'los cuatro jinetes', un grupo formado por los mejores ilusionistas del mundo, dedicado a realizar grandes robos contra hombres de negocios corruptos. Su gran golpe es pasar desapercibidos para hacer llover el dinero robado a su público. En un mundo de magia y espectáculo, nada es lo que parece.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/iN3fPrPLozgPDrHO1IILh1Cx0C3.jpg",
-    "genres": [
-      "Suspense",
-      "Crimen"
-    ],
-    "trailerKey": "K1lguoJMFBI"
-  },
-  {
-    "tmdbId": 129,
-    "imdbId": "tt0245429",
-    "title": "El viaje de Chihiro",
-    "year": 2001,
-    "rating": 8.5,
-    "plot": "Durante el traslado de su familia a los suburbios, una niña de 10 años de edad deambula por un mundo gobernado por dioses, brujas y espíritus, y donde los humanos se convierten en bestias.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/2RcxjDykOssx4SfqshewyI9vfSl.jpg",
-    "genres": [
-      "Animación",
-      "Familia",
-      "Fantasía"
-    ],
-    "trailerKey": "5Fgq4Osh6XQ"
-  },
-  {
-    "tmdbId": 438695,
-    "imdbId": "tt6467266",
-    "title": "¡Canta! 2",
-    "year": 2021,
-    "rating": 7.8,
-    "plot": "Buster Moon y sus amigos deben persuadir a la estrella del rock Clay Calloway para que se una a ellos en el estreno de un nuevo espectáculo.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/9iIDsw7RJHYU94z7k4mbYP5IlYT.jpg",
-    "genres": [
-      "Animación",
-      "Comedia",
-      "Familia",
-      "Música"
-    ],
-    "trailerKey": "UxaDz2WHqzw"
-  },
-  {
-    "tmdbId": 355020,
-    "imdbId": "tt4908644",
-    "title": "Winter on Fire: Ukraine's Fight for Freedom",
+    "tmdbId": 150540,
+    "imdbId": "tt2096673",
+    "title": "Del revés (Inside Out)",
     "year": 2015,
     "rating": 7.9,
-    "plot": "A lo largo de 93 días, las pacíficas protestas estudiantiles se convirtieron en una revolución violenta y un auténtico movimiento por los derechos civiles en Ucrania.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/1i8KPPy3aN6MVwtrjgXLXM33ajN.jpg",
+    "plot": "Riley es una chica que disfruta o padece toda clase de sentimientos. Aunque su vida ha estado marcada por la Alegría, también se ve afectada por otro tipo de emociones. Lo que Riley no entiende muy bien es por qué motivo tiene que existir la Tristeza en su vida. Una serie de acontecimientos hacen que Alegría y Tristeza se mezclen en una peligrosa aventura que dará un vuelco al mundo de Riley.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/sG3bHZWCMOZwhUq71WbPG9Vrrwc.jpg",
     "genres": [
-      "Documental"
+      "Animación",
+      "Familia",
+      "Aventura",
+      "Drama",
+      "Comedia"
     ],
-    "trailerKey": null
+    "trailerKey": "x-xlkjPwaOY"
   },
   {
-    "tmdbId": 936075,
-    "imdbId": "tt11378946",
-    "title": "Michael",
-    "year": 2026,
-    "rating": 8.6,
-    "plot": "El viaje de Michael Jackson más allá de la música, desde el descubrimiento de su extraordinario talento como líder de los Jackson Five hasta convertirse en una visionaria estrella cuya ambición creativa despertó un incansable afán por consagrarse como el mayor icono de la industria del entretenimiento.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/2uK36ujoDXOfNiJ5Yp3raVprB51.jpg",
-    "genres": [
-      "Música",
-      "Drama"
-    ],
-    "trailerKey": "o1HQSh6zZ8s"
-  },
-  {
-    "tmdbId": 385687,
-    "imdbId": "tt5433140",
-    "title": "Fast & Furious X",
-    "year": 2023,
-    "rating": 7,
-    "plot": "Durante numerosas misiones más que imposibles, Dom Toretto y su familia han sido capaces de ser más listos, de tener más valor y de ir más rápido que cualquier enemigo que se cruzara con ellos. Pero ahora tendrán que enfrentarse al oponente más letal que jamás hayan conocido: Un terrible peligro que resurge del pasado, que se mueve por una sangrienta sed de venganza y que está dispuesto a destrozar a la familia y destruir para siempre todo lo que a Dom le importa.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/3P9QvWVN02Etn4kYGC702WVoXEb.jpg",
+    "tmdbId": 581528,
+    "imdbId": "tt10208198",
+    "title": "El gangster, el policía y el diablo",
+    "year": 2019,
+    "rating": 7.9,
+    "plot": "Un jefe de la mafia (Ma Dong-seok) y un oficial de policía responsable de un sanguinario comando (Kim Mu-yeol) tendrán que dejar a un lado sus diferencias para unirse en la persecución de un asesino de nombre K (Kim Sung-kyun).",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/o9rByfNAkGJuXOSQLQ6UpUfGTOQ.jpg",
     "genres": [
       "Acción",
       "Crimen",
       "Suspense"
     ],
-    "trailerKey": "KOQy0AwA7k8"
+    "trailerKey": "8mSPq8IOG3E"
   },
   {
-    "tmdbId": 423,
-    "imdbId": "tt0253474",
-    "title": "El pianista",
-    "year": 2002,
-    "rating": 8.4,
-    "plot": "Varsovia, 1939. El pianista polaco de origen judío Wladyslaw Szpilman (Adrien Brody) interpreta un tema de Chopin en la radio nacional de Polonia mientras la aviación alemana bombardea la capital. El régimen nazi ha invadido el país, y como hace en otros países invadidos, lleva a cabo la misma política con respecto a los judíos. Así Szpilman y toda su familia -sus padres, su hermano y sus dos hermanas- se ven obligados a dejar su casa y todo lo que les pertenece para trasladarse con miles de personas de origen judío al ghetto de Varsovia. Mientras Wladyslaw trabaja como pianista en un restaurante propiedad de un judío que colabora con los nazis, su hermano Henryk (Ed Stoppard) prefiere luchar contra los nazis. Pero tres años más tarde, los habitantes del ghetto son trasladados en trenes hacia campos de concentración.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/mxfLOWnHnSlbdraKfzRn5mqoqk7.jpg",
-    "genres": [
-      "Drama",
-      "Bélica"
-    ],
-    "trailerKey": null
-  },
-  {
-    "tmdbId": 1078605,
-    "imdbId": "tt26581740",
-    "title": "Weapons",
-    "year": 2025,
-    "rating": 7.3,
-    "plot": "Cuando todos los alumnos de una misma clase, salvo uno, desaparecen misteriosamente la misma noche y exactamente a la misma hora, la pequeña ciudad donde viven se pregunta quién o qué está detrás de su desaparición.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/nYqEQ3ltw0hHc1kBaNWr7Rb8WNZ.jpg",
+    "tmdbId": 1375646,
+    "imdbId": "tt34385135",
+    "title": "Colony",
+    "year": 2026,
+    "rating": 8.2,
+    "plot": "El profesor Se-jeong es arrojado a una pesadilla cuando un  virus en rápida mutación se libera durante una conferencia de  biotecnología, lo que lleva a las autoridades a sellar las  instalaciones. Atrapado dentro sin escapatoria, Se-jeong, junto a un  pequeño grupo de supervivientes, debe luchar por mantenerse con vida  mientras los infectados sufren transformaciones horribles.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/bWzwORubAQ40nvzsTZidle19Dbm.jpg",
     "genres": [
       "Terror",
-      "Misterio"
-    ],
-    "trailerKey": "lZyASo3yaTA"
-  },
-  {
-    "tmdbId": 10681,
-    "imdbId": "tt0910970",
-    "title": "WALL·E: Batallón de limpieza",
-    "year": 2008,
-    "rating": 8.1,
-    "plot": "En el año 2800, en un planeta Tierra devastado y sin vida, tras cientos de solitarios años haciendo aquello para lo que fue construido -limpiar el planeta de basura- el pequeño robot WALL•E descubre una nueva misión en su vida cuando se encuentra con una moderna y lustrosa robot exploradora llamada EVE. Ambos viajarán a lo largo de la galaxia y vivirán una emocionante e inolvidable aventura.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/5CXpoYB2YAZRPBcv9pjkgR6tZ0X.jpg",
-    "genres": [
-      "Animación",
-      "Familia",
+      "Acción",
       "Ciencia ficción"
     ],
-    "trailerKey": "4rDD3SccHxQ"
-  },
-  {
-    "tmdbId": 1297842,
-    "imdbId": "tt27613895",
-    "title": "GOAT: Como cabras",
-    "year": 2026,
-    "rating": 8.1,
-    "plot": "Will es una pequeña cabra con grandes sueños que recibe una oportunidad única en la vida para unirse a los profesionales y jugar al rugebol, un deporte de alta intensidad, mixto y de contacto total dominado por los animales más rápidos y feroces del mundo. A los nuevos compañeros de equipo de Will no les entusiasma tener a una cabrita en su plantilla, pero Will está decidido a revolucionar el deporte y demostrar de una vez por todas que «¡los pequeños saben jugar!».",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/l8Y8o3RpFg54gmQQ8GVaxVroFmY.jpg",
-    "genres": [
-      "Animación",
-      "Comedia",
-      "Familia"
-    ],
-    "trailerKey": "q56pw-zFDP8"
-  },
-  {
-    "tmdbId": 10193,
-    "imdbId": "tt0435761",
-    "title": "Toy Story 3",
-    "year": 2010,
-    "rating": 7.8,
-    "plot": "Sabiendo que su dueño Andy, que ya no es un niño, se prepara para ir a la universidad, el vaquero Woody, el astronauta Buzz y el resto de sus amigos juguetes comienzan a preocuparse ante su incierto futuro. Efectivamente todos acaban en una guardería, donde por ejemplo la muñeca Barbie conocerá al guapo Ken. Esta reunión de nuestros amigos con otros nuevos juguetes no será sino el inicio de un montón de trepidantes y divertidas aventuras.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/yBSISwqix2z0JiwIrM3r6fiI6Cm.jpg",
-    "genres": [
-      "Animación",
-      "Familia",
-      "Comedia"
-    ],
-    "trailerKey": "xkPhZHt5TKM"
-  },
-  {
-    "tmdbId": 566213,
-    "imdbId": "tt8991268",
-    "title": "Honeyland",
-    "year": 2019,
-    "rating": 7.9,
-    "plot": "Documental sobre la última mujer recolectora de abejas de Europa. Hatidze es una mujer cerca de la cincuentena de un pequeño pueblo en Macedonia que cría colonias de abejas en unos cestos hechos a mano que deja escondidos entre las rocas. Sin protección ni ayuda, es capaz de amansarlas para poder extraer la miel y venderla en la capital. Todo es idílico hasta que, de repente, nuevos vecinos se instalan cerca de las colmenas, estorbando su paz y la de sus abejas. Así como las abejas obreras pasan toda su vida cuidando de la abeja reina, Hatidze ha comprometido su propia vida al cuidado de su madre, con la que vive en una cabaña. La intrusión de los recién llegados, una familia con siete niños ruidosos acompañados de 150 vacas, provocará un conflicto que podría destruir la forma de vida de Hatidze para siempre.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/eYXwO7SDVvLqHMD3hwYM41xGwUg.jpg",
-    "genres": [
-      "Documental"
-    ],
     "trailerKey": null
-  },
-  {
-    "tmdbId": 458220,
-    "imdbId": "tt6857376",
-    "title": "Palmer",
-    "year": 2021,
-    "rating": 8.1,
-    "plot": "Tras 12 años en prisión, el exjugador de fútbol Palmer vuelve a casa para rehacer su vida. Mientras se adapta a su nueva realidad, entabla una amistad con un niño abandonado, pero su pasado le persigue y amenaza con destruir su nueva familia.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/xSDdRAjxKAGi8fUBLOqSrBhJmF0.jpg",
-    "genres": [
-      "Drama"
-    ],
-    "trailerKey": "arjRu8ka4_8"
   },
   {
     "tmdbId": 592350,
@@ -1676,19 +788,385 @@
     "trailerKey": null
   },
   {
-    "tmdbId": 1413976,
-    "imdbId": "tt35309713",
-    "title": "Citizen Vigilante",
-    "year": 2026,
-    "rating": 6.5,
-    "plot": "Un hombre decide impartir justicia por su cuenta. Su cruzada lo convierte en un fenómeno de las redes sociales, pero también lo enfrenta al jefe de policía de la ciudad.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/6LmJD3Wohe0g4U62wgi7RyJqfE4.jpg",
+    "tmdbId": 1000492,
+    "imdbId": "tt24070754",
+    "title": "Las dos caras de la justicia",
+    "year": 2023,
+    "rating": 7.9,
+    "plot": "Desde 2014, en Francia, la justicia restauradora ofrece a las víctimas y perpetradores de delitos la oportunidad de diálogo a través de sistemas seguros, supervisados por profesionales y voluntarios como Judith, Fanny o Michel. Nassim, Issa y Thomas, sentenciados por robo con violencia, Gregoire, Nawelle y Sabine, víctimas de robo y bolso. También Chloe, víctima de una violación incestuosa, se involucra en medidas de justicia restauradora. En su viaje, hay ira y esperanza, silencio y palabras, alianzas y desamor, conciencia y confianza recuperada. Y al final del camino, a veces, reparación.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/t0bLhTHhxjlM8AfQFYNj1uYj8Kc.jpg",
     "genres": [
-      "Suspense",
+      "Drama"
+    ],
+    "trailerKey": "W8CoqmRGlOI"
+  },
+  {
+    "tmdbId": 569094,
+    "imdbId": "tt9362722",
+    "title": "Spider-Man: Cruzando el Multiverso",
+    "year": 2023,
+    "rating": 8.3,
+    "plot": "Tras reencontrarse con Gwen Stacy, el amigable vecindario de Spider-Man de Brooklyn al completo es catapultado a través del Multiverso, donde se encuentra con un equipo de Spidermans encargados de proteger su propia existencia. Pero cuando los héroes se enfrentan sobre cómo manejar una nueva amenaza, Miles se encuentra enfrentado a las otras Arañas y debe redefinir lo que significa ser un héroe para poder salvar a la gente que más quiere.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/37WcNMgNOMxdhT87MFl7tq7FM1.jpg",
+    "genres": [
+      "Animación",
       "Acción",
+      "Aventura",
+      "Ciencia ficción"
+    ],
+    "trailerKey": "b_yMOiRgMmQ"
+  },
+  {
+    "tmdbId": 695721,
+    "imdbId": "tt10545296",
+    "title": "Los Juegos del Hambre: Balada de pájaros cantores y serpientes",
+    "year": 2023,
+    "rating": 7,
+    "plot": "Ambientada en un Panem postapocalíptico, nos traslada varias décadas antes del comienzo de las aventuras de Katniss Everdeen. El joven Coriolanus Snow será el mentor de Lucy Gray Baird, la chica elegida para ser homenajeada del empobrecido Distrito 12. La joven sorprenderá a todos cantando en la ceremonia de apertura de los Décimos Juegos del Hambre en los que Snow intentará aprovecharse de su talento y encanto para sobrevivir.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/2vIK81ikjvdewSLmrwIg7AMoJIv.jpg",
+    "genres": [
+      "Ciencia ficción",
+      "Acción"
+    ],
+    "trailerKey": "mKlSMLPzn7Q"
+  },
+  {
+    "tmdbId": 532067,
+    "imdbId": "tt9239552",
+    "title": "KonoSuba. La Película. La Leyenda del Carmesí",
+    "year": 2019,
+    "rating": 8,
+    "plot": "La vida del amante de los videojuegos, Satou Kazuma, termina cuando es arrollado por un camión. En un inesperado giro del destino reencarna en otro mundo gracias a la diosa Aqua, a una torpe hechicera llamada Megumin y a una delirante caballero llamada Darkness. En esta película este peculiar grupo se enfrentará a una increíble amenaza. ¿Podrán salvar la Villa Carmesí? ¿Qué pasará con Kazuma?",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/5aaAySq2nI9kYQZzom7ymvoN2Kh.jpg",
+    "genres": [
+      "Animación",
+      "Comedia",
+      "Fantasía"
+    ],
+    "trailerKey": null
+  },
+  {
+    "tmdbId": 936075,
+    "imdbId": "tt11378946",
+    "title": "Michael",
+    "year": 2026,
+    "rating": 8.6,
+    "plot": "El viaje de Michael Jackson más allá de la música, desde el descubrimiento de su extraordinario talento como líder de los Jackson Five hasta convertirse en una visionaria estrella cuya ambición creativa despertó un incansable afán por consagrarse como el mayor icono de la industria del entretenimiento.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/2uK36ujoDXOfNiJ5Yp3raVprB51.jpg",
+    "genres": [
+      "Música",
+      "Drama"
+    ],
+    "trailerKey": "o1HQSh6zZ8s"
+  },
+  {
+    "tmdbId": 157336,
+    "imdbId": "tt0816692",
+    "title": "Interstellar",
+    "year": 2014,
+    "rating": 8.5,
+    "plot": "Un grupo de exploradores hacen uso de un agujero de gusano recientemente descubierto para superar las limitaciones de los viajes espaciales tripulados y vencer las inmensas distancias que tiene un viaje interestelar.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/d1QKiYtceF3GDtxvTFXFAqwwah9.jpg",
+    "genres": [
+      "Aventura",
+      "Drama",
+      "Ciencia ficción"
+    ],
+    "trailerKey": "UoSSbmD9vqc"
+  },
+  {
+    "tmdbId": 969681,
+    "imdbId": "tt22084616",
+    "title": "Spider-Man: Brand New Day",
+    "year": 2026,
+    "rating": 8.5,
+    "plot": "Han pasado cuatro años desde los acontecimientos de No Way Home, y Peter Parker ahora es un adulto que vive completamente solo, ha desaparecido voluntariamente de las vidas y recuerdos de quienes ama. Combatiendo el crimen en una Nueva York que ya no conoce su nombre, se ha dedicado por completo a proteger su ciudad—un Spider-Man a tiempo completo—, pero a medida que aumentan las exigencias sobre él, la presión desencadena una evolución física que amenaza su existencia, al mismo tiempo que un extraño nuevo patrón de crímenes da lugar a una de las amenazas más poderosas a las que se ha enfrentado.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/9g0sEFhmvmK4nGhXj8DHuv2noYI.jpg",
+    "genres": [
+      "Ciencia ficción",
+      "Acción",
+      "Aventura"
+    ],
+    "trailerKey": "o8EccyRIwQQ"
+  },
+  {
+    "tmdbId": 129,
+    "imdbId": "tt0245429",
+    "title": "El viaje de Chihiro",
+    "year": 2001,
+    "rating": 8.5,
+    "plot": "Durante el traslado de su familia a los suburbios, una niña de 10 años de edad deambula por un mundo gobernado por dioses, brujas y espíritus, y donde los humanos se convierten en bestias.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/2RcxjDykOssx4SfqshewyI9vfSl.jpg",
+    "genres": [
+      "Animación",
+      "Familia",
+      "Fantasía"
+    ],
+    "trailerKey": "5Fgq4Osh6XQ"
+  },
+  {
+    "tmdbId": 678580,
+    "imdbId": "tt10886670",
+    "title": "El mesero",
+    "year": 2021,
+    "rating": 8,
+    "plot": "La historia de un mesero que desea vivir como los clientes que atiende en el lujoso restaurante donde trabaja, su compañero le desanima muy seguido diciéndole que nunca lograra ser como ellos.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/zvGC5jX5wQmU1GgPc0VGZz7Mtcs.jpg",
+    "genres": [
+      "Comedia"
+    ],
+    "trailerKey": null
+  },
+  {
+    "tmdbId": 131631,
+    "imdbId": "tt1951265",
+    "title": "Los Juegos del Hambre: Sinsajo - Parte 1",
+    "year": 2014,
+    "rating": 6.8,
+    "plot": "Katniss Everdeen se encuentra en el Distrito 13 después de destrozar los Juegos para siempre. Bajo el liderazgo de la comandante Coin y el consejo de sus amigos más leales, Katniss extiende sus alas mientras lucha por salvar a Peeta Mellark y a una nación alentada por su valentía...",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/wfLsciidZamFPeOb4FD8ywk1Q9c.jpg",
+    "genres": [
+      "Ciencia ficción",
+      "Aventura",
+      "Suspense"
+    ],
+    "trailerKey": "N--eptTz7lw"
+  },
+  {
+    "tmdbId": 552524,
+    "imdbId": "tt11655566",
+    "title": "Lilo y Stitch",
+    "year": 2025,
+    "rating": 7.2,
+    "plot": "La conmovedora y divertidísima historia de una solitaria niña hawaiana y el extraterrestre fugitivo que la ayuda a reparar su desestructurada familia.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/4oLLOAT55JhAoe73VliaSKFvEEr.jpg",
+    "genres": [
+      "Familia",
+      "Ciencia ficción",
+      "Comedia"
+    ],
+    "trailerKey": "sa_6BS_VY-M"
+  },
+  {
+    "tmdbId": 550776,
+    "imdbId": "tt9072202",
+    "title": "Believe Me: The Abduction of Lisa McVey",
+    "year": 2018,
+    "rating": 8,
+    "plot": "La noche que planea quitarse la vida, Lisa McVey, de 17 años, es secuestrada y se encuentra luchando por mantenerse con vida. Consigue convencer a su atacante para que la libere, pero cuando vuelve a casa, nadie se cree su historia, salvo un detective, que sospecha que fue secuestrada por un asesino en serie. Basado en hechos reales horripilantes.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/ndLQXjvF5yvW51rreLDTr85o1gv.jpg",
+    "genres": [
+      "Drama",
+      "Película de TV",
       "Crimen"
     ],
     "trailerKey": null
+  },
+  {
+    "tmdbId": 264644,
+    "imdbId": "tt3170832",
+    "title": "La habitación",
+    "year": 2015,
+    "rating": 8,
+    "plot": "Para Jack, un niño de cinco años, la habitación es el mundo entero, el lugar donde nació, donde come, juega y aprende con su madre. Por la noche, mamá lo pone a dormir en el armario, por si viene el viejo Nick. La habitación es el hogar de Jack, mientras que para su madre es el cubículo donde lleva siete años encerrada, secuestrada desde los diecinueve años. Con gran tesón e ingenio, la joven ha creado en ese reducido espacio una vida para su hijo, y su amor por él es lo único que le permite soportar lo insoportable. Sin embargo, la curiosidad de Jack va en aumento, a la par que la desesperación de su madre, que sabe que la habitación no podrá contener ambas cosas por mucho más tiempo.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/57aCjpdhzg9RnVMI1410jlpRTWr.jpg",
+    "genres": [
+      "Drama",
+      "Suspense"
+    ],
+    "trailerKey": null
+  },
+  {
+    "tmdbId": 977942,
+    "imdbId": "tt36983905",
+    "title": "El hombre que desafió al rey",
+    "year": 2026,
+    "rating": 7.9,
+    "plot": "En la Inglaterra del siglo XIV, asolada por la peste, un campesino desencadena una rebelión contra el rey Ricardo II y se convierte involuntariamente en una leyenda de la resistencia.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/rveEjlQQ0LlyyPk8ev2pHBmQPZZ.jpg",
+    "genres": [
+      "Acción",
+      "Drama",
+      "Historia"
+    ],
+    "trailerKey": "qM2Pk44x0Ck"
+  },
+  {
+    "tmdbId": 49521,
+    "imdbId": "tt0770828",
+    "title": "El hombre de acero",
+    "year": 2013,
+    "rating": 6.7,
+    "plot": "Un niño descubre que posee poderes extraordinarios y que no pertenece a este planeta. En su juventud, viaja para descubrir sus orígenes y las razones por las cuales ha sido enviado a la Tierra. Pero el héroe que lleva dentro tiene que emerger para que pueda salvar al mundo de la aniquilación y convertirse en el símbolo de esperanza para la humanidad.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/5JW44QGgpEWx4aWXM0uVSi2xtrI.jpg",
+    "genres": [
+      "Acción",
+      "Aventura",
+      "Ciencia ficción"
+    ],
+    "trailerKey": "VzeDi7YR6gs"
+  },
+  {
+    "tmdbId": 638507,
+    "imdbId": "tt11112140",
+    "title": "Cómo entrenar a tu dragón: Vuelta a casa",
+    "year": 2019,
+    "rating": 8,
+    "plot": "Han pasado diez años desde que los dragones se mudaron al Mundo Oculto, y aunque Toothless ya no vive en New Berk, Hiccup continúa las tradiciones navideñas que una vez compartió con su mejor amigo. Pero los vikingos de New Berk comenzaban a olvidarse de su amistad con los dragones. Hiccup, Astrid y Gobber saben exactamente qué hacer para mantener a los dragones en los corazones de los aldeanos. Y al otro lado del mar, los dragones tienen un plan propio ...",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/n12wESAYZNqa88h4EzdD25bJRYR.jpg",
+    "genres": [
+      "Animación",
+      "Fantasía",
+      "Aventura",
+      "Familia"
+    ],
+    "trailerKey": null
+  },
+  {
+    "tmdbId": 11659,
+    "imdbId": "tt0346336",
+    "title": "La mejor juventud",
+    "year": 2003,
+    "rating": 8,
+    "plot": "Historia de una familia italiana desde los años 60 hasta nuestros días. Dos hermanos, Nicola (Luigi Lo Cascio) y Matteo (Alessio Boni), comparten las mismas esperanzas, los mismos sueños; disfrutan de los mismos libros y de los mismos amigos hasta que conocen a una chica desequilibrada, Giorgia (Jasmine Trinca), que perturba su destino. Mientras Nicola ejerce como psicólogo, Matteo abandona sus estudios e ingresa en el cuerpo de policía.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/tHyMkciechhnTHTM1ky5OGWrb7N.jpg",
+    "genres": [
+      "Drama",
+      "Historia",
+      "Romance"
+    ],
+    "trailerKey": null
+  },
+  {
+    "tmdbId": 610150,
+    "imdbId": "tt14614892",
+    "title": "Dragon Ball Super: Super Hero",
+    "year": 2022,
+    "rating": 7.9,
+    "plot": "Son Goku destruyó en su momento al Ejército Red Ribbon. Ahora ciertos individuos que continuaron con su legado han creado los Androides definitivos: Gamma 1 y Gamma 2. Estos dos Androides dicen ser superhéroes y atacan a Piccolo y a Gohan… ¿Cuál es el objetivo del Ejército Red Ribbon? Ante el peligro inminente, ¡es la hora de tu despertar, superhéroe!",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/dZH9gp0XQnjzYRYMGSwateGIXlB.jpg",
+    "genres": [
+      "Animación",
+      "Ciencia ficción",
+      "Acción"
+    ],
+    "trailerKey": "uoHYirZqG48"
+  },
+  {
+    "tmdbId": 1281331,
+    "imdbId": "tt37510326",
+    "title": "El Precio de la Red",
+    "year": 2026,
+    "rating": 7,
+    "plot": "Explora las prácticas internas de Facebook, la difusión de información falsa, el impacto en la salud mental de los adolescentes y la conexión con los eventos del 6 de enero en el Capitolio.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/xT7yxocpGjqzalCUTr9IFDf8Oyb.jpg",
+    "genres": [
+      "Drama",
+      "Suspense"
+    ],
+    "trailerKey": "cNbAPdz04UE"
+  },
+  {
+    "tmdbId": 1078605,
+    "imdbId": "tt26581740",
+    "title": "Weapons",
+    "year": 2025,
+    "rating": 7.3,
+    "plot": "Cuando todos los alumnos de una misma clase, salvo uno, desaparecen misteriosamente la misma noche y exactamente a la misma hora, la pequeña ciudad donde viven se pregunta quién o qué está detrás de su desaparición.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/nYqEQ3ltw0hHc1kBaNWr7Rb8WNZ.jpg",
+    "genres": [
+      "Terror",
+      "Misterio"
+    ],
+    "trailerKey": "lZyASo3yaTA"
+  },
+  {
+    "tmdbId": 872585,
+    "imdbId": "tt15398776",
+    "title": "Oppenheimer",
+    "year": 2023,
+    "rating": 8,
+    "plot": "Película sobre el físico J. Robert Oppenheimer y su papel como desarrollador de la bomba atómica. Basada en el libro 'American Prometheus: The Triumph and Tragedy of J. Robert Oppenheimer' de Kai Bird y Martin J. Sherwin.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/mJRUREPjTqqMEKwEiM2sdmIGngz.jpg",
+    "genres": [
+      "Drama",
+      "Historia",
+      "Bélica"
+    ],
+    "trailerKey": "JpUd4BS7yI0"
+  },
+  {
+    "tmdbId": 986056,
+    "imdbId": "tt20969586",
+    "title": "Thunderbolts*",
+    "year": 2025,
+    "rating": 7.3,
+    "plot": "Un grupo de supervillanos poco convencional es reclutado para hacer misiones para el gobierno: Yelena Belova, Bucky Barnes, Red Guardian, Ghost, Taskmaster y John Walker. Después de verse atrapados en una trampa mortal urdida por Valentina Allegra de Fontaine, estos marginados deben embarcarse en una peligrosa misión que les obligará a enfrentarse a los recovecos más oscuros de su pasado.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/yDWU8YyFkPnlVY627QXPvct8bz9.jpg",
+    "genres": [
+      "Acción",
+      "Ciencia ficción",
+      "Aventura"
+    ],
+    "trailerKey": "QCbzHZ1Q2lw"
+  },
+  {
+    "tmdbId": 447365,
+    "imdbId": "tt6791350",
+    "title": "Guardianes de la Galaxia: Volumen 3",
+    "year": 2023,
+    "rating": 7.9,
+    "plot": "La querida banda de los Guardianes se instala en Knowhere. Pero sus vidas no tardan en verse alteradas por los ecos del turbulento pasado de Rocket. Peter Quill, aún conmocionado por la pérdida de Gamora, debe reunir a su equipo en una peligrosa misión para salvar la vida de Rocket, una misión que, si no se completa con éxito, podría muy posiblemente conducir al final de los Guardianes tal y como los conocemos.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/6GkKzdNosVAL7UGgwTtCHSxLQ67.jpg",
+    "genres": [
+      "Ciencia ficción",
+      "Aventura",
+      "Acción"
+    ],
+    "trailerKey": "FTGm7EexNmw"
+  },
+  {
+    "tmdbId": 1186532,
+    "imdbId": "tt26731216",
+    "title": "La fragua",
+    "year": 2024,
+    "rating": 8.2,
+    "plot": "Isaiah Wright aún tiene que madurar. Tras graduarse en el instituto sin ningún plan para el futuro, Isaiah recibe un empujón para empezar a tomar mejores decisiones en la vida. El plan de Dios para él es mucho mayor de lo que jamás hubiera imaginado.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/loYpxub1ZZVmI4JzPC0jLkerq3g.jpg",
+    "genres": [
+      "Drama",
+      "Familia"
+    ],
+    "trailerKey": null
+  },
+  {
+    "tmdbId": 1284046,
+    "imdbId": "tt32268691",
+    "title": "Aniquilación",
+    "year": 2026,
+    "rating": 5.6,
+    "plot": "Una francotiradora del ejército utiliza sus habilidades para proteger a su hija de un escuadrón de máquinas asesinas que escapó de una base militar secreta, mientras unos mercenarios intentan contenerla.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/bKq74yT1Gca4JCd7E6IAHPLWBg0.jpg",
+    "genres": [
+      "Acción",
+      "Suspense"
+    ],
+    "trailerKey": null
+  },
+  {
+    "tmdbId": 101299,
+    "imdbId": "tt1951264",
+    "title": "Los Juegos del Hambre: En llamas",
+    "year": 2013,
+    "rating": 7.4,
+    "plot": "Tras vencer en los 74º Juegos del Hambre anuales, la joven Katniss Everdeen y su compañero Peeta Mellark regresan a casa. Atrás dejaron a sus amigos y su familia, teniendo ambos que participar en la 'gira de la victoria' por todos los distritos. Durante ese largo viaje, Katniss se da cuenta de que se está gestando una rebelión, pero en el Capitolio todo sigue igual y bajo estricto control del Presidente Snow, que está organizando los 75º Juegos del Hambre, denominados 'El Vasallaje de los Veinticinco': una competición especial con una inesperada novedad que cambiará Panem para siempre.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/oxnKI1qiHz7xC0mNthC7dSqTcot.jpg",
+    "genres": [
+      "Aventura",
+      "Acción",
+      "Ciencia ficción"
+    ],
+    "trailerKey": "0KKwAWsh9TQ"
   },
   {
     "tmdbId": 533514,
@@ -1707,304 +1185,192 @@
     "trailerKey": null
   },
   {
-    "tmdbId": 770156,
-    "imdbId": "tt11916254",
-    "title": "Un ángel en nuestras vidas",
-    "year": 2020,
-    "rating": 8.4,
-    "plot": "Las segundas oportunidades comienzan cuando un criminal endurecido se cruza con una niña precoz a la que un ángel ayuda a cambiar de corazón durante la temporada navideña.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/f938pbdnA0rYQCkdB2RIKLluJpW.jpg",
+    "tmdbId": 1571955,
+    "imdbId": "tt38793125",
+    "title": "Colisión",
+    "year": 2026,
+    "rating": 6.5,
+    "plot": "España, 2013. Tras atracar un banco, un fatal accidente de auto saca a la luz la cara oculta de una banda de ladrones y desvela que las traiciones comenzaron mucho antes del robo.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/L2SDL6pi8jyvMRmh1vWbqfwHtf.jpg",
     "genres": [
       "Drama",
-      "Familia"
-    ],
-    "trailerKey": null
-  },
-  {
-    "tmdbId": 214756,
-    "imdbId": "tt2637276",
-    "title": "Ted 2",
-    "year": 2015,
-    "rating": 6.3,
-    "plot": "Se trata de una secuela de la exitosa comedia escrita y dirigida por el cómico Seth MacFarlane. Recién casados Ted y Tami-Lynn deciden tener un bebé. John se ofrece en donar su esperma para que su mejor amigo pueda cumplir su sueño de tener un hijo, pero inesperadamente reciben una carta legal que dice que el estado no le permite ser padre ya que no está demostrado que sea una persona. Todos juntos tendrán que unir fuerzas para luchar por sus derechos en un tribunal de justicia.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/bO59Vn36fQauTDQpKNlHxvcK9Nw.jpg",
-    "genres": [
-      "Comedia",
-      "Fantasía"
-    ],
-    "trailerKey": null
-  },
-  {
-    "tmdbId": 637649,
-    "imdbId": "tt11083552",
-    "title": "Despierta la furia",
-    "year": 2021,
-    "rating": 7.6,
-    "plot": "H (Jason Statham) es el misterioso tipo que acaba de incorporarse como guardia de seguridad en una compañía de furgones blindados. Durante un intento de atraco a su camión, sorprende a sus compañeros mostrando habilidades propias de un soldado profesional, dejando al resto del equipo preguntándose quién es realmente y de dónde viene.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/emM894kjspdQsHyTAF7sjRNlbTr.jpg",
-    "genres": [
-      "Suspense",
-      "Crimen",
-      "Drama"
-    ],
-    "trailerKey": "CQgBahCGHUk"
-  },
-  {
-    "tmdbId": 363088,
-    "imdbId": "tt5095030",
-    "title": "Ant-Man y la Avispa",
-    "year": 2018,
-    "rating": 6.9,
-    "plot": "Mientras Scott Lang se convierte en un súper héroe y en un padre, Hope van Dyne y el Dr. Hank Pym presentan una nueva misión urgente que encuentra a Ant-Man luchando junto a The Wasp para descubrir secretos de su pasado.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/bvYI6i9lQ3bsup9PgnMF3YYr8ZR.jpg",
-    "genres": [
       "Acción",
-      "Aventura",
-      "Ciencia ficción"
-    ],
-    "trailerKey": "sc4XCKre4mo"
-  },
-  {
-    "tmdbId": 933260,
-    "imdbId": "tt17526714",
-    "title": "La sustancia",
-    "year": 2024,
-    "rating": 7.1,
-    "plot": "'Tú, pero mejor en todos los sentidos'. Esa es la promesa de la sustancia, un producto revolucionario basado en la división celular, que crea un alter ego más joven, más bello, más perfecto.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/4cJyrYA7I29QabrQ0S89N1iWUV2.jpg",
-    "genres": [
-      "Terror",
-      "Ciencia ficción"
-    ],
-    "trailerKey": "QuwvHRaIFQg"
-  },
-  {
-    "tmdbId": 447332,
-    "imdbId": "tt6644200",
-    "title": "Un lugar tranquilo",
-    "year": 2018,
-    "rating": 7.4,
-    "plot": "Evelyn y Lee Abbott son una pareja con tres hijos que vive en una granja aislada de toda civilización al norte de Nueva York. Esta familia ha sobrevivido durante meses en un mundo invadido y amenazado por mortales criaturas extraterrestres que se guían por el sonido para cazar. En este contexto en el que una palabra puede significar la muerte, la familia Abbott vive silenciosamente, andan descalzos y se comunican por medio del lenguaje de señas.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/5pairI20KJs1SEa4Z8yAsPR779m.jpg",
-    "genres": [
-      "Terror",
-      "Drama",
-      "Ciencia ficción"
-    ],
-    "trailerKey": "nvPdDhmLMAI"
-  },
-  {
-    "tmdbId": 603692,
-    "imdbId": "tt10366206",
-    "title": "John Wick 4",
-    "year": 2023,
-    "rating": 7.7,
-    "plot": "John Wick descubre un camino para derrotar a la Alta Mesa. Pero para poder ganar su libertad, Wick deberá enfrentarse a un nuevo rival con poderosas alianzas en todo el mundo, capaz de convertir a viejos amigos en enemigos.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/mj2Z9HnRSIEk3n7yVPoOY4Uzzfh.jpg",
-    "genres": [
-      "Acción",
-      "Suspense",
       "Crimen"
     ],
-    "trailerKey": "L0anWmmd8TI"
+    "trailerKey": "Jk12Xo0-oDc"
   },
   {
-    "tmdbId": 986056,
-    "imdbId": "tt20969586",
-    "title": "Thunderbolts*",
-    "year": 2025,
-    "rating": 7.3,
-    "plot": "Un grupo de supervillanos poco convencional es reclutado para hacer misiones para el gobierno: Yelena Belova, Bucky Barnes, Red Guardian, Ghost, Taskmaster y John Walker. Después de verse atrapados en una trampa mortal urdida por Valentina Allegra de Fontaine, estos marginados deben embarcarse en una peligrosa misión que les obligará a enfrentarse a los recovecos más oscuros de su pasado.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/yDWU8YyFkPnlVY627QXPvct8bz9.jpg",
+    "tmdbId": 210577,
+    "imdbId": "tt2267998",
+    "title": "Perdida",
+    "year": 2014,
+    "rating": 7.9,
+    "plot": "El día de su quinto aniversario de boda, Nick Dunne informa de que su esposa Amy ha desaparecido misteriosamente. Pronto la presión policial y mediática hace que el retrato de felicidad doméstica que ofrece Nick empiece a tambalearse. Además, su extraña conducta lo convierte en sospechoso, y todo el mundo comienza a preguntase si Nick mató a su esposa...",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/bkIhygnbv9ydlDo4SEsOcqGgQD4.jpg",
     "genres": [
-      "Acción",
-      "Ciencia ficción",
-      "Aventura"
-    ],
-    "trailerKey": "QCbzHZ1Q2lw"
-  },
-  {
-    "tmdbId": 1181678,
-    "imdbId": "tt27391124",
-    "title": "¿Quieres ser mi... hijo?",
-    "year": 2023,
-    "rating": 8.5,
-    "plot": "Lu, una mujer conformista de 40 años, un día descubre que su pareja de hace 15 años la estaba engañando. En ese momento, Lu toma la decisión de regresar a su departamento de soltera para empezar de cero, ya que se siente estancada y desconsolada. Conoce a su nuevo vecino Javier, un joven y apuesto mujeriego de tan sólo 23 años, quien no la deja descansar por sus constantes fiestas. Para poder conseguir el trabajo de sus sueños, Lu decide mentir en su entrevista al decir que es mujer de familia y que tiene un hijo de 19 años. Por si fuera poco, tiene que enfrentar la última prueba para ser contratada y pasar un fin de semana en Valle de Bravo con los ejecutivos de la empresa y sus familias. Al encontrarse desesperada, Lu le ofrece el trabajo a Javier, para que se haga pasar por su hijo y a cambio, ella no lo molestará más cuando esté de fiesta.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/9GuvODahvuFqdhuZ16aBLR4UJoP.jpg",
-    "genres": [
-      "Comedia",
-      "Romance"
-    ],
-    "trailerKey": "HK0FizurLk0"
-  },
-  {
-    "tmdbId": 496243,
-    "imdbId": "tt6751668",
-    "title": "Parásitos",
-    "year": 2019,
-    "rating": 8.5,
-    "plot": "Tanto Gi Taek (Song Kang-ho) como su familia están sin trabajo. Cuando su hijo mayor, Gi Woo (Choi Woo-sik), empieza a dar clases particulares en casa de Park (Lee Seon-gyun), las dos familias, que tienen mucho en común pese a pertenecer a dos mundos totalmente distintos, comienzan una interrelación de resultados imprevisibles.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/4N55tgxDW0RRATyrZHbx0q9HUKv.jpg",
-    "genres": [
-      "Comedia",
+      "Misterio",
       "Suspense",
       "Drama"
     ],
-    "trailerKey": "-PtU49Aol00"
+    "trailerKey": "UXyP5leMzf8"
   },
   {
-    "tmdbId": 46738,
-    "imdbId": "tt1255953",
-    "title": "Incendios",
+    "tmdbId": 38757,
+    "imdbId": "tt0398286",
+    "title": "Enredados",
     "year": 2010,
-    "rating": 8.1,
-    "plot": "Jeanne y Simon Marwan son dos mellizos cuya madre, que lleva mucho tiempo sin hablar, está a punto de morir. Pero, antes del fatal desenlace, les da dos cartas que deben ser entregadas a un padre al que creían muerto y a un hermano cuya existencia desconocían. Ambos emprenderán un viaje al Líbano para localizarlos y encontrar respuestas a su existencia. Basada en una obra de teatro de Wajdi Mouawad.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/rA40sUH6bHD5pAJ1jOcJFZPhlOe.jpg",
+    "rating": 7.6,
+    "plot": "Flynn Rider, el más buscado -y encantador- bandido del reino, se esconde en una misteriosa torre y allí se encuentra con Rapunzel, una bella y avispada adolescente con una cabellera dorada de 21 metros de largo, que vive encerrada allí desde hace años. Ambos sellan un pacto y a partir de ese momento la pareja vivirá emocionantes aventuras en compañía de un caballo superpolicía, un camaleón sobreprotector y una ruda pandilla de matones",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/z5kvXWek4smCyeWBDJQkT5sLc9T.jpg",
     "genres": [
-      "Drama",
-      "Bélica",
-      "Misterio"
-    ],
-    "trailerKey": null
-  },
-  {
-    "tmdbId": 664280,
-    "imdbId": "tt11989890",
-    "title": "David Attenborough: Una vida en nuestro planeta",
-    "year": 2020,
-    "rating": 8.4,
-    "plot": "A sus 93 años, David Attenborough ha visitado todos los continentes del planeta, explorando cientos de lugares, documentando el mundo viviente en todo su esplendor. Ahora, por primera vez, reflexiona sobre las experiencias más relevantes de su vida como naturalista.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/wA9I2KKUT1moiSnshjTL2QALv3q.jpg",
-    "genres": [
-      "Documental",
-      "Drama"
-    ],
-    "trailerKey": null
-  },
-  {
-    "tmdbId": 575265,
-    "imdbId": "tt9603208",
-    "title": "Misión: Imposible - Sentencia final",
-    "year": 2025,
-    "rating": 7.2,
-    "plot": "El agente Ethan Hunt continúa su misión de impedir que Gabriel controle el tecnológicamente omnipotente programa de IA conocido como La Entidad.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/mKK7cVNg4mQmKl0Qry9fvr5AqP7.jpg",
-    "genres": [
-      "Acción",
-      "Suspense",
-      "Aventura"
-    ],
-    "trailerKey": "YqtdLeJSM6o"
-  },
-  {
-    "tmdbId": 1007757,
-    "imdbId": "tt29552248",
-    "title": "Intercambiados",
-    "year": 2026,
-    "rating": 8.9,
-    "plot": "Una pequeña criatura del bosque intercambia el cuerpo con un majestuoso pájaro del valle, lo que los obliga a colaborar para sobrevivir a la aventura más salvaje de sus vidas.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/i89vUDwNhAEWUZSFYITSiv1RIbK.jpg",
-    "genres": [
-      "Aventura",
       "Animación",
       "Familia",
-      "Fantasía"
+      "Aventura"
     ],
-    "trailerKey": "oZlnTUemKPU"
+    "trailerKey": "ee3XOCH-pok"
   },
   {
-    "tmdbId": 1560520,
-    "imdbId": "tt32333324",
-    "title": "Batman: Knightfall Part 1: Knightfall",
-    "year": 2026,
-    "rating": 9.2,
-    "plot": "Cuando el misterioso gigante conocido únicamente como Bane libera a toda la galería de villanos de Batman del Manicomio de Arkham, el Cruzado Encapuchado se ve llevado al límite de su resistencia física y mental.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/fXvnylD29aoKx4ai3wBlHRXMSVp.jpg",
+    "tmdbId": 458220,
+    "imdbId": "tt6857376",
+    "title": "Palmer",
+    "year": 2021,
+    "rating": 8.1,
+    "plot": "Tras 12 años en prisión, el exjugador de fútbol Palmer vuelve a casa para rehacer su vida. Mientras se adapta a su nueva realidad, entabla una amistad con un niño abandonado, pero su pasado le persigue y amenaza con destruir su nueva familia.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/xSDdRAjxKAGi8fUBLOqSrBhJmF0.jpg",
     "genres": [
-      "Animación",
+      "Drama"
+    ],
+    "trailerKey": "arjRu8ka4_8"
+  },
+  {
+    "tmdbId": 8966,
+    "imdbId": "tt1099212",
+    "title": "Crepúsculo",
+    "year": 2008,
+    "rating": 6.3,
+    "plot": "La joven Bella Swan siempre fue una chica muy diferente ya en sus años de niña en Phoenix. Cuando su madre se volvió a casar, la mandó a vivir con su padre, a la pequeña y lluviosa ciudad de Forks, Washington, una población sin ningún aliciente para Bella. Pero entonces conoce en el instituo al misterioso y atractivo Edward Cullen, un joven distinto a los demás que esconde un secreto...",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/40ollvfwHaVF85lkkg522SIl3Qc.jpg",
+    "genres": [
+      "Fantasía",
+      "Drama",
+      "Romance"
+    ],
+    "trailerKey": "UBbpGSszXtU"
+  },
+  {
+    "tmdbId": 1101383,
+    "imdbId": "tt27165187",
+    "title": "El final de Oak Street",
+    "year": 2026,
+    "rating": 7.1,
+    "plot": "Después de que un misterioso fenómeno cósmico arranque Oak Street de su entorno suburbano y transporte a sus habitantes a un lugar desconocido, la familia Platt pronto descubre que su propia supervivencia depende de que permanezcan unidos mientras se orientan en un entorno que ya no reconocen.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/g9DUGw8ufetrwhCIrwq3h1NlpWO.jpg",
+    "genres": [
+      "Ciencia ficción",
+      "Misterio",
+      "Suspense"
+    ],
+    "trailerKey": "pKtm-_iOivI"
+  },
+  {
+    "tmdbId": 634649,
+    "imdbId": "tt10872600",
+    "title": "Spider-Man: No Way Home",
+    "year": 2021,
+    "rating": 7.9,
+    "plot": "Peter Parker es desenmascarado y por tanto no es capaz de separar su vida normal de los enormes riesgos que conlleva ser un súper héroe. Cuando pide ayuda a Doctor Strange, los riesgos pasan a ser aún más peligrosos, obligándole a descubrir lo que realmente significa ser Spider-Man.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/accAPImdjUwgNgocDNWXCGFEcvL.jpg",
+    "genres": [
       "Acción",
       "Aventura",
       "Ciencia ficción"
     ],
-    "trailerKey": null
+    "trailerKey": "Df00ZNYEcAY"
   },
   {
-    "tmdbId": 315162,
-    "imdbId": "tt3915174",
-    "title": "El Gato con Botas: El último deseo",
-    "year": 2022,
-    "rating": 8.2,
-    "plot": "El gato con botas descubre que ha agotado ocho de sus nueve vidas por lo que inicia una nueva para hallar la Estrella de los Deseos y así recuperar sus vidas.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/b5Jb7GoQaqIXy4VEdnQa0UrQZI.jpg",
+    "tmdbId": 244786,
+    "imdbId": "tt2582802",
+    "title": "Whiplash",
+    "year": 2014,
+    "rating": 8.4,
+    "plot": "El objetivo de Andrew Neiman, un joven y ambicioso baterista de jazz, es triunfar en el elitista Conservatorio de Música de la Costa Este en el que estudia. Marcado por el fracaso de la carrera literaria de su padre, Andrew alberga sueños de grandeza. Terence Fletcher, un profesor conocido tanto por su talento como por sus rigurosos métodos de enseñanza, dirige el mejor conjunto de jazz del Conservatorio. Cuando Fletcher elige a Andrew y para formar parte del conjunto musical que dirige, cambia para siempre la vida del joven. La pasión de Andrew por alcanzar la perfección se convierte en obsesión, al tiempo que su despiadado profesor lo lleva al límite de su capacidad y de su salud mental.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/uy36CPy5ARuC8qrH8Esg2ndFyJ5.jpg",
     "genres": [
-      "Animación",
-      "Aventura",
-      "Fantasía",
-      "Comedia",
-      "Familia"
+      "Drama",
+      "Música",
+      "Suspense"
     ],
-    "trailerKey": "7afDrYLajRk"
+    "trailerKey": "tXploxlYWL4"
   },
   {
-    "tmdbId": 475557,
-    "imdbId": "tt7286456",
-    "title": "Joker",
-    "year": 2019,
-    "rating": 8.1,
-    "plot": "Arthur Fleck es un hombre ignorado por la sociedad, cuya motivación en la vida es hacer reír. Pero una serie de trágicos acontecimientos le llevarán a ver el mundo de otra forma. Película basada en Joker, el popular personaje de DC Comics y archivillano de Batman, pero que en este film toma un cariz más realista y oscuro.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/v0eQLbzT6sWelfApuYsEkYpzufl.jpg",
+    "tmdbId": 614945,
+    "imdbId": "tt10375624",
+    "title": "Mensajes de voz para Isabelle",
+    "year": 2026,
+    "rating": 8.3,
+    "plot": "Una joven deja mensajes de voz bastante explícitos a su difunta hermana, sin saber que los recibe un desconocido que comienza a enamorarse de ella.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/ohIYxdaO7WV1zsSPFZVddWNEWkk.jpg",
     "genres": [
-      "Crimen",
-      "Suspense",
+      "Romance",
+      "Comedia",
       "Drama"
     ],
-    "trailerKey": "ygUHhImN98w"
-  },
-  {
-    "tmdbId": 14836,
-    "imdbId": "tt0327597",
-    "title": "Los mundos de Coraline",
-    "year": 2009,
-    "rating": 7.9,
-    "plot": "Película de animación en la que se nos cuenta la historia de Coraline, una jovencita que descubre en su nueva casa una puerta secreta y decide abrirla. Al hacerlo, descubre una segunda versión de su vida, una vida paralela a la que ella tiene. A primera vista, la realidad paralela es curiosamente parecida a su vida de verdad, aunque mucho mejor. Pero cuando su increíble y maravillosa aventura empieza a tomar un cariz peligroso, su otra madre intenta mantenerla a su lado para siempre. Coraline deberá recurrir a su determinación y coraje, a la ayuda de los vecinos y a un gato negro con el don del habla para salvar a sus auténticos padres, a unos niños fantasmas y regresar a casa.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/6SToEuWU2BCI1PRnMdpnzF5FaSW.jpg",
-    "genres": [
-      "Animación",
-      "Familia",
-      "Fantasía",
-      "Terror"
-    ],
-    "trailerKey": "ksOiRS2YO1U"
-  },
-  {
-    "tmdbId": 1084187,
-    "imdbId": "tt26678938",
-    "title": "Lindas y letales",
-    "year": 2026,
-    "rating": 6.8,
-    "plot": "Un grupo de bailarinas lucha por sobrevivir mientras intentan escapar de una remota posada después de que su autobús se averíe de camino a una competición.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/cmZqxJQ9MdNQEoD49HYghOXsiwH.jpg",
-    "genres": [
-      "Acción",
-      "Suspense",
-      "Terror"
-    ],
     "trailerKey": null
   },
   {
-    "tmdbId": 1726,
-    "imdbId": "tt0371746",
-    "title": "Iron Man",
-    "year": 2008,
-    "rating": 7.7,
-    "plot": "El multimillonario fabricante de armas Tony Stark debe enfrentarse a su turbio pasado después de sufrir un accidente con una de sus armas. Equipado con una armadura de última generación tecnológica, se convierte en 'El hombre de hierro' para combatir el mal a escala global.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/tFCTNx7foAsUQpgu2x1KjAJD1wT.jpg",
+    "tmdbId": 120467,
+    "imdbId": "tt2278388",
+    "title": "El gran hotel Budapest",
+    "year": 2014,
+    "rating": 8,
+    "plot": "El Sr. Gustave H., un legendario conserje de un famoso hotel europeo de entreguerras, entabla amistad con Zero Moustafa, un joven empleado al que convierte en su protegido. La historia trata sobre el robo y la recuperación de una pintura renacentista de valor incalculable y sobre la batalla que enfrenta a los miembros de una familia por una inmensa fortuna. Como telón de fondo, los levantamientos que transformaron Europa durante la primera mitad del siglo XX.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/1wk0vpNCX5T40KsGQKjfoDAhmJw.jpg",
     "genres": [
-      "Acción",
-      "Ciencia ficción",
-      "Aventura"
+      "Comedia",
+      "Drama"
     ],
-    "trailerKey": "Rxxfxhuob04"
+    "trailerKey": "b7Dg35LBGBc"
+  },
+  {
+    "tmdbId": 1400837,
+    "imdbId": "tt36586020",
+    "title": "La otra madre",
+    "year": 2026,
+    "rating": 5.8,
+    "plot": "Bela, una niña de 8 años que vive en un hogar con problemas matrimoniales, enfrenta a una entidad siniestra que sale de su armario. La presencia, a quien llama \"Otra mamá\", se vuelve cada vez más amenazante para ella y su familia.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/vsde9OnhjFMlJz8Wi6Z6drZ7GG5.jpg",
+    "genres": [
+      "Terror"
+    ],
+    "trailerKey": "ocV7K_B67lQ"
+  },
+  {
+    "tmdbId": 12444,
+    "imdbId": "tt0926084",
+    "title": "Harry Potter y las Reliquias de la Muerte - Parte 1",
+    "year": 2010,
+    "rating": 7.7,
+    "plot": "Una tarea casi imposible cae sobre los hombros de Harry: deberá encontrar y destruir los horrocruxes restantes para dar fin al reinado de Lord Voldemort. En el episodio final de la saga, el hechicero de 17 años parte junto con sus amigos Hermione Granger y Ron Weasley en un peligroso viaje por Inglaterra para encontrar los objetos que contienen los fragmentos del alma del Señor Tenebroso, los cuales garantizan su longevidad. Pero el camino no será fácil pues el lado oscuro adquiere más poder con cada minuto que pasa y las lealtades serán puestas a prueba. Harry deberá usar todos los conocimientos que gracias a Dumbledore ha adquirido sobre su enemigo para poder encontrar la forma de sobrevivir a esta última aventura.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/w6wsYKdXERaXRdByPsI2O9rn20b.jpg",
+    "genres": [
+      "Aventura",
+      "Fantasía"
+    ],
+    "trailerKey": "f3O0odK1VIQ"
+  },
+  {
+    "tmdbId": 1330021,
+    "imdbId": "tt33100314",
+    "title": "Criaturas luminosas",
+    "year": 2026,
+    "rating": 8.4,
+    "plot": "En este drama, basado en el bestseller homónimo, una viuda forja un vínculo con un pulpo muy listo y un joven a la deriva mientras trabaja de noche en un pequeño acuario.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/afCyi1YlcSq2BH14UJmFbqzzJ65.jpg",
+    "genres": [
+      "Drama",
+      "Misterio"
+    ],
+    "trailerKey": "4qqbNVMCJBc"
   },
   {
     "tmdbId": 69335,
@@ -2023,79 +1389,574 @@
     "trailerKey": null
   },
   {
-    "tmdbId": 120,
-    "imdbId": "tt0120737",
-    "title": "El señor de los anillos: La comunidad del anillo",
-    "year": 2001,
-    "rating": 8.4,
-    "plot": "En la Tierra Media, el Señor Oscuro Saurón creó los Grandes Anillos de Poder, forjados por los herreros Elfos. Tres para los reyes Elfos, siete para los Señores Enanos, y nueve para los Hombres Mortales. Secretamente, Saurón también forjó un anillo maestro, el Anillo Único, que contiene en sí el poder para esclavizar a toda la Tierra Media. Con la ayuda de un grupo de amigos y de valientes aliados, Frodo emprende un peligroso viaje con la misión de destruir el Anillo Único. Pero el Señor Oscuro Sauron, quien creara el Anillo, envía a sus servidores para perseguir al grupo. Si Sauron lograra recuperar el Anillo, sería el final de la Tierra Media.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/9xtH1RmAzQ0rrMBNUMXstb2s3er.jpg",
-    "genres": [
-      "Aventura",
-      "Fantasía",
-      "Acción"
-    ],
-    "trailerKey": "3GJp6p_mgPo"
-  },
-  {
-    "tmdbId": 652,
-    "imdbId": "tt0332452",
-    "title": "Troya",
-    "year": 2004,
-    "rating": 7.2,
-    "plot": "A lo largo de los tiempos, los hombres han hecho la guerra. Unos por poder, otros por gloria o por honor, y algunos por amor. En la antigua Grecia, la pasión de dos de los amantes más legendarios de la historia, Paris, príncipe de Troya y Helena, reina de Esparta, desencadena una guerra que asolará una civilización. El rapto de Helena por Paris, separándola de su esposo, el rey Menelao, es un insulto que El orgullo familiar establece que una afrenta a Menelao es una afrenta a su hermano Agamenón, el poderoso rey de Micenas, que no tarda en reunir a todas las grandes tribus de Grecia para recuperar a Helena de manos de los troyanos y defender el honor de su hermano. La verdad es que la lucha por el honor por parte de Agamenón está corrompida por su incontenible codicia ya que necesita conquistar Troya para asumir el control del mar Egeo.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/mBiDQT28DnuYaJSL4nDD43ORE6p.jpg",
-    "genres": [
-      "Acción",
-      "Aventura"
-    ],
-    "trailerKey": "ORKSndBYAPk"
-  },
-  {
-    "tmdbId": 541671,
-    "imdbId": "tt7181546",
-    "title": "Ballerina",
-    "year": 2025,
-    "rating": 7.3,
-    "plot": "Eve Macarro es una asesina entrenada por la Ruska Roma desde su infancia, la misma organización criminal encargada del adiestramiento de John Wick. En esta violenta historia de venganza, Eve intentará por todos los medios averiguar quién está detrás del asesinato de su padre. En su lucha por conocer la verdad, tendrá que atenerse a las normas de la Alta Mesa y, por supuesto, a las del Hotel Continental, donde descubrirá que existen secretos ocultos sobre su pasado.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/gQCrYmvCK7JCLXjCGTMRF5Lzr5c.jpg",
-    "genres": [
-      "Acción",
-      "Suspense",
-      "Crimen"
-    ],
-    "trailerKey": "7o8yNS4CYws"
-  },
-  {
-    "tmdbId": 244786,
-    "imdbId": "tt2582802",
-    "title": "Whiplash",
-    "year": 2014,
-    "rating": 8.4,
-    "plot": "El objetivo de Andrew Neiman, un joven y ambicioso baterista de jazz, es triunfar en el elitista Conservatorio de Música de la Costa Este en el que estudia. Marcado por el fracaso de la carrera literaria de su padre, Andrew alberga sueños de grandeza. Terence Fletcher, un profesor conocido tanto por su talento como por sus rigurosos métodos de enseñanza, dirige el mejor conjunto de jazz del Conservatorio. Cuando Fletcher elige a Andrew y para formar parte del conjunto musical que dirige, cambia para siempre la vida del joven. La pasión de Andrew por alcanzar la perfección se convierte en obsesión, al tiempo que su despiadado profesor lo lleva al límite de su capacidad y de su salud mental.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/uy36CPy5ARuC8qrH8Esg2ndFyJ5.jpg",
+    "tmdbId": 334533,
+    "imdbId": "tt3553976",
+    "title": "Captain Fantastic",
+    "year": 2016,
+    "rating": 7.9,
+    "plot": "Ben es un padre que ha pasado diez años viviendo en los remotos bosques situados al noroeste del Pacífico criando a sus seis hijos. Sin embargo un día la familia debe abandonar su modo de vida en la naturaleza y volver a la civilización. Asimilar su nueva situación y adaptarse de nuevo a la sociedad moderna no les va a resultar nada sencillo.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/3thX29LhgABdfkpvUb9YOJjRIu4.jpg",
     "genres": [
       "Drama",
-      "Música",
-      "Suspense"
+      "Comedia"
     ],
-    "trailerKey": "tXploxlYWL4"
+    "trailerKey": null
   },
   {
-    "tmdbId": 1495,
-    "imdbId": "tt0320661",
-    "title": "El reino de los cielos",
-    "year": 2005,
-    "rating": 7.1,
-    "plot": "Balián de Ibelín viaja a Jerusalén durante las cruzadas del siglo XII, donde será el defensor de su pueblo.",
-    "posterUrl": "https://image.tmdb.org/t/p/w500/pIrjgBmZYnwKvx4WoTkhyhKSHTp.jpg",
+    "tmdbId": 897429,
+    "imdbId": "tt9603082",
+    "title": "Demasiado bien: el cortometraje",
+    "year": 2021,
+    "rating": 8,
+    "plot": null,
+    "posterUrl": "https://image.tmdb.org/t/p/w500/zfgHyodGNdtBxO8R7d0qmR2JSEz.jpg",
     "genres": [
       "Drama",
-      "Acción",
-      "Aventura",
-      "Historia",
+      "Música"
+    ],
+    "trailerKey": null
+  },
+  {
+    "tmdbId": 546554,
+    "imdbId": "tt8946378",
+    "title": "Puñales por la espalda",
+    "year": 2019,
+    "rating": 7.8,
+    "plot": "Cuando el renombrado novelista de misterio Harlan Thrombey es encontrado muerto en su mansión justo después de su 85 cumpleaños, el inquisitivo y cortés detective Benoit Blanc es misteriosamente reclutado para investigar. Se moverá entre una red de pistas falsas y mentiras interesadas para tratar de descubrir la verdad tras la prematura muerte del escritor.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/7scJ3fVmwdSpGG87wvxH3kk0RPc.jpg",
+    "genres": [
+      "Comedia",
+      "Crimen",
+      "Misterio"
+    ],
+    "trailerKey": "HA7DVsvOzw8"
+  },
+  {
+    "tmdbId": 378064,
+    "imdbId": "tt5323662",
+    "title": "A Silent Voice",
+    "year": 2016,
+    "rating": 8.4,
+    "plot": "Shōko, una niña con discapacidad auditiva, es víctima de acoso en su escuela, siendo Shōya su principal agresor. Cuando ella se cambia de colegio, él sufre el rechazo de sus compañeros y queda aislado. Años después, intenta enmendar su error y hacer las paces con Shōko.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/hGQnljXpDGI429SC39LohaQBHhf.jpg",
+    "genres": [
+      "Animación",
+      "Drama",
+      "Romance"
+    ],
+    "trailerKey": "JLixtembASE"
+  },
+  {
+    "tmdbId": 423,
+    "imdbId": "tt0253474",
+    "title": "El pianista",
+    "year": 2002,
+    "rating": 8.4,
+    "plot": "Varsovia, 1939. El pianista polaco de origen judío Wladyslaw Szpilman (Adrien Brody) interpreta un tema de Chopin en la radio nacional de Polonia mientras la aviación alemana bombardea la capital. El régimen nazi ha invadido el país, y como hace en otros países invadidos, lleva a cabo la misma política con respecto a los judíos. Así Szpilman y toda su familia -sus padres, su hermano y sus dos hermanas- se ven obligados a dejar su casa y todo lo que les pertenece para trasladarse con miles de personas de origen judío al ghetto de Varsovia. Mientras Wladyslaw trabaja como pianista en un restaurante propiedad de un judío que colabora con los nazis, su hermano Henryk (Ed Stoppard) prefiere luchar contra los nazis. Pero tres años más tarde, los habitantes del ghetto son trasladados en trenes hacia campos de concentración.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/mxfLOWnHnSlbdraKfzRn5mqoqk7.jpg",
+    "genres": [
+      "Drama",
       "Bélica"
     ],
     "trailerKey": null
+  },
+  {
+    "tmdbId": 1297842,
+    "imdbId": "tt27613895",
+    "title": "GOAT: Como cabras",
+    "year": 2026,
+    "rating": 8,
+    "plot": "Will es una pequeña cabra con grandes sueños que recibe una oportunidad única en la vida para unirse a los profesionales y jugar al rugebol, un deporte de alta intensidad, mixto y de contacto total dominado por los animales más rápidos y feroces del mundo. A los nuevos compañeros de equipo de Will no les entusiasma tener a una cabrita en su plantilla, pero Will está decidido a revolucionar el deporte y demostrar de una vez por todas que «¡los pequeños saben jugar!».",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/l8Y8o3RpFg54gmQQ8GVaxVroFmY.jpg",
+    "genres": [
+      "Animación",
+      "Comedia",
+      "Familia"
+    ],
+    "trailerKey": "q56pw-zFDP8"
+  },
+  {
+    "tmdbId": 640344,
+    "imdbId": "tt11559652",
+    "title": "Me contro Te: Il film - La vendetta del Signor S",
+    "year": 2020,
+    "rating": 8,
+    "plot": "Una joven pareja que hace videos populares de YouTube para niños se propone ganar un premio, pero una mente maestra malvada se interpone en el camino de su éxito.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/qnmbb2de5Bh3xNsBRqozQsbwBLh.jpg",
+    "genres": [
+      "Familia",
+      "Fantasía"
+    ],
+    "trailerKey": null
+  },
+  {
+    "tmdbId": 183011,
+    "imdbId": "tt2820466",
+    "title": "La Liga de la Justicia: La paradoja del tiempo",
+    "year": 2013,
+    "rating": 7.9,
+    "plot": "Barry Allen despierta en una realidad alternativa, donde descubre que ningun héroe de la Liga de la Justicia existe, a excepción de Batman, Aquaman y Wonder Woman; estos dos últimos tienen una enorme guerra, incluso los Atlantes de Aquaman inundaron Europa y las Amazonas conquistaron Inglaterra.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/jOIH3wCtz3y4DonPDoHqSz0VjDj.jpg",
+    "genres": [
+      "Animación",
+      "Acción",
+      "Ciencia ficción"
+    ],
+    "trailerKey": null
+  },
+  {
+    "tmdbId": 1084736,
+    "imdbId": "tt26446278",
+    "title": "El Conde de Montecristo",
+    "year": 2024,
+    "rating": 7.9,
+    "plot": "Todos los sueños del joven Edmundo Dantés están a punto de hacerse realidad. Traicionado por sus rivales, es encarcelado sin juicio en el Castillo de If sin esperanza de escapar. Tras catorce años de encierro, Dantés consigue escapar y hacerse con el legendario tesoro escondido en la isla de Montecristo. Ahora, con una enorme fortuna, urde un plan extraordinario para vengarse.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/r2PGzaGA7bgcuy6PX7nx0BfDYsK.jpg",
+    "genres": [
+      "Aventura",
+      "Acción",
+      "Drama"
+    ],
+    "trailerKey": "95cMkm7RH00"
+  },
+  {
+    "tmdbId": 1417,
+    "imdbId": "tt0457430",
+    "title": "El laberinto del fauno",
+    "year": 2006,
+    "rating": 7.8,
+    "plot": "En la España falangista de 1944, una joven aficionada a los libros e hijastra de un sádico oficial del ejército huye a un misterioso pero cautivador mundo de fantasía.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/gWPkUFGlO7ZIiArUcWRBmvAwVjB.jpg",
+    "genres": [
+      "Fantasía",
+      "Drama",
+      "Bélica"
+    ],
+    "trailerKey": "NEg7u3boJhU"
+  },
+  {
+    "tmdbId": 698687,
+    "imdbId": "tt8864596",
+    "title": "Transformers One",
+    "year": 2024,
+    "rating": 8,
+    "plot": "La historia jamás contada del origen de Optimus Prime y Megatron y de cómo pasaron de ser hermanos de armas que cambiaron el destino de Cybertron para siempre, a convertirse en enemigos acérrimos.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/1jzVCZxBmgvpGILuEU8icfX77Io.jpg",
+    "genres": [
+      "Animación",
+      "Ciencia ficción",
+      "Aventura",
+      "Familia"
+    ],
+    "trailerKey": "Cn4yConEN_o"
+  },
+  {
+    "tmdbId": 491480,
+    "imdbId": "tt7533152",
+    "title": "El niño que domó el viento",
+    "year": 2019,
+    "rating": 7.9,
+    "plot": "Un chico de la República de Malaui decide ayudar a las personas de su pueblo construyendo una turbina después de leer un libro en el que se explican los pasos para su creación. Película basada en el libro homónimo de William Kamkwamba y Bryan Mealer",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/f9LYaF5Q4pfaF8Gzk64S78VLBKh.jpg",
+    "genres": [
+      "Drama",
+      "Historia"
+    ],
+    "trailerKey": null
+  },
+  {
+    "tmdbId": 272,
+    "imdbId": "tt0372784",
+    "title": "Batman Begins",
+    "year": 2005,
+    "rating": 7.7,
+    "plot": "¿Cómo cambia un hombre el mundo? Es una pregunta que obsesiona a Bruce Wayne al igual que el fantasma de sus padres, muertos a tiros ante sus ojos en las calles de Gotham una noche que cambió su vida para siempre. Atormentado por la culpa y la ira, el desilusionado heredero industrial desaparece de Gotham y viaja en secreto por el mundo, buscando los medios de luchar contra la injusticia y utilizar el miedo contra los que se aprovechan de los que tienen miedo. Con la ayuda de su leal mayordomo Alfred, el detective Jim Gordon - uno de los pocos buenos policías de las fuerzas del orden público de Gotham - y Lucius Fox, su aliado en la división de Ciencias Aplicadas de Wayne Enterprises, Bruce Wayne libera a su imponente alter ego: Batman, un justiciero enmascarado que utiliza la fuerza, la inteligencia y un despliegue de artefactos de alta tecnología para combatir las fuerzas siniestras que amenazan con destruir la ciudad.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/6yMWU1vWkOBbNRIwOxhetd2aHhO.jpg",
+    "genres": [
+      "Drama",
+      "Crimen",
+      "Acción"
+    ],
+    "trailerKey": null
+  },
+  {
+    "tmdbId": 158445,
+    "imdbId": "tt2659414",
+    "title": "Milagro en la celda 7",
+    "year": 2013,
+    "rating": 7.9,
+    "plot": "Lee Yong-gu es un hombre con problemas mentales: tiene un coeficiente de inteligencia de un niño de 6 años de edad, que es casualmente la edad que tiene su hija, la inteligente Ye-sung. Ambos llevan una vida feliz, pues Yong-gu se gana la vida trabajando como encargado del aparcamiento en un supermercado local. Pero un día, cuando la hija del comisario de policía muere en un extraño accidente, Yong-gu, que es el que encuentra su cadaver, es falsamente acusado y condenado a muerte por el secuestro, asalto sexual y asesinato de una menor de edad. Ye-sung es enviada entonces a una institución de menores, y Yong-gu es encarcelado y asignado a la celda nº7, en una prisión de máxima seguridad.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/g7tWI5ZrJGrwAccJYUD1roWzHQu.jpg",
+    "genres": [
+      "Drama",
+      "Comedia"
+    ],
+    "trailerKey": null
+  },
+  {
+    "tmdbId": 1022789,
+    "imdbId": "tt22022452",
+    "title": "Del revés 2 (Inside Out 2)",
+    "year": 2024,
+    "rating": 7.5,
+    "plot": "Riley entra en la adolescencia y el Cuartel General de su cabeza sufre una repentina reforma para hacerle hueco a algo totalmente inesperado propio de la pubertad: ¡nuevas emociones! Alegría, Tristeza, Ira, Miedo y Asco, con años de impecable gestión a sus espaldas (según ellos...) no saben muy bien qué sentir cuando aparece con enorme ímpetu Ansiedad. Y no viene sola: le acompañan envidia, vergüenza y aburrimiento.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/lE3DCRI7bQgHSiIuEPcFiXpiuGV.jpg",
+    "genres": [
+      "Animación",
+      "Aventura",
+      "Comedia",
+      "Familia"
+    ],
+    "trailerKey": "wi4E2-Am9hA"
+  },
+  {
+    "tmdbId": 1084242,
+    "imdbId": "tt26443597",
+    "title": "Zootrópolis 2",
+    "year": 2025,
+    "rating": 7.7,
+    "plot": "Después de resolver el caso más importante en la historia de Zootrópolis, los policías novatos Judy Hopps y Nick Wilde descubren que su asociación no es tan sólida como pensaban cuando el Jefe Bogo les ordena unirse al programa de consejería \"Compañeros en Crisis\". Pero no pasa mucho tiempo para que su asociación se ponga a prueba al máximo, cuando la llegada de Gary, la serpiente, pone la ciudad patas arriba.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/4fRdfQPjHiuDSkzaxFAV44k7Iem.jpg",
+    "genres": [
+      "Animación",
+      "Aventura",
+      "Comedia",
+      "Misterio",
+      "Familia"
+    ],
+    "trailerKey": "VZU-glDcBAw"
+  },
+  {
+    "tmdbId": 265177,
+    "imdbId": "tt3612616",
+    "title": "Mommy",
+    "year": 2014,
+    "rating": 8.2,
+    "plot": "Una madre viuda se encarga de la educación de su violento hijo sola. Pero cuando parecía que todo estaba perdido, un soplo de esperanza llega al conocer a su misteriosa nueva vecina: una mujer que se integra ella misma en la vida de la madre y su hijo propocionando a la madre el apoyo que anhelaba.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/1mjhmc2iG8Oe5WTqevECTUQ5iWP.jpg",
+    "genres": [
+      "Drama"
+    ],
+    "trailerKey": "fEQjnCoMOt0"
+  },
+  {
+    "tmdbId": 1087192,
+    "imdbId": "tt26743210",
+    "title": "Cómo entrenar a tu dragón",
+    "year": 2025,
+    "rating": 7.9,
+    "plot": "En la escarpada isla de Mema, donde vikingos y dragones han sido enemigos acérrimos durante generaciones, Hipo se desmarca desafiando siglos de tradición cuando entabla amistad con Desdentao, un temido dragón Furia Nocturna. Su insólito vínculo revela la verdadera naturaleza de los dragones y desafía los cimientos de la sociedad vikinga.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/9Zr7ZyiMpgMhhxJQi1tQJp9LGho.jpg",
+    "genres": [
+      "Fantasía",
+      "Familia",
+      "Acción",
+      "Aventura"
+    ],
+    "trailerKey": "Ns6ZEpQ1xS0"
+  },
+  {
+    "tmdbId": 1246049,
+    "imdbId": "tt31434030",
+    "title": "Drácula",
+    "year": 2025,
+    "rating": 7.3,
+    "plot": "Tras una devastadora pérdida, el príncipe Vlad II, conde Drácula (Caleb Landy Jones), renuncia a Dios y es maldecido a la vida eterna, condenado a vagar solitario a lo largo de los siglos. Este es el relato sobre la historia de amor jamás contada del infame vampiro, que desafiará al destino y la mortalidad en busca de su amor perdido.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/ff7fyDdtXM2wu9jsm9gOMYtpvOl.jpg",
+    "genres": [
+      "Terror",
+      "Fantasía",
+      "Romance"
+    ],
+    "trailerKey": "ETSO15J7YTw"
+  },
+  {
+    "tmdbId": 438631,
+    "imdbId": "tt1160419",
+    "title": "Dune",
+    "year": 2021,
+    "rating": 7.8,
+    "plot": "En un lejano futuro, la galaxia conocida es gobernada mediante un sistema feudal de casas nobles bajo el mandato del Emperador. Las alianzas y la política giran entorno a un pequeño planeta, Dune,  del que extrae la 'especia melange', la materia prima que permite los viajes espaciales. La Casa Atreides, bajo el mandato del Duque Leto Atreides recibe el encargo de custodiar el planeta, relevando en la encomienda a sus históricos enemigos, los Harkonnen. Paul Atreides, hijo del duque, se verá atrapado en las intrigas políticas mientras descubre el destino que le deparan los desiertos de Dune.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/szcew6yyjcDvaL0isaPBk2e3nkF.jpg",
+    "genres": [
+      "Ciencia ficción",
+      "Aventura"
+    ],
+    "trailerKey": "kPjOcWHVNGo"
+  },
+  {
+    "tmdbId": 437068,
+    "imdbId": "tt6878038",
+    "title": "A Taxi Driver: Los héroes de Gwangju",
+    "year": 2017,
+    "rating": 8,
+    "plot": "Mayo de 1980. Man-seob (SONG Kang-ho) es un taxista en Seúl que vive al dia, criando a su pequeña hija solo después de que su esposa lo abandonara, con altas facturas de hospital detrás. Un día, él escucha que hay un extranjero dispuesto a pagar mucho dinero por un viaje de ida y vuelta a la ciudad de Gwangju. Sin saber que el extranjero es un periodista alemán (Thomas Kretschmann) con una agenda oculta para investigar los rumores extraños de Gwangju, Man-seob toma el trabajo y los dos comienzan su viaje juntos.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/45oP9Fng0vf6yO4wanjM70NPBFY.jpg",
+    "genres": [
+      "Acción",
+      "Drama",
+      "Historia"
+    ],
+    "trailerKey": null
+  },
+  {
+    "tmdbId": 1187326,
+    "imdbId": "tt36164852",
+    "title": "Tadeo Jones y La Lámpara Maravillosa",
+    "year": 2026,
+    "rating": 8.2,
+    "plot": "Tadeo y Sara son ahora padres de Olimpia (Oli), una adorable e intrépida niña de dos años. Y Momia no lleva nada bien haber dejado de ser el centro de atención. Mientras están de vacaciones en Londres, Sara sigue la pista hacia un objeto único: la lámpara maravillosa de Las mil y una noches. Y Momia, presa de los celos, pide un deseo: viajar en el tiempo hasta el momento en que era joven y todos le querían. Tadeo y Sara tienen que unir fuerzas para evitar que Momia cambie el curso de la historia y traer al grupo (Jeff, Belzoni y Ramona incluidos) de vuelta a casa, a su época. Esta nueva aventura los llevará a cruzar el Océano Atlántico desde Perú hasta Grecia, y de allí a lo más profundo de Oriente Medio, hasta la misma cueva de Ali Babá y los cuarenta ladrones.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/71G1b8bqa7gzP9yU7q2fgNf2t0D.jpg",
+    "genres": [
+      "Animación",
+      "Comedia",
+      "Familia"
+    ],
+    "trailerKey": "CDpJJHc7xMo"
+  },
+  {
+    "tmdbId": 40096,
+    "imdbId": "tt0271383",
+    "title": "O Auto da Compadecida",
+    "year": 2000,
+    "rating": 8.4,
+    "plot": "En el interior del estado de Paríba, en el pueblo de Taperoá, viven João Grilo y Chicó, dos tipos muy pobres que van anunciando por las calles la mejor película del mundo, 'La Pasión de Cristo'. La sesión tiene éxito y ellos ganan algo de dinero pero siguen luchando por la supervivencia. João Grilo y Chicó planean nuevas tretas para conseguir algún dinero y se enfrentan a numeroso desafíos provocando múltiples confusiones causadas por la astucia de João Grilo, siempre acompañado de Chicó.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/y3IhuITELtprMhUd7bccu629rba.jpg",
+    "genres": [
+      "Comedia",
+      "Drama",
+      "Fantasía",
+      "Romance"
+    ],
+    "trailerKey": null
+  },
+  {
+    "tmdbId": 568332,
+    "imdbId": "tt9426852",
+    "title": "Taylor Swift: Reputation Stadium Tour",
+    "year": 2018,
+    "rating": 8.2,
+    "plot": "Taylor Swift se sube al escenario en Dallas durante su Reputation Stadium Tour y festeja una gran noche de música, recuerdos y magia visual.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/niMx0WNoKd55HxohjVnYAL7ySfw.jpg",
+    "genres": [
+      "Música"
+    ],
+    "trailerKey": null
+  },
+  {
+    "tmdbId": 566525,
+    "imdbId": "tt9376612",
+    "title": "Shang-Chi y la leyenda de los Diez Anillos",
+    "year": 2021,
+    "rating": 7.5,
+    "plot": "Adaptación cinematográfica del héroe creado por Steve Englehart y Jim Starlin en 1973, un personaje mitad chino, mitad americano, cuyo característico estilo de combate mezclaba kung-fu, nunchacos y armas de fuego.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/9VqajJXm29uprSaxOcEh7O0d6E9.jpg",
+    "genres": [
+      "Acción",
+      "Aventura",
+      "Fantasía"
+    ],
+    "trailerKey": "MQRF_YezCgA"
+  },
+  {
+    "tmdbId": 1160164,
+    "imdbId": "tt28814949",
+    "title": "TAYLOR SWIFT | THE ERAS TOUR",
+    "year": 2023,
+    "rating": 8.2,
+    "plot": "El fenómeno cultural de la cantante Taylor Swift continúa en la pantalla grande con este documental que se sumerge en los conciertos de la histórica gira de la artista.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/jf3YO8hOqGHCupsREf5qymYq1n.jpg",
+    "genres": [
+      "Música"
+    ],
+    "trailerKey": "cghkKOgqFTk"
+  },
+  {
+    "tmdbId": 1339274,
+    "imdbId": "tt27871792",
+    "title": "No dejes a los niños solos",
+    "year": 2026,
+    "rating": 6.8,
+    "plot": null,
+    "posterUrl": "https://image.tmdb.org/t/p/w500/w01yTCLE2nCSj8IMxUjrc8vIwQ9.jpg",
+    "genres": [
+      "Terror",
+      "Drama",
+      "Suspense"
+    ],
+    "trailerKey": null
+  },
+  {
+    "tmdbId": 693134,
+    "imdbId": "tt15239678",
+    "title": "Dune: Parte dos",
+    "year": 2024,
+    "rating": 8.1,
+    "plot": "Sigue el viaje mítico de Paul Atreides mientras se une a Chani y los Fremen en una guerra de venganza contra los conspiradores que destruyeron a su familia. Al enfrentarse a una elección entre el amor de su vida y el destino del universo conocido, Paul se esfuerza por evitar un futuro terrible que solo él puede prever.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/v2NN1TMK3ifuiEyawa3ukkcSOUQ.jpg",
+    "genres": [
+      "Ciencia ficción",
+      "Aventura"
+    ],
+    "trailerKey": "nWzes49-2DA"
+  },
+  {
+    "tmdbId": 12445,
+    "imdbId": "tt1201607",
+    "title": "Harry Potter y las Reliquias de la Muerte - Parte 2",
+    "year": 2011,
+    "rating": 8.1,
+    "plot": "La segunda parte de la batalla final entre las fuerzas del bien y el mal. El juego nunca ha sido tan peligroso y nadie está a salvo. Se acerca el momento de la confrontación final entre Harry Potter y Lord Voldemort. Todo termina aquí…",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/wjKy2wSlDiLLLIkM7tHnxsXG8Tp.jpg",
+    "genres": [
+      "Aventura",
+      "Fantasía"
+    ],
+    "trailerKey": "M1me0fEgYxY"
+  },
+  {
+    "tmdbId": 466420,
+    "imdbId": "tt5537002",
+    "title": "Los asesinos de la luna",
+    "year": 2023,
+    "rating": 7.4,
+    "plot": "Miembros de la tribu Osage de los Estados Unidos, son asesinados bajo misteriosas circunstancias en la década de 1920 provocando una importante investigación por el FBI involucrando a J. Edgar Hoover.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/731ydMfVJaIyR1bhFEeX7rubqGH.jpg",
+    "genres": [
+      "Crimen",
+      "Historia",
+      "Drama"
+    ],
+    "trailerKey": "wyYsrrpZuD0"
+  },
+  {
+    "tmdbId": 2034,
+    "imdbId": "tt0139654",
+    "title": "Training Day (Día de entrenamiento)",
+    "year": 2001,
+    "rating": 7.5,
+    "plot": "Todos los días, en las calles de las zonas urbanas deprimidas de los Estados Unidos se libra una guerra; una guerra entre residentes, traficantes de droga y los que han jurado proteger a unos de los otros. Esta guerra tiene sus víctimas y sus verdugos, y una de sus figuras más importantes es el sargento Alonzo Harris, un agente de narcóticos con 13 años de experiencia cuyos discutibles métodos hacen difusa la línea entre la legalidad y la corrupción. Jake Hoyt, un joven policía recién asignado a narcóticos, comienza sus rondas a las órdenes de Alonzo para aprender de él.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/nagh5PjkfBnDf5SKXyHupWu4yod.jpg",
+    "genres": [
+      "Acción",
+      "Crimen",
+      "Drama"
+    ],
+    "trailerKey": null
+  },
+  {
+    "tmdbId": 24428,
+    "imdbId": "tt0848228",
+    "title": "Vengadores",
+    "year": 2012,
+    "rating": 8.1,
+    "plot": "Cuando un enemigo inesperado surge como una gran amenaza para la seguridad mundial, Nick Fury, director de la Agencia SHIELD, decide reclutar a un equipo para salvar al mundo de un desastre casi seguro.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/ugX4WZJO3jEvTOerctAWJLinujo.jpg",
+    "genres": [
+      "Ciencia ficción",
+      "Acción",
+      "Aventura"
+    ],
+    "trailerKey": "HQIiYqOVTWo"
+  },
+  {
+    "tmdbId": 667257,
+    "imdbId": "tt10032342",
+    "title": "Cosas imposibles",
+    "year": 2021,
+    "rating": 8.5,
+    "plot": "La vida es tan curiosa e impredecible que, a veces, uno encuentra la felicidad donde menos lo espera. Matilde es una mujer que, tras la muerte de su esposo –un hombre que abusó de ella constantemente–, encuentra a su nuevo gran amigo en Miguel, su vecino joven, inseguro, desorientado y hasta dealer..",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/eaf7GQj0ieOwm08rrvjJQNbN0kN.jpg",
+    "genres": [
+      "Familia",
+      "Drama"
+    ],
+    "trailerKey": "WNysxnl_4co"
+  },
+  {
+    "tmdbId": 324786,
+    "imdbId": "tt2119532",
+    "title": "Hasta el último hombre",
+    "year": 2016,
+    "rating": 8.2,
+    "plot": "La historia de Desmond T. Doss, quien, debido a que se lo prohibía su fe, combatió en la Segunda Guerra Mundial sin portar un arma. No disparó ni una bala, pero salvó a 75 personas de la muerte en la batalla de la isla de Okinawa.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/m3jj8IJ7uP5p4MqMzgtGW5l4ECd.jpg",
+    "genres": [
+      "Drama",
+      "Historia",
+      "Bélica"
+    ],
+    "trailerKey": "bSpqX6x97N0"
+  },
+  {
+    "tmdbId": 1311031,
+    "imdbId": "tt32820897",
+    "title": "Guardianes de la noche: Kimetsu no Yaiba La fortaleza infinita",
+    "year": 2025,
+    "rating": 8.8,
+    "plot": "El Cuerpo de Cazadores de Demonios se enfrenta a los Doce Kizuki restantes antes de enfrentarse a Muzan en el Castillo del Infinito para derrotarlo de una vez por todas.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/lYnhd124Fi3vVYlh6qmItxpGZXd.jpg",
+    "genres": [
+      "Animación",
+      "Acción",
+      "Fantasía"
+    ],
+    "trailerKey": "X3E4zogzWsY"
+  },
+  {
+    "tmdbId": 549509,
+    "imdbId": "tt8999762",
+    "title": "The Brutalist",
+    "year": 2024,
+    "rating": 6.9,
+    "plot": "Cuando el visionario arquitecto László Toth y su esposa Erzsébet huyen de la Europa de posguerra en 1947 para reconstruir su legado y ver el nacimiento de la América moderna, sus vidas cambian a causa de un misterioso y adinerado cliente.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/3BwkIAjAdQY5Nn4HqDuXue5IZx6.jpg",
+    "genres": [
+      "Drama"
+    ],
+    "trailerKey": "vna5bN96xJg"
+  },
+  {
+    "tmdbId": 475557,
+    "imdbId": "tt7286456",
+    "title": "Joker",
+    "year": 2019,
+    "rating": 8.1,
+    "plot": "Arthur Fleck es un hombre ignorado por la sociedad, cuya motivación en la vida es hacer reír. Pero una serie de trágicos acontecimientos le llevarán a ver el mundo de otra forma. Película basada en Joker, el popular personaje de DC Comics y archivillano de Batman, pero que en este film toma un cariz más realista y oscuro.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/v0eQLbzT6sWelfApuYsEkYpzufl.jpg",
+    "genres": [
+      "Crimen",
+      "Suspense",
+      "Drama"
+    ],
+    "trailerKey": "ygUHhImN98w"
+  },
+  {
+    "tmdbId": 299534,
+    "imdbId": "tt4154796",
+    "title": "Vengadores: Endgame",
+    "year": 2019,
+    "rating": 8.2,
+    "plot": "Tras el chasquido de Thanos que eliminó a la mitad de la vida en el universo, los Vengadores supervivientes quedan devastados y divididos. Cinco años después, una inesperada oportunidad les permite intentar revertir la catástrofe. Reuniéndose una vez más, los héroes emprenden una misión extrema que los obliga a viajar al pasado, enfrentarse a sus propias pérdidas y hacer sacrificios definitivos para restaurar el equilibrio del universo.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/br6krBFpaYmCSglLBWRuhui7tPc.jpg",
+    "genres": [
+      "Aventura",
+      "Ciencia ficción",
+      "Acción"
+    ],
+    "trailerKey": "Ib847Q7C9AU"
+  },
+  {
+    "tmdbId": 310569,
+    "imdbId": "tt3742378",
+    "title": "Una segunda madre",
+    "year": 2015,
+    "rating": 8,
+    "plot": "Val es una interna que se toma su trabajo muy en serio. Sirve a un adinerado matrimonio de São Paulo día y noche, y cuida a su hijo adolescente, al que ha criado desde su infancia. El orden de este hogar parece inquebrantable, hasta que un día llega desde su ciudad de origen la inteligente y ambiciosa hija de Val, Jessica, a la que había dejado al cuidado de unos familiares en el norte de Brasil 13 años atrás. La presencia de la joven pone en peligro el balance de poder en la casa. Esta nueva situación pondrá en tela de juicio las lealtades de Val y la obligará a valorar lo que está dispuesta a perder.",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/a73RKpmk2jrbzQ43xUeG4dtQji7.jpg",
+    "genres": [
+      "Drama"
+    ],
+    "trailerKey": "jviq2NbAPaA"
   }
 ]

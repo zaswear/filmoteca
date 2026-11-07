@@ -28,6 +28,8 @@ export const config = {
     // `icon.svg` y `og.png` van fuera del login: el favicon lo pide el
     // navegador antes de que haya sesión y, si pasa por aquí, contesta con un
     // 307 al login y la pestaña se queda con el icono genérico.
-    "/((?!login|api/auth|_next/static|_next/image|icon\\.svg|og\\.png|favicon\\.ico).*)",
+    // `api/cartelera/revalidate` lo llama el cron sin sesión; se protege con
+    // CRON_SECRET en la propia ruta.
+    "/((?!login|api/auth|api/cartelera/revalidate|_next/static|_next/image|icon\\.svg|og\\.png|favicon\\.ico).*)",
   ],
 };

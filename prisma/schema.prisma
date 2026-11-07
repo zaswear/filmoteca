@@ -200,3 +200,27 @@ model AdminCredential {
 
   @@map("admin_credential")
 }
+
+// ─── Lanzamientos Blu-ray ────────────────────────────────────────────────────
+// Catálogo del calendario mensual de mubis, una fila por EDICIÓN (enlace de
+// mubis). Lo llena scripts/sync-bluray.mjs cada semana; la página solo lee.
+// La tabla la crea el propio script con CREATE TABLE IF NOT EXISTS: aquí no se
+// hace `db push` (ver el aviso de arriba).
+
+model BlurayRelease {
+  id             Int       @id @default(autoincrement())
+  mubisUrl       String    @unique @map("mubis_url")
+  title          String
+  releaseDate    DateTime  @map("release_date") @db.Date
+  mubisPosterUrl String?   @map("mubis_poster_url")
+  audio          String?
+  castellano     Boolean   @default(false)
+  imdbId         String?   @map("imdb_id")
+  imdbRating     Float?    @map("imdb_rating")
+  posterUrl      String?   @map("poster_url")
+  checkedAt      DateTime? @map("checked_at")
+  createdAt      DateTime  @default(now()) @map("created_at")
+
+  @@index([releaseDate])
+  @@map("bluray_releases")
+}
